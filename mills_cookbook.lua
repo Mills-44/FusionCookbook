@@ -1,6 +1,3 @@
-
-function SMODS.INIT.mills_cookbook()
-
 -- Atlas Creation for cards
 SMODS.Atlas {
     key = "pepper_jokers",
@@ -381,4 +378,3 @@ SMODS.Joker {
         end
     end
 }
-end

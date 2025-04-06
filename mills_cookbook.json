@@ -1,0 +1,15 @@
+{
+    "id": "mills_cookbook",
+    "name": "Mills Cookbook",
+    "author": ["Mills-44"],
+    "description": "A Chef's kiss to the game",
+    "prefix": "mills",
+    "priority": 0,
+    "main_file": "mills_cookbook.lua",
+    "badge_colour": "189daf",
+    "dependencies": [
+        "Steamodded (>=1.0.0~ALPHA-1225a)"
+    ],
+    "version": "1.0.0"
+  
+}

@@ -136,7 +136,7 @@ SMODS.Joker {
     },
     config = {extra = {mult = 0}, levels = 0}, 
     atlas = 'pepper_jokers',
-    pos = {x = 5, y = 0 },
+    pos = {x = 2, y = 0 },
     unlocked = true,
     discovered = true,
     blueprint_compat = true,

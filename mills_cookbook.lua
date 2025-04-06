@@ -1,3 +1,4 @@
+
 -- Atlas Creation for cards
 SMODS.Atlas {
     key = "pepper_jokers",
@@ -21,6 +22,11 @@ SMODS.Joker {
     atlas = 'pepper_jokers',
     pos = {x = 6, y = 0 },
     cost = 4,
+    unlocked = true,
+    discovered = true,
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = true,
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.mult}}
     end,
@@ -73,6 +79,11 @@ SMODS.Joker {
     config = {extra = {mult = 0}, levels = 0}, 
     atlas = 'pepper_jokers',
     pos = {x = 0, y = 0 },
+    unlocked = true,
+    discovered = true,
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = true,
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.mult}}
     end,
@@ -126,6 +137,11 @@ SMODS.Joker {
     config = {extra = {mult = 0}, levels = 0}, 
     atlas = 'pepper_jokers',
     pos = {x = 5, y = 0 },
+    unlocked = true,
+    discovered = true,
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = true,
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.mult}}
     end,
@@ -179,6 +195,11 @@ SMODS.Joker {
     config = {extra = {mult = 0}, levels = 0}, 
     atlas = 'pepper_jokers',
     pos = {x = 2, y = 0 },
+    unlocked = true,
+    discovered = true,
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = true,
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.mult}}
     end,
@@ -232,6 +253,11 @@ SMODS.Joker {
     config = {extra = {mult = 0}, levels = 0}, 
     atlas = 'pepper_jokers',
     pos = {x = 4, y = 0 },
+    unlocked = true,
+    discovered = true,
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = true,
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.mult}}
     end,
@@ -285,6 +311,11 @@ SMODS.Joker {
     config = {extra = {mult = 0}, levels = 0}, 
     atlas = 'pepper_jokers',
     pos = {x = 3, y = 0 },
+    unlocked = true,
+    discovered = true,
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = true,
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.mult}}
     end,
@@ -345,6 +376,11 @@ SMODS.Joker {
     config = {extra = {}, levels = 0}, 
     atlas = 'pepper_jokers',
     pos = {x = 5, y = 0 },
+    unlocked = true,
+    discovered = true,
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = true,
     loc_vars = function(self, info_queue, card)
         return { vars = {"^2"} }
     end,

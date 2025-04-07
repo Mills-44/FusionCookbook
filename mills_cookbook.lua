@@ -14,10 +14,17 @@ SMODS.Joker {
         text = {
            "When a {C:attention}Flush{} or {C:attention}Full House{} is played",
             "this Joker gains {C:mult}+#1#{} Mult",
-            "Every {C:attention}2nd{} activation levels up Spicyness!" 
+            "Every {C:attention}2nd{} activation levels up Spicyness!" ,
+            "{C:inactive}Total Mult: {C:mult}+#2#{}"
         }
     },
-    config = {extra = {mult = 0}, levels = 0}, 
+    config = {
+        extra = {
+            gain = 3,
+            mult = 0
+        },
+        levels = 0 
+        }, 
     rarity = 1,
     atlas = 'pepper_jokers',
     pos = {x = 6, y = 0 },
@@ -28,7 +35,12 @@ SMODS.Joker {
     eternal_compat = true,
     perishable_compat = true,
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.mult}}
+        return { 
+            vars = {
+                 card.ability.extra.gain or 3,
+                 card.ability.extra.mult or 0
+                }
+            }
     end,
     calculate = function(self, card, context)
         if context.joker_main then
@@ -39,7 +51,7 @@ SMODS.Joker {
         end
 
         if context.before and (context.poker_hands["Flush"] or context.poker_hands["Full House"]) then
-            card.ability.extra.mult = card.ability.extra.mult + 3
+          --  card.ability.extra.mult = card.ability.extra.mult + 3
             card.ability.levels = (card.ability.levels or 0) + 1
 
             local result = {
@@ -51,20 +63,53 @@ SMODS.Joker {
 
             if card.ability.levels >= 2 then
                 card.ability.levels = 0
-                local new_card = G.jokers:add("anaheim_chile")
-                    if new_card then
-                        new_card.ability.extra.mult = card.ability.extra.mult or 0
-                        new_card.ability.levels = card.ability.levels or 0
+                if G.jokers and G.jokers.cards then
+                      --add next pepper
+                    SMODS.add_card({key = "j_mills_anaheim_chile"})
+                        local cards = G.jokers.cards
+                        local new_card = card[#cards]
+                        if new_card then 
+                            new_card.ability.extra.mult = card.ability.extra.mult or 0
+                            new_card.ability.levels = card.ability.levels or 0
+                        end
+                        G.E_MANAGER:add_event(Event({
+                            func = function()
+                                play_sound('tarot1')
+                                card.T.r = -0.2
+                                card:juice_up(0.3, 0.4)
+                                card.states.drag.is = true
+                                card.children.center.pinch.x = true
+                        G.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.3, blockable = false,
+                            func = function()
+                                G.jokers:remove_card(card)
+                                    card:remove()
+                                    card = nil
+                                 return true; 
+                                end
+                            })) 
+                            return true
+                         end
+                    })) 
+                return {
+                         message = "TANGY!",
+                         colour = G.C.CHIPS
+                    }     
                     end
-                G.jokers:remove(card)
-                result.message = "Level Up!"
-                result.colour = G.C.RARE
+                    result.message = "Level Up!"
+                    result.colour = G.C.RARE
+                end
+                return result
             end
-
-            return result
-        end
     end
-}
+    }
+        --set_badges = function(self, card, badges)
+            --table.insert(badges, create_badge(
+            --    tostring(card.ability.levels or 0),
+            --    G.C.MULT,
+            --    G.C.UI.TEXT_LIGHT,
+           --     1.0
+          --  ))
+        --    return badges
 
 SMODS.Joker {
     key = 'anaheim_chile',
@@ -136,7 +181,7 @@ SMODS.Joker {
     },
     config = {extra = {mult = 0}, levels = 0}, 
     atlas = 'pepper_jokers',
-    pos = {x = 2, y = 0 },
+    pos = {x = 1, y = 0 },
     unlocked = true,
     discovered = true,
     blueprint_compat = true,
@@ -252,7 +297,7 @@ SMODS.Joker {
     },
     config = {extra = {mult = 0}, levels = 0}, 
     atlas = 'pepper_jokers',
-    pos = {x = 4, y = 0 },
+    pos = {x = 3, y = 0 },
     unlocked = true,
     discovered = true,
     blueprint_compat = true,
@@ -310,7 +355,7 @@ SMODS.Joker {
     },
     config = {extra = {mult = 0}, levels = 0}, 
     atlas = 'pepper_jokers',
-    pos = {x = 3, y = 0 },
+    pos = {x = 4, y = 0 },
     unlocked = true,
     discovered = true,
     blueprint_compat = true,

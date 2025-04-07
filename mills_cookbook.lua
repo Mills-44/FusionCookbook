@@ -122,7 +122,12 @@ SMODS.Joker {
             "{C:inactive}Total Mult: {C:mult}+#2#{}"
         }
     },
-    config = {extra = {mult = 0}, levels = 0}, 
+    config = {extra = {
+        gain = 5,
+        mult = 0
+       }, 
+    levels = 0
+       }, 
     atlas = 'pepper_jokers',
     pos = {x = 0, y = 0 },
     unlocked = true,
@@ -131,14 +136,18 @@ SMODS.Joker {
     eternal_compat = true,
     perishable_compat = true,
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.mult}}
+        return { 
+            vars = { 
+                card.ability.extra.gain or 5,
+                card.ability.extra.mult or 0    
+            }
+        }
     end,
     calculate = function(self, card, context)
         if context.joker_main then
         return {
             mult = card.ability.extra.mult,
-            message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
-            card = card
+            message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } }
           }
         end
 
@@ -155,19 +164,44 @@ SMODS.Joker {
 
             if card.ability.levels >= 2 then
                 card.ability.levels = 0
-                local new_card = G.jokers:add("jalapeno")
-                    if new_card then
-                        new_card.ability.extra.mult = card.ability.extra.mult or 0
-                        new_card.ability.levels = card.ability.levels or 0
+                if G.jokers and G.jokers.cards then
+                    --add next pepper
+                    SMODS.add_card({key = "j_mills_jalapeno"})
+                        local cards = G.jokers.cards
+                        local new_card = card[#cards]
+                        if new_card then 
+                            new_card.ability.extra.mult = card.ability.extra.mult or 0
+                            new_card.ability.levels = card.ability.levels or 0
                     end
-                G.jokers:remove(card)
+                    G.E_MANAGER:add_event(Event({
+                        func = function()
+                            play_sound('tarot1')
+                            card.T.r = -0.2
+                            card:juice_up(0.3, 0.4)
+                            card.states.drag.is = true
+                            card.children.center.pinch.x = true
+                    G.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.3, blockable = false,
+                        func = function()
+                            G.jokers:remove_card(card)
+                                card:remove()
+                                card = nil
+                             return true; 
+                            end
+                        })) 
+                        return true
+                     end
+                })) 
+            return {
+                     message = "Buh-Bye!",
+                     colour = G.C.CHIPS
+                }     
+                end
                 result.message = "Level Up!"
                 result.colour = G.C.RARE
             end
-
             return result
         end
-    end
+end
 }
 
 SMODS.Joker {
@@ -177,10 +211,17 @@ SMODS.Joker {
         text = {
            "When a {C:attention}Flush{} or {C:attention}Full House{} is played",
             "this Joker gains {C:mult}+#1#{} Mult",
-            "Every {C:attention}2nd{} activation levels up Spicyness!" 
+            "Every {C:attention}2nd{} activation levels up Spicyness!",
+            "{C:inactive}Total Mult: {C:mult}+#2#{}"
         }
     },
-    config = {extra = {mult = 0}, levels = 0}, 
+    config = {
+        extra = {
+        gain = 7,    
+        mult = 0
+        }, 
+        levels = 0
+    }, 
     atlas = 'pepper_jokers',
     pos = {x = 1, y = 0 },
     unlocked = true,
@@ -189,14 +230,18 @@ SMODS.Joker {
     eternal_compat = true,
     perishable_compat = true,
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.mult}}
+        return { 
+            vars = { 
+                card.ability.extra.gain or 7,
+                card.ability.extra.mult or 0
+            }
+        }
     end,
     calculate = function(self, card, context)
         if context.joker_main then
         return {
             mult = card.ability.extra.mult,
-            message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
-            card = card
+            message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } }
           }
         end
 
@@ -207,25 +252,49 @@ SMODS.Joker {
             local result = {
                 message = 'Spicy!',
                 colour = G.C.MULT,
-                mult_mod = 7,
+                -- mult_mod = 7,
                 card = card
             }
 
             if card.ability.levels >= 2 then
                 card.ability.levels = 0
-                local new_card = G.jokers:add("cayenne")
-                    if new_card then
+                if G.jokers and G.jokers.cards then
+                    SMODS.add_card({key = "j_mills_habanero"})
+                    local cards = G.jokers.cards
+                    local new_card = card[#cards]
+                    if new_card then 
                         new_card.ability.extra.mult = card.ability.extra.mult or 0
                         new_card.ability.levels = card.ability.levels or 0
                     end
-                G.jokers:remove(card)
+                    G.E_MANAGER:add_event(Event({
+                        func = function()
+                            play_sound('tarot1')
+                            card.T.r = -0.2
+                            card:juice_up(0.3, 0.4)
+                            card.states.drag.is = true
+                            card.children.center.pinch.x = true
+                    G.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.3, blockable = false,
+                        func = function()
+                            G.jokers:remove_card(card)
+                                card:remove()
+                                card = nil
+                             return true; 
+                            end
+                        })) 
+                        return true
+                     end
+                })) 
+            return {
+                     message = "Adios!",
+                     colour = G.C.CHIPS
+                }     
+                end
                 result.message = "Level Up!"
                 result.colour = G.C.RARE
             end
-
             return result
         end
-    end
+end
 }
 
 SMODS.Joker {
@@ -235,10 +304,17 @@ SMODS.Joker {
         text = {
            "When a {C:attention}Flush{} or {C:attention}Full House{} is played",
             "this Joker gains {C:mult}+#1#{} Mult",
-            "Every {C:attention}2nd{} activation levels up Spicyness!" 
+            "Every {C:attention}2nd{} activation levels up Spicyness!",
+            "{C:inactive}Total Mult: {C:mult}+#2#{}"
         }
     },
-    config = {extra = {mult = 0}, levels = 0}, 
+    config = {
+        extra = {
+            gain = 10,
+            mult = 0
+        }, 
+        levels = 0
+    }, 
     atlas = 'pepper_jokers',
     pos = {x = 2, y = 0 },
     unlocked = true,
@@ -247,14 +323,18 @@ SMODS.Joker {
     eternal_compat = true,
     perishable_compat = true,
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.mult}}
+        return { 
+            vars = { 
+                card.ability.extra.gain or 10,
+                card.ability.extra.mult or 0
+            }
+        }
     end,
     calculate = function(self, card, context)
         if context.joker_main then
         return {
             mult = card.ability.extra.mult,
             message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
-            card = card
           }
         end
 
@@ -265,26 +345,51 @@ SMODS.Joker {
             local result = {
                 message = 'Fiery!',
                 colour = G.C.MULT,
-                mult_mod = 10,
+               -- mult_mod = 10,
                 card = card
             }
 
             if card.ability.levels >= 2 then
                 card.ability.levels = 0
-                local new_card = G.jokers:add("habanero")
-                    if new_card then
-                        new_card.ability.extra.mult = card.ability.extra.mult or 0
-                        new_card.ability.levels = card.ability.levels or 0
-                    end
-                G.jokers:remove(card)
-                result.message = "Level Up!"
-                result.colour = G.C.RARE
-            end
-
-            return result
-        end
-    end
-}
+                if G.jokers and G.jokers.cards then
+                    --add next pepper
+                  SMODS.add_card({key = "j_mills_habanero"})
+                      local cards = G.jokers.cards
+                      local new_card = card[#cards]
+                      if new_card then 
+                          new_card.ability.extra.mult = card.ability.extra.mult or 0
+                          new_card.ability.levels = card.ability.levels or 0
+                      end
+                      G.E_MANAGER:add_event(Event({
+                          func = function()
+                              play_sound('tarot1')
+                              card.T.r = -0.2
+                              card:juice_up(0.3, 0.4)
+                              card.states.drag.is = true
+                              card.children.center.pinch.x = true
+                      G.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.3, blockable = false,
+                          func = function()
+                              G.jokers:remove_card(card)
+                                  card:remove()
+                                  card = nil
+                               return true; 
+                              end
+                          })) 
+                          return true
+                       end
+                  })) 
+              return {
+                       message = "Later!",
+                       colour = G.C.CHIPS
+                  }     
+                  end
+                  result.message = "Level Up!"
+                  result.colour = G.C.RARE
+              end
+              return result
+          end
+  end
+  }
 
 SMODS.Joker {
     key = 'habanero',
@@ -293,10 +398,17 @@ SMODS.Joker {
         text = {
            "When a {C:attention}Flush{} or {C:attention}Full House{} is played",
             "this Joker gains {C:mult}+#1#{} Mult",
-            "Every {C:attention}2nd{} activation levels up Spicyness!" 
+            "Every {C:attention}2nd{} activation levels up Spicyness!",
+            "{C:inactive}Total Mult: {C:mult}+#2#{}"
         }
     },
-    config = {extra = {mult = 0}, levels = 0}, 
+    config = {
+        extra = {
+            gain = 25,
+            mult = 0
+        }, 
+        levels = 0
+    }, 
     atlas = 'pepper_jokers',
     pos = {x = 3, y = 0 },
     unlocked = true,
@@ -305,7 +417,12 @@ SMODS.Joker {
     eternal_compat = true,
     perishable_compat = true,
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.mult}}
+        return { 
+            vars = { 
+                card.ability.extra.gain or 25,
+                card.ability.extra.gain or 0
+            }
+        }
     end,
     calculate = function(self, card, context)
         if context.joker_main then
@@ -323,26 +440,51 @@ SMODS.Joker {
             local result = {
                 message = 'Sizziling!',
                 colour = G.C.MULT,
-                mult_mod = 25,
+               -- mult_mod = 25,
                 card = card
             }
 
             if card.ability.levels >= 2 then
                 card.ability.levels = 0
-                local new_card = G.jokers:add("ghost_pepper")
-                    if new_card then
-                        new_card.ability.extra.mult = 100
-                        new_card.ability.levels = 0
-                    end
-                G.jokers:remove(card)
-                result.message = "Level Up!"
-                result.colour = G.C.XMULT
-            end
-
-            return result
-        end
-    end
-}
+                if G.jokers and G.jokers.cards then
+                    --add next pepper
+                  SMODS.add_card({key = "j_mills_ghost_pepper"})
+                      local cards = G.jokers.cards
+                      local new_card = card[#cards]
+                      if new_card then 
+                          new_card.ability.extra.mult = card.ability.extra.mult or 0
+                          new_card.ability.levels = card.ability.levels or 0
+                      end
+                      G.E_MANAGER:add_event(Event({
+                          func = function()
+                              play_sound('tarot1')
+                              card.T.r = -0.2
+                              card:juice_up(0.3, 0.4)
+                              card.states.drag.is = true
+                              card.children.center.pinch.x = true
+                      G.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.3, blockable = false,
+                          func = function()
+                              G.jokers:remove_card(card)
+                                  card:remove()
+                                  card = nil
+                               return true; 
+                              end
+                          })) 
+                          return true
+                       end
+                  })) 
+              return {
+                       message = "Ciao!",
+                       colour = G.C.CHIPS
+                  }     
+                  end
+                  result.message = "Level Up!"
+                  result.colour = G.C.RARE
+              end
+              return result
+          end
+  end
+  }
 
 SMODS.Joker {
     key = 'ghost_pepper',
@@ -351,10 +493,17 @@ SMODS.Joker {
         text = {
            "Adds {C:mult}+100{} Mult and doubles your current Mult on {C:attention}Flush{} or {C:attention}Full House{}.",
             "Levels up after {C:attention}3{} infernos.",
-            "Every {C:attention}2nd{} activation levels up Spicyness!" 
+            "Every {C:attention}2nd{} activation levels up Spicyness!",
+            "{C:inactive}Total Mult: {C:mult}+#2#{}"
         }
     },
-    config = {extra = {mult = 0}, levels = 0}, 
+    config = {
+        extra = {
+            gain = 100,
+            mult = 0
+        }, 
+        levels = 0
+    }, 
     atlas = 'pepper_jokers',
     pos = {x = 4, y = 0 },
     unlocked = true,
@@ -363,22 +512,28 @@ SMODS.Joker {
     eternal_compat = true,
     perishable_compat = true,
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.mult}}
+        return { 
+            vars = { 
+                card.ability.extra.gain or 100,
+                card.ability.extra.mult or 0
+            }
+        }
     end,
     calculate = function(self, card, context)
         if context.joker_main then
-        return {
-            mult = card.ability.extra.mult,
-            message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
-            card = card
-          }
+            return {
+                mult = card.ability.extra.mult,
+                message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
+                card = card
+            }
         end
-
+    
         if context.before and (context.poker_hands["Flush"] or context.poker_hands["Full House"]) then
             card.ability.levels = (card.ability.levels or 0) + 1
+    
             local base_mult = G.GAME.round_reserve.mult
             local final_mult = (base_mult * 2) + 100
-
+    
             G.E_MANAGER:add_event(Event({
                 func = function()
                     ease_mult(self, base_mult, final_mult, 0.5, 'easeOutCubic')
@@ -386,26 +541,46 @@ SMODS.Joker {
                     return true
                 end
             }))
-
+    
             local result = {
                 message = 'Scorching!',
-                colour = G.C.XMULT,
                 mult_mod = final_mult - base_mult,
+                colour = G.C.XMULT,
                 card = card
             }
-
+    
             if card.ability.levels >= 2 then
                 card.ability.levels = 0
-                local new_card = G.jokers:add("carolina_reaper")
+                if G.jokers and G.jokers.cards then
+                    SMODS.add_card({key = "j_mills_carolina_reaper"})
+                    local cards = G.jokers.cards
+                    local new_card = cards[#cards]
                     if new_card then
                         new_card.ability.extra.mult = 0
                         new_card.ability.levels = 0
                     end
-                G.jokers:remove(card)
-                result.message = "Reaper Is Born!"
-                result.colour = G.C.IMPORTANT
+                    G.E_MANAGER:add_event(Event({
+                        func = function()
+                            play_sound('tarot1')
+                            card.T.r = -0.2
+                            card:juice_up(0.3, 0.4)
+                            card.states.drag.is = true
+                            card.children.center.pinch.x = true
+                            G.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.3, blockable = false,
+                                func = function()
+                                    G.jokers:remove_card(card)
+                                    card:remove()
+                                    card = nil
+                                    return true
+                                end
+                            }))
+                            return true
+                        end
+                    }))
+                    result.message = "Reaper is born!"
+                    result.colour = G.C.IMPORTANT
+                end
             end
-
             return result
         end
     end
@@ -416,10 +591,15 @@ SMODS.Joker {
     loc_txt = {
         name = 'Carolina Reaper',
         text = {
-           "Applies {C:xmult}^2{} Mult to your total Mult each hand."
+           "Applies {C:xmult}^2{} Mult to your total Mult each hand.",
+           "{C:inactive}Total Mult: {C:mult}+#2#{}"
         }
     },
-    config = {extra = {}, levels = 0}, 
+    config = {
+        extra = {
+        }, 
+        levels = 0
+    }, 
     atlas = 'pepper_jokers',
     pos = {x = 5, y = 0 },
     unlocked = true,

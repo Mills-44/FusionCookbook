@@ -51,13 +51,13 @@ SMODS.Joker {
         end
 
         if context.before and (context.poker_hands["Flush"] or context.poker_hands["Full House"]) then
-          --  card.ability.extra.mult = card.ability.extra.mult + 3
+            card.ability.extra.mult = card.ability.extra.mult + 3
             card.ability.levels = (card.ability.levels or 0) + 1
 
             local result = {
                 message = 'Tangy!',
                 colour = G.C.MULT,
-                mult_mod = 3,
+              --  mult_mod = 3,
                 card = card
             }
 
@@ -91,7 +91,7 @@ SMODS.Joker {
                          end
                     })) 
                 return {
-                         message = "TANGY!",
+                         message = "Sayonara!",
                          colour = G.C.CHIPS
                     }     
                     end
@@ -118,7 +118,8 @@ SMODS.Joker {
         text = {
            "When a {C:attention}Flush{} or {C:attention}Full House{} is played",
             "this Joker gains {C:mult}+#1#{} Mult",
-            "Every {C:attention}2nd{} activation levels up Spicyness!" 
+            "Every {C:attention}2nd{} activation levels up Spicyness!",
+            "{C:inactive}Total Mult: {C:mult}+#2#{}"
         }
     },
     config = {extra = {mult = 0}, levels = 0}, 
@@ -148,7 +149,7 @@ SMODS.Joker {
             local result = {
                 message = 'Piquant!',
                 colour = G.C.MULT,
-                mult_mod = 5,
+          --      mult_mod = 5,
                 card = card
             }
 

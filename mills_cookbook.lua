@@ -63,15 +63,24 @@ SMODS.Joker {
 
             if card.ability.levels >= 2 then
                 card.ability.levels = 0
-                if G.jokers and G.jokers.cards then
-                      --add next pepper
-                    SMODS.add_card({key = "j_mills_anaheim_chile"})
-                        local cards = G.jokers.cards
-                        local new_card = card[#cards]
-                        if new_card then 
-                            new_card.ability.extra.mult = card.ability.extra.mult or 0
-                            new_card.ability.levels = card.ability.levels or 0
-                        end
+                --Flags new version
+                card.ability.evolve_to = "j_mills_anaheim_chile"
+            end
+                     return result
+        end
+
+                if context.after and card.ability.evolve_to then
+                    local evolve_key = card.ability.evolve_to
+                    card.ability.evolve_to = nil
+
+                    SMODS.add_card({key = evolve_key})
+                    local cards= G.jokers.cards
+                    local new_card = cards[#cards]
+            if new_card then  
+                new_card.ability.extra.mult = card.ability.extra.mult or 0
+                new_card.ability.levels = 0
+                end 
+                
                         G.E_MANAGER:add_event(Event({
                             func = function()
                                 play_sound('tarot1')
@@ -94,11 +103,6 @@ SMODS.Joker {
                          message = "Sayonara!",
                          colour = G.C.CHIPS
                     }     
-                    end
-                    result.message = "Level Up!"
-                    result.colour = G.C.RARE
-                end
-                return result
             end
     end
     }

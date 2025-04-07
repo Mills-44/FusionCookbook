@@ -135,7 +135,7 @@ SMODS.Joker {
        }, 
     atlas = 'pepper_jokers',
     pos = {x = 0, y = 0 },
-    unlocked = true,
+    unlocked = false,
     discovered = true,
     blueprint_compat = true,
     eternal_compat = true,
@@ -227,7 +227,7 @@ SMODS.Joker {
     }, 
     atlas = 'pepper_jokers',
     pos = {x = 1, y = 0 },
-    unlocked = true,
+    unlocked = false,
     discovered = true,
     blueprint_compat = true,
     eternal_compat = true,
@@ -317,7 +317,7 @@ SMODS.Joker {
     }, 
     atlas = 'pepper_jokers',
     pos = {x = 2, y = 0 },
-    unlocked = true,
+    unlocked = false,
     discovered = true,
     blueprint_compat = true,
     eternal_compat = true,
@@ -412,7 +412,7 @@ SMODS.Joker {
     atlas = 'pepper_jokers',
     pos = {x = 3, y = 0 },
     unlocked = true,
-    discovered = true,
+    discovered = false,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
@@ -420,7 +420,7 @@ SMODS.Joker {
         return { 
             vars = { 
                 card.ability.extra.gain or 25,
-                card.ability.extra.gain or 0
+                card.ability.extra.mult or 0
             }
         }
     end,
@@ -505,7 +505,7 @@ SMODS.Joker {
     }, 
     atlas = 'pepper_jokers',
     pos = {x = 4, y = 0 },
-    unlocked = true,
+    unlocked = false,
     discovered = true,
     blueprint_compat = true,
     eternal_compat = true,
@@ -607,7 +607,7 @@ SMODS.Joker {
     }, 
     atlas = 'pepper_jokers',
     pos = {x = 5, y = 0 },
-    unlocked = true,
+    unlocked = false,
     discovered = true,
     blueprint_compat = true,
     eternal_compat = true,

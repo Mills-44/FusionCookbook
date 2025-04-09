@@ -37,7 +37,7 @@ local sweets_jokers = {
     "nutty_buddy",
     "jammin_jelly",
     "stay_puft",
-    "Barry_b",
+    "barry_b",
 }
 for _, joker in ipairs(sweets_jokers) do
     local path = SMODS.current_mod.path .. "/jokers/sweets/" .. joker .. ".lua"

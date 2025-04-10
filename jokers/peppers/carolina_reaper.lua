@@ -8,14 +8,13 @@ return {
         }
     },
     config = {
-        extra = {
-        }, 
+        extra = {}, 
         levels = 0
     }, 
     atlas = 'pepper_jokers',
     pos = {x = 5, y = 0 },
     unlocked = false,
-    discovered = true,
+    discovered = false,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
@@ -30,7 +29,6 @@ return {
             card = card
           }
         end
-
         if context.before then
             local base_mult = G.GAME.round_reserve.mult
             local final_mult = math.max(0, base_mult ^ 2)

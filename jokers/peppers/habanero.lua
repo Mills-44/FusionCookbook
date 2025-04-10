@@ -18,7 +18,9 @@ return {
     }, 
     atlas = 'pepper_jokers',
     pos = {x = 3, y = 0 },
-    unlocked = true,
+    rarity = 2,
+    shop_appearance = false,
+    unlocked = false,
     discovered = false,
     blueprint_compat = true,
     eternal_compat = true,
@@ -40,7 +42,7 @@ return {
           }
         end
 
-        if context.before and (context.poker_hands["Flush"] or context.poker_hands["Full House"]) then
+        if context.before and context.scoring_name and (context.scoring_name == "Flush" or context.scoring_name == "Full House") then
             card.ability.extra.mult = card.ability.extra.mult + 25
             card.ability.levels = (card.ability.levels or 0) + 1
 

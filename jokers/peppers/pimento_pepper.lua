@@ -3,7 +3,7 @@ return {
     loc_txt = {
         name = 'Pimento Pepper',
         text = {
-           "When a {C:attention}Flush{} or {C:attention}Full House{} is played",
+           "When a {C:attention}Flush{} or {C:attention}Full House{} scored",
             "this Joker gains {C:mult}+#1#{} Mult",
             "Every {C:attention}2nd{} activation levels up Spicyness!" ,
             "{C:inactive}Total Mult: {C:mult}+#2#{}"
@@ -44,7 +44,7 @@ return {
         }
         end
         -- To look if flush or full house is played
-        if context.before and (context.poker_hands["Flush"] or context.poker_hands["Full House"]) then
+        if context.before and context.scoring_name and (context.scoring_name == "Flush" or context.scoring_name == "Full House") then
             card.ability.extra.mult = card.ability.extra.mult + 3 -- Gives the mult +3
             card.ability.levels = (card.ability.levels or 0) + 1 --Gains one level
             local result = {

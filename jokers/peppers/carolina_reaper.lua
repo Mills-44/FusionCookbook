@@ -13,6 +13,8 @@ return {
     }, 
     atlas = 'pepper_jokers',
     pos = {x = 5, y = 0 },
+    rarity = 4,
+    shop_appearance = false,
     unlocked = false,
     discovered = false,
     blueprint_compat = true,

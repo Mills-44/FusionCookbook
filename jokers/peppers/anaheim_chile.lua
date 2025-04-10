@@ -18,7 +18,7 @@ return {
     atlas = 'pepper_jokers',
     pos = {x = 0, y = 0 },
     unlocked = false,
-    discovered = true,
+    discovered = false,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
@@ -37,7 +37,7 @@ return {
             message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } }
           }
         end
-        if context.before and (context.poker_hands["Flush"] or context.poker_hands["Full House"]) then
+        if context.before and context.scoring_name and (context.scoring_name == "Flush" or context.scoring_name == "Full House") then
             card.ability.extra.mult = card.ability.extra.mult + 5
             card.ability.levels = (card.ability.levels or 0) + 1
             local result = {

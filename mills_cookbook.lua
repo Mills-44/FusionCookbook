@@ -48,17 +48,17 @@ end
 
 -- SANDWHICH JOKERS
 -- Sandwhich Atlas
-SMODS.Atlas {
-    key = "sandwhich_jokers", --For the sandwhich jokers implemented in mod
-    path = "sandwhich_jokers.png", --image used for sandwhich
-    px = 71, --Sizing of jokers in 1x
-    py = 95 --1x y direction
-}
+--SMODS.Atlas {
+--    key = "sandwhich_jokers", --For the sandwhich jokers implemented in mod
+--    path = "sandwhich_jokers.png", --image used for sandwhich
+--    px = 71, --Sizing of jokers in 1x
+--    py = 95 --1x y direction
+--}
 -- Load Sandwhich Jokers
 --local sandwhich_jokers = {
 --    "everlasting_pollenstopper",
  --   "golden_crunch"
-}
+--}
 --for _, joker in ipairs(sandwhich_jokers) do
  --   local path = SMODS.current_mod.path .. "/jokers/sandwhiches/" .. joker .. ".lua"
  --   local joker_def = dofile(path)

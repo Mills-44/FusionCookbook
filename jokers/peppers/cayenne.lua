@@ -3,7 +3,7 @@ return {
     loc_txt = {
         name = 'Cayenne',
         text = {
-           "When a {C:attention}Flush{} or {C:attention}Full House{} is played",
+           "When a {C:attention}Flush{} or {C:attention}Full House{} is scored",
             "this Joker gains {C:mult}+#1#{} Mult",
             "Every {C:attention}2nd{} activation levels up Spicyness!",
             "{C:inactive}Total Mult: {C:mult}+#2#{}"
@@ -18,8 +18,10 @@ return {
     }, 
     atlas = 'pepper_jokers',
     pos = {x = 2, y = 0 },
+    rarity = 1,
+    shop_appearance = false,
     unlocked = false,
-    discovered = true,
+    discovered = false,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
@@ -39,7 +41,7 @@ return {
           }
         end
 
-        if context.before and (context.poker_hands["Flush"] or context.poker_hands["Full House"]) then
+        if context.before and context.scoring_name and (context.scoring_name == "Flush" or context.scoring_name == "Full House") then
             card.ability.extra.mult = card.ability.extra.mult + 10
             card.ability.levels = (card.ability.levels or 0) + 1
 

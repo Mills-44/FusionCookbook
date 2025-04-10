@@ -26,7 +26,7 @@ return {
     unlocked = true,
     discovered = true,
     blueprint_compat = true,
-    eternal_compat = true,
+    eternal_compat = false,
     perishable_compat = true,
     loc_vars = function(self, info_queue, card)
         return { 
@@ -47,6 +47,12 @@ return {
         if context.before and context.scoring_name and (context.scoring_name == "Flush" or context.scoring_name == "Full House") then
             card.ability.extra.mult = card.ability.extra.mult + 3 -- Gives the mult +3
             card.ability.levels = (card.ability.levels or 0) + 1 --Gains one level
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    play_sound('tangy')  
+                    return true
+                end
+            }))
             local result = {
                 message = 'Tangy!',
                 colour = G.C.MULT, -- Red Text

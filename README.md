@@ -1,6 +1,8 @@
 # Mills-Cookbook
 A Chef's kiss to the game
 
+Tailsman Needed For Mod: https://github.com/SpectralPack/Talisman
+
 Wiki Fandom: https://mills-cookbook.fandom.com/wiki/Mills_Cookbook_Wiki
 
 Hello, everyone! I’m new to the Balatro Modding community and still figuring out how to create a fun yet balanced structure for this mod. Currently, I’ve implemented an intriguing Pepper Joker system that I think many of you will enjoy. Please note that the code isn’t perfect at the moment, and it might cause crashes. If you encounter any issues, don’t hesitate to reach out to me here so I can address them in future updates. Thank you!

@@ -109,4 +109,41 @@ local cream_puff = {
     end
 }
 
-return {slice_of_bread, cream_puff}
+local homeys_doney = {
+    key = 'homeys_doney',
+    loc_txt = {
+        name = "Homey\'s Doney",
+        text = {
+            "Gives either {C:attention}+1 Discard{} or {C:attention}+1 Hand{}",
+            "for this round. {C:inactive}(Random)"
+        }
+    },
+    config = {},
+    atlas = 'snack_cards',
+    pos = {
+        x = 0,
+        y = 0
+    },
+    discovered = true,
+    unlocked = true, 
+    booster_pack = 'snack_pack',
+    use = function(self, card)
+        G.E_MANAGER:add_event(Event({
+            blocking = true,
+            func = function()
+                local buff_type = pseudorandom('homeys_doney', 2)
+                if buff_type == 1 then
+                    G.consumeables.discards = G.consumeables.discards + 1
+                    G.hand_text:add({text = '+1 Discard!', scale = 1.2, color = G.C.CHIP})
+                else
+                    G.consumeables.hands = G.consumeables.hands + 1
+                    G.hand_text:add({text = '+1 Hand!', scale = 1.2, color = G.C.MULT})
+                end
+                play_sound('tasty1')
+                return true
+            end
+        }))
+    end
+}
+
+return {slice_of_bread, cream_puff, homeys_doney}

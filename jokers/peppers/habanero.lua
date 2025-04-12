@@ -6,7 +6,8 @@ return {
            "When a {C:attention}Flush{} or {C:attention}Full House{} is played",
             "this Joker gains {C:mult}+#1#{} Mult",
             "Every {C:attention}2nd{} activation levels up Spicyness!",
-            "{C:inactive}Total Mult: {C:mult}+#2#{}"
+            "{C:inactive}Total Mult: {C:mult}+#2#{}",
+             "{C:blue} Art By gfsg "
         }
     },
     config = {
@@ -17,13 +18,20 @@ return {
         levels = 0
     }, 
     atlas = 'pepper_jokers',
-    pos = {x = 3, y = 0 },
+    pos = {
+        x = 4, 
+        y = 0 
+    },
+    soul_pos = {
+        x = 4, 
+        y = 1 
+    },
     rarity = 2,
-    shop_appearance = false,
+    in_pool = false,
     unlocked = false,
     discovered = false,
     blueprint_compat = true,
-    eternal_compat = true,
+    eternal_compat = false,
     perishable_compat = true,
     loc_vars = function(self, info_queue, card)
         return { 
@@ -34,18 +42,23 @@ return {
         }
     end,
     calculate = function(self, card, context)
-        if context.joker_main then
+        if context.joker_main and not context.before then
         return {
-            mult = card.ability.extra.mult,
-            message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
-            card = card
+            mult = card.ability.extra.mult
           }
         end
-
+        local in_pool = function(self, args)
+            return false
+        end 
         if context.before and context.scoring_name and (context.scoring_name == "Flush" or context.scoring_name == "Full House") then
             card.ability.extra.mult = card.ability.extra.mult + 25
             card.ability.levels = (card.ability.levels or 0) + 1
-
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    play_sound('mills_sizziling')
+                    return true
+                end
+            }))
             local result = {
                 message = 'Sizziling!',
                 colour = G.C.MULT,
@@ -86,10 +99,16 @@ return {
                         return true
                     end
                     })) 
-                    return {
-                        message = "Adios!",
-                        colour = G.C.CHIPS
-                    }     
-                end
+                G.E_MANAGER:add_event(Event({
+                    func = function()
+                        play_sound('mills_bye')
+                        return true
+                    end
+                }))
+                return {
+                    message = "Buh-Bye!",
+                    colour = G.C.CHIPS
+                    } 
         end
+    end
     }

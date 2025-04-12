@@ -3,51 +3,49 @@ return {
     loc_txt = {
         name = 'Carolina Reaper',
         text = {
-           "Applies {C:xmult}^2{} Mult to your total Mult each hand.",
-           "{C:inactive}Total Mult: {C:mult}+#2#{}"
+            "Applies {C:mult}+100{} to total Mult, then {C:emult}^2{} that value.",
+            "{C:blue}Art by gfsg"
         }
     },
     config = {
-        extra = {}, 
-        levels = 0
-    }, 
+        extra = {
+            mult = 100,
+            power = 2
+        }
+    },
     atlas = 'pepper_jokers',
-    pos = {x = 5, y = 0 },
+    pos = { x = 6, y = 0 },
+    soul_pos = { x = 6, y = 1 },
     rarity = 4,
-    shop_appearance = false,
-    unlocked = false,
-    discovered = false,
+    unlocked = true,
+    discovered = true,
     blueprint_compat = true,
-    eternal_compat = true,
+    eternal_compat = false,
     perishable_compat = true,
-    loc_vars = function(self, info_queue, card)
-        return { vars = {"^2"} }
+    loc_vars = function(self, info_queue, center)
+        return {
+            vars = {
+                center.ability.extra.mult,
+                center.ability.extra.power
+            }
+        }
     end,
     calculate = function(self, card, context)
-        if context.joker_main then
-        return {
-            message = "^2",
-            colour = G.C.XMULT,
-            card = card
-          }
+        if context.joker_main then  
+            return {
+                mult_mod = card.ability.extra.mult,
+                Emult_mod = card.ability.extra.power,
+                colour = G.C.DARK_EDITION,
+                card = card
+            }
         end
-        if context.before then
-            local base_mult = G.GAME.round_reserve.mult
-            local final_mult = math.max(0, base_mult ^ 2)
-
+        if context.after then
             G.E_MANAGER:add_event(Event({
                 func = function()
-                    ease_mult(self, base_mult, final_mult, 0.5, 'easeOutCubic')
-                    G.GAME.round_reserve.mult = final_mult
+                    play_sound('mills_death')
                     return true
                 end
             }))
-            
-            local result = {
-                message = ' Death -_- ',
-                colour = G.C.XMULT,
-                card = card
-            }
         end
     end
 }

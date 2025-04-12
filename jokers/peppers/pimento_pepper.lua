@@ -6,7 +6,8 @@ return {
            "When a {C:attention}Flush{} or {C:attention}Full House{} scored",
             "this Joker gains {C:mult}+#1#{} Mult",
             "Every {C:attention}2nd{} activation levels up Spicyness!" ,
-            "{C:inactive}Total Mult: {C:mult}+#2#{}"
+            "{C:inactive}Total Mult: {C:mult}+#2#{}",
+            "{C:blue} Art By gfsg "
         }
     },
     config = {
@@ -19,8 +20,12 @@ return {
     rarity = 1,  -- Common Joker
     atlas = 'pepper_jokers',
     pos = {
-        x = 6, 
+        x = 0, 
         y = 0 
+    },
+    soul_pos = {
+        x = 0,
+        y = 1
     },
     cost = 4,
     unlocked = true,
@@ -37,10 +42,9 @@ return {
         }
     end,
     calculate = function(self, card, context)
-        if context.joker_main then
+        if context.joker_main and not (context.before or context.after) then
         return {
             mult = card.ability.extra.mult,
-            message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } }
         }
         end
         -- To look if flush or full house is played
@@ -49,7 +53,7 @@ return {
             card.ability.levels = (card.ability.levels or 0) + 1 --Gains one level
             G.E_MANAGER:add_event(Event({
                 func = function()
-                    play_sound('tangy')  
+                    play_sound('mills_tangy')
                     return true
                 end
             }))
@@ -94,6 +98,12 @@ return {
             return true
         end
         })) 
+        G.E_MANAGER:add_event(Event({
+            func = function()
+                play_sound('mills_sayonara')
+                return true
+            end
+        }))
         return {
             message = "Sayonara!",--Message displayed as joker leaves
             colour = G.C.CHIPS --Blue Text

@@ -29,7 +29,7 @@ end
  --   path = "sweets_jokers.png", --image used for sweets
  --   px = 71, --Sizing of jokers in 1x
  --   py = 95 --1x y direction
-}
+--}
 -- Load Sweets Jokers
 --local sweets_jokers = {
  --   "wonkas_chocolate_bar",
@@ -39,7 +39,7 @@ end
  --   "barry_b",
  --   "gummibar",
  --   "peppermint_butler"
-}
+--}
 --    for _, joker in ipairs(sweets_jokers) do
 --    local path = SMODS.current_mod.path .. "/jokers/sweets/" .. joker .. ".lua"
 --    local joker_def = dofile(SMODS.current_mod.path .. "/jokers/sweets/" .. joker .. ".lua")

@@ -4,7 +4,7 @@ return {
     loc_txt = {
         name = 'Snack Pack',
         text = {
-             "Choose {C:attention}1{} of {C:attention}4{} Snack items",
+             "Choose {C:green}1 of 4{} Snack items",
             "to {C:attention}munch{} on"
         }
     },

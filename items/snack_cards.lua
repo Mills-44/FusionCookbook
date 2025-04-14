@@ -20,7 +20,7 @@ local slice_of_bread = {
     loc_txt = {
         name = 'Slice Of Bread',
         text = { 
-            "Combine {C:attention}2 compatible Jokers{} into",
+            "Combine {C:attention}2 Compatible Jokers{} into",
             "a {C:attention}Sandwich Joker{}"
         }
     },
@@ -68,7 +68,7 @@ local cream_puff = {
     loc_txt = {
         name = "Cream Puff",
         text = {
-            "Boosts all {C:attention}Sweet Jokers{} by {C:mult}+20%{} stats",
+            "Boosts all {C:attention}Sweet Jokers{} by {C:enhancement}+20%{} stats",
             "{C:inactive}(Chips, Mult, XMult, etc)"
         }
     },
@@ -101,7 +101,7 @@ local cream_puff = {
                     play_sound('tasty1')
                     G.hand_text:add({text = 'Sweet Boost!', scale = 1.2, color = G.C.MULT})
                 else
-                    G.hand_text:add({text = 'No Sweet Jokers!', scale = 1.1, color = G.C.RED})
+                    G.hand_text:add({text = 'No Sweet Jokers!', scale = 1.0, color = G.C.RED})
                 end
                 return true
             end
@@ -114,8 +114,8 @@ local homeys_doney = {
     loc_txt = {
         name = "Homey\'s Doney",
         text = {
-            "Gives either {C:attention}+1 Discard{} or {C:attention}+1 Hand{}",
-            "for this round. {C:inactive}(Random)"
+            "{C:green} 1 in 2{} chance to get +1 Discard or,",
+            "{C:green} 1 in 2{} chance to get +1 Hand"
         }
     },
     config = {},
@@ -146,4 +146,164 @@ local homeys_doney = {
     end
 }
 
-return {slice_of_bread, cream_puff, homeys_doney}
+local butterscotch = {
+    key = 'butterscotch',
+    loc_txt = {
+        name = "Butterscotch",
+        text = {
+            "Gains {X:mult,C:white}X0.5{} for each {C:attention}Sweets Joker{},",
+            "and multiplies money by total result",
+            "{C:inactive}Starts on {X:mult,C:white}1x"
+        }
+    },
+    config = {},
+    atlas = 'snack_cards',
+    pos = {
+        x = 0,
+        y = 0
+    },
+    discovered = true,
+    unlocked = true,
+    booster_pack = 'snack_pack',
+    use = function(self, card)
+    end
+}
+
+local bubblegum = {
+    key = 'bubblegum',
+    loc_txt = {
+        name = "Bubblegum",
+        text = {
+            "Gives {C:money}$2{} per {C:gold}Gold Card{}",
+            "in your deck"
+        }
+    },
+    config = {},
+    atlas = 'snack_cards',
+    pos = {
+        x = 0,
+        y = 0
+    },
+    discovered = true,
+    unlocked = true,
+    booster_pack = 'snack_pack',
+    use = function(self, card)
+        G.E_MANAGER:add_event(Event({
+            blocking = true,
+            func = function()
+                local gold_count = 0
+                for _, j in ipairs(G.jokers.cards) do
+                    if c.edition and c.edition.etype == 'gold' then
+                        gold_count = gold_count + 1
+                    end
+                end
+                local reward = gold_count * 2
+                G.GAME.dollar = G.GAME.dollar + reward
+                play_sound('money')
+                G.hand_text:add({
+                    text = 'Bubblicious!',
+                    colour = G.C.MONEY,
+                    scale = 1.2
+                })
+                return true
+            end
+        }))
+    end
+}
+
+local kinder_egg = {
+    key = 'kinder_egg',
+    loc_txt = {
+        name = "Kinder Egg",
+        text = {
+            "Create one random Sweets Joker"
+        }
+    },
+    config = {},
+    atlas = 'snack_cards',
+    pos = {
+        x = 0,
+        y = 0
+    },
+    discovered = true,
+    unlocked = true,
+    booster_pack = 'snack_pack',
+    use = function(self, card)
+        G.E_MANAGER:add_event(Event({
+        blocking = true,
+        func = function ()
+            local sweets_jokers = {
+                'wonkas_chocolate_bar',
+                'nutty_buddy',
+                'stay_puft',
+                'barry_b',
+                'jammin_jelly',
+                'apple_of_jacks_eye',
+                'gummibar',
+                'koolaid_man'
+            }
+
+            local chosen_key = pseudorandom_element(sweets_jokers)
+            local new_joker = create_card('Joker', G.jokers, chosen_key, 1, nil, nil)
+            G.jokers:emplace(new_joker)
+
+            play_sound('tasty2')
+            G.hand_text:add({
+                text = 'Sweet!',
+                scale = 1.3,
+                color = G.C.GREEN
+            })
+            return true
+        end
+        }))
+    end
+}
+
+local rye_chip = {
+    key = 'rye_chip',
+    loc_txt = {
+        name = "Rye Chip",
+        text = {
+            "Create two random Snack Cards"
+        }
+    },
+    config = {},
+    atlas = 'snack_cards',
+    pos = {
+        x = 0,
+        y = 0
+    },
+    discovered = true,
+    unlocked = true,
+    booster_pack = 'snack_pack',
+    use = function(self, card)
+        G.E_MANAGER:add_event(Event({
+            blocking = true, 
+            func = function()
+                local snack_cards = {
+                    'slice_of_bread',
+                    'cream_puff',
+                    'homeys_doney',
+                    'butterscotch',
+                    'bubblegum',
+                    'kinder_egg'
+                }
+                for i = 1, 2 do
+                    local key = pseudorandom_element(snack_card_keys)
+                    local snack = create_card('Consumable', G.consumeables, key, 1, nil, nil)
+                    G.consumeables:emplace(snack)
+                end
+                play_sound('tasty1')
+                G.hand_text:add({
+                    text = "Snack Time!",
+                    color = G.C.GOLD,
+                    scale = 1.2
+                })
+
+                return true
+            end
+        }))
+    end
+}
+
+return {slice_of_bread, cream_puff, homeys_doney, butterscotch, bubblegum, kinder_egg, rye_chip}

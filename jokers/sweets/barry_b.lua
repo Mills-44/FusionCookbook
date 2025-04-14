@@ -4,7 +4,7 @@ return {
         name = 'Barry B\'s Honey Tree',
         text = {
             "When scored hand contains a {C:attention}Four of a Kind{},",
-            "turn all cards in the hand into {C:glass}Glass{} Cards"
+            "turn all cards in the hand into Glass Cards"
         }
     },
     config = {},

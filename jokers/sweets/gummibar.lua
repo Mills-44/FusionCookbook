@@ -4,7 +4,7 @@ return {
         name = 'Gummibar',
         text = {
            "When scoring hand contains a {C:attention}Two Pair,",
-           "this {C:joker}Joker{} gains +3 {C:chips}Mult{}"
+           "this Joker gains +3 {C:mult}Mult{}"
         }
     },
     config = {

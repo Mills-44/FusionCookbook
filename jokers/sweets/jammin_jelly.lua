@@ -8,13 +8,13 @@ return {
         }
     },
     config = {},
-    rarity = 1,
+    rarity = 2,
     atlas = 'sweets_jokers',
     pos = {
         x = 1,
         y = 0
     },
-    cost = 5, 
+    cost = 6, 
     unlocked = true, 
     discovered = true, 
     blueprint_compat = true,

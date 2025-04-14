@@ -4,8 +4,7 @@ return {
         name = 'Stay Puft',
         text = {
              "When scored hand contains a {C:attention}Straight{},",
-            "turn all cards in the hand into either {C:attention}Wild{} or", 
-            "{C:attention}Steel{} Cards (50/50)"
+            "turn all cards in the hand into either Wild or Steel Cards (50/50)"
         }
     },
     config = {},
@@ -15,7 +14,7 @@ return {
         x = 3,
         y = 0
     },
-    cost = 4, 
+    cost = 5, 
     unlocked = true, 
     discovered = true, 
     blueprint_compat = true,

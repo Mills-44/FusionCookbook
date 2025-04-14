@@ -4,7 +4,7 @@ return {
         name = 'Peppermint Butler',
         text = {
            "When scoring hand contains a {C:attention}Pair{},",
-           "this {C:joker}Joker{} gains +5 {C:chips}Chips{}"
+           "this Joker gains +5 {C:chips}Chips{}"
         }
     },
     config = {

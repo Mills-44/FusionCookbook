@@ -4,17 +4,17 @@ return {
         name = 'Wonka\'s Chocolate Bar',
         text = {
             "When scored hand contains a {C:attention}Two Pair{},",
-            "turn all cards in the hand into {C:money}Lucky{} Cards"
+            "turn all cards in the hand into Lucky Cards"
         }
     },
     config = {},
-    rarity = 1,
+    rarity = 2,
     atlas = 'sweets_jokers',
     pos = {
         x = 4,
         y = 0
     },
-    cost = 5, 
+    cost = 6, 
     unlocked = true, 
     discovered = true, 
     blueprint_compat = true,

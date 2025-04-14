@@ -1,22 +1,22 @@
 return {
-    key = 'three_musketeers',
+    key = 'koolaid_man',
     loc_txt = {
-        name = 'Three Musketeers',
+        name = 'Kool-Aid Man',
         text = {
             "When scoring hand contains a {C:attention}Three of a Kind{},",
-           "this {C:joker}Joker{} gives {C:money}$4"
+           "this Joker gives {C:money}$4"
         }
     },
     config = {
         money = 4
     },
-    rarity = 1,
+    rarity = 2,
     atlas = 'sweets_jokers',
     pos = {
         x = 2,
         y = 0
     },
-    cost = 5, 
+    cost = 7, 
     unlocked = true, 
     discovered = true, 
     blueprint_compat = true,
@@ -41,7 +41,7 @@ return {
     
             return {
                 money = card.ability.extra.money,
-                message = "Yippe!",
+                message = "Oh Yeah!",
                 colour = G.C.MONEY
             }
         end

@@ -180,7 +180,5 @@ SMODS.Atlas {
 
 
 local candisimo_path = SMODS.current_mod.path .. "items/enhancements.lua"
-local candisimo = dofile(candisimo_path)
-local cookiesimo = dofile(cookiesimo_path)
 SMODS.Enhancement(cookiesimo)
 SMODS.Enhancement(candisimo)

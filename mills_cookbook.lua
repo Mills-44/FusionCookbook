@@ -168,3 +168,9 @@ SMODS.Sound{
     volume = 1.0,
     pitch = 1.0
 }
+
+-- ENHANCEMENTS
+
+local candisimo_path = SMODS.current_mod.path .. "items/candisimo.lua"
+local candisimo = dofile(candisimo_path)
+SMODS.Enhancement(candisimo)

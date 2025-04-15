@@ -307,7 +307,7 @@ local rye_chip = {
 }
 
 local biscoff = {
-    key = 'biscoff'
+    key = 'biscoff',
     loc_txt = {
         name = 'Biscoff',
         text = "{Choose 2 cards to turn into Candisimo Cards"

@@ -47,13 +47,10 @@ return {
                 message = '+100 Mult!',
                 colour = G.C.MULT,
                 mult_mod = card.ability.extra.mult or 0,
+                message2 = 'X2 Mult!',
+                colour2 = G.C.MULT,
             }
         end
-        return { 
-            message = '+X2 Mult!',
-            colour = G.C.MULT,
-            Xmult_mod = card.ability.extra.Xmult or 0
-        }
         local in_pool = function(self, args)
             return false
         end 

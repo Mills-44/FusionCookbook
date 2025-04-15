@@ -11,7 +11,7 @@ local candisimo = {
     pos = {
         x = 0,
         y = 0
-    }
+    },
 
     -- Runs when enhanced card is scored only
     calculate = function(self, card, context)
@@ -68,7 +68,7 @@ local cookiesimo = {
     pos = {
         x = 0,
         y = 0
-    }
+    },
 
     -- Runs when enhanced card is scored only
     calculate = function(self, card, context)
@@ -84,9 +84,8 @@ local cookiesimo = {
                 { key = "voucher", weight = 2, effect = function() G.GAME.voucher_pool:gain_random_voucher(); return {message = "Voucher Surprise!", colour = G.C.VOUCHER} end },
                 { key = "tarot", weight = 5, effect = function() G.GAME.tarot_pool:add_random(); return {message = "Tarot Gift!", colour = G.C.TAROT} end },
                 { key = "planet", weight = 5, effect = function() G.GAME.planet_pool:add_random(); return {message = "Planet Gift!", colour = G.C.PLANET} end },
-                { key = "snack_cards", weight = 5, effect = function() SMODS.ConsumablePool:add_random(); return {message = "Snack Treat!", colour = G.C.CONSUMABLE} end },
-                local total_weight = 0
-            for _, option in ipairs(GAIN_TABLE) do total_weight = total_weight + option.weight end
+                { key = "snack_cards", weight = 5, effect = function() SMODS.ConsumablePool:add_random(); return {message = "Snack Treat!", colour = G.C.CONSUMABLE} end }
+            }
 
             local total_weight = 0
             for _, option in ipairs(GAIN_TABLE) do total_weight = total_weight + option.weight end
@@ -104,7 +103,6 @@ local cookiesimo = {
             end
         end
     end
-}
 }
 
 return {candisimo, cookiesimo}

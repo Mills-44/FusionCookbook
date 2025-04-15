@@ -36,12 +36,8 @@ return {
                 message = '+100 Mult!',
                 colour = G.C.MULT,
                 mult_mod = card.ability.extra.mult,
-            }
-        end
-            return{
-                message = '^2 Mult!',
-                colour = G.C.DARK_EDITION,
-                Emult_mod = card.ability.extra.power
+                message2 = '^2 Mult!',
+                colour2 = G.C.DARK_EDITION
             }
         end
         if context.after then
@@ -51,6 +47,6 @@ return {
                     return true
                 end
             }))
-        end
     end
+end
 }

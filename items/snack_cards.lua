@@ -264,7 +264,7 @@ local rye_chip = {
     loc_txt = {
         name = "Rye Chip",
         text = {
-            "Create two random Snack Cards"
+            "Create 2 random Snack Cards"
         }
     },
     config = {},
@@ -347,4 +347,46 @@ local biscoff = {
     end
 }
 
-return {slice_of_bread, cream_puff, homeys_doney, butterscotch, bubblegum, kinder_egg, rye_chip, biscoff}
+local pretzel = {
+    key = 'pretzel',
+    loc_txt = {
+        name = 'Pretzel',
+        text = "Select 1 card to become a Cookiesimo Card"
+    },
+    config = {},
+    atlas = 'snack_cards',
+    pos = {
+        x = 0,
+        y = 0
+    },
+    discovered = true,
+    unlocked = true, 
+    booster_pack = 'snack_pack',
+    use = function(self, card)
+        G.STATE_ARGS.selecting_card = true
+        G:select_cards({
+            amount = 1,
+            prompt = 'Select 1 card to become a Cookiesimo Card',
+            must_have = true,
+            filter = function(c)
+                return c.area == G.hand
+            end,
+            callback = function(selected)
+                for _, c in ipairs(selected) do
+                    c:set_edition({cookiesimo = true})
+                    c:juice_up(0.5)
+                end
+                play_sound('holo1')
+                G.hand_text:add({
+                    text = "Salty!",
+                    scale = 1.3,
+                    color = G.C.FILTER
+                })
+            end
+        })
+        return true
+    end
+}
+
+
+return {slice_of_bread, cream_puff, homeys_doney, butterscotch, bubblegum, kinder_egg, rye_chip, biscoff, preztel}

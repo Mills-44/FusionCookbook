@@ -170,7 +170,17 @@ SMODS.Sound{
 }
 
 -- ENHANCEMENTS
+ --Register Snack Pack image
+SMODS.Atlas {
+    key = "enhancements",
+    path = "enhancements.png",
+    px = 71, --Sizing in 1x
+    py = 95 --1x y direction
+}
 
-local candisimo_path = SMODS.current_mod.path .. "items/candisimo.lua"
+
+local candisimo_path = SMODS.current_mod.path .. "items/enhancements.lua"
 local candisimo = dofile(candisimo_path)
+local cookiesimo = dofile(cookiesimo_path)
+SMODS.Enhancement(cookiesimo)
 SMODS.Enhancement(candisimo)

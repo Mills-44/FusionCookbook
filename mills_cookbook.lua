@@ -39,6 +39,9 @@ end
  --   "barry_b",
  --   "gummibar",
  --   "peppermint_butler"
+ --   "apple_of_jacks eye",
+ --   "koolaid_man",
+ --   ""
 --}
 --    for _, joker in ipairs(sweets_jokers) do
 --    local path = SMODS.current_mod.path .. "/jokers/sweets/" .. joker .. ".lua"

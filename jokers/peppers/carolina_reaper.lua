@@ -3,8 +3,8 @@ return {
     loc_txt = {
         name = 'Carolina Reaper',
         text = {
-            "Applies {C:mult}+100{} to total Mult, then {C:emult}^2{} that value.",
-            "{C:blue}Art by gfsg"
+            "Applies {C:mult}+100{} to total Mult, then {C:dark_edition}^2{} that value.",
+            "{X:gold,C:blue} Art by gfsg"
         }
     },
     config = {
@@ -33,10 +33,15 @@ return {
     calculate = function(self, card, context)
         if context.joker_main then  
             return {
+                message = '+100 Mult!',
+                colour = G.C.MULT,
                 mult_mod = card.ability.extra.mult,
-                Emult_mod = card.ability.extra.power,
+            }
+        end
+            return{
+                message = '^2 Mult!',
                 colour = G.C.DARK_EDITION,
-                card = card
+                Emult_mod = card.ability.extra.power
             }
         end
         if context.after then

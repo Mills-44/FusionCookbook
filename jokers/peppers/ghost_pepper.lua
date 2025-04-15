@@ -4,10 +4,10 @@ return {
         name = 'Ghost Pepper',
         text = {
            "Gives {C:mult}+100{} Mult and doubles your current Mult,",
-            "On {C:attention}Flush{} or {C:attention}Full Houses{} Level up and after {C:attention}3{} infernos.",
-            "The {C:attention}3rd{} level activates Pain!",
+            "On {C:attention}Flush{} or {C:attention}Full Houses{} Level up and after {C:attention}5{} infernos.",
+            "The {C:attention}5th{} level activates Pain!",
             "{C:inactive}Total Mult: {C:mult}+#2#{}",
-             "{C:blue} Art By gfsg "
+             "{X:gold,C:blue} Art By gfsg "
         }
     },
     config = {
@@ -27,7 +27,6 @@ return {
         y = 1
     },
     rarity = 3,
-    in_pool = false,
     unlocked = false,
     discovered = false,
     blueprint_compat = true,
@@ -45,10 +44,16 @@ return {
     calculate = function(self, card, context)
         if context.joker_main and not context.before then
             return {
+                message = '+100 Mult!',
+                colour = G.C.MULT,
                 mult_mod = card.ability.extra.mult or 0,
-                Xmult_mod = card.ability.extra.Xmult or 0
             }
         end
+        return { 
+            message = '+X2 Mult!',
+            colour = G.C.MULT,
+            Xmult_mod = card.ability.extra.Xmult or 0
+        }
         local in_pool = function(self, args)
             return false
         end 
@@ -65,7 +70,7 @@ return {
                 colour = G.C.MULT,
                 card = card
             }
-            if card.ability.levels >= 3 then
+            if card.ability.levels >= 5 then
                 card.ability.levels = 0
                   --Flags new version
                 card.ability.evolve_to = "j_mills_carolina_reaper"

@@ -5,9 +5,9 @@ return {
         text = {
            "When a {C:attention}Flush{} or {C:attention}Full House{} is played",
             "this Joker gains {C:mult}+#1#{} Mult",
-            "Every {C:attention}2nd{} activation levels up Spicyness!",
+            "Every {C:attention}3rd{} activation levels up Spicyness!",
             "{C:inactive}Total Mult: {C:mult}+#2#{}",
-             "{C:blue} Art By gfsg "
+             "{X:gold,C:blue} Art By gfsg "
         }
     },
     config = {extra = {
@@ -62,7 +62,7 @@ return {
                 colour = G.C.MULT,
                 card = card
             }
-            if card.ability.levels >= 2 then
+            if card.ability.levels >= 3 then
                 card.ability.levels = 0
                 -- Flags new version
                 card.ability.evolve_to = "j_mills_jalapeno"

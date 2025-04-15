@@ -306,4 +306,25 @@ local rye_chip = {
     end
 }
 
-return {slice_of_bread, cream_puff, homeys_doney, butterscotch, bubblegum, kinder_egg, rye_chip}
+local biscoff = {
+    key = 'biscoff'
+    loc_txt = {
+        name 'Biscoff'
+        text = ""
+    },
+    config = {},
+    atlas = 'snack_cards'
+    pos = {
+        x = 0,
+        y = 0
+    }
+    discovered = true,
+    unlocked = true, 
+    booster_pack = 'snack_pack',
+    use = function(self, card)
+        G.E_MANAGER:add_event(Event({
+            blocking = true, 
+            func = function()
+}
+
+return {slice_of_bread, cream_puff, homeys_doney, butterscotch, bubblegum, kinder_egg, rye_chip, biscoff}

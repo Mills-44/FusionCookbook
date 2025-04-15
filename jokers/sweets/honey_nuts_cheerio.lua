@@ -1,7 +1,7 @@
 return {
-    key = 'apple_of_jacks_eye',
+    key = 'honey_nuts_cheerio',
     loc_txt = {
-        name = 'Apple of Jack\'s Eye',
+        name = 'Honey Nut\'s Cheerio',
         text = {
             "All {C:spades}spades{} played in scoring hand,",
             "turn into Gold Cards"
@@ -35,7 +35,7 @@ return {
                 }))
             end
             return {
-                message = "This is Halloween!",
+                message = "Delicious!",
                 colour = G.C.GOLD
             }
         end

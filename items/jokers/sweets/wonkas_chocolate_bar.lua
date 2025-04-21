@@ -1,4 +1,4 @@
-return {
+SMODS.Joker {
     key = 'wonkas_chocolate_bar',
     loc_txt = {
         name = 'Wonka\'s Chocolate Bar',

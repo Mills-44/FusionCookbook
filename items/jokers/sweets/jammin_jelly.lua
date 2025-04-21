@@ -1,4 +1,4 @@
-return {
+SMODS.Joker {
     key = 'jammin_jelly',
     loc_txt = {
         name = 'Jammin\' Jelly',
@@ -9,12 +9,12 @@ return {
     },
     config = {},
     rarity = 2,
-    atlas = 'sweets_jokers',
+    atlas = 'sweet_jokers',
     pos = {
-        x = 1,
+        x = 2,
         y = 0
     },
-    cost = 6, 
+    cost = 6,
     unlocked = true, 
     discovered = true, 
     blueprint_compat = true,

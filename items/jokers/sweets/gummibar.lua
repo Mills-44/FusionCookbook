@@ -1,4 +1,4 @@
-return {
+SMODS.Joker {
     key = 'gummibar',
     loc_txt = {
         name = 'Gummibar',
@@ -13,9 +13,9 @@ return {
             mult = 0
         }, 
     }, 
-    atlas = 'sweets_jokers',
+    atlas = 'sweet_jokers',
     pos = {
-        x = 0, 
+        x = 7, 
         y = 0 
     },
     cost = 5,

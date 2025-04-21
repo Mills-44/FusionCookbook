@@ -1,4 +1,4 @@
-return {
+SMODS.Joker {
     key = 'apple_of_jacks_eye',
     loc_txt = {
         name = 'Apple of Jack\'s Eye',
@@ -8,9 +8,9 @@ return {
         }
     },
     config = {},
-    atlas = 'sweets_jokers',
+    atlas = 'sweet_jokers',
     pos = {
-        x = 0,
+        x = 4,
         y = 0
     },
     cost = 4,
@@ -25,28 +25,33 @@ return {
     end,
     calculate = function(self, card, context)
         if context.scoring_hand and context.cardarea == G.play then
-            local suits_count = {H = 0, D = 0, C = 0, S = 0}
+            local suit_count = { H = 0, D = 0, C = 0, S = 0 }
             for _, played_card in ipairs(context.full_hand or {}) do
                 local suit = played_card.base.suit
-                suits_count[suit] = (suits_count[suit] or 0) + 1
+                if suit then
+                    suit_count[suit] = (suit_count[suit] or 0) + 1
+                end
             end
-            for _, count in pairs(suits_count) do
+    
+            for _, count in pairs(suit_count) do
                 if count >= 3 then
                     G.E_MANAGER:add_event(Event({
                         func = function()
                             local snack_cards = {
-                                'slice_of_bread', 'cream_puff', 'kinder_egg', 'bubblegum', 'homeys_doney', 'butterscotch', 'rye_chip'
+                                'slice_of_bread',
+                                -- Add your future snack keys here
                             }
-                            local chosen = pseudorandom_element(snack_cards)
-                            G.consumeables:emplace(create_card('Consumeable', G.consumeables, chosen, 1))
+                            local selected = pseudorandom_element(snack_cards)
+                            local snack_card = create_card('Consumable', G.consumables, selected, 1)
+                            G.consumables:emplace(snack_card)
+                            G.hand_text:add({ text = 'Snack Break!', scale = 1.1, colour = G.C.MONEY })
                             play_sound('tarot1')
-                            G.hand_text:add({text = 'Sweet Draw!', scale = 1.2, color = G.C.SECONDARY})
                             return true
                         end
                     }))
-                    break
+                    break -- only 1 card should be added per scoring
                 end
             end
         end
     end
-}
+}    

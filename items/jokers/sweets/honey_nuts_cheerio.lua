@@ -1,4 +1,4 @@
-return {
+SMODS.Joker {
     key = 'honey_nuts_cheerio',
     loc_txt = {
         name = 'Honey Nut\'s Cheerio',
@@ -8,9 +8,9 @@ return {
         }
     },
     config = {},
-    atlas = 'sweets_jokers',
+    atlas = 'sweet_jokers',
     pos = {
-        x = 0,
+        x = 5,
         y = 0
     },
     cost = 4,

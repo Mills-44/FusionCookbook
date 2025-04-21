@@ -1,4 +1,4 @@
-return {
+SMODS.Joker {
     key = 'peppermint_butler',
     loc_txt = {
         name = 'Peppermint Butler',
@@ -13,7 +13,7 @@ return {
             chips = 0
         }, 
     }, 
-    atlas = 'sweets_jokers',
+    atlas = 'sweet_jokers',
     pos = {
         x = 0, 
         y = 0 

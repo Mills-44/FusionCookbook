@@ -1,4 +1,4 @@
-return {
+SMODS.Joker {
     key = 'barry_b',
     loc_txt = {
         name = 'Barry B\'s Honey Tree',
@@ -9,12 +9,12 @@ return {
     },
     config = {},
     rarity = 1,
-    atlas = 'sweets_jokers',
+    atlas = 'sweet_jokers',
     pos = {
-        x = 2,
+        x = 3,
         y = 0
     },
-    cost = 5, 
+    cost = 5,
     unlocked = true, 
     discovered = true, 
     blueprint_compat = true,

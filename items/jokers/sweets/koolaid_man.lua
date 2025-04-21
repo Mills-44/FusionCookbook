@@ -1,4 +1,4 @@
-return {
+SMODS.Joker {
     key = 'koolaid_man',
     loc_txt = {
         name = 'Kool-Aid Man',
@@ -11,12 +11,12 @@ return {
         money = 4
     },
     rarity = 2,
-    atlas = 'sweets_jokers',
+    atlas = 'sweet_jokers',
     pos = {
         x = 2,
         y = 0
     },
-    cost = 7, 
+    cost = 7,
     unlocked = true, 
     discovered = true, 
     blueprint_compat = true,

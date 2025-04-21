@@ -1,4 +1,4 @@
-return {
+SMODS.Joker {
     key = 'stay_puft',
     loc_txt = {
         name = 'Stay Puft',
@@ -9,9 +9,9 @@ return {
     },
     config = {},
     rarity = 1,
-    atlas = 'sweets_jokers',
+    atlas = 'sweet_jokers',
     pos = {
-        x = 3,
+        x = 1,
         y = 0
     },
     cost = 5, 

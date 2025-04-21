@@ -74,13 +74,13 @@ end
 
 local INSERT_SNACKS = {
     'slice_of_bread',
-    'cream_puff',
-    'homeys_doney',
-    'butterscotch',
-    'bubblegum',
-    'kinder_egg',
-    'biscoff',
-    'pretzel'
+  --  'cream_puff',
+  --  'homeys_doney',
+  --  'butterscotch',
+  --  'bubblegum',
+  --  'kinder_egg',
+  --  'biscoff',
+  --  'pretzel'
 }
 for i = 1, #INSERT_SNACKS do
     local status, err = pcall(function()

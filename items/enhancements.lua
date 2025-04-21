@@ -3,11 +3,12 @@ local candisimo = {
     key = "candisimo",
     loc_txt = {
         name = "Candisimo",
-        text ={ "If scored in {C:attention}Flush or lower{}, gain {C:chips}+5{} chips, ",
-            "If scored in {C:attention}Full House or higher{}, gain {C:mult}+2{} mult"
+        text ={ 
+            "If scored hand is a {C:attention}Flush or lower{}, gain {C:chips}+5{} chips, ",
+            "If scored hand is a {C:attention}Full House or higher{}, gain {C:mult}+2{} mult"
         }
     },
-    atlas = "enhancements.png",
+    atlas = "enhancements",
     pos = {
         x = 0,
         y = 0
@@ -47,11 +48,16 @@ local candisimo = {
         end
     end,
     loc_vars = function(self, card)
+        local chips = 0
+        local mult = 0
+    
+        if card.ability and card.ability.extra then
+            chips = card.ability.extra.candisimo_chips or 0
+            mult = card.ability.extra.candisimo_mult or 0
+        end
+    
         return {
-            vars = {
-                card.ability.extra.candisimo_chips or 0,
-                card.ability.extra.candisimo_mult or 0
-            }
+            vars = { chips, mult }
         }
     end
 }
@@ -64,16 +70,22 @@ local cookiesimo = {
         text ={  "On score, triggers a random sweet surprise equal to the rank of card"
         }
     },
-    atlas = "enhancements.png",
+    atlas = "enhancements",
     pos = {
-        x = 0,
+        x = 1,
         y = 0
     },
-
+    loc_vars = function(self, info_queue, card)
+        return {
+            vars = {
+                card and card.ability and card.ability.name or ""
+            }
+        }
+    end,
     -- Runs when enhanced card is scored only
     calculate = function(self, card, context)
         if context.scoring_card and context.cardarea == G.play and context.full_hand then
-            local rank = card.base.rank or 1
+            local rank = card:get_id() or 1
             local GAIN_TABLE = {
                 { key = "chips", weight = 20, effect = function() return {chips = 5 * rank, message = "+"..(5 * rank).." Chips!", colour = G.C.CHIPS} end },
                 { key = "mult", weight = 20, effect = function() return {mult = math.ceil(rank / 2), message = "+"..math.ceil(rank / 2).." Mult!", colour = G.C.MULT} end },

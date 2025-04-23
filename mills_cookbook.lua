@@ -17,13 +17,19 @@ SMODS.Atlas {
     px = 71,
     py = 95
 }
+SMODS.Atlas { 
+    key = 'koolaid_man',
+    path = "koolaid_man.png",
+    px = 71,
+    py = 95
+}
 -- Register Sandwhich Atlas (commented out for now)
---SMODS.Atlas {
-  --  key = "sandwhich_jokers", --For the sandwhich jokers implemented in mod
-  --  path = "sandwhich_jokers.png", --image used for sandwhich
-  --  px = 71, --Sizing of jokers in 1x
-  --  py = 95 --1x y direction
---}
+SMODS.Atlas {
+    key = "sandwich_jokers", 
+    path = "sandwich_jokers.png", 
+    px = 71, 
+    py = 95 
+}
 -- Snack Packs
 SMODS.Atlas { 
     key = 'snack_pack',
@@ -55,42 +61,27 @@ SMODS.ConsumableType {
     loc_txt = {
         name = 'Snack',
         collection = 'Snack Cards',
-        text = "Find this in a",
-            "Snack Pack to",
-            "learn what it does"
     },
     collection_rows = {3,3},
     shop_rate = 1
 }
 
-local cae = CardArea.emplace
-function CardArea:emplace(card, location, stay_flipped)
-    if self == G.consumeables and card.ability.set == "Snack" then
-        G.consumeables:emplace(card, location, stay_flipped)
-        return
-    end
-    cae(self, card, location, stay_flipped)
-end
-
 local INSERT_SNACKS = {
     'slice_of_bread',
-  --  'cream_puff',
-  --  'homeys_doney',
-  --  'butterscotch',
-  --  'bubblegum',
-  --  'kinder_egg',
-  --  'biscoff',
-  --  'pretzel'
+    'cream_puff',
+    'homeys_doney',
+    'butterscotch',
+    'bubblegum',
+  --  'rye_chip',
+   -- 'kinder_egg',
+ --   'biscoff',
+   -- 'pretzel'
 }
-for i = 1, #INSERT_SNACKS do
-    local status, err = pcall(function()
-        return NFS.load(SMODS.current_mod.path .. 'items/snacks/' .. INSERT_SNACKS[i] .. '.lua')()
-    end)
-    sendDebugMessage("Loaded Snacks: " .. INSERT_SNACKS[i], 'mills')
-    if not status then
-        error(INSERT_SNACKS[i] .. ": " .. err)
-    end
+for _, file in ipairs(INSERT_SNACKS) do
+    sendDebugMessage("Executing items/snacks/" .. file .. ".lua", "mills")
+    assert(SMODS.load_file("items/snacks/" .. file .. ".lua"))()
 end
+
 --Insert Snack Pack
 local INSERT_SNACK_PACKS = {
     'snack_pack_normal_1',
@@ -98,6 +89,21 @@ local INSERT_SNACK_PACKS = {
     'snack_pack_jumbo_1',
     --'' For future cards
 }
+
+mills.getsnackkey = function(seed)
+    seed = seed or 'seed'
+    local pool = get_current_pool('Snack')
+    local snackkey = pseudorandom_element(pool, pseudoseed(seed))
+    local it, itlimit = 0, 100 -- so we don't lock the game up.
+    while snackkey == 'UNAVAILABLE' do
+      it = it + 1
+      if it >= itlimit then break end
+      snackkey = pseudorandom_element(pool, pseudoseed(seed))
+    end
+  
+    return snackkey ~= 'UNAVAILABLE' and snackkey or 'c_mills_slice_of_bread'
+  end
+  
 for i = 1, #INSERT_SNACK_PACKS do
     local status, err = pcall(function()
         return NFS.load(SMODS.current_mod.path .. 'items/boosters/' .. INSERT_SNACK_PACKS[i] .. '.lua')()
@@ -140,6 +146,32 @@ for _, file in ipairs(sweet_jokers) do
     sendDebugMessage("Executing items/jokers/sweet/" .. file .. ".lua", "mills")
     assert(SMODS.load_file("items/jokers/sweet/" .. file .. ".lua"))()
 end
+
+local sandwich_jokers = {
+ --  "everlasting_pollenstopper",
+ --  "flayfluff_sub",
+ --  "gloopwhich",
+ --  "mr_pb_and_jelly",
+ --  "golden_crunch"
+}
+
+for _, file in ipairs(sandwich_jokers) do
+    sendDebugMessage("Executing items/jokers/sandwiches/" .. file .. ".lua", "mills")
+    assert(SMODS.load_file("items/jokers/sandwiches/" .. file .. ".lua"))()
+end
+
+-- ||       INSERT CARD MODS        ||
+
+local card_mod = {
+    "cookiesimo",
+    "candisimo"
+ }
+
+ for _, file in ipairs(card_mod) do
+    sendDebugMessage("Executing items/modifiers/" .. file .. ".lua", "mills")
+    assert(SMODS.load_file("items/modifiers/" .. file .. ".lua"))()
+end
+
 -- ||       SOUNDS         ||
 
 SMODS.Sound{
@@ -227,7 +259,14 @@ SMODS.Sound{
 
 SMODS.Sound{
     key = 'goopy',
-    path = 'Goopy.ogg',
+    path = 'goopy.ogg',
+    volume = 1.0,
+    pitch = 1.0
+}
+
+SMODS.Sound{
+    key = 'doh',
+    path = 'doh.ogg',
     volume = 1.0,
     pitch = 1.0
 }

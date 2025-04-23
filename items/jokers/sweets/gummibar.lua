@@ -3,8 +3,9 @@ SMODS.Joker {
     loc_txt = {
         name = 'Gummibar',
         text = {
-           "When scoring hand contains a {C:attention}Two Pair,",
-           "this Joker gains +3 {C:mult}Mult{}"
+           "When scoring hand is a {C:attention}Two Pair{},",
+           "this Joker gains +3 {C:mult}Mult{}",
+           "{C:inactive}Total Mult: {C:mult}+#2#{}"
         }
     },
     config = {
@@ -34,11 +35,6 @@ SMODS.Joker {
         }
     end,
     calculate = function(self, card, context)
-        if context.joker_main and not context.before then
-        return {
-            chips = card.ability.extra.mult
-          }
-        end
         if context.joker_main and not context.before then
             return {
                 mult = card.ability.extra.mult

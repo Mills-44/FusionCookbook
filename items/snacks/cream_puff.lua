@@ -19,6 +19,9 @@ SMODS.Consumable {
     cost = 3,
     discovered = true,
     unlocked = true,
+    can_use = function(self)
+        return true 
+    end,
     use = function(self, card)
         G.E_MANAGER:add_event(Event({
             blocking = true,

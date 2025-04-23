@@ -136,7 +136,7 @@ local sweet_jokers = {
     "gummibar",
     "honey_nuts_cheerio",
     "jammin_jelly",
-    "koolaid_man",
+  --  "koolaid_man",
     "nutty_buddy",
     "peppermint_butler",
     "stay_puft"

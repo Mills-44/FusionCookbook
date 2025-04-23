@@ -15,6 +15,9 @@ SMODS.Consumable {
     cost = 3,
     discovered = true,
     unlocked = true,
+    can_use = function(self)
+        return true 
+    end,
     use = function(self, card)
         local fusion_recipes = {
             {

@@ -51,4 +51,3 @@ SMODS.Consumable {
         }))
     end
 }
-snacks

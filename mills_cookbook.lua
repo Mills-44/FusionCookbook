@@ -12,20 +12,14 @@ SMODS.Atlas {
 }
 --Sweet Jokers
 SMODS.Atlas { 
-    key = 'sweet_jokers',
-    path = "sweet_jokers.png",
+    key = 'apple_of_jacks_eye',
+    path = "apple_of_jacks_eye.png",
     px = 71,
     py = 95
 }
 SMODS.Atlas { 
-    key = 'peppermint_butler',
-    path = "peppermint_butler.png",
-    px = 71,
-    py = 95
-}
-SMODS.Atlas { 
-    key = 'nutty_buddy',
-    path = "nutty_buddy.png",
+    key = 'barry_b',
+    path = "barry_b.png",
     px = 71,
     py = 95
 }
@@ -36,8 +30,38 @@ SMODS.Atlas {
     py = 95
 }
 SMODS.Atlas { 
+    key = 'honey_nut_cheerios',
+    path = "honey_nut_cheerios.png",
+    px = 71,
+    py = 95
+}
+SMODS.Atlas { 
+    key = 'jammin_jelly',
+    path = "jammin_jelly.png",
+    px = 71,
+    py = 95
+}
+SMODS.Atlas { 
     key = 'koolaid_man',
     path = "koolaid_man.png",
+    px = 71,
+    py = 95
+}
+SMODS.Atlas { 
+    key = 'nutty_buddy',
+    path = "nutty_buddy.png",
+    px = 71,
+    py = 95
+}
+SMODS.Atlas { 
+    key = 'stay_puft',
+    path = "stay_puft.png",
+    px = 71,
+    py = 95
+}
+SMODS.Atlas { 
+    key = 'wonkas_chocolate_bar',
+    path = "wonkas_chocolate_bar.png",
     px = 71,
     py = 95
 }

@@ -18,6 +18,24 @@ SMODS.Atlas {
     py = 95
 }
 SMODS.Atlas { 
+    key = 'peppermint_butler',
+    path = "peppermint_butler.png",
+    px = 71,
+    py = 95
+}
+SMODS.Atlas { 
+    key = 'nutty_buddy',
+    path = "nutty_buddy.png",
+    px = 71,
+    py = 95
+}
+SMODS.Atlas { 
+    key = 'gummibar',
+    path = "gummibar.png",
+    px = 71,
+    py = 95
+}
+SMODS.Atlas { 
     key = 'koolaid_man',
     path = "koolaid_man.png",
     px = 71,
@@ -136,7 +154,7 @@ local sweet_jokers = {
     "gummibar",
     "honey_nuts_cheerio",
     "jammin_jelly",
-  --  "koolaid_man",
+    "koolaid_man",
     "nutty_buddy",
     "peppermint_butler",
     "stay_puft"

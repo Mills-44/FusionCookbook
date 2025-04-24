@@ -3,7 +3,7 @@ SMODS.Joker {
     loc_txt = {
         name = 'Gummibar',
         text = {
-           "When scoring hand is a {C:attention}Two Pair{},",
+            "If the scoring hand is a {C:attention}Straight{},",
            "this Joker gains +3 {C:mult}Mult{}",
            "{C:inactive}Total Mult: {C:mult}+#2#{}"
         }
@@ -14,9 +14,9 @@ SMODS.Joker {
             mult = 0
         }, 
     }, 
-    atlas = 'sweet_jokers',
+    atlas = 'gummibar',
     pos = {
-        x = 7, 
+        x = 0, 
         y = 0 
     },
     cost = 5,
@@ -40,28 +40,14 @@ SMODS.Joker {
                 mult = card.ability.extra.mult
             }
         end
-        if context.before and context.full_hand then
-            local pair_count = 0
-            local rank_counts = {}
-            for _, c in ipairs(context.full_hand) do
-                local v = c.base.value
-                rank_counts[v] = (rank_counts[v] or 0) + 1
-            end
 
-            for _, count in pairs(rank_counts) do
-                if count == 2 then
-                    pair_count = pair_count + 1
-                end
-            end
-
-            if pair_count == 2 then
-                card.ability.extra.mult = (card.ability.extra.mult or 0) + card.ability.extra.gain
-                return {
-                    message = "Beba bi duba duba yum yum!",
-                    colour = G.C.MULT,
-                    card = card
-                }
-            end
+        if context.before and context.scoring_name == "Straight" then
+            card.ability.extra.mult = (card.ability.extra.mult or 0) + card.ability.extra.gain
+            return {
+                message = "Beba bi duba duba yum yum!",
+                colour = G.C.MULT,
+                card = card
+            }
         end
     end
 }

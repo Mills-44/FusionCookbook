@@ -11,9 +11,9 @@ SMODS.Joker {
         money = 4
     },
     rarity = 2,
-    atlas = 'sweet_jokers',
+    atlas = 'koolaid_man',
     pos = {
-        x = 2,
+        x = 0,
         y = 0
     },
     cost = 7,
@@ -23,8 +23,12 @@ SMODS.Joker {
     eternal_compat = true,
     perishable_compat = true,
     loc_vars = function(self, info_queue, card)
-		return { vars = { card.ability.extra.money } }
-	end,
+        return { 
+            vars = { 
+                self.config.money or 0 
+            } 
+        }
+    end,
     calculate = function(self, card, context)
         -- Trigger only once for the whole hand (context.before)
         if context.before and context.scoring_name == 'Three of a Kind' and context.scoring_hand then

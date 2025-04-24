@@ -9,9 +9,9 @@ SMODS.Joker {
     },
     config = {},
     rarity = 1,
-    atlas = 'sweet_jokers',
+    atlas = 'stay_puft',
     pos = {
-        x = 1,
+        x = 0,
         y = 0
     },
     cost = 5, 

@@ -8,9 +8,9 @@ SMODS.Joker {
         }
     },
     config = {},
-    atlas = 'sweet_jokers',
+    atlas = 'apple_of_jacks_eye',
     pos = {
-        x = 4,
+        x = 0,
         y = 0
     },
     cost = 4,

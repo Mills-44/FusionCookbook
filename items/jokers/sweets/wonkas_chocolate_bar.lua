@@ -9,9 +9,9 @@ SMODS.Joker {
     },
     config = {},
     rarity = 2,
-    atlas = 'sweets_jokers',
+    atlas = 'wonkas_chocolate_bar',
     pos = {
-        x = 4,
+        x = 0,
         y = 0
     },
     cost = 6, 

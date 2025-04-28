@@ -1,314 +1,114 @@
+if not MILLS then
+	MILLS = {}
+end
+
 mills = SMODS.current_mod
-mills_path = SMODS.current_mod.path
 
-
--- ||       ATLAS       ||
--- Pepper Jokers
-SMODS.Atlas { 
-    key = 'pepper_jokers',
-    path = "pepper_jokers.png",
-    px = 71,
-    py = 95
-}
---Sweet Jokers
-SMODS.Atlas { 
-    key = 'apple_of_jacks_eye',
-    path = "apple_of_jacks_eye.png",
-    px = 71,
-    py = 95
-}
-SMODS.Atlas { 
-    key = 'barry_b',
-    path = "barry_b.png",
-    px = 71,
-    py = 95
-}
-SMODS.Atlas { 
-    key = 'gummibar',
-    path = "gummibar.png",
-    px = 71,
-    py = 95
-}
-SMODS.Atlas { 
-    key = 'honey_nut_cheerios',
-    path = "honey_nut_cheerios.png",
-    px = 71,
-    py = 95
-}
-SMODS.Atlas { 
-    key = 'jammin_jelly',
-    path = "jammin_jelly.png",
-    px = 71,
-    py = 95
-}
-SMODS.Atlas { 
-    key = 'koolaid_man',
-    path = "koolaid_man.png",
-    px = 71,
-    py = 95
-}
-SMODS.Atlas { 
-    key = 'nutty_buddy',
-    path = "nutty_buddy.png",
-    px = 71,
-    py = 95
-}
-SMODS.Atlas { 
-    key = 'stay_puft',
-    path = "stay_puft.png",
-    px = 71,
-    py = 95
-}
-SMODS.Atlas { 
-    key = 'wonkas_chocolate_bar',
-    path = "wonkas_chocolate_bar.png",
-    px = 71,
-    py = 95
-}
--- Register Sandwhich Atlas (commented out for now)
-SMODS.Atlas {
-    key = "sandwich_jokers", 
-    path = "sandwich_jokers.png", 
-    px = 71, 
-    py = 95 
-}
--- Snack Packs
-SMODS.Atlas { 
-    key = 'snack_pack',
-    path = "snack_pack.png",
-    px = 71,
-    py = 95
-}
---Snack Cards
-SMODS.Atlas { 
-    key = 'snack_cards',
-    path = "snack_cards.png",
-    px = 71,
-    py = 95
-}
-SMODS.Atlas {
-    key = "enhancements",
-    path = "enhancements.png",
-    px = 71, --Sizing in 1x
-    py = 95 --1x y direction
-}
-
--- ||       INSERT SNACK SET        ||
---Insert Snack Cards
-SMODS.ConsumableType {
-    key = 'Snack',
-    primary_colour = G.C.SET.Tarot,
-    secondary_colour = G.C.SECONDARY_SET.Tarot,
-    default = 'c_mills_slice_of_bread',
-    loc_txt = {
-        name = 'Snack',
-        collection = 'Snack Cards',
-    },
-    collection_rows = {3,3},
-    shop_rate = 1
-}
-
-local INSERT_SNACKS = {
-    'slice_of_bread',
+local atlas_keys = {
+    'pepper_jokers',
+    'apple_of_jacks_eye',
+    'barry_b',
+    'gummibar',
+    'honey_nut_cheerios',
+    'jammin_jelly',
+    'koolaid_man',
+    'nutty_buddy',
+    'peppermint_butler',
+    'stay_puft',
+    'wonkas_chocolate_bar',
+    'everlasting_pollenstopper',
+    'flayfluff_sub',
+    'gloopwich',
+    'golden_crunch',
+    'mr_pb_and_jelly',
+    'snack_pack',
+    'snack_pack_jumbo',
+    'snack_pack_mega',
+    'munch',
+    'biscoff',
+    'bubblegum',
+    'butterscotch',
     'cream_puff',
     'homeys_doney',
-    'butterscotch',
-    'bubblegum',
-  --  'rye_chip',
-   -- 'kinder_egg',
- --   'biscoff',
-   -- 'pretzel'
-}
-for _, file in ipairs(INSERT_SNACKS) do
-    sendDebugMessage("Executing items/snacks/" .. file .. ".lua", "mills")
-    assert(SMODS.load_file("items/snacks/" .. file .. ".lua"))()
-end
-
---Insert Snack Pack
-local INSERT_SNACK_PACKS = {
-    'snack_pack_normal_1',
-    'snack_pack_normal_2',
-    'snack_pack_jumbo_1',
-    --'' For future cards
-}
-
-mills.getsnackkey = function(seed)
-    seed = seed or 'seed'
-    local pool = get_current_pool('Snack')
-    local snackkey = pseudorandom_element(pool, pseudoseed(seed))
-    local it, itlimit = 0, 100 -- so we don't lock the game up.
-    while snackkey == 'UNAVAILABLE' do
-      it = it + 1
-      if it >= itlimit then break end
-      snackkey = pseudorandom_element(pool, pseudoseed(seed))
-    end
+    'kinder_egg',
+    'pretzel',
+    'rye_chip',
+    'slice_of_bread',
+    'candisimo',
+    'cookiesimo',
+    'cookie',
+    -- 
+  }
   
-    return snackkey ~= 'UNAVAILABLE' and snackkey or 'c_mills_slice_of_bread'
+for _, key in ipairs(atlas_keys) do
+    SMODS.Atlas {
+      key  = key,
+      path = key .. '.png',
+      px   = 71,
+      py   = 95,
+    }
   end
   
-for i = 1, #INSERT_SNACK_PACKS do
-    local status, err = pcall(function()
-        return NFS.load(SMODS.current_mod.path .. 'items/boosters/' .. INSERT_SNACK_PACKS[i] .. '.lua')()
-    end)
-    sendDebugMessage("Loaded Snack Packs: " .. INSERT_SNACK_PACKS[i], 'mills')
-    if not status then
-        error(INSERT_SNACK_PACKS[i] .. ": " .. err)
-    end
-end
-
--- ||       INSERT JOKER SETS        ||
--- Insert Pepper Jokers
-local pepper_jokers = {
-    "pimento_pepper",
-    "anaheim_chile",
-    "jalapeno",
-    "cayenne",
-    "habanero",
-    "ghost_pepper",
-    "carolina_reaper",
-}
-
-for _, file in ipairs(pepper_jokers) do
-    sendDebugMessage("Executing items/jokers/pepper/" .. file .. ".lua", "mills")
-    assert(SMODS.load_file("items/jokers/pepper/" .. file .. ".lua"))()
-end
-local sweet_jokers = {
-    "apple_of_jacks_eye",
-    "barry_b",
-    "gummibar",
-    "honey_nuts_cheerio",
-    "jammin_jelly",
-    "koolaid_man",
-    "nutty_buddy",
-    "peppermint_butler",
-    "stay_puft"
-}
-
-for _, file in ipairs(sweet_jokers) do
-    sendDebugMessage("Executing items/jokers/sweet/" .. file .. ".lua", "mills")
-    assert(SMODS.load_file("items/jokers/sweet/" .. file .. ".lua"))()
-end
-
-local sandwich_jokers = {
- --  "everlasting_pollenstopper",
- --  "flayfluff_sub",
- --  "gloopwhich",
- --  "mr_pb_and_jelly",
- --  "golden_crunch"
-}
-
-for _, file in ipairs(sandwich_jokers) do
-    sendDebugMessage("Executing items/jokers/sandwiches/" .. file .. ".lua", "mills")
-    assert(SMODS.load_file("items/jokers/sandwiches/" .. file .. ".lua"))()
-end
-
--- ||       INSERT CARD MODS        ||
-
-local card_mod = {
-    "cookiesimo",
-    "candisimo"
- }
-
- for _, file in ipairs(card_mod) do
-    sendDebugMessage("Executing items/modifiers/" .. file .. ".lua", "mills")
-    assert(SMODS.load_file("items/modifiers/" .. file .. ".lua"))()
-end
-
 -- ||       SOUNDS         ||
+local sound_keys = {
+    'tangy',
+    'sayonara',
+    'piquant',
+    'bye',
+    'spicy',
+    'adios',
+    'sizziling',
+    'fiery',
+    'later',
+    'death',
+    'scorching',
+    'crunch',
+    'goopy',
+    'doh',
+    'munch',
+    'wonka',
+    'jack',
+    'honey',
+    'nutty',
+    'puft',
+    'minty',
+    'gummy',
+    'jam',
+    'koolaid'
+}
+for _, key in ipairs(sound_keys) do
+    SMODS.Sound{
+      key    = key,
+      path   = key .. '.ogg',
+      volume = 1.0,
+      pitch  = 1.0,
+    }
+  end
 
-SMODS.Sound{
-    key = 'tangy',
-    path = 'tangy.ogg',
-    volume = 1.0,
-    pitch = 1.0
-}
+assert(SMODS.load_file("lib/utility.lua"))()
 
-SMODS.Sound{
-    key = 'sayonara',
-    path = 'sayonara.ogg',
-    volume = 1.0,
-    pitch = 1.0
-}
+assert(SMODS.load_file("items/snack.lua"))()
+assert(SMODS.load_file("items/jokers/peppers.lua"))()
+assert(SMODS.load_file("items/jokers/sweet.lua"))()
+assert(SMODS.load_file("items/jokers/sandwiches.lua"))()
+assert(SMODS.load_file("items/modifiers.lua"))()
+assert(SMODS.load_file("items/spectrals.lua"))()
+assert(SMODS.load_file("items/seals.lua"))()
 
-SMODS.Sound{
-    key = 'piquant',
-    path = 'piquant.ogg',
-    volume = 1.0,
-    pitch = 1.0
-}
+   -- Grab the original
+   local orig_init = Sprite.init
 
-SMODS.Sound{
-    key = 'bye',
-    path = 'bye.ogg',
-    volume = 1.0,
-    pitch = 1.0
-}
+   function Sprite:init(x, y, w, h, atlas, pos, ...)
+       if not atlas then
+           local fallback_key, fallback_atlas
+           for k,a in pairs(G.ASSET_ATLAS) do
+               fallback_key, fallback_atlas = k, a
+               break
+           end
+           atlas = fallback_atlas
+           pos   = pos or { x = 0, y = 0 }
+       end
 
-SMODS.Sound{
-    key = 'spicy',
-    path = 'spicy.ogg',
-    volume = 1.0,
-    pitch = 1.0
-}
-
-SMODS.Sound{
-    key = 'adios',
-    path = 'adios.ogg',
-    volume = 1.0,
-    pitch = 1.0
-}
-
-SMODS.Sound{
-    key = 'sizziling',
-    path = 'sizziling.ogg',
-    volume = 1.0,
-    pitch = 1.0
-}
-
-SMODS.Sound{
-    key = 'fiery',
-    path = 'fiery.ogg',
-    volume = 1.0,
-    pitch = 1.0
-}
-
-SMODS.Sound{
-    key = 'later',
-    path = 'later.ogg',
-    volume = 1.0,
-    pitch = 1.0
-}
-SMODS.Sound{
-    key = 'death',
-    path = 'death.ogg',
-    volume = 1.0,
-    pitch = 1.0
-}
-
-SMODS.Sound{
-  key = 'scorching',
-  path = 'scorching.ogg',
-  volume = 1.0,
-  pitch = 1.0
-}
-
-SMODS.Sound{
-    key = 'crunch',
-    path = 'crunch.ogg',
-    volume = 1.0,
-    pitch = 1.0
-}
-
-SMODS.Sound{
-    key = 'goopy',
-    path = 'goopy.ogg',
-    volume = 1.0,
-    pitch = 1.0
-}
-
-SMODS.Sound{
-    key = 'doh',
-    path = 'doh.ogg',
-    volume = 1.0,
-    pitch = 1.0
-}
+       -- now call the original with a non‐nil atlas
+       orig_init(self, x, y, w, h, atlas, pos, ...)
+   end

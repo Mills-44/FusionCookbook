@@ -3,20 +3,15 @@
 	"name": "Mills Cookbook",
 	"display_name": "Mills Cookbook",
 	"author": ["Mills-44"],
-	"description": "A Chef's kiss to the game",
+	"description": "A chef's kiss to the game",
 	"prefix": "mills",
 	"main_file": "mills.lua",
-	"priority": 0,
-	"badge_colour": "2587be",
-	"badge_text_colour": "2587be",
+	"priority": 450,
+	"badge_colour": "2c63ea",
+	"badge_text_colour": "baa7a7",
 	"version": "1.0.0",
 	"dependencies": [
-		"Steamodded (>=1.0.0~BETA-0323b)",
-		"Lovely (>=0.7.1)",
-		"Talisman (>=2.1.0~dev)"
-	],
-	"config": {
-  "snacks": true,
-  "Jokers": true
-}
+		"Talisman (>=2.0.9)",
+		"Steamodded (>=1.0.0~BETA-0323b)"
+	]
 }

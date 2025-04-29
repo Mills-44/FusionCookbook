@@ -85,7 +85,7 @@ for _, key in ipairs(sound_keys) do
     }
   end
 
---assert(SMODS.load_file("lib/utility.lua"))() Stupid For this one :/
+assert(SMODS.load_file("lib/utility.lua"))()
 
 assert(SMODS.load_file("items/snack.lua"))()
 assert(SMODS.load_file("items/jokers/peppers.lua"))()

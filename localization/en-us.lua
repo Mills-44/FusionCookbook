@@ -7,9 +7,9 @@ return {
           m_mills_candisimo = {
               name = "Candisimo",
               text ={ 
-                  "Scored hands that are {C:attention}Flush or Lower{} this caid gains +10 chips",
-                  "Scored hands that are {C:attention}Full house or Higher{} this caid gains +2 mult",
-                  "{C:inactive}Total Chips: {C:chips}+#1#{} and {C:mult}+#2#{}"
+                  "Scored hands that are {C:attention}Flush or Lower{} this caid gains {C:chips}+#1#{}",
+                  "Scored hands that are {C:attention}Full house or Higher{} this caid gains {C:mult}+#1#",
+                  "{C:inactive}Total Chips: {C:chips}+#2#{} and {C:mult}+#2#{}"
               }
           },
           m_mills_cookiesimo = {
@@ -19,6 +19,20 @@ return {
               "{C:inactive}Surprise include mult, xmult, chips, consumeables"
               }
           },
+          m_mills_whippisimo = {
+            name = "Whippisimo",
+            text = {
+                "Gives {X:mult,C:white}X#1#{}  mult when scored then {X:mult,C:white}X#2#{}  mult when scored",
+                "repeats each time scored to the one previously not used"
+                }
+            },
+            m_mills_frostisimo = {
+              name = "Frostisimo",
+              text = {
+                  "When scored gain {C:gold}$1{} if you have a {C:attention}Sweet joker{}",
+                  "the amount of money increases by {C:gold}$1{} each time scored"
+                  }
+              },
           },
           Joker={
                --PEPPER JOKERS
@@ -74,7 +88,7 @@ return {
               }, j_mills_ghost_pepper = {
                   name = "Ghost Pepper",
                   text = {
-                      "This Joker gives {C:mult}+#1#{} Mult and {C:xmult}x#2#{}",
+                      "This Joker gives {C:mult}+#1#{} Mult and {X:mult,C:white}X2{} ",
                       "On {C:attention}Flush{} or {C:attention}Full Houses{}, levels up Spicyness",
                       "The {C:attention}5th{} level activates Pain!",
                       "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg "
@@ -263,18 +277,30 @@ return {
                     "Select 2 cards to turn to Candisimo"
                   }
                 },
+                c_mills_blondwie = {
+                  name = "Blondwie",
+                  text = {
+                    "Select 2 cards and destroy them add combined card off the difference between the 2 cards"
+                  }
+                },
                 c_mills_bubblegum = {
                   name = "Bubblegum",
                   text = {
-                    "Gives {C:money}$2{} per {C:attention{} Gold Card in your deck"
+                    "Gain {C:money}$2{} per {C:attention{} Gold Card{} in your deck"
                   }
                 },
                 c_mills_butterscotch = {
                   name = "Butterscotch",
                   text = {
-                    "Gains {X:mult,C:white}X0.5{} for each {C:attention}Sweet Joker{},",
-                    "and multiplies by total result",
+                    "Gain {X:mult,C:white}X0.5{} for each {C:attention}Sweet Joker{},",
+                    "and multiply by your total result",
                     "{C:inactive}Starts on {X:mult,C:white}1x{}"
+                  }
+                },
+                c_mills_choffle = {
+                  name = "Choffle",
+                  text = {
+                    "Select 2 cards and destroy them, add combined sum card to the deck"
                   }
                 },
                 c_mills_cream_puff = {
@@ -282,6 +308,12 @@ return {
                   text = {
                     "Boosts all {C:attention}Jokers{} compatible by {C:enhancement}+20%{}",
                     "{C:inactive}(Chips, Mult, XMult, etc){}"
+                  }
+                },
+                c_mills_frosting = {
+                  name = "Frosting",
+                  text = {
+                    "Select 2 cards to turn to Frostisimo"
                   }
                 },
                 c_mills_homeys_doney = {
@@ -294,7 +326,7 @@ return {
                 c_mills_kinder_egg = {
                   name = "Kinder Egg",
                   text = {
-                    "Creates one random {C:attention}Sweet Joker{}"
+                    "Create one random {C:attention}Sweet Joker{}"
                   }
                 },
                 c_mills_pretzel = {
@@ -314,7 +346,13 @@ return {
                   text = {
                     "Combine two compatible Jokers to create a {C:attention}Sandwich Joker{}"
                   }
-                },      
+                },
+                c_mills_whipping_cream = {
+                  name = "Whipping Cream",
+                  text = {
+                    "Select 2 cards to turn to Whippisimo"
+                  }
+                },
               },
           Spectral={
               c_mills_munch = {
@@ -336,7 +374,8 @@ return {
           challenge_names={},
           collabs={},
           dictionary={
-              k_mills_snack_pack = "Snack Pack",
+              k_mills_snack_pack = "Snack",
+              b_mills_snack_pack = "Snack",
               mills_flayfluff = "Makes Flayfluff!",
               mills_not_valid_fusion = "No Valid Combos",
               mills_unknwown_fusion = "Unknown Combo"

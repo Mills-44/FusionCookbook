@@ -100,20 +100,19 @@ MILLS.PEPPER_JOKERS = {
 --Sweet Jokers
 MILLS.SWEET_JOKERS = {
   --"apple_of_jacks_eye",
-  --"barry_b",
-  --"gummibar",
-  --"jammin_jelly",
-  --"koolaid_man",
-  --"nutty_buddy",
-  --"peppermint_butler",
-  --"stay_puft",
-  --"wonkas_chocolate_bar",
+  "barry_b",
+  "gummibar",
+  "jammin_jelly",
+  "koolaid_man",
+  "nutty_buddy",
+  "peppermint_butler",
+  "stay_puft",
+  "wonkas_chocolate_bar",
   --"king_candy",
   --"cookie_monster",
   --"gingy",
   --"bob",
-  --"honey_nut_cheerios",
-  --"koolaid_man"
+  "honey_nut_cheerios",
   --"", -- More Ideas
 }
 

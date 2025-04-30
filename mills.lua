@@ -18,7 +18,7 @@ SMODS.load_file("items/atlas.lua")() -- Pictures
 SMODS.load_file("items/sounds.lua")() -- Sounds
 
 MILLS.register_items(MILLS.PEPPER_JOKERS, "items/joker/pepper")
---MILLS.register_items(MILLS.SWEET_JOKERS, "items/joker/sweet")
+MILLS.register_items(MILLS.SWEET_JOKERS, "items/joker/sweet")
 --MILLS.register_items(MILLS.SANDWICH_JOKERS, "items/joker/sandwich")
 --MILLS.register_items(MILLS.SNACKBOOSTER, "items/snack/boosters")
 --MILLS.register_items(MILLS.SNACKS, "items/snack/snacks")

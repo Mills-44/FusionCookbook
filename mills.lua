@@ -1,6 +1,6 @@
 --For my Util and Define
 if not MILLS then
-  MILLS = {}
+    MILLS = {}
 end
 --Loads Mod
 mills = SMODS.current_mod
@@ -20,51 +20,43 @@ SMODS.load_file("items/sounds.lua")() -- Sounds
 MILLS.register_items(MILLS.PEPPER_JOKERS, "items/joker/pepper")
 MILLS.register_items(MILLS.SWEET_JOKERS, "items/joker/sweet")
 --MILLS.register_items(MILLS.SANDWICH_JOKERS, "items/joker/sandwich")
---MILLS.register_items(MILLS.SNACKBOOSTER, "items/snack/boosters")
---MILLS.register_items(MILLS.SNACKS, "items/snack/snacks")
---MILLS.register_items(MILLS.ENHANCEMENTS, "items/enhancements")
+
+SMODS.ConsumableType {
+  key = 'Snack',                -- Add the prefix of the mod to the key
+  primary_colour = MILLS.COLORS.COOKIE,
+  secondary_colour = G.C.COOKIE,        -- Color of the collection button and badge
+  shop_rate = 1,                                 -- These will appear in the shop
+  name = 'Snack',
+  collection = 'Snack',
+  loc_text = {
+    name = 'Snack',
+    text = {
+      "Snack"
+  },
+  },
+  default = 'c_mills_kinder_egg',           -- Card to spawn if pool is empty
+  collection_rows = { 3, 3 }
+}
+
+-- PATCH: Ensure pool is initialized before injection
+local orig_insert_pool = SMODS.insert_pool
+SMODS.insert_pool = function(pool, center, ...)
+  if type(pool) ~= "table" then
+    pool = {}
+  end
+  return orig_insert_pool(pool, center, ...)
+end
+
+MILLS.register_items(MILLS.SNACKBOOSTER, "items/snack/boosters")
+MILLS.register_items(MILLS.SNACKS, "items/snack/snacks")
+
+
+MILLS.register_items(MILLS.ENHANCEMENTS, "items/enhancements")
+
 --MILLS.register_items(MILLS.SPECTRAL, "items/spectral")
+
 --MILLS.register_items(MILLS.SEALS, "items/seals")
+
 --MILLS.register_items(MILLS.TAGS, "items/tags")
+
 --MILLS.register_items(MILLS.EDITIONS, "items/editions")
-
-
-
--- Collect valid objects to apply Cookbook config to
-local objects = {}
-
-for _, v in pairs(SMODS.Centers) do
-objects[#objects + 1] = { obj = v, center = true }
-end
-
-for _, v in pairs(SMODS.Tags) do
-objects[#objects + 1] = { obj = v, tag = true }
-end
-
--- Apply said config to each valid object
-for _, v in ipairs(objects) do
-local obj = v.obj
-if obj and type(obj) == "table" and obj.mills then
-  local func_ref = obj.in_pool or function() return true end
-  local config = obj.mills
-
-  config.requirements = {}
-  for k, _ in pairs(config) do
-    local data = MILLS.requirement_map[k]
-    if data then
-      table.insert(config.requirements, data)
-    end
-  end
-
--- Hook the in_pool function, adding extra logic depending on the
--- config provided by this center
-  obj.in_pool = function(self, args)
-    local ret, dupes = func_ref(self, args)
-
-    for _, req in ipairs(config.requirements) do
-      ret = ret and MILLS.config[req.setting]
-    end
-    return ret, dupes
-  end
-end
-end

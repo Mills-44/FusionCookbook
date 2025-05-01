@@ -22,20 +22,29 @@ MILLS.register_items(MILLS.SWEET_JOKERS, "items/joker/sweet")
 --MILLS.register_items(MILLS.SANDWICH_JOKERS, "items/joker/sandwich")
 
 SMODS.ConsumableType {
-  key = 'Snack',                -- Add the prefix of the mod to the key
+  key = "Snack",
+  set = 'Snack',
   primary_colour = MILLS.COLORS.COOKIE,
-  secondary_colour = G.C.COOKIE,        -- Color of the collection button and badge
-  shop_rate = 1,                                 -- These will appear in the shop
-  name = 'Snack',
-  collection = 'Snack',
-  loc_text = {
-    name = 'Snack',
-    text = {
-      "Snack"
+  secondary_colour = MILLS.COLORS.COOKIE,
+  collection_rows = {3,3},
+  loc_txt ={
+      name = 'Snacks',
+      collection = 'Snacks', 
   },
-  },
-  default = 'c_mills_kinder_egg',           -- Card to spawn if pool is empty
-  collection_rows = { 3, 3 }
+  cards = {
+    ["c_mills_biscoff"] = true,
+    ["c_mills_blondwie"] = true,
+    ["c_mills_bubblegum"] = true,
+    ["c_mills_choffle"] = true,
+    ["c_mills_cream_puff"] = true,
+    ["c_mills_frosting"] = true,
+    ["c_mills_homeys_doney"] = true,
+    ["c_mills_kinder_egg"] = true,
+    ["c_mills_pretzel"] = true,
+    ["c_mills_rye_chip"] = true,
+    ["c_mills_slice_of_bread"] = true,
+    ["c_mills_whipping cream"] = true
+  }
 }
 
 -- PATCH: Ensure pool is initialized before injection

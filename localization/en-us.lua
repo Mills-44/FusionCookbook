@@ -22,10 +22,10 @@ descriptions = {
         m_mills_whippisimo = {
           name = "Whippisimo",
           text = {
-              "Gives {X:mult,C:white}X#1#{}  mult when scored then {X:mult,C:white}X#2#{}  mult when scored",
-              "repeats each time scored to the one previously not used"
-              }
-          },
+            "Gives {X:mult,C:white}X#1#{} mult when scored",
+            "Alternates between {X:mult,C:white}X2{} and {X:mult,C:white}X1{} each time scored"
+          }
+        },
           m_mills_frostisimo = {
             name = "Frostisimo",
             text = {

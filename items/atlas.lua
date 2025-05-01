@@ -34,7 +34,10 @@ local atlas_keys = { --This will set up a local loop of all atlas keys
   'candisimo',
   'cookiesimo',
   'cookie',
-  --
+  'whippisimo',
+  'whipping_cream',
+  'frosting',
+
 }
 
 for _, key in ipairs(atlas_keys) do --Pulls all keys in list

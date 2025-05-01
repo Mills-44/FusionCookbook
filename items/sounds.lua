@@ -6,7 +6,7 @@ local sound_files = { -- loop of all soinds implemented in game
     "goopy", "gummy", "honey", "jam", "jazz", "koolaid",
     "later", "minty", "nutty", "piquant", "puft",
     "sayonara", "scorching", "sizzling", "spicy", "tangy", "wonka",
-    "jack", "cookie", "bob", "gingy", "candy", 
+    "jack", "cookie", "bob", "gingy", "candy", "nice",
 }
 
 for _, key in ipairs(sound_files) do -- Pulls all sounds in local loop

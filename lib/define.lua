@@ -141,7 +141,7 @@ MILLS.SNACKBOOSTER = {
 MILLS.SNACKS = {
 --"slice_of_bread",
 --"cream_puff",
---"rye_chip",
+"rye_chip",
 --"pretzel",
 "homeys_doney",
 --"kinder_egg",

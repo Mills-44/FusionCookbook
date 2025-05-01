@@ -145,7 +145,7 @@ MILLS.SNACKS = {
 --"pretzel",
 "homeys_doney",
 --"kinder_egg",
---"biscoff",
+"biscoff",
 --"bubblegum",
 "butterscotch",
 --"frosting",
@@ -161,8 +161,8 @@ MILLS.SNACKS = {
 -- ||           ENHANCEMENTS          ||
 MILLS.ENHANCEMENTS = {
  "candisimo",
- "cookiesimo",
- "whippisimo"
+-- "cookiesimo",
+-- "whippisimo"
 -- "frostisimo"
 -- ""
 }

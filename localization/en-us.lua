@@ -7,9 +7,9 @@ descriptions = {
         m_mills_candisimo = {
             name = "Candisimo",
             text ={ 
-                "Scored hands that are {C:attention}Flush or Lower{} this caid gains {C:chips}+#3#{}",
-                "Scored hands that are {C:attention}Full house or Higher{} this caid gains {C:mult}+#4#",
-                "{C:inactive}Total Chips: {C:chips}+#1#{} and {C:mult}+#2#{}"
+                "Scored hands that are {C:attention}Flush or Lower{} this card gains {C:chips}+#3#{} Chips",
+                "Scored hands that are {C:attention}Full House or Higher{} this card gains {C:mult}+#4#{} Mult",
+                "{C:inactive}Total: {C:chips}+#1#{} Chips and {C:mult}+#2#{} Mult"
             }
         },
         m_mills_cookiesimo = {
@@ -22,15 +22,15 @@ descriptions = {
         m_mills_whippisimo = {
           name = "Whippisimo",
           text = {
-            "Gives {X:mult,C:white}X#1#{} mult when scored",
-            "Alternates between {X:mult,C:white}X2{} and {X:mult,C:white}X1{} each time scored"
+            "{X:mult,C:white}X#1#{} Mult when scored",
+            "Alternates between {X:mult,C:white}X2{} and {X:mult,C:white}X1{} when scored"
           }
         },
           m_mills_frostisimo = {
             name = "Frostisimo",
             text = {
-                "When scored gain {C:gold}$1{} if you have a {C:attention}Sweet joker{}",
-                "the amount of money increases by {C:gold}$1{} each time scored"
+                "{C:gold}$1{} when scored if you have a {C:attention}Sweet joker{}",
+                "the amount of money increases by {C:gold}$1{}"
                 }
             },
         },

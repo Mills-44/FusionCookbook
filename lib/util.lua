@@ -1,13 +1,13 @@
 --makes sweet joker a type 
 if not SMODS.ObjectTypes.Sweet then
   SMODS.ObjectType {
-  key = 'Sweet',
-  default = 'j_mills_apple_of_jacks_eye',
-  cards = {},
-  inject = function(self)
-    SMODS.ObjectType.inject(self)
-  end
-}
+    key = 'Sweet',
+    default = 'j_mills_apple_of_jacks_eye',
+    cards = {},
+    inject = function(self)
+      SMODS.ObjectType.inject(self)
+    end
+  }
 end
 
 ---Checks if a provided card is classified as a "Sweet Joker"
@@ -21,7 +21,6 @@ function MILLS.is_sweet(card)
   if not center then
     return false
   end
-  -- If the center has the Sweet pool in its definition
   if center.pools and center.pools.Sweet then
     return true
   end
@@ -51,45 +50,6 @@ function MILLS.register_items(items, path)
   end
 end
 
--- Define Calculation
-if card then
-  SMODS.calculate_effect({
-    message = localize('k_balanced'),
-    colour  = { 0.8, 0.45, 0.85, 1 },
-    instant = true
-  }, card)
-end
-
---- @return boolean
-function MILLS.has_modded_suit_in_deck()
-  for k, v in ipairs(G.playing_cards or {}) do
-    local is_modded = true
-    for _, suit in ipairs(MILLS.base_suits) do
-      if v.base.suit == suit then
-        is_modded = false
-      end
-    end
-
-    if not SMODS.has_no_suit(v) and is_modded then
-      return true
-    end
-  end
-  return false
-end
-
----@return table
---Inject Colors
-for name, color in pairs(MILLS.COLORS) do
-  G.C[name:upper()] = color
-end
-
--- Safe initialization for RNG (run only once)
-if not MILLS._rng_seeded then
-  math.randomseed(os.time())
-  MILLS._rng_seeded = true
-end
-
-
 ---Returns true with probability `chance` (0.0 to 1.0)
 ---@param chance number
 ---@return boolean
@@ -98,7 +58,7 @@ function MILLS.random_chance(chance)
 end
 
 ---Weighted random selection
----@param choices table<string, number> -- key-value pairs of item -> weight (e.g., {a=0.5, b=0.3, c=0.2})
+---@param choices table<string, number>
 ---@return string | nil
 function MILLS.random_weighted_choice(choices)
   local total = 0
@@ -113,23 +73,56 @@ function MILLS.random_weighted_choice(choices)
   end
 end
 
----Returns a random joker key from a pool definition table (e.g. {Sweet = true})
+---Returns a random joker/snack key from any matching pool
 ---@param pool_table table
 ---@return string | nil
 function MILLS.random_choice_from_pool(pool_table)
   local jokers = {}
-  for key, def in pairs(SMODS.Jokers) do
-    if def.pools then
-      for pool, enabled in pairs(pool_table) do
-        if enabled and def.pools[pool] then
-          table.insert(jokers, key)
-          break
+  local sources = {SMODS.Jokers, SMODS.Consumables}
+
+  for _, source in ipairs(sources) do
+    for key, def in pairs(source or {}) do
+      if type(def) == "table" and def.pools then
+        for pool, enabled in pairs(pool_table or {}) do
+          if enabled and def.pools[pool] then
+            table.insert(jokers, key)
+            break
+          end
         end
       end
     end
   end
+
   if #jokers > 0 then
     return jokers[math.random(1, #jokers)]
   end
   return nil
+end
+
+---Check if deck has non-standard suit cards
+---@return boolean
+function MILLS.has_modded_suit_in_deck()
+  for _, v in ipairs(G.playing_cards or {}) do
+    local is_modded = true
+    for _, suit in ipairs(MILLS.base_suits) do
+      if v.base.suit == suit then
+        is_modded = false
+      end
+    end
+    if not SMODS.has_no_suit(v) and is_modded then
+      return true
+    end
+  end
+  return false
+end
+
+-- Inject mod colors into global G.C
+for name, color in pairs(MILLS.COLORS or {}) do
+  G.C[name:upper()] = color
+end
+
+-- Seed RNG once
+if not MILLS._rng_seeded then
+  math.randomseed(os.time())
+  MILLS._rng_seeded = true
 end

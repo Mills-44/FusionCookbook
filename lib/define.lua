@@ -148,7 +148,7 @@ MILLS.SNACKS = {
 "biscoff",
 --"bubblegum",
 "butterscotch",
---"frosting",
+"frosting",
 "whipping_cream",
 -- "cannoli",
 -- "taffy",
@@ -162,8 +162,8 @@ MILLS.SNACKS = {
 MILLS.ENHANCEMENTS = {
  "candisimo",
 -- "cookiesimo",
--- "whippisimo"
--- "frostisimo"
+ "whippisimo"
+ "frostisimo"
 -- ""
 }
 

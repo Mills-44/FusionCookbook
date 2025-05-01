@@ -147,7 +147,7 @@ MILLS.SNACKS = {
 --"kinder_egg",
 --"biscoff",
 --"bubblegum",
---"butterscotch",
+"butterscotch",
 --"frosting",
 --"whipping_cream",
 -- "cannoli",

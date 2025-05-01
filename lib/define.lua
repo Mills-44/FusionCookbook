@@ -149,7 +149,7 @@ MILLS.SNACKS = {
 --"bubblegum",
 "butterscotch",
 --"frosting",
---"whipping_cream",
+"whipping_cream",
 -- "cannoli",
 -- "taffy",
 -- "shortbread",

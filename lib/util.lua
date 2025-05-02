@@ -14,16 +14,14 @@ end
 ---@param card table | string a center key or a card
 ---@return boolean
 function MILLS.is_sweet(card)
-  local center = type(card) == "string"
-      and G.P_CENTERS[card]
-      or (card.config and card.config.center)
+  local center = nil
+  if type(card) == 'string' then
+    center = G.P_CENTERS[card]
+  elseif type(card) == 'table' and card.config then
+    center = card.config.center or G.P_CENTERS[card.config.center_key]
+  end
 
-  if not center then
-    return false
-  end
-  if center.pools and center.pools.Sweet then
-    return true
-  end
+  return center and center.pools and center.pools.Sweet or false
 end
 
 ---Returns a table of all the Jokers classified as "Sweet Jokers" in the G.jokers cardarea

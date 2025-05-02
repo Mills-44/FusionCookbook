@@ -168,27 +168,27 @@ MILLS.SWEET_ENHANCEMENTS = {
 }
  MILLS.ORE_ENHANCEMENTS = {
  -- Fusion Enhancements
-"lots",
- "extra",
- "untamed",
- "tempered",
- "sapph",
- "cob",
- "ori",
- "scratch",
- "power",
- "feral",
- "color",
- "ruby",
- "cinna",
- "rhondite",
- "prize",
- "wow",
- "stain",
- "claws",
- "bou",
- "pig",
- "clov"
+--"lots",
+-- "extra",
+-- "untamed",
+-- "tempered",
+-- "sapph",
+-- "cob",
+-- "ori",
+-- "scratch",
+-- "power",
+ --"feral",
+-- "color",
+-- "ruby",
+--"cinna",
+ --"rhondite",
+ --"prize",
+ --"wow",
+ --"stain",
+-- "claws",
+-- "bou",
+-- "pig",
+-- "clov"
 }
 
 -- ||           SPECTRAL          ||

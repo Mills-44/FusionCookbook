@@ -1,19 +1,20 @@
-SMODS.Consumable {
+SMODS.Consumable  {
     object_type = "Consumable",
-    key = 'biscoff',
-    set = "Snack",
-    atlas = 'biscoff',
+    key = 'pretzel',
+    set = 'Snack',
+    atlas = 'pretzel',
     pos = {
         x = 0,
         y = 0
     },
     config = {
-        max_highlighted = 2,
+        max_highlighted = 1,
+        mod_conv = 'm_mills_cookiesimo'
     },
+    cost = 3,
     pools = { 
         Snack = true
      },
-    cost = 3,
     unlocked = true,
     discovered = true,
     can_use = function(self, card)
@@ -54,7 +55,7 @@ SMODS.Consumable {
                     func = function()
                         G.hand:remove_from_highlighted(c)
                         c:flip()
-                        c:set_ability(G.P_CENTERS['m_mills_candisimo'], true, nil)
+                        c:set_ability(G.P_CENTERS['m_mills_cookiesimo'], true, nil)
                         c:juice_up(0.3, 0.3)
                         return true
                     end

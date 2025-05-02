@@ -1,6 +1,7 @@
 SMODS.Consumable  {
-  key = 'rye_chip', -- MUST MATCH define.lua
-  set = 'Snack',
+  object_type = "Consumable",
+  key = 'rye_chip',
+  set = "Snack",
   atlas = 'rye_chip',
   pos = { x = 0, y = 0 },
   config = {},

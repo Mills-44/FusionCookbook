@@ -1,12 +1,16 @@
 SMODS.Consumable  {
+  object_type = "Consumable",
     key = 'homeys_doney',
-    set = 'Snack',
+    set = "Snack",
     atlas = 'homeys_doney',
     pos = { x = 0, y = 0 },
     config = {},
     cost = 3,
     unlocked = true,
     discovered = true,
+    pools = { 
+      Snack = true
+   },
   
     can_use = function(self)
       return true

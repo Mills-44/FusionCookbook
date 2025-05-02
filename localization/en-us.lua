@@ -33,6 +33,156 @@ descriptions = {
                 "the amount of money increases by {C:gold}$1{}"
                 }
             },
+            m_mills_bou = {
+              name = "Boulder",
+              text = {
+                 "Considered as any suit with no rank",
+                 "{C:chips}+#1#{} chips",
+                  }
+              },
+            m_mills_cinna = {
+              name = "Cinnabar",
+              text = {
+                 "{C:mult}+#1#{} Mult",
+                 "has no ramk or suit"
+                  }
+              },
+            m_mills_claws = {
+              name = "Claws",
+              text = {
+                "{X:mult,C:white}X#1#{} Mult",
+                "Destroyed after {C:attention}#2#{} times scored"
+
+                  }
+              },
+            m_mills_clov = {
+              name = "Clover",
+              text = {
+                "{C:green}#3# in #4#{} chance",
+                "for {C:mult}+#1#{} Mult",
+                "{C:green}#3# in #5#{} chance",
+                "{C:money}$#2#{} dollars"}
+                  },
+            m_mills_cob = {
+              name = "Cobalt",
+              text = {
+                 "{C:chips}+#1#{} Chips",
+                  "has no rank or suit"
+                  }
+              },
+            m_mills_color = {
+              name = "Colored Glass",
+              text = {
+                "{X:mult,C:white}X#1#{} Mult",
+                "{C:green}#2# in #3#{} card is destroyed"
+                  }
+              },
+            m_mills_extra = {
+              name = "Extra",
+              text = {
+                 "{C:chips}+#1#{} Chips",
+                 "{C:mult}+#2#{} Mult"
+                  }
+              },
+            m_mills_feral = {
+              name = "Feral",
+              text = {
+                 "{C:mult}+#1#{} Mult",
+                 "considered all suits"
+                  }
+              },
+            m_mills_lots = {
+              name = "Lots",
+              text = {
+                 "{C:chips}+#1#{} Chips"
+                  }
+              },  
+            m_mills_ori = {
+              name = "Orichalcum",
+              text = {
+                 "{C:money}$#1#{} when held in hand",
+                 "then addds {C:bonus}Chips{} equal to the amount of total {C:attention}money{}"
+                  }
+              },
+            m_mills_pig = {
+              name = "Piggy",
+              text = {
+                 "{C:money}+$#1#{} dollars when scored and",
+                 "{C:money}+$#2#{} while held in hand"
+                  }
+              },
+            m_mills_power = {
+              name = "Power",
+              text = {
+                 "{X:mult,C:white}X#1#{} Mult"
+                  }
+              },
+            m_mills_prize = {
+              name = "Prize",
+              text = {
+                "{C:green}#3# in #4#{} chance",
+                "for {X:mult,C:white}X#1#{} Mult",
+                "{C:green}#3# in #5#{} chance for {C:money}$#2#{}"
+                  }
+              },
+            m_mills_rhondite = {
+              name = "Rhondite",
+              text = {
+                "{C:money}-$1{} when scored",
+                "{C:green}#2# in #3#{} chance earn {C:money}$#1#{}"
+                  }
+              },
+            m_mills_ruby = {
+              name = "Ruby",
+              text = {
+                 "{X:mult,C:white}X#1#{} Mult"
+                  }
+              },
+            m_mills_sapph = {
+              name = "Sapphire",
+              text = {
+                "{X:chips,C:white}X#1#{} Chips",
+                "while held in hand"
+                  }
+              },
+            m_mills_scratch = {
+              name = "Scratch",
+              text = {
+                "{C:green}#1# in #2#{} chance",
+                "for {C:chips}+#3#{} chips",
+                "{C:green}#4# in #5#{} chance",
+                "for {C:money}$#6# "
+                  }
+              },
+            m_mills_stain = {
+              name = "Stain",
+              text = {
+                "{X:mult,C:white}X#2#{} Mult",
+                "{C:green}#3# in #1#{} card is destroyed"
+                  }
+              },
+            m_mills_tempered = {
+              name = "Tempered Glass",
+              text = {
+                "{X:chips,C:white}X#1#{} Chips",
+                "{C:green}#2# in #3#{} card is destroyed"
+                  }
+              },
+            m_mills_untamed = {
+              name = "Untamed",
+              text = {
+                 "{C:chips}+#1#{} Chips",
+                "Considered as any suit"
+                  }
+              },
+            m_mills_wow = {
+              name = "Monster",
+              text = {
+                "{C:legendary}I keep it caged{}",
+                "{C:legendary}and i just can't",
+                "{C:legendary}hold it..."
+                  }
+              }, 
         },
         Joker={
              --PEPPER JOKERS
@@ -188,7 +338,7 @@ descriptions = {
                 name = "Stay Puft",
                 text = {
                   "When scored hand contains a {C:attention}Straight{}",
-                  "turn all cards in the hand into either {C:attention}Wild or Steel Cards{}",
+                  "turn all cards in the hand into either {C:attention}Lots or Boulder Cards{}",
                   "{C:green}(1 in 2){} for each"
                 }
               },
@@ -280,7 +430,8 @@ descriptions = {
               c_mills_blondwie = {
                 name = "Blondwie",
                 text = {
-                  "Select 2 cards and destroy them add combined card off the difference between the 2 cards"
+                  "Select 2 cards and destroy them add ",
+                  "combined card off the difference between the 2 cards"
                 }
               },
               c_mills_bubblegum = {
@@ -341,6 +492,12 @@ descriptions = {
                   "Create 2 random Snack Cards"
                 }
               },
+              c_mills_shortbread = {
+                name = "Shortbread",
+                text = {
+                    "Select 2 cards and destroy them, then create a new card with 1 lower rank than the highest"
+                }
+            },         
               c_mills_slice_of_bread = {
                 name = "Slice of Bread",
                 text = {
@@ -374,8 +531,8 @@ descriptions = {
         challenge_names={},
         collabs={},
         dictionary={
-            k_mills_snack_pack = "Snack",
-            b_mills_snack_pack = "Snack",
+            k_mills_snack_pack = "Snack Pack",
+           -- b_mills_snack_pack = "Snack",
             mills_flayfluff = "Makes Flayfluff!",
             mills_not_valid_fusion = "No Valid Combos",
             mills_unknwown_fusion = "Unknown Combo"

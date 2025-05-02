@@ -1,4 +1,4 @@
-# Mills-Cookbook
+# Fusion Cookbook
 A Chef's kiss to the game
 
 Tailsman Needed For Mod: https://github.com/SpectralPack/Talisman

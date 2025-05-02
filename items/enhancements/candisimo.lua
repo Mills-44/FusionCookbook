@@ -1,9 +1,9 @@
 SMODS.Enhancement {
     key = "candisimo",
-    atlas = 'candisimo',
+    atlas = 'enhanc_sw',
     pos = {
-        x = 0,
-        y = 0
+        x = 1,
+        y = 1
     },
     config = {
         extra = {

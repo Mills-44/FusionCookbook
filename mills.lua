@@ -7,7 +7,7 @@ mills = SMODS.current_mod
 mills_path = SMODS.current_mod.path
 
 --Config Lib
-MILLS.config = SMODS.load_file("config.lua")() -- When I set up UI I this will actually do sum for now its a dummy config 
+--MILLS.config = SMODS.load_file("config.lua")() -- When I set up UI I this will actually do sum for now its a dummy config 
 
 --Load lib
 SMODS.load_file("lib/define.lua")() -- Definitions 
@@ -69,10 +69,10 @@ MILLS.register_items(MILLS.SWEET_ENHANCEMENTS, "items/enhancements/sweet")
 MILLS.register_items(MILLS.ORE_ENHANCEMENTS, "items/enhancements/ore")
 
 MILLS.register_items(MILLS.SNACKS, "items/snack")
---MILLS.register_items(MILLS.FUSION, "items/fusion")
+MILLS.register_items(MILLS.FUSION, "items/fusion")
 
---MILLS.register_items(MILLS.SPECTRAL, "items/spectral")
---MILLS.register_items(MILLS.TAROT, "items/tarot")
+MILLS.register_items(MILLS.SPECTRAL, "items/spectral")
+MILLS.register_items(MILLS.TAROT, "items/tarot")
 
 MILLS.register_items(MILLS.SEALS, "items/seals")
 

@@ -1,6 +1,8 @@
 SMODS.Booster {
+    object_type = "Booster",
+    kind = "Snack",
     key = 'snack_pack_jumbo',
-    group_key = 'mills_snack_pack',
+    group_key = 'k_mills_snack_pack',
     atlas = 'snack_pack_jumbo',
     pos = { 
         x = 0, 

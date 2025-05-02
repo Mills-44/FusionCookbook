@@ -139,32 +139,56 @@ MILLS.SNACKBOOSTER = {
 
 --Snack Cards
 MILLS.SNACKS = {
---"slice_of_bread",
---"cream_puff",
+"slice_of_bread",
+"cream_puff",
 "rye_chip",
---"pretzel",
+"pretzel",
 "homeys_doney",
---"kinder_egg",
+"kinder_egg",
 "biscoff",
---"bubblegum",
+"bubblegum",
 "butterscotch",
 "frosting",
 "whipping_cream",
 -- "cannoli",
 -- "taffy",
--- "shortbread",
+ "shortbread",
 -- "choffle",
--- "blondwie",
+ "blondwie",
 -- "",
 }
 
 -- ||           ENHANCEMENTS          ||
-MILLS.ENHANCEMENTS = {
+MILLS.SWEET_ENHANCEMENTS = {
+  -- Sweet Modifiers
  "candisimo",
--- "cookiesimo",
- "whippisimo"
+ "cookiesimo",
+ "whippisimo",
  "frostisimo"
--- ""
+}
+ MILLS.ORE_ENHANCEMENTS = {
+ -- Fusion Enhancements
+"lots",
+ "extra",
+ "untamed",
+ "tempered",
+ "sapph",
+ "cob",
+ "ori",
+ "scratch",
+ "power",
+ "feral",
+ "color",
+ "ruby",
+ "cinna",
+ "rhondite",
+ "prize",
+ "wow",
+ "stain",
+ "claws",
+ "bou",
+ "pig",
+ "clov"
 }
 
 -- ||           SPECTRAL          ||

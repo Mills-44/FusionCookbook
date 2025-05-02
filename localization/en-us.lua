@@ -386,6 +386,20 @@ descriptions = {
                    "create a {C:negative}Negative Snack{} card"
                 }
             },
+            j_mills_cave = {
+              name = "Cave Joker",
+              text = {
+                "Creates a random {C:attention}Ore{} card",
+                "when blind selected"
+              }
+          },
+          j_mills_monster = {
+            name = "Monster",
+            text = {
+               "Turns {C:attention}Steel{} card",
+                "into {C:attention}Claws{} card"
+            }
+        },
         },
         Other={
             p_mills_snack_pack = {

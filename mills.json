@@ -1,8 +1,8 @@
 {
 	"id": "mills",
-	"name": "Mills Cookbook",
-	"display_name": "Mills Cookbook",
-	"author": ["Mills-44"],
+	"name": "Fusion Cookbook",
+	"display_name": "Fusion Cookbook",
+	"author": ["Mills-44", "Rafaelly"],
 	"description": "A chef's kiss to the game",
 	"prefix": "mills",
 	"main_file": "mills.lua",

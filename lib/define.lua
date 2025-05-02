@@ -116,6 +116,10 @@ MILLS.SWEET_JOKERS = {
 --"", -- More Ideas
 }
 
+MILLS.FUSION_JOKERS = {
+  "monster",
+  "cave"
+}
 --Sandwich Jokers
 MILLS.SANDWHICH_JOKERS = {
 --"flayfluff_sub"
@@ -127,16 +131,17 @@ MILLS.SANDWHICH_JOKERS = {
 --""
 }
 
--- ||           SNACKS          ||
+-- ||           BOOSTER          ||
 
 -- Snack Pack Booster 
-MILLS.SNACKBOOSTER = {
+MILLS.BOOSTER = {
 "snack_pack",
 "snack_pack_jumbo",
 "snack_pack_mega",
+--"fusion_pack"
 }
 
-
+-- ||           SNACKS          ||
 --Snack Cards
 MILLS.SNACKS = {
 "slice_of_bread",
@@ -157,6 +162,10 @@ MILLS.SNACKS = {
  "blondwie",
 -- "",
 }
+-- ||           FUSIONS          ||
+MILLS.FUSION = {
+  "global"
+}
 
 -- ||           ENHANCEMENTS          ||
 MILLS.SWEET_ENHANCEMENTS = {
@@ -168,27 +177,27 @@ MILLS.SWEET_ENHANCEMENTS = {
 }
  MILLS.ORE_ENHANCEMENTS = {
  -- Fusion Enhancements
---"lots",
--- "extra",
--- "untamed",
--- "tempered",
--- "sapph",
--- "cob",
--- "ori",
--- "scratch",
--- "power",
- --"feral",
--- "color",
--- "ruby",
---"cinna",
- --"rhondite",
- --"prize",
- --"wow",
- --"stain",
--- "claws",
--- "bou",
--- "pig",
--- "clov"
+"lots",
+ "extra",
+ "untamed",
+ "tempered",
+ "sapph",
+ "cob",
+ "ori",
+ "scratch",
+ "power",
+ "feral",
+ "color",
+ "ruby",
+ "cinna",
+ "rhondite",
+ "prize",
+ "wow",
+ "stain",
+ "claws",
+ "bou",
+ "pig",
+ "clov"
 }
 
 -- ||           SPECTRAL          ||

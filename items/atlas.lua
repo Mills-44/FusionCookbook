@@ -42,7 +42,7 @@ local atlas_keys = { --This will set up a local loop of all atlas keys
   'shortbread',
   -- 'taffy',
   'enhanc_fus', -- Defines all ore enahncements in one picture 
-  -- 'joker'
+  'joker'
   -- 'spectral',
   -- 'seal'
 }

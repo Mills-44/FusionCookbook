@@ -150,7 +150,7 @@ MILLS.SNACKS = {
 "rye_chip",
 --"pretzel",
 "homeys_doney",
---"kinder_egg",
+"kinder_egg",
 "biscoff",
 --"bubblegum",
 "butterscotch",

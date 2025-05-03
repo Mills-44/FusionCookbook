@@ -42,53 +42,56 @@ SMODS.Consumable {
     discovered = true,
     
     can_use = function(self, card)
-        -- Only usable when hand is out (in play) or in shop
-        if not G or not G.hand then return false end
-        local highlighted = G.hand.highlighted or {}
-        local ability = card.ability or {}
-        local max_highlighted = ability.max_highlighted or 2
-
-        return #highlighted <= max_highlighted and #highlighted > 0
+        if #G.hand.highlighted > 2 then
+            return false
+        end
+        
+        for _, v in ipairs(G.hand.highlighted) do
+            if SMODS.has_enhancement(v, 'm_wild') or
+               SMODS.has_enhancement(v, 'm_stone') or
+               SMODS.has_enhancement(v, 'm_bonus') then
+                return true
+            else return false
+            end
+        return true
+        end
     end,
-
+    
     use = function(self, card, area, copier)
-        local highlighted = G.hand.highlighted or {}
-        if #highlighted > 0 then
+        if #G.hand.highlighted > 2 then
+            return false
+        end
+        
+        G.E_MANAGER:add_event(Event({
+            trigger = 'after', delay = 0.4,
+            func = function()
+                card:juice_up(0.3, 0.5)
+                return true
+            end
+        }))
+
+        for _, v in ipairs(G.hand.highlighted) do
             G.E_MANAGER:add_event(Event({
-                trigger = 'after', delay = 0.4,
+                trigger = 'after', delay = 0.15,
                 func = function()
-                    card:juice_up(0.3, 0.5)
+                    if SMODS.has_enhancement(v, 'm_mult') then
+                        v:set_ability ("m_mills_cinna",nil,true)
+                    end
+
+                    if SMODS.has_enhancement(v, 'm_bonus') then
+                        v:set_ability ("m_mills_cob",nil,true)
+                    end
+
+                    if SMODS.has_enhancement(v, 'm_stone') then
+                        if MILLS.random_chance(.5) then
+                            v:set_ability('m_mills_cinna') -- Turns it to wild
+                           else
+                            v:set_ability('m_mills_cob')
+                        end
+                     end
                     return true
                 end
             }))
-
-            for _, c in ipairs(highlighted) do
-                G.E_MANAGER:add_event(Event({
-                    trigger = 'after', delay = 0.15,
-                    func = function()
-                        c:flip()
-                        c:juice_up(0.3, 0.3)
-                        return true
-                    end
-                }))
-            end
-            delay(0.2)
-            for _, c in ipairs(highlighted) do
-                G.E_MANAGER:add_event(Event({
-                    trigger = 'after', delay = 0.15,
-                    func = function()
-                        G.hand:remove_from_highlighted(c)
-                        c:flip()
-                        if MILLS.random_chance(.5) then
-                            c:set_ability(G.P_CENTERS['m_mills_cob'], true, nil)
-                        else 
-                            c:set_ability(G.P_CENTERS['m_mills_bou'], true, nil)    
-                        end
-                        c:juice_up(0.3, 0.3)
-                        return true
-                    end
-                }))
-            end
         end
     end
 }

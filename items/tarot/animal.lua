@@ -9,6 +9,7 @@ SMODS.Consumable {
     },
     config = {
         max_highlighted = 0,
+        odd = 10
     },
     pools = { 
         Tarot = true
@@ -43,16 +44,19 @@ SMODS.Consumable {
             G.E_MANAGER:add_event(Event({
                 trigger = 'after', delay = 0.15,
                 func = function()
-                    local new_enhancement
-                    if c.enhancement == "m_bonus" then
-                        new_enhancement = "m_mills_untamed"
-                    elseif c.enhancement == "m_mult" then
-                        new_enhancement = "m_mills_feral"
-                    elseif c.enhancement == "m_wild" then
-                        new_enhancement = MILLS.random_chance(0.5) and "m_mills_untamed" or "m_mills_feral"
-                    end
+                    if SMODS.has_enhancement(othercard,"m_bonus") then
+                        othercard:set_ability ("m_mills_untamed",nil,true)
+                     if SMODS.has_enhancement(othercard,"m_mult") then
+                        othercard:set_ability ("m_mills_feral",nil,true)
+                   if SMODS.has_enhancement(othercard,"m_steel") then
+                       if pseudorandom('feralodd') < G.GAME.probabilities.normal / card.ability.extra.odd then
+                           othercard:set_ability ("m_mills_feral",nil,true)
+                       end
+                       if pseudorandom('untodd') < G.GAME.probabilities.normal / card.ability.extra.odd then
+                           othercard:set_ability ("m_mills_untamed",nil,true)
+                       end
 
-                    if new_enhancement then
+                    if othercard:set_ability ("m_mills_untamed",nil,true) or othercard:set_ability ("m_mills_feral",nil,true) then
                         c:set_ability(G.P_CENTERS[new_enhancement], true, nil)
                         c:juice_up(0.3, 0.3)
                     end

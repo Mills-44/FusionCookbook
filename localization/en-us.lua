@@ -438,7 +438,7 @@ descriptions = {
             c_mills_biscoff = {
                 name = "Biscoff",
                 text = {
-                  "Select 2 cards to turn to Candisimo"
+                  "Select 2 cards to turn to {C:attention}Candisimo{}"
                 }
               },
               c_mills_blondwie = {
@@ -451,7 +451,7 @@ descriptions = {
               c_mills_bubblegum = {
                 name = "Bubblegum",
                 text = {
-                  "Gain {C:money}$2{} per {C:attention{} Gold Card{} in your deck"
+                  "Gain {C:money}$2{} per {C:attention{}Gold{} in your deck"
                 }
               },
               c_mills_butterscotch = {
@@ -478,7 +478,7 @@ descriptions = {
               c_mills_frosting = {
                 name = "Frosting",
                 text = {
-                  "Select 2 cards to turn to Frostisimo"
+                  "Select 2 cards to turn to {C:attention}Frostisimo{}"
                 }
               },
               c_mills_homeys_doney = {
@@ -497,13 +497,13 @@ descriptions = {
               c_mills_pretzel = {
                 name = "Pretzel",
                 text = {
-                  "Select 1 card to turn to Cookiesimo"
+                  "Select 1 card to turn to {C:attention}Cookiesimo{}"
                 }
               },
               c_mills_rye_chip = {
                 name = "Rye Chip",
                 text = {
-                  "Create 2 random Snack Cards"
+                  "Create 2 random {C:attention}Snacks{}"
                 }
               },
               c_mills_shortbread = {
@@ -521,7 +521,7 @@ descriptions = {
               c_mills_whipping_cream = {
                 name = "Whipping Cream",
                 text = {
-                  "Select 2 cards to turn to Whippisimo"
+                  "Select 2 cards to turn to {C:attention}Whippisimo{}"
                 }
               },
             },

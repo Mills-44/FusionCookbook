@@ -88,7 +88,7 @@ descriptions = {
               name = "Feral",
               text = {
                  "{C:mult}+#1#{} Mult",
-                 "considered all suits"
+                 "and can be scored as any suit"
                   }
               },
             m_mills_lots = {
@@ -172,7 +172,7 @@ descriptions = {
               name = "Untamed",
               text = {
                  "{C:chips}+#1#{} Chips",
-                "Considered as any suit"
+                "and can be scored as any suit"
                   }
               },
             m_mills_wow = {

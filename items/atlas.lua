@@ -42,9 +42,12 @@ local atlas_keys = { --This will set up a local loop of all atlas keys
   'shortbread',
   -- 'taffy',
   'enhanc_fus', -- Defines all ore enahncements in one picture 
-  'joker'
+  'joker',
   -- 'spectral',
-  -- 'seal'
+  -- 'seal',
+   'animal',
+   'chromlech',
+-- ''
 }
 
 for _, key in ipairs(atlas_keys) do --Pulls all keys in list

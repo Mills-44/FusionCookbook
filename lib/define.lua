@@ -152,7 +152,7 @@ MILLS.SNACKS = {
 "homeys_doney",
 "kinder_egg",
 "biscoff",
---"bubblegum",
+"bubblegum",
 "butterscotch",
 "frosting",
 "whipping_cream",

@@ -70,7 +70,8 @@ BOB = HEX("2ec3f1"),
 GINGY = HEX("6f4305"),
 GUMMY = HEX("21de24"),
 JELLY = HEX("820f8a"),
--- _ = HEX(""),
+-- Fusion Colors
+FUSION = HEX("FF00FF"),
 -- _ = HEX(""),
 -- _ = HEX(""),
 -- _ = HEX(""),
@@ -164,7 +165,7 @@ MILLS.SNACKS = {
 }
 -- ||           FUSIONS          ||
 MILLS.FUSION = {
-  "global"
+ -- "global"
 }
 
 -- ||           ENHANCEMENTS          ||
@@ -205,6 +206,12 @@ MILLS.SPECTRAL = {
 -- "munch",
 -- "baker",
 }
+
+-- ||           TAROT          ||
+MILLS.TAROT = {
+   "animal",
+   "chromlech",
+  }
 
 -- ||           SEALS          ||
 MILLS.SEALS = {

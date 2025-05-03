@@ -535,7 +535,20 @@ descriptions = {
         },
         Stake={},
         Tag={},
-        Tarot={},
+        Tarot={
+          c_mills_animal = {
+            name = "Animal",
+             text = { 
+                "Select 2 cards to turn to either Feral or Untamed"
+                }
+        },
+          c_mills_chromlech = {
+            name = "Chromlech",
+             text = { 
+                "Select 2 cards to turn to either Cobalt or Boulder"
+                }
+        },
+        },
         Voucher={},
     },
     misc = {

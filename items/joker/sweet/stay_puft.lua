@@ -26,9 +26,9 @@ SMODS.Joker {
                 G.E_MANAGER:add_event(Event({
                     func = function()
                        if MILLS.random_chance(.5) then
-                        c:set_ability('m_mills_bou') -- Turns it to wild
+                        c:set_ability('m_wild') -- Turns it to wild
                        else
-                        c:set_ability('m_mills_lots')
+                        c:set_ability('m_steel')
                        end
                        play_sound('mills_puft')
                         c:juice_up(0.4, 0.4)

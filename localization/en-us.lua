@@ -539,13 +539,13 @@ descriptions = {
           c_mills_animal = {
             name = "Animal",
              text = { 
-                "Select 2 cards to turn to either Feral or Untamed"
+                "Select either 2 {C:attention} Mult, Wild or Bonus} to turn to either Feral or Untamed"
                 }
         },
           c_mills_chromlech = {
             name = "Chromlech",
              text = { 
-                "Select 2 cards to turn to either Cobalt or Boulder"
+               "Select either 2 {C:attention} Mult, Stone or Bonus} to turn to either Cobalt or Cinnabar"
                 }
         },
         },

@@ -7,8 +7,8 @@ descriptions = {
         m_mills_candisimo = {
             name = "Candisimo",
             text ={ 
-                "Scored hands that are {C:attention}Flush or Lower{} this card gains {C:chips}+#3#{} Chips",
-                "Scored hands that are {C:attention}Full House or Higher{} this card gains {C:mult}+#4#{} Mult",
+                "If scored in {C:attention}Flush or Lower{}, this card gains {C:chips}+#3#{} Chips",
+                "If scored in {C:attention}Full House or Higher{} this card gains {C:mult}+#4#{} Mult",
                 "{C:inactive}Total: {C:chips}+#1#{} Chips and {C:mult}+#2#{} Mult"
             }
         },
@@ -16,7 +16,7 @@ descriptions = {
         name = "Cookiesimo",
         text = {
             "Triggers a random surprise!",
-            "{C:inactive}Surprise include mult, xmult, chips, consumeables"
+            "{C:inactive}Surprise include chips, mult, xmult, consumeables"
             }
         },
         m_mills_whippisimo = {
@@ -29,7 +29,7 @@ descriptions = {
           m_mills_frostisimo = {
             name = "Frostisimo",
             text = {
-                "{C:gold}$1{} when scored if you have a {C:attention}Sweet joker{}",
+                "{C:gold}$#1#{} when scored if you have a {C:attention}Sweet joker{}",
                 "the amount of money increases by {C:gold}$1{}"
                 }
             },
@@ -44,7 +44,7 @@ descriptions = {
               name = "Cinnabar",
               text = {
                  "{C:mult}+#1#{} Mult",
-                 "has no ramk or suit"
+                 "has no rank or suit"
                   }
               },
             m_mills_claws = {
@@ -191,7 +191,7 @@ descriptions = {
                 text = {
                     "This Joker gains {C:mult}+#1#{} Mult",
                     "When a {C:attention}Flush{} or {C:attention}Full{} House is played",
-                    "Every {C:attention}3rd{} activation levels up Spicyness!",
+                    "Every {C:attention}3rd{} activation levels up Spiciness!",
                     "{C:inactive}Total Mult: {C:mult}+#2#{}",
                     "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg",
                 }
@@ -201,7 +201,7 @@ descriptions = {
                 text = {
                     "This Joker gains {C:mult}+#1#{} Mult",
                     "{C:attention}When a Flush{} or Full House is played",
-                    "Every {C:attention}3rd{} activation levels up Spicyness!",
+                    "Every {C:attention}3rd{} activation levels up Spiciness!",
                     "{C:inactive}Total Mult: {C:mult}+#2#{}",
                     "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg ",
                 }
@@ -211,7 +211,7 @@ descriptions = {
                 text = {
                     "This Joker gains {C:mult}+#1#{} Mult",
                     "{C:attention}When a Flush{} or Full House is played",
-                    "Every {C:attention}3rd{} activation levels up Spicyness!",
+                    "Every {C:attention}3rd{} activation levels up Spiciness!",
                     "{C:inactive}Total Mult: {C:mult}+#2#{}",
                     "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg ",
                 }
@@ -221,7 +221,7 @@ descriptions = {
                 text = {
                     "This Joker gains {C:mult}+#1#{} Mult",
                     "{C:attention}When a Flush{} or Full House is played",
-                    "Every {C:attention}3rd{} activation levels up Spicyness!",
+                    "Every {C:attention}3rd{} activation levels up Spiciness!",
                     "{C:inactive}Total Mult: {C:mult}+#2#{}",
                     "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg ",
                 }
@@ -231,7 +231,7 @@ descriptions = {
                 text = {
                     "This Joker gains {C:mult}+#1#{} Mult",
                     "{C:attention}When a Flush{} or Full House is played",
-                    "Every {C:attention}3rd{} activation levels up Spicyness!",
+                    "Every {C:attention}3rd{} activation levels up Spiciness!",
                     "{C:inactive}Total Mult: {C:mult}+#2#{}",
                     "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg ",
                 }
@@ -239,7 +239,7 @@ descriptions = {
                 name = "Ghost Pepper",
                 text = {
                     "This Joker gives {C:mult}+#1#{} Mult and {X:mult,C:white}X2{} ",
-                    "On {C:attention}Flush{} or {C:attention}Full Houses{}, levels up Spicyness",
+                    "On {C:attention}Flush{} or {C:attention}Full Houses{}, levels up Spiciness!",
                     "The {C:attention}5th{} level activates Pain!",
                     "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg "
                 }
@@ -262,28 +262,28 @@ descriptions = {
                 name = "Barry B.",
                 text = {
                   "When scoring hands contains a {C:attention}Four of a Kind{}",
-                  "all cards turn into {C:attention}Glass Cards{}"
+                  "all cards turn into {C:attention}Glass{}"
                 }
               },
               j_mills_bob = {
                 name = "B.O.B",
                 text = {
                   "When scoring hands contains a {C:attention}Flush{}",
-                  "all cards turn into {C:attention}Whippisimo Cards{}"
+                  "all cards turn into {C:attention}Whippisimo{}"
                 }
               },
               j_mills_cookie_monster = {
                 name = "Cookie Monster",
                 text = {
                   "When scoring hands contains a {C:attention}Straight Flush{}",
-                  "all cards turn into {C:attention}Cookiesimo Cards{}"
+                  "all cards turn into {C:attention}Cookiesimo{}"
                 }
               },
               j_mills_gingy = {
                 name = "Gingy",
                 text = {
                   "When scoring hands contains a {C:attention}Full House{}",
-                  "all cards turn into {C:attention}Frostisimo Cards{}"
+                  "all cards turn into {C:attention}Frostisimo{}"
                 }
               },
               j_mills_gummibar = {
@@ -297,21 +297,21 @@ descriptions = {
                 name = "Honey Nut Cheerio's",
                 text = {
                   "All {C:spades}Spades{} played in scoring hand,",
-                  "turn into {C:attention}Gold Cards{}"
+                  "turn into {C:attention}Gold{}"
                 }
               },
               j_mills_jammin_jelly = {
                 name = "Jammin' Jelly",
                 text = {
                   "When scoring hands contains a {C:attention}Three of a Kind{}",
-                  "all cards turn into {C:attention}Mult Cards{}"
+                  "all cards turn into {C:attention}Mult{}"
                 }
               },
               j_mills_king_candy = {
                 name = "King Candy",
                 text = {
                   "When scoring hands contains a {C:attention}Five of a Kind{}",
-                  "all cards turn into {C:attention}Candisimo Cards{}"
+                  "all cards turn into {C:attention}Candisimo{}"
                 }
               },
               j_mills_koolaid_man = {
@@ -324,7 +324,7 @@ descriptions = {
                 name = "Nutty Buddy",
                 text = {
                   "When scoring hands contains a {C:attention}Pair{}",
-                  "all cards turn into {C:attention}Bonus Cards{}"
+                  "all cards turn into {C:attention}Bonus{}"
                 }
               },
               j_mills_peppermint_butler = {
@@ -338,7 +338,7 @@ descriptions = {
                 name = "Stay Puft",
                 text = {
                   "When scored hand contains a {C:attention}Straight{}",
-                  "turn all cards in the hand into either {C:attention}Lots or Boulder Cards{}",
+                  "turn all cards in the hand into either {C:attention}Wild or Steel{}",
                   "{C:green}(1 in 2){} for each"
                 }
               },
@@ -346,7 +346,7 @@ descriptions = {
                 name = "Wonka's Chocolate Bar",
                 text = {
                   "When scored hand contains a {C:attention}Two Pair{}",
-                  "turn all cards in the hand into {C:attention}Lucky Cards{}"
+                  "turn all cards in the hand into {C:attention}Lucky{}"
                 }
             },
             --SANDWICH JOKERS
@@ -539,13 +539,13 @@ descriptions = {
           c_mills_animal = {
             name = "Animal",
              text = { 
-                "Select either 2 {C:attention} Mult, Wild or Bonus} to turn to either Feral or Untamed"
+               "Select either 2 {C:attention} Mult, Wild or Bonus} to turn to either Feral or Untamed"
                 }
         },
           c_mills_chromlech = {
             name = "Chromlech",
              text = { 
-               "Select either 2 {C:attention} Mult, Stone or Bonus} to turn to either Cobalt or Cinnabar"
+                "Select either 2 {C:attention} Mult, Stone or Bonus} to turn to either Cobalt or Cinnabar"
                 }
         },
         },

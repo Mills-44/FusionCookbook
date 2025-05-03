@@ -19,7 +19,7 @@ SMODS.load_file("items/sounds.lua")() -- Sounds
 
 MILLS.register_items(MILLS.PEPPER_JOKERS, "items/joker/pepper")
 MILLS.register_items(MILLS.SWEET_JOKERS, "items/joker/sweet")
---MILLS.register_items(MILLS.FUSION_JOKERS, "items/joker/fusion")
+MILLS.register_items(MILLS.FUSION_JOKERS, "items/joker/fusion")
 --MILLS.register_items(MILLS.SANDWICH_JOKERS, "items/joker/sandwich")
 
 -- Register custom ConsumableType: Snack
@@ -66,10 +66,10 @@ end
 MILLS.register_items(MILLS.BOOSTER, "items/boosters")
 
 MILLS.register_items(MILLS.SWEET_ENHANCEMENTS, "items/enhancements/sweet")
---MILLS.register_items(MILLS.ORE_ENHANCEMENTS, "items/enhancements/ore")
+MILLS.register_items(MILLS.ORE_ENHANCEMENTS, "items/enhancements/ore")
 
 MILLS.register_items(MILLS.SNACKS, "items/snack")
---MILLS.register_items(MILLS.FUSION, "items/fusion")
+MILLS.register_items(MILLS.FUSION, "items/fusion")
 
 --MILLS.register_items(MILLS.SPECTRAL, "items/spectral")
 MILLS.register_items(MILLS.TAROT, "items/tarot")
@@ -79,3 +79,16 @@ MILLS.register_items(MILLS.TAROT, "items/tarot")
 --MILLS.register_items(MILLS.TAGS, "items/tags")
 
 --MILLS.register_items(MILLS.EDITIONS, "items/editions")
+
+-- Create a table checker for jokers that transforms cards
+
+function table.contains(table, element)
+  if table and type(table) == "table" then
+      for _, value in pairs(table) do
+          if value == element then
+              return true
+          end
+      end
+      return false
+  end
+end

@@ -22,7 +22,7 @@ SMODS.Consumable  {
         if not G or not G.hand then return false end
         local highlighted = G.hand.highlighted or {}
         local ability = card.ability or {}
-        local max_highlighted = ability.max_highlighted or 2
+        local max_highlighted = ability.max_highlighted or 1
         
         return #highlighted <= max_highlighted and #highlighted > 0
     end,

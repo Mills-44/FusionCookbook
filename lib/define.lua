@@ -209,8 +209,8 @@ MILLS.SPECTRAL = {
 
 -- ||           TAROT          ||
 MILLS.TAROT = {
-   "animal",
-   "chromlech",
+  -- "animal",
+  -- "chromlech",
   }
 
 -- ||           SEALS          ||

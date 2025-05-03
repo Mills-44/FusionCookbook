@@ -1,6 +1,7 @@
 SMODS.Enhancement {
     key = "scratch",
     atlas = 'enhanc_fus',
+    any_suit = true,
     pos = {
         x = 7, 
         y = 0

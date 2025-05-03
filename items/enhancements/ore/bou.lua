@@ -1,6 +1,9 @@
 SMODS.Enhancement {
     key = "bou",
     atlas = 'enhanc_fus', 
+    any_rank = true,
+    no_suit = true,
+    replace_base_card = true,
     pos = {
         x= 5,
         y= 2
@@ -10,9 +13,6 @@ SMODS.Enhancement {
             chips = 50
         }
     },
-    any_rank = true,
-    no_suit = true,
-    replace_base_card = true,
     loc_vars = function(self, info_queue, card)
         return {
             vars = {

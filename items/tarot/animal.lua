@@ -8,86 +8,57 @@ SMODS.Consumable {
         y = 0
     },
     config = {
-        max_highlighted = 2,
-        unlock_condition = function()
-            local function has_required_combo()
-                local has_wild = false
-                local has_bonus = false
-                local has_mult = false
-    
-                local piles = {G.hand.cards, G.deck.cards, G.discard.cards}
-                for _, pile in ipairs(piles) do
-                    for _, card in ipairs(pile) do
-                        if card.enhancement == "m_wild" then
-                            has_wild = true
-                        elseif card.enhancement == "m_bonus" then
-                            has_bonus = true
-                        elseif card.enhancement == "m_mult" then
-                            has_mult = true
-                        end
-                    end
-                end
-    
-                return has_wild and (has_bonus or has_mult)
-            end
-    
-            return has_required_combo()
-        end
+        max_highlighted = 0,
     },
     pools = { 
         Tarot = true
      },
     cost = 3,
-    unlocked = false,
+    unlocked = true,
     discovered = true,
     can_use = function(self, card)
-        -- Only usable when hand is out (in play) or in shop
-        if not G or not G.hand then return false end
-        local highlighted = G.hand.highlighted or {}
-        local ability = card.ability or {}
-        local max_highlighted = ability.max_highlighted or 2
-        
-        return #highlighted <= max_highlighted and #highlighted > 0
+        if #G.hand.highlighted ~= 2 then
+            return false
+        end
+        for _, v in ipairs(G.hand.highlighted) do
+            if not SMODS.has_enhancement(v, "m_bonus", "m_mult", "m_wild") then
+                return false
+            end
+        end
+        return true
     end,
-
     use = function(self, card, area, copier)
         local highlighted = G.hand.highlighted or {}
-        if #highlighted > 0 then
+        if #highlighted == 0 then return end
+
+        G.E_MANAGER:add_event(Event({
+            trigger = 'after', delay = 0.4,
+            func = function()
+                card:juice_up(0.3, 0.5)
+                return true
+            end
+        }))
+
+        for _, c in ipairs(highlighted) do
             G.E_MANAGER:add_event(Event({
-                trigger = 'after', delay = 0.4,
+                trigger = 'after', delay = 0.15,
                 func = function()
-                    card:juice_up(0.3, 0.5)
+                    local new_enhancement
+                    if c.enhancement == "m_bonus" then
+                        new_enhancement = "m_mills_untamed"
+                    elseif c.enhancement == "m_mult" then
+                        new_enhancement = "m_mills_feral"
+                    elseif c.enhancement == "m_wild" then
+                        new_enhancement = MILLS.random_chance(0.5) and "m_mills_untamed" or "m_mills_feral"
+                    end
+
+                    if new_enhancement then
+                        c:set_ability(G.P_CENTERS[new_enhancement], true, nil)
+                        c:juice_up(0.3, 0.3)
+                    end
                     return true
                 end
             }))
-
-            for _, c in ipairs(highlighted) do
-                G.E_MANAGER:add_event(Event({
-                    trigger = 'after', delay = 0.15,
-                    func = function()
-                        c:flip()
-                        c:juice_up(0.3, 0.3)
-                        return true
-                    end
-                }))
-            end
-            delay(0.2)
-            for _, c in ipairs(highlighted) do
-                G.E_MANAGER:add_event(Event({
-                    trigger = 'after', delay = 0.15,
-                    func = function()
-                        G.hand:remove_from_highlighted(c)
-                        c:flip()
-                        if MILLS.random_chance(.5) then
-                        c:set_ability(G.P_CENTERS['m_mills_feral'], true, nil)
-                        else 
-                        c:set_ability(G.P_CENTERS['m_mills_untamed'], true, nil)    
-                        c:juice_up(0.3, 0.3)
-                        return true
-                    end
-                end
-                }))
         end
     end
-end
 }

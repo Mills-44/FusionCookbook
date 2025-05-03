@@ -180,17 +180,17 @@ MILLS.SWEET_ENHANCEMENTS = {
  -- Fusion Enhancements
 --"lots",
 -- "extra",
--- "untamed",
+"untamed",
 -- "tempered",
 -- "sapph",
--- "cob",
+ "cob",
 -- "ori",
 -- "scratch",
 -- "power",
--- "feral",
+ "feral",
 -- "color",
 -- "ruby",
--- "cinna",
+ "cinna",
 -- "rhondite",
 -- "prize",
 -- "wow",
@@ -209,8 +209,8 @@ MILLS.SPECTRAL = {
 
 -- ||           TAROT          ||
 MILLS.TAROT = {
-  -- "animal",
-  -- "chromlech",
+   "animal",
+   "chromlech",
   }
 
 -- ||           SEALS          ||

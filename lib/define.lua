@@ -102,24 +102,29 @@ MILLS.PEPPER_JOKERS = {
 MILLS.SWEET_JOKERS = {
 --"apple_of_jacks_eye",
 "barry_b",
+--"better_call_bon",
 "bob",
 --"cookie_monster",
 --"gingy",
 "gummibar",
+--"heisenbergs_baby_blue",
 "honey_nut_cheerios",
 "jammin_jelly",
 "king_candy",
+--"king_dice",
 "koolaid_man",
 "nutty_buddy",
 "peppermint_butler",
+--"pos_baozis",
 "stay_puft",
+--"stuart_on_a_stick",
 "wonkas_chocolate_bar",
 --"", -- More Ideas
 }
 
 MILLS.FUSION_JOKERS = {
- -- "monster",
- -- "cave"
+  -- "cave"
+  -- "monster",
 }
 --Sandwich Jokers
 MILLS.SANDWHICH_JOKERS = {
@@ -179,26 +184,26 @@ MILLS.SWEET_ENHANCEMENTS = {
 }
  MILLS.FUSION_ENHANCEMENTS = {
  -- Fusion Enhancements
-"bou",
+--"bou",
 "cinna",
-"claws",
-"clov",
+--"claws",
+--"clov",
 "cob",
-"color",
-"crack",
+--"color",
+--"crack",
 "extra",
 "feral",
 "lots",
-"ori",
-"pig",
-"power",
-"prize",
-"rhondite",
-"ruby",
-"sapph",
-"scratch",
-"stain",
-"tempered",
+--"ori",
+--"pig",
+--"power",
+--"prize",
+--"rhondite",
+--"ruby",
+--"sapph",
+--"scratch",
+--"stain",
+--"tempered",
 "untamed",
 }
 
@@ -212,6 +217,8 @@ MILLS.SPECTRAL = {
 MILLS.TAROT = {
    "animal",
    "chromlech",
+   "omnipotent",
+   --""
   }
 
 -- ||           SEALS          ||

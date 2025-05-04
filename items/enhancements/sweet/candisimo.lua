@@ -5,6 +5,7 @@ SMODS.Enhancement {
         x = 1,
         y = 1
     },
+    order = 1,
     config = {
         extra = {
         chips = 0,

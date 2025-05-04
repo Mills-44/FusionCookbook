@@ -7,7 +7,7 @@ SMODS.Enhancement {
       toggle = true  -- true = x2 next, false = x1 next
     }
   },
-
+  order = 4,
   loc_vars = function(self, info_queue, card)
     local next = card.ability.extra.toggle and 2 or 1
     local prev = card.ability.extra.toggle and 1 or 2

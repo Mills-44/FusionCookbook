@@ -11,6 +11,7 @@ SMODS.Enhancement {
             mult = 5
         }
     },
+    order = 2,
     loc_vars = function(self, info_queue, card)
         return {
             vars = {

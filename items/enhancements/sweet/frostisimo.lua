@@ -10,7 +10,7 @@ SMODS.Enhancement {
       base_money = 1
     }
   },
-
+  order = 3,
   loc_vars = function(self, info_queue, card)
     return {
       vars = {

@@ -86,7 +86,7 @@ descriptions = {
               },
 
 	   m_mills_crack = { 
-              name = "Cracked Glass Card",
+              name = "Shattered Glass",
               label = "Cracked",
               text = {
                       "{X:mult,C:white}X#1#{} mult",

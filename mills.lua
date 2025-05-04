@@ -67,7 +67,7 @@ end
 MILLS.register_items(MILLS.BOOSTER, "items/boosters")
 
 MILLS.register_items(MILLS.SWEET_ENHANCEMENTS, "items/enhancements/sweet")
-MILLS.register_items(MILLS.ORE_ENHANCEMENTS, "items/enhancements/ore")
+MILLS.register_items(MILLS.FUSION_ENHANCEMENTS, "items/enhancements/fusion")
 
 MILLS.register_items(MILLS.SNACKS, "items/snack")
 MILLS.register_items(MILLS.FUSION, "items/fusion")

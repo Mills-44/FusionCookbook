@@ -494,6 +494,12 @@ descriptions = {
                   "Create one random {C:attention}Sweet Joker{}"
                 }
               },
+              c_mills_m_and_m = {
+                name = "M&M",
+                text = {
+                  "{C:green} 1 in 3{} chance to get a {C:attention}Spectral{} card."
+                }
+              },
               c_mills_pretzel = {
                 name = "Pretzel",
                 text = {
@@ -509,7 +515,7 @@ descriptions = {
               c_mills_shortbread = {
                 name = "Shortbread",
                 text = {
-                    "Decreases rank of up to{C:attention}2{},",
+                    "Decreases rank of up to {C:attention}2{},",
                     "selected cards by {C:attention}1{}"
                 }
             },         

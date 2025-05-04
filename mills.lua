@@ -40,10 +40,11 @@ SMODS.ConsumableType {
 }
 
 -- Register custom ConsumableType: Fusion
+
 SMODS.ConsumableType {
   object_type = "ConsumableType",
   key = 'Fusion',
-  default = 'c_mills_global',
+  default = 'c_mills_enh_fus',
   collection_rows = { 4,4 },
   primary_colour = HEX("7164C6"),
   secondary_colour = HEX("31353B"),
@@ -64,7 +65,29 @@ SMODS.insert_pool = function(pool, center, ...)
   return orig_insert_pool(pool, center, ...)
 end
 
+-- Fusing cards go boioioing
+local set_spritesref = Card.set_sprites
+function Card:set_sprites(_center, _front)
+    set_spritesref(self, _center, _front)
+    if _center and _center.name == "c_mills_enh_fus" then
+        self.children.floating_sprite = Sprite(
+            self.T.x,
+            self.T.y,
+            self.T.w,
+            self.T.h,
+            G.ASSET_ATLAS[_center.atlas or _center.set],
+            { x = 3, y = 0 }
+        )
+        self.children.floating_sprite.role.draw_major = self
+        self.children.floating_sprite.states.hover.can = false
+        self.children.floating_sprite.states.click.can = false
+    end
+end
+
+-- register items
+
 MILLS.register_items(MILLS.BOOSTER, "items/boosters")
+
 
 MILLS.register_items(MILLS.SWEET_ENHANCEMENTS, "items/enhancements/sweet")
 MILLS.register_items(MILLS.FUSION_ENHANCEMENTS, "items/enhancements/fusion")
@@ -73,6 +96,7 @@ MILLS.register_items(MILLS.SNACKS, "items/snack")
 MILLS.register_items(MILLS.FUSION, "items/fusion")
 
 --MILLS.register_items(MILLS.SPECTRAL, "items/spectral")
+
 MILLS.register_items(MILLS.TAROT, "items/tarot")
 
 --MILLS.register_items(MILLS.SEALS, "items/seals")
@@ -80,16 +104,3 @@ MILLS.register_items(MILLS.TAROT, "items/tarot")
 --MILLS.register_items(MILLS.TAGS, "items/tags")
 
 --MILLS.register_items(MILLS.EDITIONS, "items/editions")
-
--- Create a table checker for jokers that transforms cards
-
-function table.contains(table, element)
-  if table and type(table) == "table" then
-      for _, value in pairs(table) do
-          if value == element then
-              return true
-          end
-      end
-      return false
-  end
-end

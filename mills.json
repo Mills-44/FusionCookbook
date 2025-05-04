@@ -3,7 +3,7 @@
 	"name": "Fusion Cookbook",
 	"display_name": "Fusion Cookbook",
 	"author": ["Mills-44", "Rafaelly"],
-	"description": "A chef's kiss to the game",
+	"description": "Splice, Spice, and Everything Nice all in one mod. Fusion elements added to the game for enhanced and new effects for Balatro",
 	"prefix": "mills",
 	"main_file": "mills.lua",
 	"priority": 450,

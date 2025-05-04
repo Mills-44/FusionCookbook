@@ -36,7 +36,6 @@ local atlas_keys = { --This will set up a local loop of all atlas keys
   'frosting',
   'bob',
   'king_candy',
-  'frostisimo',
   'blondwie',
   'm_and_m',
   'choffle',

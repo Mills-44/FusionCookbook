@@ -57,16 +57,16 @@ MILLS.dark_suits = { 'Spades', 'Clubs' }
 ---@return table
 MILLS.COLORS = { --Sorry bro the u is too confusing for my american brain XD
 --Pepper Colors
-TANGY = HEX("19460b"),
-PIQUANT = HEX("2c7515"),
-SPICY = HEX("667515"),
-SIZZILING = HEX("afac1a"),
-FIERY = HEX("ce9e17"),
-SCORCHING = HEX("ce6417"),
 DEATH = HEX("a21c0d"),
+FIERY = HEX("ce9e17"),
+PIQUANT = HEX("2c7515"),
+SCORCHING = HEX("ce6417"),
+SIZZILING = HEX("afac1a"),
+SPICY = HEX("667515"),
+TANGY = HEX("19460b"),
 --Sweet Colors
-COOKIE = HEX("834f0d"),
 BOB = HEX("2ec3f1"),
+COOKIE = HEX("834f0d"),
 GINGY = HEX("6f4305"),
 GUMMY = HEX("21de24"),
 JELLY = HEX("820f8a"),
@@ -89,13 +89,13 @@ FUSION = HEX("FF00FF"),
 
 --Pepper Jokers
 MILLS.PEPPER_JOKERS = {
-  "pimento_pepper",
-  "anaheim_chile",
-  "jalapeno",
-  "cayenne",
-  "habanero",
-  "ghost_pepper",
-  "carolina_reaper"
+"anaheim_chile",
+"carolina_reaper",
+"cayenne",
+"ghost_pepper",
+"habanero",
+"jalapeno",
+"pimento_pepper",
 }
 
 --Sweet Jokers
@@ -136,10 +136,11 @@ MILLS.SANDWHICH_JOKERS = {
 
 -- Snack Pack Booster 
 MILLS.BOOSTER = {
+--"fusion_pack"
 "snack_pack",
 "snack_pack_jumbo",
 "snack_pack_mega",
---"fusion_pack"
+
 }
 
 -- ||           SNACKS          ||
@@ -203,8 +204,8 @@ MILLS.SWEET_ENHANCEMENTS = {
 
 -- ||           SPECTRAL          || 
 MILLS.SPECTRAL = {
--- "munch",
 -- "baker",
+-- "munch",
 }
 
 -- ||           TAROT          ||
@@ -215,9 +216,9 @@ MILLS.TAROT = {
 
 -- ||           SEALS          ||
 MILLS.SEALS = {
+-- "bubblegum",
 -- "cookie",
 -- "donut",
--- "bubblegum",
 -- "",
 }
 
@@ -230,8 +231,8 @@ MILLS.TAGS = {
 
 -- ||           EDITIONS          ||
 MILLS.EDITIONS = {
+-- "dipped",  
 -- "powedered",
 -- "sprinkled",
--- "dipped",  
 -- "",
 }

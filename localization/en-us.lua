@@ -509,7 +509,8 @@ descriptions = {
               c_mills_shortbread = {
                 name = "Shortbread",
                 text = {
-                    "Select 2 cards and destroy them, then create a new card with 1 lower rank than the highest"
+                    "Decreases rank of up to{C:attention}2{},",
+                    "selected cards by {C:attention}1{}"
                 }
             },         
               c_mills_slice_of_bread = {

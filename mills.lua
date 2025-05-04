@@ -40,7 +40,6 @@ SMODS.ConsumableType {
 }
 
 -- Register custom ConsumableType: Fusion
-
 SMODS.ConsumableType {
   object_type = "ConsumableType",
   key = 'Fusion',
@@ -84,23 +83,22 @@ function Card:set_sprites(_center, _front)
     end
 end
 
--- register items
-
+-- Register Game Add-Ons will use the util function to go to those folders and pull each lua file in it pretty sweet function 
+-- Loads all boosters
 MILLS.register_items(MILLS.BOOSTER, "items/boosters")
-
-
+-- Loads all enhancements
 MILLS.register_items(MILLS.SWEET_ENHANCEMENTS, "items/enhancements/sweet")
 MILLS.register_items(MILLS.FUSION_ENHANCEMENTS, "items/enhancements/fusion")
-
+-- Loads all snack and fusion consumables
 MILLS.register_items(MILLS.SNACKS, "items/snack")
 MILLS.register_items(MILLS.FUSION, "items/fusion")
-
+-- Loads all new spectral cards
 --MILLS.register_items(MILLS.SPECTRAL, "items/spectral")
-
+-- Loads all new tarot cards
 MILLS.register_items(MILLS.TAROT, "items/tarot")
-
+-- Loads all new seals
 --MILLS.register_items(MILLS.SEALS, "items/seals")
-
+-- Loads all new tags
 --MILLS.register_items(MILLS.TAGS, "items/tags")
-
+-- Loads all new editions
 --MILLS.register_items(MILLS.EDITIONS, "items/editions")

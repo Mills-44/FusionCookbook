@@ -16,6 +16,7 @@ SMODS.load_file("lib/util.lua")() -- Utility functions built
 
 SMODS.load_file("items/atlas.lua")() -- Pictures
 SMODS.load_file("items/sounds.lua")() -- Sounds
+SMODS.load_file("items/tabs.lua")() -- Tabs
 
 MILLS.register_items(MILLS.PEPPER_JOKERS, "items/joker/pepper")
 MILLS.register_items(MILLS.SWEET_JOKERS, "items/joker/sweet")

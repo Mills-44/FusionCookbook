@@ -84,6 +84,16 @@ descriptions = {
                  "{C:mult}+#2#{} Mult"
                   }
               },
+
+	   m_mills_crack = { 
+              name = "Cracked Glass Card",
+              label = "Cracked",
+              text = {
+                      "{X:mult,C:white}X#1#{} mult",
+                      "{E:2}breaks{} after use"
+                    }
+              },
+			
             m_mills_feral = {
               name = "Feral",
               text = {

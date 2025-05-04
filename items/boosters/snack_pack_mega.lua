@@ -9,7 +9,7 @@ SMODS.Booster {
         y = 0 
     },
     config = {
-      extra = 6,
+      extra = 5,
       choose = 2
     },
     weight = .55,

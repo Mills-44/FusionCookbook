@@ -1,8 +1,8 @@
 SMODS.Consumable {
     object_type = "Consumable",
-    key = 'animal',
+    key = 'omnipotent',
     set = "Tarot",
-    atlas = 'animal',
+    atlas = 'omnipotent',
     pos = {
         x = 0,
         y = 0
@@ -10,24 +10,24 @@ SMODS.Consumable {
     config = {
         max_highlighted = 2,
         extra = {
-        odd = 10
-        } 
+            odd = 10
+            } 
     },
     pools = { 
         Tarot = true
-     },
+    },
     cost = 3,
     unlocked = true,
     discovered = true,
+    
     can_use = function(self, card)
         if #G.hand.highlighted > 2 then
             return false
         end
         
         for _, v in ipairs(G.hand.highlighted) do
-            if SMODS.has_enhancement(v, 'm_bonus') or
-               SMODS.has_enhancement(v, 'm_mult') or
-               SMODS.has_enhancement(v, 'm_wild') then
+            if SMODS.has_enhancement(v, 'm_mult') or
+               SMODS.has_enhancement(v, 'm_bonus') then
                 return true
             else return false
             end
@@ -53,18 +53,17 @@ SMODS.Consumable {
                 trigger = 'after', delay = 0.15,
                 func = function()
                     if SMODS.has_enhancement(v, 'm_bonus') then
-                        v:set_ability ("m_mills_untamed",nil,true)
-                    end
-
-                    if SMODS.has_enhancement(v, 'm_mult') then
-                        v:set_ability ("m_mills_feral",nil,true)
-                    end
-
-                    if SMODS.has_enhancement(v, 'm_wild') then
-                        if MILLS.random_chance(.5) then
-                            v:set_ability('m_mills_untamed') -- Turns it to wild
+                        if MILLS.random_chance(.75) then
+                            v:set_ability('m_mills_lots') 
                            else
-                            v:set_ability('m_mills_feral')
+                            v:set_ability('m_mills_extra')
+                        end
+                    end
+                    if SMODS.has_enhancement(v, 'm_mult') then
+                        if MILLS.random_chance(.55) then
+                            v:set_ability('m_mills_lots') 
+                           else
+                            v:set_ability('m_mills_extra')
                         end
                      end
                     return true

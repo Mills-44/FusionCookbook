@@ -9,36 +9,15 @@ SMODS.Consumable {
     },
     config = {
         max_highlighted = 2,
-        unlock_condition = function()
-            local function has_required_combo()
-                local has_stone = false
-                local has_bonus = false
-                local has_wild = false
-    
-                local piles = {G.hand.cards, G.deck.cards, G.discard.cards}
-                for _, pile in ipairs(piles) do
-                    for _, card in ipairs(pile) do
-                        if card.enhancement == "m_stone" then
-                            has_stone = true
-                        elseif card.enhancement == "m_bonus" then
-                            has_bonus = true
-                        elseif card.enhancement == "m_wild" then
-                            has_wild = true
-                        end
-                    end
-                end
-    
-                return has_stone and (has_bonus or has_wild)
-            end
-    
-            return has_required_combo()
-        end
+        extra = {
+            odd = 10
+            } 
     },
     pools = { 
         Tarot = true
     },
     cost = 3,
-    unlocked = false,
+    unlocked = true,
     discovered = true,
     
     can_use = function(self, card)
@@ -84,7 +63,7 @@ SMODS.Consumable {
 
                     if SMODS.has_enhancement(v, 'm_stone') then
                         if MILLS.random_chance(.5) then
-                            v:set_ability('m_mills_cinna') -- Turns it to wild
+                            v:set_ability('m_mills_cinna') 
                            else
                             v:set_ability('m_mills_cob')
                         end

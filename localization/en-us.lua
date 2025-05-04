@@ -557,6 +557,79 @@ descriptions = {
         },
         },
         Voucher={},
+	Tags = {},
+        Tabs = {
+          mills_fusions_glob = {
+            name = "",
+            text = {
+              "{C:purple, S:1.2}Global Fusion Card:{} Fuses 2 diferent selected cards of any type"
+            }
+          },
+
+          mills_fusions_glob_enh = {
+            name = "",
+            text = {
+              "{C:purple, S:1.2}Global Modification Fusion Card:{} Fuses 2 diferent selected cards of any type"
+            }
+          },
+
+          mills_fusions_glob_cons = {
+            name = "",
+            text = {
+              "{C:purple, S:1.2}Global Consumable Fusion Card:{} Fuses 2 diferent selected cards of any type"
+            }
+          },
+
+          mills_fusions_enh = {
+            name = "",
+            text = {
+              "{C:purple, S:1.2}Enhanc Fusion Card:{} Fuses 2 diferent selected {C:attention)enhancement{}"
+            }
+          },
+
+          mills_fusions_edi = {
+            name = "",
+            text = {
+              "{C:purple, S:1.2}Edition Fusion Card:{} Fuses 2 diferent selected {C:attention)editions{}"
+            }
+          },
+
+          mills_fusions_seal = {
+            name = "",
+            text = {
+              "{C:purple, S:1.2}Seal Fusion Card:{} Fuses 2 diferent selected {C:attention)Seals{}"
+            }
+          },
+
+          mills_fusions_tarot = {
+            name = "",
+            text = {
+              "{C:purple, S:1.2}Tarot Fusion Card:{} Fuses 2 diferent selected {C:attention)Tarot Cards{}"
+            }
+          },
+
+          mills_fusions_spec = {
+            name = "",
+            text = {
+              "{C:purple, S:1.2}Spectral Fusion Card:{} Fuses 2 diferent selected {C:attention)spectral cards{}"
+            }
+          },
+
+          mills_fusions_snack = {
+            name = "",
+            text = {
+              "{C:purple, S:1.2}Snack Fusion Card:{} Fuses 2 diferent selected {C:attention)snack cards{}"
+            }
+          },
+
+          mills_fusions_plan = {
+            name = "",
+            text = {
+              "{C:purple, S:1.2}Planet Fusion Card:{} Fuses 2 diferent selected {C:attention)planet card{}"
+            }
+          },
+
+        }
     },
     misc = {
         achievement_descriptions={},
@@ -570,6 +643,10 @@ descriptions = {
             mills_flayfluff = "Makes Flayfluff!",
             mills_not_valid_fusion = "No Valid Combos",
             mills_unknwown_fusion = "Unknown Combo"
+	    -- menus
+           k_mills_instruction_glob = "Fusing Global",
+           k_mills_instruction_mod = "Fusing Mods",
+           k_mills_instruction_cons = "Fusing Consume",
 
         },
         high_scores={},

@@ -10,7 +10,7 @@ SMODS.Consumable {
         max_highlighted = 2,
     },
     pools = {
-        Custom = true
+        Snack = true
     },
     cost = 3,
     unlocked = true,

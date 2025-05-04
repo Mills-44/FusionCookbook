@@ -158,7 +158,7 @@ MILLS.SNACKS = {
 "whipping_cream",
 -- "cannoli",
 -- "taffy",
--- "shortbread",
+"shortbread",
 -- "choffle",
 -- "blondwie",
 -- "",

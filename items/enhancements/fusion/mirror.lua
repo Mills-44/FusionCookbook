@@ -1,0 +1,22 @@
+SMODS.Enhancement {
+    key = "mirror",
+    atlas = "enhanc_fus",
+    pos = {
+    x = 4, 
+    y = 3
+    },
+    config = {extra = {x_mult = 1.5, odd = 4}},
+    loc_vars = function(self, info_queue, card)
+        return {vars={card.ability.extra.x_mult, card.ability.extra.odd, (G.GAME.probabilities.normal or 1)}}
+end,
+    calculate = function(self,card,context)
+    if context.cardarea and context.main_scoring == G.play then
+        return { x_mult = card.ability.extra.x_mult}
+    end
+    if context.cardarea == G.play and context.repetition then
+        if pseudorandom('retrigodd') < G.GAME.probabilities.normal / card.ability.extra.odd then
+            return {repetitions = 1}
+        end
+    end
+end
+}

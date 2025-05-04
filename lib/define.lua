@@ -166,7 +166,7 @@ MILLS.SNACKS = {
 }
 -- ||           FUSIONS          ||
 MILLS.FUSION = {
- -- "global"
+ "enh_fus"
 }
 
 -- ||           ENHANCEMENTS          ||
@@ -177,32 +177,31 @@ MILLS.SWEET_ENHANCEMENTS = {
  "whippisimo",
  "frostisimo"
 }
- MILLS.ORE_ENHANCEMENTS = {
+ MILLS.FUSION_ENHANCEMENTS = {
  -- Fusion Enhancements
---"lots",
--- "extra",
+"lots",
+"extra",
 "untamed",
--- "tempered",
--- "sapph",
+"tempered",
+"sapph",
  "cob",
--- "ori",
--- "scratch",
--- "power",
+"ori",
+"scratch",
+"power",
  "feral",
--- "color",
--- "ruby",
- "cinna",
--- "rhondite",
--- "prize",
--- "wow",
--- "stain",
--- "claws",
--- "bou",
--- "pig",
--- "clov"
+"color",
+"ruby",
+"cinna",
+"rhondite",
+"prize",
+"stain",
+"claws",
+"bou",
+"pig",
+"clov"
 }
 
--- ||           SPECTRAL          ||
+-- ||           SPECTRAL          || 
 MILLS.SPECTRAL = {
 -- "munch",
 -- "baker",

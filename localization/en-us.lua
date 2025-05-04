@@ -642,7 +642,7 @@ descriptions = {
            -- b_mills_snack_pack = "Snack",
             mills_flayfluff = "Makes Flayfluff!",
             mills_not_valid_fusion = "No Valid Combos",
-            mills_unknwown_fusion = "Unknown Combo"
+            mills_unknwown_fusion = "Unknown Combo",
 	    -- menus
            k_mills_instruction_glob = "Fusing Global",
            k_mills_instruction_mod = "Fusing Mods",

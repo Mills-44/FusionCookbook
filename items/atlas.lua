@@ -38,7 +38,8 @@ local atlas_keys = { --This will set up a local loop of all atlas keys
   'king_candy',
   'frostisimo',
   'blondwie',
-  --'choffle',
+  'm_and_m',
+  'choffle',
   'shortbread',
   -- 'taffy',
   'enhanc_fus', -- Defines all ore enahncements in one picture 

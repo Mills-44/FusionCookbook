@@ -17,6 +17,7 @@ SMODS.load_file("lib/util.lua")() -- Utility functions built
 SMODS.load_file("items/atlas.lua")() -- Pictures
 SMODS.load_file("items/sounds.lua")() -- Sounds
 SMODS.load_file("items/tabs.lua")() -- Tabs
+SMODS.load_file("lovely/others.toml") -- obsidian
 
 MILLS.register_items(MILLS.PEPPER_JOKERS, "items/joker/pepper")
 MILLS.register_items(MILLS.SWEET_JOKERS, "items/joker/sweet")
@@ -40,6 +41,7 @@ SMODS.ConsumableType {
 }
 
 -- Register custom ConsumableType: Fusion
+
 SMODS.ConsumableType {
   object_type = "ConsumableType",
   key = 'Fusion',
@@ -75,7 +77,7 @@ function Card:set_sprites(_center, _front)
             self.T.w,
             self.T.h,
             G.ASSET_ATLAS[_center.atlas or _center.set],
-            { x = 3, y = 0 }
+            { x = 1, y = 2 }
         )
         self.children.floating_sprite.role.draw_major = self
         self.children.floating_sprite.states.hover.can = false
@@ -83,22 +85,23 @@ function Card:set_sprites(_center, _front)
     end
 end
 
--- Register Game Add-Ons will use the util function to go to those folders and pull each lua file in it pretty sweet function 
--- Loads all boosters
+-- register items
+
 MILLS.register_items(MILLS.BOOSTER, "items/boosters")
--- Loads all enhancements
+
+
 MILLS.register_items(MILLS.SWEET_ENHANCEMENTS, "items/enhancements/sweet")
 MILLS.register_items(MILLS.FUSION_ENHANCEMENTS, "items/enhancements/fusion")
--- Loads all snack and fusion consumables
+
 MILLS.register_items(MILLS.SNACKS, "items/snack")
 MILLS.register_items(MILLS.FUSION, "items/fusion")
--- Loads all new spectral cards
+
 --MILLS.register_items(MILLS.SPECTRAL, "items/spectral")
--- Loads all new tarot cards
+
 MILLS.register_items(MILLS.TAROT, "items/tarot")
--- Loads all new seals
+
 --MILLS.register_items(MILLS.SEALS, "items/seals")
--- Loads all new tags
+
 --MILLS.register_items(MILLS.TAGS, "items/tags")
--- Loads all new editions
+
 --MILLS.register_items(MILLS.EDITIONS, "items/editions")

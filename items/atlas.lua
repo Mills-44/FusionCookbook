@@ -19,7 +19,6 @@ local atlas_keys = { --This will set up a local loop of all atlas keys
 'flayfluff_sub',
 'fusion',
 'frosting',
-'frostisimo',
 'gloopwich',
 'golden_crunch',
 'gummibar',

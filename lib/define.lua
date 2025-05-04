@@ -145,8 +145,7 @@ MILLS.BOOSTER = {
 -- ||           SNACKS          ||
 --Snack Cards
 MILLS.SNACKS = {
---"slice_of_bread",
---"cream_puff",
+"shortbread",
 "rye_chip",
 "pretzel",
 "homeys_doney",
@@ -156,11 +155,13 @@ MILLS.SNACKS = {
 "butterscotch",
 "frosting",
 "whipping_cream",
+"m_and_m",
 -- "cannoli",
 -- "taffy",
-"shortbread",
 -- "choffle",
 -- "blondwie",
+--"slice_of_bread",
+--"cream_puff",
 -- "",
 }
 -- ||           FUSIONS          ||

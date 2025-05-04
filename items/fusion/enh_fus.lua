@@ -377,6 +377,121 @@ SMODS.Consumable {
               G.hand.highlighted[2]:start_dissolve()
               SMODS.add_card({key = "j_mills_monster"})
           end
+
+        if SMODS.has_enhancement(G.hand.highlighted[1], 'm_glass') and
+          SMODS.has_enhancement(G.hand.highlighted[2], 'm_wild')
+          or
+          SMODS.has_enhancement(G.hand.highlighted[1], 'm_wild') and
+          SMODS.has_enhancement(G.hand.highlighted[2], 'm_glass') then
+            G.hand.highlighted[1]:set_ability ("m_mills_stain",nil,true)
+            G.hand.highlighted[2]:start_dissolve()
+            G.E_MANAGER:add_event(Event({
+                trigger = 'after',
+                delay = 0.75,
+                func = function()
+                G.hand.highlighted[1]:flip()
+                return true
+                   end}))
+            G.E_MANAGER:add_event(Event({
+                trigger = 'after',
+                delay = 1.00,
+                func = function()
+                G.hand.highlighted[1]:flip()
+                return true
+                end}))
+        end
+
+        if SMODS.has_enhancement(G.hand.highlighted[1], 'm_steel') and
+            SMODS.has_enhancement(G.hand.highlighted[2], 'm_wild')
+            or
+            SMODS.has_enhancement(G.hand.highlighted[1], 'm_wild') and
+            SMODS.has_enhancement(G.hand.highlighted[2], 'm_steel') then
+              G.hand.highlighted[1]:set_ability ("m_mills_claws",nil,true)
+              G.hand.highlighted[2]:start_dissolve()
+              G.E_MANAGER:add_event(Event({
+                  trigger = 'after',
+                  delay = 0.75,
+                  func = function()
+                  G.hand.highlighted[1]:flip()
+                  return true
+                     end}))
+              G.E_MANAGER:add_event(Event({
+                  trigger = 'after',
+                  delay = 1.00,
+                  func = function()
+                  G.hand.highlighted[1]:flip()
+                  return true
+                  end}))
+          end
+
+          if SMODS.has_enhancement(G.hand.highlighted[1], 'm_stone') and
+          SMODS.has_enhancement(G.hand.highlighted[2], 'm_wild')
+          or
+          SMODS.has_enhancement(G.hand.highlighted[1], 'm_wild') and
+          SMODS.has_enhancement(G.hand.highlighted[2], 'm_stone') then
+            G.hand.highlighted[1]:set_ability ("m_mills_bou",nil,true)
+            G.hand.highlighted[2]:start_dissolve()
+            G.E_MANAGER:add_event(Event({
+                trigger = 'after',
+                delay = 0.75,
+                func = function()
+                G.hand.highlighted[1]:flip()
+                return true
+                   end}))
+            G.E_MANAGER:add_event(Event({
+                trigger = 'after',
+                delay = 1.00,
+                func = function()
+                G.hand.highlighted[1]:flip()
+                return true
+                end}))
+        end
+
+        if SMODS.has_enhancement(G.hand.highlighted[1], 'm_gold') and
+            SMODS.has_enhancement(G.hand.highlighted[2], 'm_wild')
+            or
+            SMODS.has_enhancement(G.hand.highlighted[1], 'm_wild') and
+            SMODS.has_enhancement(G.hand.highlighted[2], 'm_gold') then
+              G.hand.highlighted[1]:set_ability ("m_mills_pig",nil,true)
+              G.hand.highlighted[2]:start_dissolve()
+              G.E_MANAGER:add_event(Event({
+                  trigger = 'after',
+                  delay = 0.75,
+                  func = function()
+                  G.hand.highlighted[1]:flip()
+                  return true
+                     end}))
+              G.E_MANAGER:add_event(Event({
+                  trigger = 'after',
+                  delay = 1.00,
+                  func = function()
+                  G.hand.highlighted[1]:flip()
+                  return true
+                  end}))
+          end
+
+          if SMODS.has_enhancement(G.hand.highlighted[1], 'm_lucky') and
+          SMODS.has_enhancement(G.hand.highlighted[2], 'm_wild')
+          or
+          SMODS.has_enhancement(G.hand.highlighted[1], 'm_wild') and
+          SMODS.has_enhancement(G.hand.highlighted[2], 'm_lucky') then
+            G.hand.highlighted[1]:set_ability ("m_mills_clover",nil,true)
+            G.hand.highlighted[2]:start_dissolve()
+            G.E_MANAGER:add_event(Event({
+                trigger = 'after',
+                delay = 0.75,
+                func = function()
+                G.hand.highlighted[1]:flip()
+                return true
+                   end}))
+            G.E_MANAGER:add_event(Event({
+                trigger = 'after',
+                delay = 1.00,
+                func = function()
+                G.hand.highlighted[1]:flip()
+                return true
+                end}))
+        end
     end}
 
 

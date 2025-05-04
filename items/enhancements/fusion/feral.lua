@@ -5,6 +5,7 @@ SMODS.Enhancement {
         x = 2,
         y = 1
     },
+    any_suit = true,
     config = {
         extra = {
             mult = 4

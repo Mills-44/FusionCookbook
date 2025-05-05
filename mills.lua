@@ -67,6 +67,7 @@ SMODS.insert_pool = function(pool, center, ...)
 end
 
 -- Fusing cards go boioioing
+
 local set_spritesref = Card.set_sprites
 function Card:set_sprites(_center, _front)
     set_spritesref(self, _center, _front)

@@ -13,7 +13,8 @@ SMODS.Consumable {
     pools = { 
         Snack = true
      },
-    cost = 3,
+    cost = 4,
+    weight = 15,
     unlocked = true,
     discovered = true,
     can_use = function(self, card)

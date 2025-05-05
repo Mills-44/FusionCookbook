@@ -62,7 +62,7 @@ SMODS.Consumable {
                     end
 
                     if SMODS.has_enhancement(v, 'm_stone') then
-                        if MILLS.random_chance(.5) then
+                        if MILLS.random_chance(.45) then
                             v:set_ability('m_mills_cinna') 
                            else
                             v:set_ability('m_mills_cob')

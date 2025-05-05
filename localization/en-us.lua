@@ -578,15 +578,24 @@ descriptions = {
           c_mills_animal = {
             name = "Animal",
              text = { 
-               "Select either 2 {C:attention} Mult, Wild or Bonus} to turn to either Feral or Untamed"
+               "Select 2 {C:attention} Mult, Wild or Bonus{}, ",
+               "cards to turn to either {C:attention}Feral{} or {C:attention}Untamed{}"
                 }
         },
           c_mills_chromlech = {
-            name = "Chromlech",
+            name = "Cromlech",
              text = { 
-                "Select either 2 {C:attention} Mult, Stone or Bonus} to turn to either Cobalt or Cinnabar"
+                "Select 2 {C:attention} Mult, Stone or Bonus{}, ",
+                "cards to turn to either {C:attention}Cobalt{} or {C:attention}Cinnabar{}"
                 }
         },
+        c_mills_omnipotent = {
+          name = "Omnipotent",
+           text = { 
+              "Select 2 {C:attention} Mult or Bonus{}, ",
+              "cards to turn to either {C:attention}Lots{} or {C:attention}Extra{}"
+              }
+      },
         },
         Voucher={},
         Tags = {},

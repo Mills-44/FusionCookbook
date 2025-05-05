@@ -5,7 +5,8 @@ SMODS.Consumable  {
     atlas = 'kinder_egg',
     pos = { x = 0, y = 0 },
     config = {},
-    cost = 5,
+    cost = 4,
+    weight = 5,
     unlocked = true,
     discovered = true,
     pools = { 

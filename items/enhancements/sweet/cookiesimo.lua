@@ -1,6 +1,7 @@
 SMODS.Enhancement {
   key = "cookiesimo",
   atlas = 'enhanc_sw',
+  consumable = true,
   pos = {
       x = 0,
       y = 1
@@ -29,24 +30,60 @@ SMODS.Enhancement {
             elseif pseudorandom('multodd') < G.GAME.probabilities.normal / card.ability.extra.odd then
               mult = card.ability.extra.mult
             elseif pseudorandom('dollarsodd') < G.GAME.probabilities.normal / card.ability.extra.odd then
-              return {card.ability.extra.p_dollars}
+              return {ease_dollars(5)}
 
             elseif pseudorandom('tarotodd') < G.GAME.probabilities.normal / card.ability.extra.odd then
-              return SMODS.create_card{
-                 set = 'Tarot',
-                 }
+              G.E_MANAGER:add_event(Event({
+                trigger = 'after', 
+                delay = 0.4, 
+                func = function()
+                if G.consumeables.config.card_limit > #G.consumeables.cards then
+                  play_sound('mills_nice')
+                  local card = create_card('Tarot', G.consumeables, nil, nil, nil, nil, nil, 'c_' )
+                            card:add_to_deck()
+                            G.consumeables:emplace(card)
+                            card:juice_up(0.3, 0.5)
+                      end
+                        return true end }))
             elseif pseudorandom('snackodd') < G.GAME.probabilities.normal / card.ability.extra.odd then
-              return SMODS.create_card{
-                set = 'Snack',
-                }
+              G.E_MANAGER:add_event(Event({
+                trigger = 'after', 
+                delay = 0.4, 
+                func = function()
+                  if G.consumeables.config.card_limit > #G.consumeables.cards then
+                  play_sound('mills_nice')
+                  local card = create_card('Snack', G.consumeables, nil, nil, nil, nil, nil, 'c_mills_' )
+                            card:add_to_deck()
+                            G.consumeables:emplace(card)
+                            card:juice_up(0.3, 0.5)
+                      end
+                        return true end }))
             elseif pseudorandom('spectralodd') < G.GAME.probabilities.normal / card.ability.extra.odd then
-              return SMODS.create_card{
-                set = 'Spectral',
-                }
+              G.E_MANAGER:add_event(Event({
+                trigger = 'after', 
+                delay = 0.4, 
+                func = function()
+                  if G.consumeables.config.card_limit > #G.consumeables.cards then
+                  play_sound('mills_nice')
+                  local card = create_card('Spectral', G.consumeables, nil, nil, nil, nil, nil, 'c_' )
+                            card:add_to_deck()
+                            G.consumeables:emplace(card)
+                            card:juice_up(0.3, 0.5)
+                      end
+                        return true end }))
             elseif pseudorandom('planetodd') < G.GAME.probabilities.normal / card.ability.extra.odd then
-              return SMODS.create_card{
-                set = 'Planet',
-                }
+              G.E_MANAGER:add_event(Event({
+                trigger = 'after', 
+                delay = 0.4, 
+                func = function()
+                  if G.consumeables.config.card_limit > #G.consumeables.cards then
+                  play_sound('mills_nice')
+                  local card = create_card('Planet', G.consumeables, nil, nil, nil, nil, nil, 'c_' )
+                            card:add_to_deck()
+                            G.consumeables:emplace(card)
+                            card:juice_up(0.3, 0.5)
+                      end
+                        return true end }))
               end
 
               return {
@@ -54,4 +91,5 @@ SMODS.Enhancement {
                   mult = mult,
               }
           end
-        end}
+        end
+      }

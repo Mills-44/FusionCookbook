@@ -414,7 +414,7 @@ descriptions = {
             j_mills_mr_pb_and_jelly = {
                 name = "Mr.PB & Jelly",
                 text = {
-                   "When scored hand contains a {C:attention}Lucky and Glass Card{},",
+                   "When scored hand contains a {C:attention}Mult{} and {C:attention}Bonus{},",
                    "create a {C:negative}Negative Snack{} card"
                 }
             },

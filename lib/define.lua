@@ -127,10 +127,10 @@ MILLS.FUSION_JOKERS = {
   -- "monster",
 }
 --Sandwich Jokers
-MILLS.SANDWHICH_JOKERS = {
+MILLS.SANDWICH_JOKERS = {
 --"flayfluff_sub"
 --"golden_crunch"
---"mr_pb_and_jelly"
+"mr_pb_and_jelly"
 --"gloopwich"
 --"everlasting_pollenstopper"
 --"" -- More to come :)

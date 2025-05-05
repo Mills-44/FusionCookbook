@@ -124,3 +124,47 @@ if not MILLS._rng_seeded then
   math.randomseed(os.time())
   MILLS._rng_seeded = true
 end
+
+function MILLS.spawn_rate(args)
+  args = args or {}
+  local key = args.key or 'c_mills_'
+  local mod = args.mod or 1
+  local guaranteed = args.guaranteed or false
+  local options = args.options or get_current_pool("Snack")
+  local type_key = args.type_key or key.."type"..G.GAME.round_resets.ante
+  key = key..G.GAME.round_resets.ante
+ 
+  local available_cards = {}
+  local weight = 0
+  for _, v in ipairs(options) do
+    if v ~= "UNAVAILABLE" then
+        local card_option = {}
+        if type(v) == 'string' then
+          assert(G.P_CENTERS[v], ("Could not find card \"%s\"."):format(v))
+          card_option = { key = v, weight = G.P_CENTERS[v].weight or 5}
+        end
+        if card_option.weight > 0 then
+          table.insert(available_cards, card_option)
+          weight = weight + card_option.weight
+      end
+    end
+  end
+
+  local total_weight = 0
+  for _,v in ipairs(available_cards) do
+    v.weight = G.P_CENTERS[v.key].get_weight and G.P_CENTERS[v.key]:get_weight() or v.weight
+    total_weight = total_weight + v.weight
+  end
+
+  local card_spawn = pseudorandom(pseudoseed(key))
+    if card_spawn > 1 - (total_weight * mod / weight) or guaranteed then -- Each card weight
+        local card_choosen = pseudorandom(pseudoseed(type_key)) -- which card is selected
+        local weight_i = 0
+        for k, v in ipairs(available_cards) do
+            weight_i = weight_i + v.weight
+            if card_choosen > 1 - (weight_i / total_weight) then
+                return v.key
+            end
+        end
+      end
+end

@@ -11,7 +11,7 @@ SMODS.Consumable  {
         max_highlighted = 1,
         mod_conv = 'm_mills_cookiesimo'
     },
-    cost = 4,
+    cost = 5,
     weight = 2,
     pools = { 
         Snack = true

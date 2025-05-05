@@ -12,7 +12,8 @@ SMODS.Consumable {
     pools = {
         Snack = true
     },
-    cost = 4,
+    cost = 3,
+    weight = 10,
     unlocked = true,
     discovered = true,
     consumable = true,

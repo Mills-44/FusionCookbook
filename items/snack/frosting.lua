@@ -11,7 +11,7 @@ SMODS.Consumable  {
         max_highlighted = 2,
         mod_conv = 'm_mills_frostisimo'
     },
-    cost = 4,
+    cost = 3,
     weight = 10,
     unlocked = true,
     discovered = true,

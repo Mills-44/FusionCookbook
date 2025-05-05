@@ -5,7 +5,7 @@ SMODS.Consumable  {
     atlas = 'homeys_doney',
     pos = { x = 0, y = 0 },
     config = {},
-    cost = 4,
+    cost = 3,
     weight = 10,
     unlocked = true,
     discovered = true,

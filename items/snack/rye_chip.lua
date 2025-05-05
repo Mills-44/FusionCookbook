@@ -5,7 +5,7 @@ SMODS.Consumable  {
   atlas = 'rye_chip',
   pos = { x = 0, y = 0 },
   config = {},
-  cost = 4,
+  cost = 5,
   weight = 2,
   unlocked = true,
   discovered = true,

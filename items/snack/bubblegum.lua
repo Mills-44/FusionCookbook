@@ -5,7 +5,7 @@ SMODS.Consumable {
     atlas = 'bubblegum',
     pos = { x = 0, y = 0 },
     pools = { Snack = true },
-    cost = 4,
+    cost = 3,
     weight = 10,
     discovered = true,
     unlocked = true,

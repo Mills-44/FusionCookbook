@@ -161,7 +161,7 @@ MILLS.SNACKS = {
 "frosting",
 "homeys_doney",
 "kinder_egg",
-"m_and_m",
+--"m_and_m",
 "pretzel",
 "rye_chip",
 "shortbread",

@@ -14,7 +14,7 @@ SMODS.Consumable {
         Snack = true
      },
     cost = 4,
-    weight = 15,
+    weight = 10,
     unlocked = true,
     discovered = true,
     can_use = function(self, card)

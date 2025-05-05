@@ -7,14 +7,15 @@ SMODS.Enhancement {
   },
   config = {
     extra = {
-      base_money = 1
+      base_money = 1,
+      money_gain = 1
     }
   },
   order = 3,
   loc_vars = function(self, info_queue, card)
     return {
       vars = {
-        card.ability.extra.base_money
+        card.ability.extra.money_gain
       }
     }
   end,
@@ -22,10 +23,11 @@ SMODS.Enhancement {
   calculate = function(self, card, context)
     if context.cardarea == G.play and context.main_scoring then
       local money = card.ability.extra.base_money
-
+      local money_gain = card.ability.extra.money_gain
       for _, v in ipairs(G.jokers.cards) do
         if MILLS.is_sweet(v) then
           money = money + 1
+          card.ability.extra.money_gain = money_gain + 1   
           break
         end
       end

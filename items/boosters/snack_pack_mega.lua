@@ -17,7 +17,7 @@ SMODS.Booster {
     weight = .55,
     cost = 8,
     discovered = true,
-    draw_hand = true
+    draw_hand = true,
 --Vanilla usage of how to set up boosters just be aware of how to use create_card function
     create_card = function(self, card)
       return create_card("Snack", G.pack_cards, nil, nil, true, true, nil, "mills_snack")

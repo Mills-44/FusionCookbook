@@ -538,6 +538,13 @@ descriptions = {
                   "Select 1 card to turn to {C:attention}Cookiesimo{}"
                 }
               },
+              c_mills_rock_candy = {
+                name = "Rock Candy",
+                text = {
+                  "Select 2 {C:attention}Glass or Bonus{}, ",
+                  "cards to turn to either {C:attention}Tempered{} or {C:attention}Cracked Glass{}"
+                }
+              },
               c_mills_rye_chip = {
                 name = "Rye Chip",
                 text = {

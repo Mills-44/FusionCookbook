@@ -208,6 +208,13 @@ descriptions = {
                     "Never breaks",
                       }
                   },
+		m_mills_dia = {
+                    name = "Diamond Card",
+                    text = {
+                      "{C:green}#4# in #2#{} chance for {X:money,C:white}X2{} dollars",
+                      "{C:green}#4# in #3#{} chance to break card",
+                        }
+                    },
         },
         Joker={
              --PEPPER JOKERS

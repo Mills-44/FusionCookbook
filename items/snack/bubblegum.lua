@@ -6,7 +6,7 @@ SMODS.Consumable {
     pos = { x = 0, y = 0 },
     pools = { Snack = true },
     cost = 4,
-    weight = 15,
+    weight = 10,
     discovered = true,
     unlocked = true,
 

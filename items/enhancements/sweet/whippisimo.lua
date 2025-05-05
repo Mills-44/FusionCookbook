@@ -21,8 +21,7 @@ SMODS.Enhancement {
       local mult = card.ability.extra.toggle and 2 or 1
       card.ability.extra.toggle = not card.ability.extra.toggle
       return {
-        xmult = mult,
-        message = "Whippisimo! x" .. mult .. "!"
+        xmult = mult
       }
     end
   end

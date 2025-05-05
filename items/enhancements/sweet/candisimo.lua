@@ -26,23 +26,22 @@ SMODS.Enhancement {
     end,
     calculate = function(self, card, context)
         if context.cardarea == G.play and context.main_scoring then
-            if next(context.poker_hands['High Card']) or next(context.poker_hands['Pair']) or next(context.poker_hands['Two Pair']) or next(context.poker_hands['Three of a Kind']) or next(context.poker_hands['Straight']) or next(context.poker_hands['Flush']) then 
+            if next(context.poker_hands['Full House'])  or next(context.poker_hands['Four of a Kind'])  or next(context.poker_hands['Straight Flush']) then
+                card.ability.extra.mult = card.ability.extra.mult + 2
+                return {
+                    message = "+2 Mult!",
+                    mult =  card.ability.extra.mult
+                }
+            else
                 card.ability.extra.chips = card.ability.extra.chips + 5
                 return {
                     message = "+5 Chips!",
-                    chips = card.ability.extra.chips
-                }
-            end
-            if next(context.poker_hands['Full House'])  or next(context.poker_hands['Four of a Kind'])  or next(context.poker_hands['Straight Flush']) then
-                card.ability.extra.chips = card.ability.extra.mult + 2
-                return {
-                    message = "+2 Mult!",
-                    mult = card.ability.extra.mult
+                    chips =  card.ability.extra.chips
                 }
             end
         end
         SMODS.calculate_effect {
-            card = card,
+            card = card
           }
-    end
+        end
 }

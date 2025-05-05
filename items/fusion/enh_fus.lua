@@ -37,6 +37,7 @@ SMODS.Consumable {
     cost = 10,
     unlocked = true,
     discovered = true,
+    shop_rate = 1.0,
     can_use = function(self, card)
         if #G.hand.highlighted ~= 2 then
             return false

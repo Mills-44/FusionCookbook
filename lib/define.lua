@@ -164,6 +164,7 @@ MILLS.SNACKS = {
 "m_and_m",
 "pretzel",
 "rye_chip",
+"rock_candy"
 "shortbread",
 --"slice_of_bread",
 --"taffy",

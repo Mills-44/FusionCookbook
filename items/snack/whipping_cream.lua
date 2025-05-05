@@ -11,7 +11,8 @@ SMODS.Consumable  {
         max_highlighted = 2,
         mod_conv = 'm_mills_whippisimo'
     },
-    cost = 3,
+    cost = 4,
+    weight = 10,
     unlocked = true,
     pools = { 
         Snack = true

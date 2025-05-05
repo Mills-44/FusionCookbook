@@ -5,7 +5,8 @@ SMODS.Consumable {
     atlas = 'butterscotch',
     pos = { x = 0, y = 0 },
     config = {},
-    cost = 3,
+    cost = 4,
+    weight = 2,
     pools = { 
       Snack = true
    },

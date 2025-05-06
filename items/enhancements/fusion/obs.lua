@@ -21,6 +21,7 @@ SMODS.Enhancement {
     x = 5,
     y = 3
 },
+    always_scores = true,
     config = {extra = {x_mult = 2}},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.x_mult}}

@@ -2,6 +2,10 @@
 if not MILLS then
     MILLS = {}
 end
+
+if not ANIM then
+  ANIM = {}
+end
 --Loads Mod
 mills = SMODS.current_mod
 mills_path = SMODS.current_mod.path
@@ -13,6 +17,7 @@ mills_path = SMODS.current_mod.path
 SMODS.load_file("lib/define.lua")() -- Definitions 
 SMODS.load_file("lib/util.lua")() -- Utility functions built
 --SMODS.load_file("lib/ui.lua")() -- Not Today :(
+ANIM = SMODS.load_file("lib/animation.lua")()
 
 SMODS.load_file("items/atlas.lua")() -- Pictures
 SMODS.load_file("items/sounds.lua")() -- Sounds
@@ -22,7 +27,7 @@ SMODS.load_file("lovely/others.toml") -- obsidian
 MILLS.register_items(MILLS.PEPPER_JOKERS, "items/joker/pepper")
 MILLS.register_items(MILLS.SWEET_JOKERS, "items/joker/sweet")
 MILLS.register_items(MILLS.FUSION_JOKERS, "items/joker/fusion")
---MILLS.register_items(MILLS.SANDWICH_JOKERS, "items/joker/sandwich")
+MILLS.register_items(MILLS.SANDWICH_JOKERS, "items/joker/sandwich")
 
 -- Register custom ConsumableType: Snack
 SMODS.ConsumableType {

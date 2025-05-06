@@ -17,7 +17,7 @@ mills_path = SMODS.current_mod.path
 SMODS.load_file("lib/define.lua")() -- Definitions 
 SMODS.load_file("lib/util.lua")() -- Utility functions built
 --SMODS.load_file("lib/ui.lua")() -- Not Today :(
-ANIM = SMODS.load_file("lib/animation.lua")()
+--ANIM = SMODS.load_file("lib/animation.lua")()
 
 SMODS.load_file("items/atlas.lua")() -- Pictures
 SMODS.load_file("items/sounds.lua")() -- Sounds

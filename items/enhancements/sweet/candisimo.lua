@@ -30,13 +30,17 @@ SMODS.Enhancement {
                 card.ability.extra.mult = card.ability.extra.mult + 2
                 return {
                     message = "+2 Mult!",
-                    mult =  card.ability.extra.mult
+                    mult =  card.ability.extra.mult,
+                    chips = card.ability.extra.chips,
+                    card = card
                 }
             else
                 card.ability.extra.chips = card.ability.extra.chips + 5
                 return {
                     message = "+5 Chips!",
-                    chips =  card.ability.extra.chips
+                    chips =  card.ability.extra.chips,
+                    mult =  card.ability.extra.mult,
+                    card = card
                 }
             end
         end

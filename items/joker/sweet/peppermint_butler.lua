@@ -32,8 +32,8 @@ SMODS.Joker {
     end,
   
     calculate = function(self, card, context)
-      if context.before and not context.blueprint then
-        if next(context.poker_hands['Three of a Kind']) then
+      if context.joker_main then    
+        if next(context.poker_hands['Pair']) then
           card.ability.extra.chips = card.ability.extra.chips + 5
         G.E_MANAGER:add_event(Event({
           func = function()
@@ -41,10 +41,11 @@ SMODS.Joker {
             return true
           end
         })) 
-      SMODS.calculate_effect {
+      return {
         message = 'Minty!',
         colour = G.C.CHIPS,
-        card = card,
+        chips = card.ability.extra.chips,
+        card = card
       }
     end
   end

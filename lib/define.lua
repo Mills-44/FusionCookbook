@@ -108,7 +108,7 @@ MILLS.SWEET_JOKERS = {
 --"gingy",
 "gummibar",
 --"heisenbergs_baby_blue",
-"honey_nut_cheerios",
+--"honey_nut_cheerios",
 "jammin_jelly",
 "king_candy",
 --"king_dice",
@@ -130,7 +130,7 @@ MILLS.FUSION_JOKERS = {
 MILLS.SANDWICH_JOKERS = {
 --"flayfluff_sub"
 --"golden_crunch"
-"mr_pb_and_jelly"
+--"mr_pb_and_jelly"
 --"gloopwich"
 --"everlasting_pollenstopper"
 --"" -- More to come :)

@@ -6,6 +6,7 @@ SMODS.Enhancement {
     any_rank = true,
     no_suit = true,
     replace_base_card = true,
+    always_scores = true,
     pos = {
         x= 5,
         y= 2

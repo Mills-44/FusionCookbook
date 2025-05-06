@@ -8,6 +8,7 @@ SMODS.Enhancement {
     replace_base_card = true,
     no_suit = true,
     no_rank = true,
+    always_scores = true,
     config = {
         extra = {
             mult = 20

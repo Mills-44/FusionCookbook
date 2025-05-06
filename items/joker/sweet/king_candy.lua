@@ -9,7 +9,7 @@ SMODS.Joker {
     pools = { 
         Sweet = true
      },  
-    rarity = 2,
+    rarity = 3,
     cost = 7,
     unlocked = true, 
     discovered = true, 

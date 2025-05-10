@@ -16,12 +16,11 @@ mills_path = SMODS.current_mod.path
 --Load lib
 SMODS.load_file("lib/define.lua")() -- Definitions 
 SMODS.load_file("lib/util.lua")() -- Utility functions built
---SMODS.load_file("lib/ui.lua")() -- Not Today :(
---ANIM = SMODS.load_file("lib/animation.lua")()
+SMODS.load_file("lib/ui.lua")() -- Tabs and stuff
+ANIM = SMODS.load_file("lib/animation.lua")()
 
 SMODS.load_file("items/atlas.lua")() -- Pictures
 SMODS.load_file("items/sounds.lua")() -- Sounds
-SMODS.load_file("items/tabs.lua")() -- Tabs
 SMODS.load_file("lovely/others.toml") -- obsidian
 
 MILLS.register_items(MILLS.PEPPER_JOKERS, "items/joker/pepper")
@@ -75,7 +74,7 @@ end
 
 local set_spritesref = Card.set_sprites
 function Card:set_sprites(_center, _front)
-    set_spritesref(self, _center, _front)
+    set_spritesref(self, _center, _front) 
     if _center and _center.name == "c_mills_enh_fus" then
         self.children.floating_sprite = Sprite(
             self.T.x,
@@ -83,7 +82,7 @@ function Card:set_sprites(_center, _front)
             self.T.w,
             self.T.h,
             G.ASSET_ATLAS[_center.atlas or _center.set],
-            { x = 1, y = 2 }
+            { x = 1, y = 1 }
         )
         self.children.floating_sprite.role.draw_major = self
         self.children.floating_sprite.states.hover.can = false
@@ -102,12 +101,14 @@ MILLS.register_items(MILLS.FUSION_ENHANCEMENTS, "items/enhancements/fusion")
 MILLS.register_items(MILLS.SNACKS, "items/snack")
 MILLS.register_items(MILLS.FUSION, "items/fusion")
 
---MILLS.register_items(MILLS.SPECTRAL, "items/spectral")
+MILLS.register_items(MILLS.SPECTRAL, "items/spectral")
 
 MILLS.register_items(MILLS.TAROT, "items/tarot")
 
---MILLS.register_items(MILLS.SEALS, "items/seals")
+MILLS.register_items(MILLS.SEALS, "items/seals")
 
---MILLS.register_items(MILLS.TAGS, "items/tags")
+MILLS.register_items(MILLS.TAGS, "items/tags")
+
+--MILLS.register_items(MILLS.VOUCHERS, "items/vouchers")
 
 --MILLS.register_items(MILLS.EDITIONS, "items/editions")

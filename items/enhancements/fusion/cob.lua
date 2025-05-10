@@ -11,7 +11,7 @@ SMODS.Enhancement {
     always_scores = true,
     config = {
         extra = {
-            bonus = 100
+            bonus = 120
         }
     },
     order = 4,
@@ -25,7 +25,8 @@ SMODS.Enhancement {
     calculate = function(self, card, context)
         if context.cardarea == G.play and context.main_scoring then
            return {
-            chips = card.ability.extra.bonus
+            chips = card.ability.extra.bonus,
+            card = card
         }
         end
 end

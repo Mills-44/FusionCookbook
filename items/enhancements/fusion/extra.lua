@@ -7,8 +7,8 @@ SMODS.Enhancement {
     },
     config = {
         extra = {
-            bonus = 50, 
-            mult = 5
+            bonus = 45, 
+            mult = 6
         }
     },
     order = 2,

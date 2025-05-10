@@ -9,7 +9,7 @@ SMODS.Joker {
     pools = { 
         Sweet = true
      },  
-    rarity = 3,
+    rarity = 2,
     cost = 7,
     unlocked = true, 
     discovered = true, 
@@ -21,22 +21,33 @@ SMODS.Joker {
     end,
     calculate = function(self, card, context)
         if context.before and not context.blueprint then -- Just we dont have something weird happen here tbh
-            if next(context.poker_hands['Five of a Kind']) then -- Checks if hand contains Three of a Kind
-            for _, c in ipairs(context.scoring_hand) do
-                G.E_MANAGER:add_event(Event({
-                    func = function()
-                        c:set_ability('m_mills_candisimo') -- Turns it to Candisimo
-                        play_sound('mills_candy')
-                        c:juice_up(0.4, 0.4)
+            if next(context.poker_hands['Five of a Kind']) then -- Checks if hand contains Five of a Kind
+                for _,c in ipairs(context.scoring_hand) do
+                    G.E_MANAGER:add_event(Event({
+                        trigger = 'after',
+                        delay = 0.15,
+                        func = function()
+                        c:flip()
+                        c:juice_up(.3,.5)
                         return true
+                           end}))
+                    if not SMODS.has_enhancement(c, 'm_mills_candisimo') then
+                        c:set_ability('m_mills_candisimo',nil,true) 
+                    G.E_MANAGER:add_event(Event({
+                        trigger = 'after',
+                        delay = .3,
+                        func = function()
+                        c:flip()
+                        return true
+                        end}))
                     end
-                }))
+                end
+                play_sound('mills_candy')
+                return {
+                    message = "Glazed!",
+                    colour = G.C.MULT,
+                }
             end
-            return {
-                message = "Candified!",
-                colour = G.C.MULT
-            }
         end
-    end 
-end
-}
+    end
+    }

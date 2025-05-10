@@ -1,8 +1,8 @@
 SMODS.Consumable {
     object_type = "Consumable",
-    key = 'chromlech',
-    set = "Tarot",
-    atlas = 'chromlech',
+    key = 'take_5',
+    set = "Snack",
+    atlas = 'take_5',
     pos = {
         x = 0,
         y = 0
@@ -14,9 +14,10 @@ SMODS.Consumable {
             } 
     },
     pools = { 
-        Tarot = true
+        Snack = true
     },
-    cost = 3,
+    weight = 2,
+    cost = 5,
     unlocked = true,
     discovered = true,
     
@@ -26,9 +27,9 @@ SMODS.Consumable {
         end
         
         for _, v in ipairs(G.hand.highlighted) do
-            if SMODS.has_enhancement(v, 'm_wild') or
-               SMODS.has_enhancement(v, 'm_stone') or
-               SMODS.has_enhancement(v, 'm_mult') then
+            if SMODS.has_enhancement(v, 'm_glass') or
+               SMODS.has_enhancement(v, 'm_mult') or
+               SMODS.has_enhancement(v, 'm_wild') then
                 return true
             else return false
             end
@@ -53,30 +54,27 @@ SMODS.Consumable {
             G.E_MANAGER:add_event(Event({
                 trigger = 'after', delay = 0.15,
                 func = function()
-                    
                     if SMODS.has_enhancement(v, 'm_mult') then
-                        if MILLS.random_chance(.7) then
-                            v:set_ability('m_mills_cinna') 
+                        if MILLS.random_chance(.80) then
+                            v:set_ability('m_mills_power') 
                            else
-                            v:set_ability('m_mills_cob')
+                            v:set_ability('m_mills_stain')
+                        end
+                    end
+                    if SMODS.has_enhancement(v, 'm_glass') then
+                        if MILLS.random_chance(.65) then
+                            v:set_ability('m_mills_stain') 
+                           else
+                            v:set_ability('m_mills_power')
                         end
                      end
-
-                     if SMODS.has_enhancement(v, 'm_stone') then
-                        if MILLS.random_chance(.5) then
-                            v:set_ability('m_mills_cinna') 
-                           else
-                            v:set_ability('m_mills_cob')
-                        end
-                     end
-
-                    if SMODS.has_enhancement(v, 'm_bonus') then
-                        if MILLS.random_chance(.8) then
-                            v:set_ability('m_mills_cob') 
-                           else
-                            v:set_ability('m_mills_cinna')
-                        end
-                     end
+                    if SMODS.has_enhancement(v, 'm_wild') then
+                     if MILLS.random_chance(.5) then
+                        v:set_ability('m_mills_stain') 
+                       else
+                        v:set_ability('m_mills_power')
+                    end
+                 end
                     return true
                 end
             }))

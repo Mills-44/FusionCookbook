@@ -60,7 +60,7 @@ SMODS.Consumable {
                         end
                     end
                     if SMODS.has_enhancement(v, 'm_mult') then
-                        if MILLS.random_chance(.75) then
+                        if MILLS.random_chance(.25) then
                             v:set_ability('m_mills_power') 
                            else
                             v:set_ability('m_mills_extra')

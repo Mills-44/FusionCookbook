@@ -5,7 +5,7 @@ SMODS.Enhancement {
         x = 6, 
         y = 0
     },
-    config = {extra = {h_dollars = 6}},
+    config = {extra = {h_dollars = 5}},
     loc_vars = function(self, info_queue, card)
         return {
             vars={

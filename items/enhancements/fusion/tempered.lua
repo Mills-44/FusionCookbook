@@ -7,8 +7,8 @@ SMODS.Enhancement {
     },
     config = {
         extra = {
-            x_chips = 1.5, 
-            odds = 3
+            x_chips = 2, 
+            odds = 6
         }
     },
     loc_vars = function(self, info_queue, card)
@@ -19,7 +19,7 @@ SMODS.Enhancement {
                 card.ability.extra.odds}}
 end,
 calculate = function(self, card, context)
-    if context.destroy_card and context.cardarea == G.play and context.destroy_card == card and pseudorandom('glassodd') < G.GAME.probabilities.normal/card.ability.extra.odds then
+    if context.destroy_card and context.cardarea == G.play and context.destroy_card == card and pseudorandom('glass') < G.GAME.probabilities.normal/card.ability.extra.odds then
         return { 
             remove = true 
         }

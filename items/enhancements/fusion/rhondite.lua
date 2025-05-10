@@ -5,7 +5,7 @@ pos = {
     x = 6, 
     y = 1
 },
-config = {extra = {p_dollars = 20, odds = 15}},
+config = {extra = {p_dollars = 30, odds = 15}},
 loc_vars = function(self, info_queue, card)
     return { 
         vars = {
@@ -18,7 +18,7 @@ end,
 calculate = function(self, card, context)
 if context.cardarea == G.play and context.main_scoring and pseudorandom('moneyodd') < G.GAME.probabilities.normal/card.ability.extra.odds then
     return {
-        p_dollars = 20
+        p_dollars = 30
     }
 end
 if context.cardarea == G.play and context.main_scoring then

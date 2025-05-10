@@ -9,7 +9,7 @@ SMODS.Enhancement {
         extra = 
         {
         odd = 4, 
-        odds = 8, 
+        odds = 10, 
         mult = 20, 
         p_dollars = 20
     }},

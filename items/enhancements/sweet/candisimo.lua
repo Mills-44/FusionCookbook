@@ -29,7 +29,6 @@ SMODS.Enhancement {
             if next(context.poker_hands['Full House'])  or next(context.poker_hands['Four of a Kind'])  or next(context.poker_hands['Straight Flush']) then
                 card.ability.extra.mult = card.ability.extra.mult + 2
                 return {
-                    message = "+2 Mult!",
                     mult =  card.ability.extra.mult,
                     chips = card.ability.extra.chips,
                     card = card
@@ -37,7 +36,6 @@ SMODS.Enhancement {
             else
                 card.ability.extra.chips = card.ability.extra.chips + 5
                 return {
-                    message = "+5 Chips!",
                     chips =  card.ability.extra.chips,
                     mult =  card.ability.extra.mult,
                     card = card

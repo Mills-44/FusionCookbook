@@ -53,16 +53,24 @@ SMODS.Consumable {
                 trigger = 'after', delay = 0.15,
                 func = function()
                     if SMODS.has_enhancement(v, 'm_bonus') then
-                        v:set_ability ("m_mills_untamed",nil,true)
+                        if MILLS.random_chance(.6) then
+                        v:set_ability ("m_mills_lots",nil,true)
+                        else
+                        v:set_ability ("m_mills_untamed",nil,true) 
+                        end
                     end
 
                     if SMODS.has_enhancement(v, 'm_mult') then
+                        if MILLS.random_chance(.7) then
                         v:set_ability ("m_mills_feral",nil,true)
+                        else
+                        v:set_ability ("m_mills_extra",nil,true) 
+                        end
                     end
 
                     if SMODS.has_enhancement(v, 'm_wild') then
                         if MILLS.random_chance(.5) then
-                            v:set_ability('m_mills_untamed') -- Turns it to wild
+                            v:set_ability('m_mills_untamed') 
                            else
                             v:set_ability('m_mills_feral')
                         end

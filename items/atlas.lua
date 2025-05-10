@@ -1,8 +1,9 @@
 --I know different from most formats but I enjoy redoing my art sicne I am pob gonna update decently often once I get better
 --If you are intrested in aty feel free to reach out :)
 
+--Cards that are 71x95
 local atlas_keys = { --This will set up a local loop of all atlas keys
- 'animal',
+'animal',
 'apple_of_jacks_eye',
 'barry_b',
 'biscoff',
@@ -10,8 +11,11 @@ local atlas_keys = { --This will set up a local loop of all atlas keys
 'bob',
 'bubblegum',
 'butterscotch',
+'cake_pop',
+'cannoli',
 'choffle',
 'chromlech',
+'cookie',
 'cream_puff',
 'enhanc_fus',
 'enhanc_sw',
@@ -32,6 +36,7 @@ local atlas_keys = { --This will set up a local loop of all atlas keys
 'm_and_m',
 'mr_pb_and_jelly',
 'munch',
+'nom',
 'nutty_buddy',
 'omnipotent',
 'pepper_jokers',
@@ -39,15 +44,19 @@ local atlas_keys = { --This will set up a local loop of all atlas keys
 'pretzel',
 'rock_candy',
 'rye_chip',
+'sweet',
 -- "seal",
 'shortbread',
 'slice_of_bread',
+'snack_merchant',
 'snack_pack',
 'snack_pack_jumbo',
 'snack_pack_mega',
+'snack_tycoon',
 -- "spectral",
 'stay_puft',
 -- "taffy",
+'take_5',
 'whipping_cream',
 'wonkas_chocolate_bar',
 }

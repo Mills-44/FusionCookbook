@@ -23,20 +23,31 @@ SMODS.Joker {
         if context.before and not context.blueprint then -- Just we dont have something weird happen here tbh
             if next(context.poker_hands['Three of a Kind']) then -- Checks if hand contains Three of a Kind
             for _, c in ipairs(context.scoring_hand) do
-                G.E_MANAGER:add_event(Event({
-                    func = function()
-                        c:set_ability('m_mult') -- Turns it to Mult
-                        play_sound('mills_jam')
-                        c:juice_up(0.4, 0.4)
+                    G.E_MANAGER:add_event(Event({
+                        trigger = 'after',
+                        delay = 0.15,
+                        func = function()
+                        c:flip()
+                        c:juice_up(.3,.5)
                         return true
+                           end}))
+                    if not SMODS.has_enhancement(c, 'm_mult') then
+                        c:set_ability('m_mult',nil,true) 
+                    G.E_MANAGER:add_event(Event({
+                        trigger = 'after',
+                        delay = .3,
+                        func = function()
+                        c:flip()
+                        return true
+                        end}))
                     end
-                }))
+                end
+                play_sound('mills_jam')
+                return {
+                    message = "Groovy!",
+                    colour = MILLS.COLORS.JELLY,
+                }
             end
-            return {
-                message = "Groovy!",
-                colour = MILLS.COLORS.JELLY
-            }
         end
-    end 
-end
+    end
 }

@@ -5,7 +5,7 @@ descriptions = {
     Edition={},
     Enhanced={
         m_mills_candisimo = {
-            name = "Candisimo card",
+            name = "Candisimo Card",
             text ={ 
                 "If scored in {C:attention}Flush or Lower{}, this card gains {C:chips}+#3#{} Chips",
                 "If scored in {C:attention}Full House or Higher{} this card gains {C:mult}+#4#{} Mult card",
@@ -13,42 +13,42 @@ descriptions = {
             }
         },
         m_mills_cookiesimo = {
-        name = "Cookiesimo card",
+        name = "Cookiesimo Card",
         text = {
             "Triggers a random surprise!",
-            "{C:inactive}Surprise include chips, mult, xmult, consumeables"
+            "{C:inactive}Surprise include chips, mult, $, xmult, consumeables"
             }
         },
         m_mills_whippisimo = {
-          name = "Whippisimo card",
+          name = "Whippisimo Card",
           text = {
             "{X:mult,C:white}X#1#{} Mult when scored",
             "Alternates between {X:mult,C:white}X2{} and {X:mult,C:white}X1{} when scored"
           }
         },
           m_mills_frostisimo = {
-            name = "Frostisimo card",
+            name = "Frostisimo Card",
             text = {
-                "{C:gold}$#1#{} when scored if you have a {C:attention}Sweet joker{}",
+                "{C:gold}$#1#{} when scored if you have a {C:attention}Sweet Joker{}",
                 "the amount of money increases by {C:gold}$1{}"
                 }
             },
             m_mills_bou = {
-              name = "Boulder card",
+              name = "Boulder Card",
               text = {
                  "Considered as any suit with no rank",
                  "{C:chips}+#1#{} chips",
                   }
               },
             m_mills_cinna = {
-              name = "Cinnabar card",
+              name = "Cinnabar Card",
               text = {
-                 "{C:mult}+#1#{} Mult",
+                 "{C:mult}+#1#{} Mult & {C:chips}+#2#{} Chips",
                  "has no rank or suit"
                   }
               },
             m_mills_claws = {
-              name = "Claws card",
+              name = "Claws Card",
               text = {
                 "{X:mult,C:white}X#1#{} Mult",
                 "Destroyed after {C:attention}#2#{} times scored"
@@ -56,7 +56,7 @@ descriptions = {
                   }
               },
             m_mills_clov = {
-              name = "Clover card",
+              name = "Clover Card",
               text = {
                 "{C:green}#3# in #4#{} chance",
                 "for {C:mult}+#1#{} Mult",
@@ -64,61 +64,61 @@ descriptions = {
                 "{C:money}$#2#{} dollars"}
                   },
             m_mills_cob = {
-              name = "Cobalt card",
+              name = "Cobalt Card",
               text = {
                  "{C:chips}+#1#{} Chips",
                   "has no rank or suit"
                   }
               },
             m_mills_color = {
-              name = "Colored Glass card",
+              name = "Colored Glass Card",
               text = {
                 "{X:mult,C:white}X#1#{} Mult",
                 "{C:green}#2# in #3#{} card is destroyed"
                   }
               },
             m_mills_extra = {
-              name = "Extra card",
+              name = "Extra Card",
               text = {
                  "{C:chips}+#1#{} Chips",
                  "{C:mult}+#2#{} Mult"
                   }
               },
             m_mills_feral = {
-              name = "Feral card",
+              name = "Lava Card",
               text = {
                  "{C:mult}+#1#{} Mult",
                  "and can be scored as any suit"
                   }
               },
             m_mills_lots = {
-              name = "Lots card",
+              name = "Lots Card",
               text = {
                  "{C:chips}+#1#{} Chips"
                   }
               },  
             m_mills_ori = {
-              name = "Orichalcum",
+              name = "Orichalcum Card",
               text = {
                  "{C:money}$#1#{} when held in hand card",
                  "then addds {C:bonus}Chips{} equal to the amount of total {C:attention}money{}"
                   }
               },
             m_mills_pig = {
-              name = "Piggy card",
+              name = "Piggy Card",
               text = {
                  "{C:money}+$#1#{} dollars when scored and",
                  "{C:money}+$#2#{} while held in hand"
                   }
               },
             m_mills_power = {
-              name = "Power card",
+              name = "Power Card",
               text = {
-                 "{X:mult,C:white}X#1#{} Mult"
+                 "{C:mult}+#1#{} Mult"
                   }
               },
             m_mills_prize = {
-              name = "Prize card",
+              name = "Prize Card",
               text = {
                 "{C:green}#3# in #4#{} chance",
                 "for {X:mult,C:white}X#1#{} Mult",
@@ -127,7 +127,7 @@ descriptions = {
                 },
 
             m_mills_crack = { 
-              name = "Cracked Glass Card card",
+              name = "Cracked Glass Card",
               text = {
                       "{X:mult,C:white}X#1#{} mult",
                       "{E:2}breaks{} after use"
@@ -135,27 +135,27 @@ descriptions = {
               },
 
             m_mills_rhondite = {
-              name = "Rhondite card",
+              name = "Rhondite Card",
               text = {
                 "{C:money}-$1{} when scored",
                 "{C:green}#2# in #3#{} chance earn {C:money}$#1#{}"
                   }
               },
             m_mills_ruby = {
-              name = "Ruby card",
+              name = "Ruby Card",
               text = {
                  "{X:mult,C:white}X#1#{} Mult"
                   }
               },
             m_mills_sapph = {
-              name = "Sapphire",
+              name = "Sapphire Card",
               text = {
                 "{X:chips,C:white}X#1#{} Chips",
                 "while held in hand"
                   }
               },
             m_mills_scratch = {
-              name = "Scratch card",
+              name = "Scratch Card",
               text = {
                 "{C:green}#1# in #2#{} chance",
                 "for {C:chips}+#3#{} chips",
@@ -164,28 +164,28 @@ descriptions = {
                   }
               },
             m_mills_stain = {
-              name = "Stain card",
+              name = "Stained Glass Card",
               text = {
                 "{X:mult,C:white}X#2#{} Mult",
                 "{C:green}#3# in #1#{} card is destroyed"
                   }
               },
             m_mills_tempered = {
-              name = "Tempered Glass card",
+              name = "Tempered Glass Card",
               text = {
                 "{X:chips,C:white}X#1#{} Chips",
                 "{C:green}#2# in #3#{} card is destroyed"
                   }
               },
             m_mills_untamed = {
-              name = "Untamed card",
+              name = "Water Card",
               text = {
                  "{C:chips}+#1#{} Chips",
                 "and can be scored as any suit"
                   }
               },
             m_mills_wow = {
-              name = "Monster",
+              name = "Monster Card",
               text = {
                 "{C:legendary}I keep it caged{}",
                 "{C:legendary}and i just can't",
@@ -196,7 +196,7 @@ descriptions = {
               m_mills_mirror = {
                 name = "Mirror Card",
                 text = {
-                  "{X:mult,C:white}X#1#{} mult",
+                  "{X:mult,C:white}X#1#{} Mult",
                   "{C:green}#3# in #2#{} chance to retrigger",
                     }
                 },
@@ -204,15 +204,15 @@ descriptions = {
                 m_mills_obs = {
                   name = "Obsidian Card",
                   text = {
-                    "{X:mult,C:white}X#1#{} mult",
+                    "{X:mult,C:white}X#1#{} Mult",
                     "Never breaks",
                       }
                   },
-		m_mills_dia = {
+		            m_mills_dia = {
                     name = "Diamond Card",
                     text = {
-                      "{C:green}#4# in #2#{} chance for {X:money,C:white}X2{} dollars",
-                      "{C:green}#4# in #3#{} chance to break card",
+                      "{C:green}#4# in #2#{} chance for ${X:money,C:white}X2{}",
+                      "{C:green}#4# in #3#{} chance card breaks",
                         }
                     },
         },
@@ -222,7 +222,7 @@ descriptions = {
                 name = "Pimento Pepper",
                 text = {
                     "This Joker gains {C:mult}+#1#{} Mult",
-                    "When a {C:attention}Flush{} or {C:attention}Full{} House is played",
+                    "When a {C:attention}Flush{} or {C:attention}Full House{} is played",
                     "Every {C:attention}3rd{} activation levels up Spiciness!",
                     "{C:inactive}Total Mult: {C:mult}+#2#{}",
                     "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg",
@@ -232,7 +232,7 @@ descriptions = {
                 name = "Anaheim Chile",
                 text = {
                     "This Joker gains {C:mult}+#1#{} Mult",
-                    "{C:attention}When a Flush{} or Full House is played",
+                    "{C:attention}When a Flush{} or {C:attention}Full House{} is played",
                     "Every {C:attention}3rd{} activation levels up Spiciness!",
                     "{C:inactive}Total Mult: {C:mult}+#2#{}",
                     "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg ",
@@ -242,7 +242,7 @@ descriptions = {
                 name = "Jalapeno",
                 text = {
                     "This Joker gains {C:mult}+#1#{} Mult",
-                    "{C:attention}When a Flush{} or Full House is played",
+                    "{C:attention}When a Flush{} or {C:attention}Full House{} is played",
                     "Every {C:attention}3rd{} activation levels up Spiciness!",
                     "{C:inactive}Total Mult: {C:mult}+#2#{}",
                     "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg ",
@@ -252,7 +252,7 @@ descriptions = {
                 name = "Cayenne",
                 text = {
                     "This Joker gains {C:mult}+#1#{} Mult",
-                    "{C:attention}When a Flush{} or Full House is played",
+                    "{C:attention}When a Flush{} or {C:attention}Full House{} is played",
                     "Every {C:attention}3rd{} activation levels up Spiciness!",
                     "{C:inactive}Total Mult: {C:mult}+#2#{}",
                     "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg ",
@@ -262,7 +262,7 @@ descriptions = {
                 name = "Habanero",
                 text = {
                     "This Joker gains {C:mult}+#1#{} Mult",
-                    "{C:attention}When a Flush{} or Full House is played",
+                    "{C:attention}When a Flush{} or {C:attention}Full House{} is played",
                     "Every {C:attention}3rd{} activation levels up Spiciness!",
                     "{C:inactive}Total Mult: {C:mult}+#2#{}",
                     "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg ",
@@ -287,35 +287,36 @@ descriptions = {
             j_mills_apple_of_jacks_eye = {
                 name = "Apple Jack",
                 text = {
-                  "When 3 of one suit are scored create a random {C:attention}Snack{} card"
+                  "When scoring hand contains all face cards",
+                  "create a random {C:attention}Snack{} card"
                 }
               },
               j_mills_barry_b = {
                 name = "Barry B.",
                 text = {
                   "When scoring hands contains a {C:attention}Four of a Kind{}",
-                  "all cards turn into {C:attention}Glass{}"
+                  "turn hand into {C:attention}Glass Cards{}"
                 }
               },
               j_mills_bob = {
                 name = "B.O.B",
                 text = {
                   "When scoring hands contains a {C:attention}Flush{}",
-                  "all cards turn into {C:attention}Whippisimo{}"
+                  "turn hand into {C:attention}Whippisimo Cards{}"
                 }
               },
               j_mills_cookie_monster = {
                 name = "Cookie Monster",
                 text = {
                   "When scoring hands contains a {C:attention}Straight Flush{}",
-                  "all cards turn into {C:attention}Cookiesimo{}"
+                  "turn hand into {C:attention}Cookiesimo Cards{}"
                 }
               },
               j_mills_gingy = {
                 name = "Gingy",
                 text = {
                   "When scoring hands contains a {C:attention}Full House{}",
-                  "all cards turn into {C:attention}Frostisimo{}"
+                  "turn hand into {C:attention}Frostisimo Cards{}"
                 }
               },
               j_mills_gummibar = {
@@ -329,21 +330,21 @@ descriptions = {
                 name = "Honey Nut Cheerio's",
                 text = {
                   "All {C:spades}Spades{} played in scoring hand,",
-                  "turn into {C:attention}Gold{}"
+                  "turn into {C:attention}Gold Cards{}"
                 }
               },
               j_mills_jammin_jelly = {
                 name = "Jammin' Jelly",
                 text = {
                   "When scoring hands contains a {C:attention}Three of a Kind{}",
-                  "all cards turn into {C:attention}Mult{}"
+                  "turn hand into {C:attention}Mult Cards{}"
                 }
               },
               j_mills_king_candy = {
                 name = "King Candy",
                 text = {
                   "When scoring hands contains a {C:attention}Five of a Kind{}",
-                  "all cards turn into {C:attention}Candisimo{}"
+                  "turn hand into {C:attention}Candisimo Cards{}"
                 }
               },
               j_mills_koolaid_man = {
@@ -356,7 +357,7 @@ descriptions = {
                 name = "Nutty Buddy",
                 text = {
                   "When scoring hands contains a {C:attention}Pair{}",
-                  "all cards turn into {C:attention}Bonus{}"
+                  "turn hand into {C:attention}Bonus Cards{}"
                 }
               },
               j_mills_peppermint_butler = {
@@ -370,7 +371,7 @@ descriptions = {
                 name = "Stay Puft",
                 text = {
                   "When scored hand contains a {C:attention}Straight{}",
-                  "turn all cards in the hand into either {C:attention}Wild or Steel{}",
+                  "turn all cards in the hand into either {C:attention}Wild or Steel Cards{}",
                   "{C:green}(1 in 2){} for each"
                 }
               },
@@ -378,7 +379,7 @@ descriptions = {
                 name = "Wonka's Chocolate Bar",
                 text = {
                   "When scored hand contains a {C:attention}Two Pair{}",
-                  "turn all cards in the hand into {C:attention}Lucky{}"
+                  "turn all cards in the hand into {C:attention}Lucky Cards{}"
                 }
             },
             --SANDWICH JOKERS
@@ -428,8 +429,8 @@ descriptions = {
           j_mills_monster = {
             name = "Monster",
             text = {
-               "Turns {C:attention}Steel{} card",
-                "into {C:attention}Claws{} card"
+               "Turns {C:attention}Steel Cards{}",
+                "into {C:attention}Claws Cards{}"
             }
         },
         },
@@ -470,20 +471,20 @@ descriptions = {
             c_mills_biscoff = {
                 name = "Biscoff",
                 text = {
-                  "Select 2 cards to turn to {C:attention}Candisimo{}"
+                  "Select 2 cards to turn to {C:attention}Candisimo Cards{}"
                 }
               },
               c_mills_blondwie = {
                 name = "Blondwie",
                 text = {
-                  "Select 2 cards and destroy them add ",
-                  "combined card off the difference between the 2 cards"
+                  "Select 2 {C:attention}Mult, Lucky, or Glass Cards{},",
+                  "To enfuse and create a new enhancement card"
                 }
               },
               c_mills_bubblegum = {
                 name = "Bubblegum",
                 text = {
-                  "Gain {C:money}$2{} per {C:attention{}Gold{} in your deck"
+                  "Gain {C:money}$2{} per {C:attention{}Gold Card{} in your deck"
                 }
               },
               c_mills_butterscotch = {
@@ -494,10 +495,25 @@ descriptions = {
                   "{C:inactive}Starts on {X:mult,C:white}1x{}"
                 }
               },
+              c_mills_cake_pop = {
+                name = "Cake Pop",
+                text = {
+                  "Select 2 {C:attention}Mult, Stone, or Glass Cards{},",
+                 "To enfuse and create a new enhancement card"
+                }
+              },
+              c_mills_cannoli = {
+                name = "Cannoli",
+                text = {
+                  "Create a copy of selected card with a chance to have,",
+                  "enhancement, seal, or edition"
+                }
+              },
               c_mills_choffle = {
                 name = "Choffle",
                 text = {
-                  "Select 2 cards and destroy them, add combined sum card to the deck"
+                  "Select 2 {C:attention}Lucky, Gold, or Bonus Cards{},",
+                  "To enfuse and create a new enhancement card"
                 }
               },
               c_mills_cream_puff = {
@@ -510,7 +526,7 @@ descriptions = {
               c_mills_frosting = {
                 name = "Frosting",
                 text = {
-                  "Select 2 cards to turn to {C:attention}Frostisimo{}"
+                  "Select 2 cards to turn to {C:attention}Frostisimo Cards{}"
                 }
               },
               c_mills_homeys_doney = {
@@ -529,26 +545,26 @@ descriptions = {
               c_mills_m_and_m = {
                 name = "M&M",
                 text = {
-                  "{C:green} 1 in 3{} chance to get a {C:attention}Spectral{} card."
+                  "{C:green} 1 in 3{} chance to get a {C:negative}Spectral{} card."
                 }
               },
               c_mills_pretzel = {
                 name = "Pretzel",
                 text = {
-                  "Select 1 card to turn to {C:attention}Cookiesimo{}"
+                  "Select 1 card to turn into {C:attention}Cookiesimo Card{}"
                 }
               },
               c_mills_rock_candy = {
                 name = "Rock Candy",
                 text = {
-                  "Select 2 {C:attention}Glass or Bonus{}, ",
-                  "cards to turn to either {C:attention}Tempered{} or {C:attention}Cracked Glass{}"
+                  "Select 2 {C:attention}Glass Cards{} or {C:attention}Bonus Cards{},",
+                  "To enfuse and create a new enhancement card"
                 }
               },
               c_mills_rye_chip = {
                 name = "Rye Chip",
                 text = {
-                  "Create 2 random {C:attention}Snacks{}"
+                  "Create 2 random {C:attention}Snacks Cards{}"
                 }
               },
               c_mills_shortbread = {
@@ -561,13 +577,21 @@ descriptions = {
               c_mills_slice_of_bread = {
                 name = "Slice of Bread",
                 text = {
-                  "Combine two compatible Jokers to create a {C:attention}Sandwich Joker{}"
+                  "Combine two compatible Jokers,",
+                  "to create a {C:attention}Sandwich Joker{}"
+                }
+              },
+              c_mills_take_5 = {
+                name = "Take 5",
+                text = {
+                  "Select 2 {C:attention}Wild, Glass, or Mult Cards{},",
+                 "To enfuse and create a new enhancement card"
                 }
               },
               c_mills_whipping_cream = {
                 name = "Whipping Cream",
                 text = {
-                  "Select 2 cards to turn to {C:attention}Whippisimo{}"
+                  "Select 2 cards to turn to {C:attention}Whippisimo Cards{}"
                 }
               },
             },
@@ -580,38 +604,49 @@ descriptions = {
             },
         },
         Stake={},
-        Tag={},
+        Tag={
+          tag_mills_sweet = {
+          name = "Sweet Tag",
+           text = { 
+                 "The next shop will have a free {C:attention}Sweet Joker{}."
+              }
+        },
+        tag_mills_nom = {
+          name = "Nom Tag",
+           text = { 
+                 "Immediately open a free {C:attention}Mega Snack Pack{}."
+              }
+        },
+        },
         Tarot={
           c_mills_animal = {
             name = "Animal",
              text = { 
-               "Select 2 {C:attention} Mult, Wild or Bonus{}, ",
-               "cards to turn to either {C:attention}Feral{} or {C:attention}Untamed{}"
+               "Select 2 {C:attention} Mult, Wild or Bonus Cards{},",
+               "To enfuse and create a new enhancement card"
                 }
         },
           c_mills_chromlech = {
             name = "Cromlech",
              text = { 
-                "Select 2 {C:attention} Mult, Stone or Bonus{}, ",
-                "cards to turn to either {C:attention}Cobalt{} or {C:attention}Cinnabar{}"
+                "Select 2 {C:attention} Mult, Stone or Bonus Cards{},",
+                "To enfuse and create a new enhancement card"
                 }
         },
         c_mills_omnipotent = {
           name = "Omnipotent",
            text = { 
-              "Select 2 {C:attention} Mult or Bonus{}, ",
-              "cards to turn to either {C:attention}Lots{} or {C:attention}Extra{}"
+              "Select 2 {C:attention} Mult or Bonus Cards{},",
+              "To enfuse and create a new enhancement card"
               }
       },
         },
-        Voucher={},
-        Tags = {},
         Fusion = {
           c_mills_enh_fus = {
             name = "Enhancement Fusion",
             text = {
               "{C:purple}Fuses{} 2 different {C:attention}enhancements{}",
-              "into one {C:purple,E:1}fused{} enhancement"
+              "into one {C:purple,E:1}fused{} enhancement card"
             }
           },
         },
@@ -685,9 +720,32 @@ descriptions = {
               "{C:purple, S:1.2}Planet Fusion Card:{} Fuses 2 diferent selected {C:attention)planet card{}"
             }
           },
-
-        }
-    },
+          mills_fusions_cred = {
+            name = "",
+            text = {
+              "MOD MADE BY:",
+              "{X:legendary,C:white}Artist:{} {C:dark_blue}Rafaelly, Mills-44 and GSFG{}",
+              "{X:legendary,C:white}Developer:{} {C:dark_blue}Rafaelly and Mills-44{}",
+              "{X:legendary,C:white}Localization:{}",
+              "{C:dark_blue}Rafaelly(Portuguese[WIP] & english) and Mills-44(English){}"
+              
+            }
+          },
+        },
+        Voucher={
+          v_mills_snack_merchant = {
+            name = "Snack Merchant",
+            text = {
+              "{C:attention}Snack{} cards appear 2X more frequently in the shop"
+            },
+          },
+          v_mills_snack_tycoon = {
+            name = "Snack Tycoon",
+            text = {
+              "{C:attention}Snack{} cards appear 4X more frequently in the shop"
+            },
+          },
+        },
     misc = {
         achievement_descriptions={},
         achievement_names={},
@@ -701,9 +759,10 @@ descriptions = {
             mills_not_valid_fusion = "No Valid Combos",
             mills_unknwown_fusion = "Unknown Combo",
 	    -- menus
-           k_mills_instruction_glob = "Fusing Global",
-           k_mills_instruction_mod = "Fusing Mods",
-           k_mills_instruction_cons = "Fusing Consume",
+           k_mills_instruction_cred = "Credits!",
+           k_mills_instruction_glob = "Fusing Global!",
+           k_mills_instruction_mod = "Fusing Mods!",
+           k_mills_instruction_cons = "Fusing Consume!",
 
         },
         high_scores={},
@@ -737,4 +796,5 @@ descriptions = {
         },
         v_text={},
     },
+  }
 }

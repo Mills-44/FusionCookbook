@@ -1,7 +1,7 @@
 local ANIM = {}
 
 -- Cards flip from left to right one by one
-function ANIM.card_snake(cards, opts)
+function ANIM.card_flip(cards, opts)
     opts = opts or {}
 
     for i = 1, #cards do
@@ -9,15 +9,17 @@ function ANIM.card_snake(cards, opts)
         
         G.E_MANAGER:add_event(Event({
             trigger = 'after',
-            delay = .3,
+            delay = 0.10,
             func = function()
-                if card and card.flip and not card.fully_flipped then
-                    card:flip()
-                    card.fully_flipped = true
-                else
-                    card:flip()
-                end
-                return true
+            card:flip()
+            return true
+               end}))
+        G.E_MANAGER:add_event(Event({
+            trigger = 'after',
+            delay = .75,
+            func = function()
+            card:flip()
+            return true
             end
         }))
     end

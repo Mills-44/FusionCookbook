@@ -7,10 +7,10 @@ SMODS.Enhancement {
         y = 0
     },
     config = {extra = {
-        odd = 5, 
-        odds = 20, 
-        bonus = 40, 
-        p_dollars = 30
+        odd = 4, 
+        odds = 10, 
+        bonus = 45, 
+        p_dollars = 10
     }
 },
     loc_vars = function(self, info_queue, card)

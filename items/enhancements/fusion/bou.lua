@@ -5,15 +5,15 @@ SMODS.Enhancement {
     atlas = 'enhanc_fus', 
     any_rank = true,
     no_suit = true,
-    replace_base_card = true,
     always_scores = true,
+    replace_base_card = true,
     pos = {
         x= 5,
         y= 2
     },
     config = {
         extra = {
-            chips = 50
+            chips = 75
         }
     },
     loc_vars = function(self, info_queue, card)

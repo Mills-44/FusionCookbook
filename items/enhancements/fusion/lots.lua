@@ -6,7 +6,7 @@ SMODS.Enhancement {
         y = 0
     },
     config = {extra = {
-        bonus = 80
+        bonus = 75
     }},
     order = 1,
     loc_vars = function(self, info_queue, card)

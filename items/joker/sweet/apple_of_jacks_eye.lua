@@ -17,29 +17,25 @@ SMODS.Joker {
     eternal_compat = true,
     perishable_compat = true,
     calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.play then         
-            local card_type = 'Snack'
-            for _, suit in ipairs(MILLS.base_suits) do --This should be counting suits essentially if it set up right :/
-                local count = 0  
-            for _, card in ipairs(context.hand) do
-                if card:is_suit(suit) then
-                    count = count + 1 --Will keep track of suits each
-                end
-            end
-            if count >= 3 then --Looks to see if hand has 3 or more for easy logic
+        if context.joker_main and context.scoring_hand then
+            local only_faces = true
+             if context.scoring_hand[i]:is_face() then
+                only_faces = true
+             else
+                only_faces = false
+             end
+            if only_faces then
                 G.E_MANAGER:add_event(Event({
-                    trigger = 'before',
-                    delay = 0.0,
                     func = function()
-                local card = create_card(card_type, G.consumeables, nil, nil, nil, nil, card_type, nil)
-                play_sound('mills_jack') 
-                card:add_to_deck()
-                G.consumeables:emplace(card)
-                return true
+                        play_sound('mills_nice')
+                        local snack_card = create_card('Snack', G.consumeables, nil, nil, nil, nil, nil, 'c_mills_')
+                        snack_card:add_to_deck()
+                        G.consumeables:emplace(snack_card)
+                        snack_card:juice_up(0.3, 0.5)
+                        return true
+                    end
+                }))
             end
-        }))
         end
-    end 
-end
-end
+    end
 }

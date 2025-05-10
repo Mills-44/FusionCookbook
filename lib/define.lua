@@ -70,6 +70,7 @@ COOKIE = HEX("834f0d"),
 GINGY = HEX("6f4305"),
 GUMMY = HEX("21de24"),
 JELLY = HEX("820f8a"),
+SWEET = HEX("d31a9a"),
 -- Fusion Colors
 FUSION = HEX("FF00FF"),
 -- _ = HEX(""),
@@ -123,8 +124,8 @@ MILLS.SWEET_JOKERS = {
 }
 
 MILLS.FUSION_JOKERS = {
-  -- "cave"
-  -- "monster",
+   "cave",
+   "monster",
 }
 --Sandwich Jokers
 MILLS.SANDWICH_JOKERS = {
@@ -149,14 +150,19 @@ MILLS.BOOSTER = {
 }
 
 -- ||           SNACKS          ||
+---@class Consumable
+---@field key string
+---@field atlas string
+---@field weight integer
 --Snack Cards
 MILLS.SNACKS = {
 "biscoff",
---"blondwie",
+"blondwie",
 "bubblegum",
 "butterscotch",
+"cake_pop",
 --"cannoli",
---"choffle",
+"choffle",
 --"cream_puff",
 "frosting",
 "homeys_doney",
@@ -168,6 +174,7 @@ MILLS.SNACKS = {
 "shortbread",
 --"slice_of_bread",
 --"taffy",
+"take_5",
 "whipping_cream",
 }
 -- ||           FUSIONS          ||
@@ -214,7 +221,7 @@ MILLS.SWEET_ENHANCEMENTS = {
 -- ||           SPECTRAL          || 
 MILLS.SPECTRAL = {
 -- "baker",
--- "munch",
+ "munch",
 }
 
 -- ||           TAROT          ||
@@ -228,15 +235,22 @@ MILLS.TAROT = {
 -- ||           SEALS          ||
 MILLS.SEALS = {
 -- "bubblegum",
--- "cookie",
+ "cookie",
 -- "donut",
 -- "",
 }
 
 -- ||           TAGS          ||
 MILLS.TAGS = {
--- "nom",
--- "sweet",
+ "nom",
+ "sweet",
+-- "",
+}
+
+-- ||           VOUCHERS          ||
+MILLS.VOUCHERS = {
+ --"snack_merchant",
+ --"snack_tycoon",
 -- "",
 }
 

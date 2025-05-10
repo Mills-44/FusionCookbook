@@ -8,7 +8,7 @@ SMODS.Enhancement {
     any_suit = true,
     config = {
         extra = {
-            mult = 4
+            mult = 6
         }
     },
     order = 5,

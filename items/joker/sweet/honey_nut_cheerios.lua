@@ -17,23 +17,32 @@ SMODS.Joker {
     eternal_compat = true,
     perishable_compat = true,
     calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.play then         
-        if context.other_card:is_suit("Spades") then -- Check if it is a spade
-            for _, c in ipairs(context.scoring_hand) do
-            G.E_MANAGER:add_event(Event({
-                func = function()
-                    c:set_ability('m_gold') -- Turns it to gold
-                    play_sound('mills_honey')
-                    c:juice_up(0.4, 0.4)
+           if context.individual and context.cardarea == G.play then
+
+            local other_card = context.other_card
+
+            if other_card.base.suit == ('Spades') then
+            for _,c in ipairs(context.full_hand) do
+                G.E_MANAGER:add_event(Event({
+                    trigger = 'after',
+                    delay = 0.15,
+                    func = function()
+                    c:flip()
+                    c:juice_up(.3,.5)
                     return true
-                    end
-                }))
+                       end}))
+                if not SMODS.has_enhancement(c, 'm_gold') then
+                    c:set_ability('m_gold',nil,true) 
+                G.E_MANAGER:add_event(Event({
+                    trigger = 'after',
+                    delay = .3,
+                    func = function()
+                    c:flip()
+                    return true
+                    end}))
+                end
             end
         end
-        return {
-            message = "Delicous!",
-            colours = G.C.GOLD
-        }
     end
 end
-}
+}   

@@ -5,7 +5,7 @@ SMODS.Enhancement {
         x = 4, 
         y = 1
     },
-    config = {extra = {x_mult = 3}},
+    config = {extra = {x_mult = 2.5}},
     loc_vars = function(self, info_queue, card)
         return { 
             vars={
@@ -14,7 +14,7 @@ SMODS.Enhancement {
         }
     end,
     calculate = function(self, card, context)
-        if context.cardarea == G.play and context.main_scoring then
+        if context.final_scoring_step and context.cardarea == G.play then
             return {
                 x_mult = card.ability.extra.x_mult
             }

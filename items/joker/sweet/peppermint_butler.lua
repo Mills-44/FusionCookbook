@@ -32,7 +32,7 @@ SMODS.Joker {
     end,
   
     calculate = function(self, card, context)
-      if context.joker_main then    
+      if context.joker_main or context.main_scoring then    
         if next(context.poker_hands['Pair']) then
           card.ability.extra.chips = card.ability.extra.chips + 5
         G.E_MANAGER:add_event(Event({
@@ -41,13 +41,13 @@ SMODS.Joker {
             return true
           end
         })) 
-      return {
-        message = 'Minty!',
-        colour = G.C.CHIPS,
-        chips = card.ability.extra.chips,
-        card = card
-      }
     end
+    return {
+      message = 'Minty!',
+      colour = G.C.CHIPS,
+      chips = card.ability.extra.chips,
+      card = card
+    }
   end
 end
 }

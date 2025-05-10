@@ -17,11 +17,13 @@ SMODS.Enhancement {
     name = "Obsidian",
     atlas = "enhanc_fus",
     replace_base_card = true,
+    no_suit = true,
+    no_rank = true,
+    always_scores = true,
     pos = {
     x = 5,
     y = 3
 },
-    always_scores = true,
     config = {extra = {x_mult = 2}},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.x_mult}}

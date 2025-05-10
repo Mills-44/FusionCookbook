@@ -125,6 +125,8 @@ if not MILLS._rng_seeded then
   MILLS._rng_seeded = true
 end
 
+---@param args any
+---@return function
 function MILLS.spawn_rate(args)
   args = args or {}
   local key = args.key or 'c_mills_'
@@ -154,6 +156,15 @@ function MILLS.spawn_rate(args)
   for _,v in ipairs(available_cards) do
     v.weight = G.P_CENTERS[v.key].get_weight and G.P_CENTERS[v.key]:get_weight() or v.weight
     total_weight = total_weight + v.weight
+  end
+
+   -- ✅ Log in Debug Plus
+   if debug_print then
+    debug_print("=== MILLS.spawn_rate debug ===")
+    for _, v in ipairs(available_cards) do
+      local percent = (v.mod_weight / total_mod_weight) * 100
+      debug_print((" - %s: %.2f%%"):format(v.key, percent))
+    end
   end
 
   local card_spawn = pseudorandom(pseudoseed(key))

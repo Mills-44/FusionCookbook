@@ -199,7 +199,7 @@ MILLS.SWEET_ENHANCEMENTS = {
 "cob",
 "color",
 "crack",
---"dia",
+"dia",
 "extra",
 "feral",
 "lots",
@@ -214,6 +214,7 @@ MILLS.SWEET_ENHANCEMENTS = {
 "sapph",
 "scratch",
 "stain",
+"sup",
 "tempered",
 "untamed",
 }

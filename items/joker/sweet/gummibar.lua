@@ -6,9 +6,9 @@ SMODS.Joker {
         mult_mod = 4
       },
     },
-    atlas = 'gummibar',
+    atlas = 'sweet_jokers_1',
     pos = {
-      x = 0,
+      x = 4,
       y = 0
     },
     pools = { 

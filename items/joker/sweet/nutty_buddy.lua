@@ -1,9 +1,9 @@
 SMODS.Joker {
     key = 'nutty_buddy',
     config = {},
-    atlas = 'nutty_buddy',
+    atlas = 'sweet_jokers_1',
     pos = {
-        x = 0,
+        x = 3,
         y = 0
     },
     pools = { 

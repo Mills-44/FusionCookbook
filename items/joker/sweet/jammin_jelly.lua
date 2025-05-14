@@ -1,10 +1,10 @@
 SMODS.Joker {
     key = 'jammin_jelly',
     config = {},
-    atlas = 'jammin_jelly',
+    atlas = 'sweet_jokers_1',
     pos = {
-        x = 0,
-        y = 0
+        x = 1,
+        y = 1
     },
     pools = { 
         Sweet = true

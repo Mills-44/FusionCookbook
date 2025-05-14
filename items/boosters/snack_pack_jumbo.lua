@@ -18,16 +18,31 @@ SMODS.Booster {
     cost = 6,
     discovered = true,
     draw_hand = true,
-     --Vanilla usage of how to set up boosters just be aware of how to use create_card function
-    create_card = function(self, card)
-      return create_card("Snack", G.pack_cards, nil, nil, true, true, nil, "mills_snack")
+    loc_vars = function(self, info_queue, card)
+      return { vars = { card.config.center.config.choose, card.ability.extra } }
   end,
+     --Vanilla usage of how to set up boosters just be aware of how to use create_card function
   ease_background_colour = function(self)
       ease_colour(G.C.DYN_UI.MAIN, MILLS.COLORS.COOKIE)
       ease_background_colour({ new_colour =  MILLS.COLORS.COOKIE, special_colour = G.C.BLACK, contrast = 2 })
   end,
-  loc_vars = function(self, info_queue, card)
-      return { vars = { card.config.center.config.choose, card.ability.extra } }
+  particles = function(self)
+     G.booster_pack_sparkles = Particles(2, 2, 0, 0, {
+                timer = 0.05,
+                scale = 0.3,
+                initialize = true,
+                lifespan = 3,
+                speed = 0.2,
+                padding = -1,
+                attach = G.ROOM_ATTACH,
+                colours = {G.C.GOLD, G.C.BLACK},
+                fill = true
+            })
+            G.booster_pack_sparkles.fade_alpha = 1
+            G.booster_pack_sparkles:fade(1, 0)
+  end,
+  create_card = function(self, card)
+      return create_card("Snack", G.pack_cards, nil, nil, true, true, nil, "mills_snack")
   end,
   }
   

@@ -30,15 +30,6 @@ SMODS.Consumable {
     use = function(self, card, area, copier)
         local highlighted = G.hand.highlighted or {}
         if #highlighted == 0 then return end
- 
-        local snack_key = MILLS.spawn_rate{
-            options = MILLS.SNACKS,
-            key = 'c_mills_',
-            mod = 1.25,
-            guaranteed = true
-          }
-          
-        if not weight then return end
 
             G.E_MANAGER:add_event(Event({
                 trigger = 'after', delay = 0.4,

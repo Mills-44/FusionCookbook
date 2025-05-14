@@ -1,10 +1,10 @@
 SMODS.Joker {
     key = 'stay_puft',
     config = {},
-    atlas = 'stay_puft',
+    atlas = 'sweet_jokers_1',
     pos = {
-        x = 0,
-        y = 0
+        x = 2,
+        y = 1
     },
     pools = { 
         Sweet = true

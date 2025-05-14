@@ -54,7 +54,6 @@ MILLS.base_suits = {
 MILLS.light_suits = { 'Diamonds', 'Hearts' }
 MILLS.dark_suits = { 'Spades', 'Clubs' }
 
----@return table
 MILLS.COLORS = { --Sorry bro the u is too confusing for my american brain XD
 --Pepper Colors
 DEATH = HEX("a21c0d"),
@@ -71,6 +70,11 @@ GINGY = HEX("6f4305"),
 GUMMY = HEX("21de24"),
 JELLY = HEX("820f8a"),
 SWEET = HEX("d31a9a"),
+ART = HEX("ffd180"),
+ART_TEXT = ("2c1f08"),
+CODE = HEX("dea236"),
+CODE_TEXT = ("41392b"),
+
 -- Fusion Colors
 FUSION = HEX("FF00FF"),
 -- _ = HEX(""),
@@ -105,7 +109,7 @@ MILLS.SWEET_JOKERS = {
 "barry_b",
 --"better_call_bon",
 "bob",
---"cookie_monster",
+"cookie_monster",
 --"gingy",
 "gummibar",
 --"heisenbergs_baby_blue",
@@ -199,7 +203,7 @@ MILLS.SWEET_ENHANCEMENTS = {
 "cob",
 "color",
 "crack",
-"dia",
+--"dia",
 "extra",
 "feral",
 "lots",
@@ -214,7 +218,6 @@ MILLS.SWEET_ENHANCEMENTS = {
 "sapph",
 "scratch",
 "stain",
-"sup",
 "tempered",
 "untamed",
 }

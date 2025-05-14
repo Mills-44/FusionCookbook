@@ -1,16 +1,16 @@
 SMODS.Joker {
     key = 'cookie_monster',
     config = {},
-    atlas = 'cookie_monster',
+    atlas = 'sweet_jokers_1',
     pos = {
-        x = 0,
-        y = 0
+        x = 4,
+        y = 1
     },
     pools = { 
         Sweet = true
      },
     rarity = 3,
-    cost = 9,
+    cost = 8,
     unlocked = true, 
     discovered = true, 
     blueprint_compat = true,

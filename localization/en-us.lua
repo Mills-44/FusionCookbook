@@ -211,16 +211,10 @@ descriptions = {
 		            m_mills_dia = {
                     name = "Diamond Card",
                     text = {
-                      "{C:green}#3# in #4#{} chance for ${X:money,C:white}X2{}",
-                      "{C:green}#3# in #5#{} chance card breaks",
+                      "{C:green}#4# in #2#{} chance for ${X:money,C:white}X2{}",
+                      "{C:green}#4# in #3#{} chance card breaks",
                         }
                     },
-                 m_mills_sup = {
-                    name = "Supersteel Card",
-                    text ={ 
-                      "{X:mult,C:white}X#1#{} mult when held in hand",
-            }
-        },
         },
         Joker={
              --PEPPER JOKERS
@@ -428,7 +422,7 @@ descriptions = {
             j_mills_cave = {
               name = "Cave Joker",
               text = {
-                "Creates a random {C:attention}Ore{} card",
+                "Creates a random {C:attention}Fusion{} card",
                 "when blind selected"
               }
           },
@@ -769,6 +763,7 @@ descriptions = {
            k_mills_instruction_glob = "Fusing Global!",
            k_mills_instruction_mod = "Fusing Mods!",
            k_mills_instruction_cons = "Fusing Consume!",
+          
 
         },
         high_scores={},

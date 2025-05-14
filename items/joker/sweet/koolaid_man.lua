@@ -5,14 +5,10 @@ SMODS.Joker {
         money = 3
       },
     },
-    atlas = 'koolaid_man',
+    atlas = 'sweet_jokers_1',
     pos = {
-      x = 0,
+      x = 2,
       y = 0
-    },
-    soul_pos = {
-      x = 0,
-      y = 1
     },
     in_pool = function(self, args)
         return false

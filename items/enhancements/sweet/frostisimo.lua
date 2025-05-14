@@ -27,13 +27,12 @@ SMODS.Enhancement {
       for _, v in ipairs(G.jokers.cards) do
         if MILLS.is_sweet(v) then
           money = money + 1
-          card.ability.extra.money_gain = money_gain + 1   
+          card.ability.extra.money_gain = card.ability.extra.money_gain + 1   
           break
         end
       end
-      ease_dollars(money)
+      ease_dollars(money_gain)
       SMODS.calculate_effect {
-        message = "$" .. tostring(money) .. " Sweet Bonus!",
         card = card
       }
     end

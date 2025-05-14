@@ -2,7 +2,7 @@
 SMODS.Joker {
     key = 'barry_b',
     config = {},
-    atlas = 'barry_b',
+    atlas = 'sweet_jokers_1',
     pos = {
         x = 0,
         y = 0

@@ -6,10 +6,10 @@ SMODS.Joker {
         chips_mod = 5
       },
     },
-    atlas = 'peppermint_butler',
+    atlas = 'sweet_jokers_1',
     pos = {
       x = 0,
-      y = 0
+      y = 1
     },
     pools = {
       Sweet = true

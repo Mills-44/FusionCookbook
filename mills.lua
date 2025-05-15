@@ -42,6 +42,8 @@ SMODS.ConsumableType {
       label = 'Snack',
       },
   shop_rate = 1.0,
+  can_stack = true,
+	can_divide = true,
 }
 
 -- Register custom ConsumableType: Fusion
@@ -109,6 +111,6 @@ MILLS.register_items(MILLS.SEALS, "items/seals")
 
 MILLS.register_items(MILLS.TAGS, "items/tags")
 
---MILLS.register_items(MILLS.VOUCHERS, "items/vouchers")
+MILLS.register_items(MILLS.VOUCHERS, "items/vouchers")
 
 --MILLS.register_items(MILLS.EDITIONS, "items/editions")

@@ -340,6 +340,13 @@ descriptions = {
                   "turn hand into {C:attention}Mult Cards{}"
                 }
               },
+                j_mills_jimbo_gump = {
+                name = "Jimbo Gump",
+                text = {
+                  "This Joker gains {X:mult,C:white}X#1#{} Mult for every scoring enhanced card",
+                  "Total: {X:mult,C:white}X#2#{} Mult"
+                }
+              },
               j_mills_king_candy = {
                 name = "King Candy",
                 text = {
@@ -736,13 +743,13 @@ descriptions = {
           v_mills_snack_merchant = {
             name = "Snack Merchant",
             text = {
-              "{C:attention}Snack{} cards appear 2X more frequently in the shop"
+              "{C:attention}Snack{} cards appear {X:mult,C:white}X#1#{} more frequently in the shop"
             },
           },
           v_mills_snack_tycoon = {
             name = "Snack Tycoon",
             text = {
-              "{C:attention}Snack{} cards appear 4X more frequently in the shop"
+              "{C:attention}Snack{} cards appear {X:mult,C:white}X#1#{} more frequently in the shop"
             },
           },
         },
@@ -763,12 +770,13 @@ descriptions = {
            k_mills_instruction_glob = "Fusing Global!",
            k_mills_instruction_mod = "Fusing Mods!",
            k_mills_instruction_cons = "Fusing Consume!",
-          
+           
 
         },
         high_scores={},
         labels={
             mills_cookie_seal = "Cookie Seal",
+            
         },
         poker_hand_descriptions={},
         poker_hands={},

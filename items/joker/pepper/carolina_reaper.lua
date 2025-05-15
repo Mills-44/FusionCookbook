@@ -2,9 +2,9 @@ SMODS.Joker {
   key = 'carolina_reaper',
   config = {
     extra = {
-      mult = 150,        -- Base multiplier
-      a_powmult = 2          -- Constant exponent
-    }
+      mult = 150,        -- Base multiplier       
+    },
+    power = 2 -- Exponential mult
   },
   atlas = 'pepper_jokers',
   pos = {
@@ -29,16 +29,11 @@ SMODS.Joker {
     return {
       vars = {
         card.ability.extra.mult,
-        card.ability.extra.power
+        card.ability.power
       }
     }
   end,
   calculate = function(self, card, context)
-    if context.joker_main then
-      return {
-        mult = math.pow(card.ability.extra.mult, card.ability.extra.power),
-      }
-    end
     if context.before and not context.blueprint then  
       G.E_MANAGER:add_event(Event({
         func = function()
@@ -52,5 +47,38 @@ SMODS.Joker {
         card = card,
       }
     end
+    if context.joker_main then
+      return {
+        mult_mod = 150,
+        Emult_mod = 2,
+        card = card
+      }
+    end
   end
 }
+
+-- Joker Display Compatability
+if JokerDisplay then 
+  JokerDisplay.Definitions["j_mills_carolina_reaper"] = { -- Pulls definition from the localization file
+      reminder_text = {
+      { text = "(" },
+      { text = "Any hand" },
+      { text = ")" },
+    },
+    text = {
+      { text = "+", colour = G.C.MULT },
+       { ref_table = "card.ability.extra", ref_value = "mult", retrigger_type = "mult", colour = G.C.MULT },
+      { text = " and ", colour = G.C.INACTIVE },
+      {
+       border_nodes = {
+          { text = "^" },
+          { ref_table = "card.ability", ref_value = "power", retrigger_type = "exp" },
+        },
+        border_colour = G.C.DARK_EDITION
+      }
+    },
+    calc_function = function(card)
+      card.joker_display_values.hand = localize("Flush", 'poker_hands')
+    end,
+  }
+end

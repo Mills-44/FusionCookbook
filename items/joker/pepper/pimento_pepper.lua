@@ -79,3 +79,22 @@ SMODS.Joker {
     end
   end
 }
+
+-- Joker Display Compatability
+if JokerDisplay then 
+  JokerDisplay.Definitions["j_mills_pimento_pepper"] = { -- Pulls definition from the localization file
+      reminder_text = {
+      { text = "(" },
+      { ref_table = "card.joker_display_values", ref_value = "hand" },
+      { text = " or Full House" },
+      { text = ")" },
+    },
+    text = {
+      { text = "+", colour = G.C.MULT },
+      { ref_table = "card.ability.extra", ref_value = "mult", retrigger_type = "mult", colour = G.C.MULT }
+    },
+    calc_function = function(card)
+      card.joker_display_values.hand = localize("Flush", 'poker_hands')
+    end,
+  }
+end

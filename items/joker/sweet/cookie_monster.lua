@@ -19,24 +19,59 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return {} --Not needed for this type of card 
     end,
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Sweet", 
+        MILLS.COLORS.SWEET, 
+        G.C.WHITE, 
+        1.2 )
+    end,
     calculate = function(self, card, context)
-        if context.before and not context.blueprint then -- Just we dont have something weird happen here tbh
+         if context.before and not context.blueprint then -- Just we dont have something weird happen here tbh
             if next(context.poker_hands['Straight Flush']) then -- Checks if hand contains Straight Flush
-            for _, c in ipairs(context.scoring_hand) do
-                G.E_MANAGER:add_event(Event({
-                    func = function()
-                        c:set_ability('m_mills_cookiesimo') -- Turns it to Cookiesimo
-                        play_sound('mills_cookie')
-                        c:juice_up(0.4, 0.4)
+                for _,c in ipairs(context.scoring_hand) do
+                    G.E_MANAGER:add_event(Event({
+                        trigger = 'after',
+                        delay = 0.15,
+                        func = function()
+                        c:flip()
+                        c:juice_up(.3,.5)
                         return true
+                           end}))
+                    if not SMODS.has_enhancement(c, 'm_mills_cookiesimo') then
+                        c:set_ability('m_mills_cookiesimo',nil,true) 
                     end
-                }))
+                    G.E_MANAGER:add_event(Event({
+                        trigger = 'after',
+                        delay = .3,
+                        func = function()
+                        c:flip()
+                        return true
+                        end}))
+                end
+                play_sound('mills_cookie')
+                return {
+                    message = "Cookie?",
+                    colour = MILLS.COLORS.COOKIE,
+                }
             end
-            return {
-                message = "Cookie?",
-                color = MILLS.COLORS.COOKIE
-            }
         end
-    end 
+    end
+    }
+
+-- Joker Display Compatability
+if JokerDisplay then 
+  JokerDisplay.Definitions["j_mills_cookie_monster"] = { -- Pulls definition from the localization file
+    reminder_text = {
+        { text = "(" },
+        { ref_table = "card.joker_display_values", ref_value = "hand" },
+        { text = ")" },
+    },
+     text = {
+        { text = "Cookiesimo Cards", colour = G.C.FILTER },
+     },
+     calc_function = function(card)
+      card.joker_display_values.hand = localize("Straight Flush", 'poker_hands')
+    end,
+    }   
 end
-}

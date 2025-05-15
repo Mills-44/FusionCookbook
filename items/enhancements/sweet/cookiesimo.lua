@@ -9,10 +9,10 @@ SMODS.Enhancement {
   order = 2,
   config = {
       extra = {
-      bonus = 50,
-      mult = 8,
+      bonus = 100,
+      mult = 20,
+      xmult = 3,
       p_dollars = 5,
-      odd = 2
       }
   },
   loc_vars = function(self, info_queue, card)
@@ -24,15 +24,16 @@ SMODS.Enhancement {
           if context.cardarea == G.play and context.main_scoring then
             local bonus = 0
             local mult = 0
-
-              if pseudorandom('bonusodd') < G.GAME.probabilities.normal / card.ability.extra.odd then
+            local xmult = 0
+              if MILLS.random_chance(.4) then
               bonus = card.ability.extra.bonus
-            elseif pseudorandom('multodd') < G.GAME.probabilities.normal / card.ability.extra.odd then
+            elseif MILLS.random_chance(.5) then
               mult = card.ability.extra.mult
-            elseif pseudorandom('dollarsodd') < G.GAME.probabilities.normal / card.ability.extra.odd then
+            elseif MILLS.random_chance(.6) then
+              xmult = card.ability.extra.xmult
+            elseif MILLS.random_chance(.7) then
               return {ease_dollars(5)}
-
-            elseif pseudorandom('tarotodd') < G.GAME.probabilities.normal / card.ability.extra.odd then
+            elseif MILLS.random_chance(.8) then
               G.E_MANAGER:add_event(Event({
                 trigger = 'after', 
                 delay = 0.4, 
@@ -45,7 +46,7 @@ SMODS.Enhancement {
                             card:juice_up(0.3, 0.5)
                       end
                         return true end }))
-            elseif pseudorandom('snackodd') < G.GAME.probabilities.normal / card.ability.extra.odd then
+            elseif MILLS.random_chance(.9) then
               G.E_MANAGER:add_event(Event({
                 trigger = 'after', 
                 delay = 0.4, 
@@ -58,7 +59,7 @@ SMODS.Enhancement {
                             card:juice_up(0.3, 0.5)
                       end
                         return true end }))
-            elseif pseudorandom('spectralodd') < G.GAME.probabilities.normal / card.ability.extra.odd then
+            elseif pseudorandom('spectralodd') < MILLS.random_chance(.95) then
               G.E_MANAGER:add_event(Event({
                 trigger = 'after', 
                 delay = 0.4, 
@@ -71,7 +72,7 @@ SMODS.Enhancement {
                             card:juice_up(0.3, 0.5)
                       end
                         return true end }))
-            elseif pseudorandom('planetodd') < G.GAME.probabilities.normal / card.ability.extra.odd then
+            elseif pseudorandom('planetodd') < MILLS.random_chance(1) then
               G.E_MANAGER:add_event(Event({
                 trigger = 'after', 
                 delay = 0.4, 
@@ -89,6 +90,7 @@ SMODS.Enhancement {
               return {
                   chips = bonus,
                   mult = mult,
+                  xmult = xmult,
               }
           end
         end

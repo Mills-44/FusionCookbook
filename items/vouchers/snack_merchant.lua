@@ -6,27 +6,16 @@ SMODS.Voucher {
         x = 0,
         y = 0
     },
-    config = { 
-        extra = 8 / 4, 
-        extra_disp = 2 
-    },
+    config = { rate_up = 2 },
     unlocked = true,
     discovered = true,
     loc_vars = function(self, info_queue, card)
-		return { vars = { card and card.ability.extra_disp or self.config.extra_disp } }
+		return { vars = { self.config.rate_up } }
 	end,
-    redeem = function(self, card)
+    redeem = function(self)
 		G.E_MANAGER:add_event(Event({
 			func = function()
-				G.GAME.tarot_rate = G.GAME.tarot_rate * (card and card.ability.extra or self.config.extra)
-				return true
-			end,
-		}))
-	end,
-    unredeem = function(self, card)
-		G.E_MANAGER:add_event(Event({
-			func = function()
-				G.GAME.tarot_rate = G.GAME.tarot_rate / (card and card.ability.extra or self.config.extra)
+				G.GAME.snack_rate = G.GAME.snack_rate * self.config.rate_up
 				return true
 			end,
 		}))

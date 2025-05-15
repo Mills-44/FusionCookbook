@@ -20,6 +20,13 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return {} --Not needed for this type of card 
     end,
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Sweet", 
+        MILLS.COLORS.SWEET, 
+        G.C.WHITE, 
+        1.2 )
+    end,
     calculate = function(self, card, context)
         if context.before and not context.blueprint then
             if next(context.poker_hands['Four of a Kind']) then
@@ -34,6 +41,7 @@ SMODS.Joker {
                        end}))
                 if not SMODS.has_enhancement(c, 'm_glass') then
                     c:set_ability('m_glass',nil,true) 
+                end
                 G.E_MANAGER:add_event(Event({
                     trigger = 'after',
                     delay = .3,
@@ -41,7 +49,6 @@ SMODS.Joker {
                     c:flip()
                     return true
                     end}))
-                end
             end
             play_sound('mills_jazz')
             return {
@@ -52,3 +59,20 @@ SMODS.Joker {
     end
 end
 }
+
+-- Joker Display Compatability
+if JokerDisplay then 
+  JokerDisplay.Definitions["j_mills_barry_b"] = { -- Pulls definition from the localization file
+    reminder_text = {
+        { text = "(" },
+        { ref_table = "card.joker_display_values", ref_value = "hand" },
+        { text = ")" },
+    },
+     text = {
+        { text = "Glass Cards", colour = G.C.FILTER },
+     },
+     calc_function = function(card)
+      card.joker_display_values.hand = localize("Four of a Kind", 'poker_hands')
+    end,
+    }   
+end

@@ -70,11 +70,6 @@ GINGY = HEX("6f4305"),
 GUMMY = HEX("21de24"),
 JELLY = HEX("820f8a"),
 SWEET = HEX("d31a9a"),
-ART = HEX("ffd180"),
-ART_TEXT = ("2c1f08"),
-CODE = HEX("dea236"),
-CODE_TEXT = ("41392b"),
-
 -- Fusion Colors
 FUSION = HEX("FF00FF"),
 -- _ = HEX(""),
@@ -94,36 +89,47 @@ FUSION = HEX("FF00FF"),
 
 --Pepper Jokers
 MILLS.PEPPER_JOKERS = {
-"anaheim_chile",
-"carolina_reaper",
-"cayenne",
-"ghost_pepper",
-"habanero",
-"jalapeno",
 "pimento_pepper",
+"anaheim_chile",
+"jalapeno",
+"cayenne",
+"habanero",
+"ghost_pepper",
+"carolina_reaper",
 }
 
 --Sweet Jokers
 MILLS.SWEET_JOKERS = {
---"apple_of_jacks_eye",
-"barry_b",
---"better_call_bon",
-"bob",
-"cookie_monster",
---"gingy",
+-- Common
 "gummibar",
---"heisenbergs_baby_blue",
---"honey_nut_cheerios",
-"jammin_jelly",
-"king_candy",
---"king_dice",
-"koolaid_man",
+"honey_nut_cheerios",
 "nutty_buddy",
 "peppermint_butler",
---"pos_baozis",
 "stay_puft",
---"stuart_on_a_stick",
+
+-- Uncommon
+"barry_b",
+"bob",
+"jammin_jelly",
+"koolaid_man",
 "wonkas_chocolate_bar",
+
+-- Rare
+"cookie_monster",
+"jimbo_gump",
+"king_candy",
+
+-- Legendary
+
+
+-- Unfinished
+--"apple_of_jacks_eye",
+--"better_call_bon",
+--"gingy",
+--"heisenbergs_baby_blue",
+--"king_dice",
+--"pos_baozis",
+--"stuart_on_a_stick",
 --"", -- More Ideas
 }
 
@@ -253,8 +259,8 @@ MILLS.TAGS = {
 
 -- ||           VOUCHERS          ||
 MILLS.VOUCHERS = {
- --"snack_merchant",
- --"snack_tycoon",
+ "snack_merchant",
+ "snack_tycoon",
 -- "",
 }
 

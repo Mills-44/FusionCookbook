@@ -16,33 +16,42 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
-    calculate = function(self, card, context)
-           if context.individual and context.cardarea == G.play then
-
+   calculate = function(self, card, context)
+        if context.individual and context.cardarea == G.play and context.other_card:is_suit("Spades") then
             local other_card = context.other_card
-
-            if other_card.base.suit == ('Spades') then
-            for _,c in ipairs(context.full_hand) do
-                G.E_MANAGER:add_event(Event({
-                    trigger = 'after',
-                    delay = 0.15,
-                    func = function()
-                    c:flip()
-                    c:juice_up(.3,.5)
-                    return true
-                       end}))
-                if not SMODS.has_enhancement(c, 'm_gold') then
-                    c:set_ability('m_gold',nil,true) 
-                G.E_MANAGER:add_event(Event({
-                    trigger = 'after',
-                    delay = .3,
-                    func = function()
-                    c:flip()
-                    return true
-                    end}))
+            G.E_MANAGER:add_event(Event({
+                   trigger = 'after',
+                        delay = 0.15,
+                        func = function()
+                        other_card:flip()
+                        other_card:juice_up(.3,.5)
+                        return true
+                        end}))
+                    other_card:set_ability('m_gold',nil,true) 
+                    G.E_MANAGER:add_event(Event({
+                        trigger = 'after',
+                        delay = .3,
+                        func = function()
+                        other_card:flip()
+                        return true
+                        end}))
                 end
             end
-        end
-    end
+} 
+
+-- Joker Display Compatability
+if JokerDisplay then 
+  JokerDisplay.Definitions["j_mills_honey_nut_cheerios"] = { -- Pulls definition from the localization file
+      reminder_text = {
+      { text = "(" },
+      { ref_table = "card.joker_display_values", ref_value = "suit", colour = G.C.SUITS.Spades },
+      { text = ")" },
+    },
+     text = {
+        { text = "Gold Cards", colour = G.C.FILTER },
+     },
+     calc_function = function(card)
+      card.joker_display_values.hand = localize("Spades", 'base_suits')
+    end,
+    }   
 end
-}   

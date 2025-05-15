@@ -17,7 +17,7 @@ SMODS.Joker {
     unlocked = true,
     discovered = true,
     blueprint_compat = true,
-    eternal_compat = false,
+    eternal_compat = true,
     perishable_compat = true,
     loc_vars = function(self, info_queue, card)
       return {
@@ -25,6 +25,13 @@ SMODS.Joker {
           card.ability.extra.money,
         }
       }
+    end,
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Sweet", 
+        MILLS.COLORS.SWEET, 
+        G.C.WHITE, 
+        1.2 )
     end,
     calculate = function(self, card, context)
       if context.before and not context.blueprint then

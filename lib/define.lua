@@ -167,6 +167,7 @@ MILLS.MISC_JOKERS = {
 --"scorecard",
 "stowaway",
 --"topsy_turvy",
+"waste_worker"
 
 -- Uncommon
 --"russian_roulette",

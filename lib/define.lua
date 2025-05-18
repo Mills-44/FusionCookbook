@@ -160,6 +160,7 @@ MILLS.SANDWICH_JOKERS = {
 --Misc Jokers
 MILLS.MISC_JOKERS = {
 -- Common 
+"calculator",
 "clown",
 "serious",
 --"scorecard",
@@ -167,7 +168,6 @@ MILLS.MISC_JOKERS = {
 --"topsy_turvy",
 
 -- Uncommon
---"calculator",
 --"russian_roulette",
 
 -- Rare

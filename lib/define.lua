@@ -162,7 +162,7 @@ MILLS.MISC_JOKERS = {
 -- Common 
 "clown",
 "serious",
-"scorecard",
+--"scorecard",
 "stowaway",
 --"topsy_turvy",
 

@@ -61,7 +61,7 @@ SMODS.current_mod.config_tab = function()
   SMODS.current_mod.extra_tabs = function()
     return {
         {
-    label = localize("k_mills_instruction_glob"),
+    label = localize('mills_instruction_glob'),
     tab_definition_function = function()
     local modNodes = {}
 
@@ -145,7 +145,7 @@ SMODS.current_mod.config_tab = function()
          end
     },
     {
-      label = localize("k_mills_instruction_cons"),
+      label = localize('k_mills_instruction_cons'),
       tab_definition_function = function()
       local modNodes = {}
   

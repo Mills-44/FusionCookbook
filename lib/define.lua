@@ -160,14 +160,15 @@ MILLS.SANDWICH_JOKERS = {
 --Misc Jokers
 MILLS.MISC_JOKERS = {
 -- Common 
+"calculator",
 "clown",
 "serious",
+"snake_eyes",
 --"scorecard",
 "stowaway",
 --"topsy_turvy",
 
 -- Uncommon
---"calculator",
 --"russian_roulette",
 
 -- Rare
@@ -235,94 +236,30 @@ MILLS.SWEET_ENHANCEMENTS = {
 }
  MILLS.FUSION_ENHANCEMENTS = {
  -- Fusion Enhancements
-
- -- ===Bonus===
-
-"lots",
-"extra",
-"water",
-"tempered",
-"sapph",
-"cob",
-"ori",
-"scratch",
-
--- ===Mult===
-
-"extra",
-"power",
-"laval",
-"color",
-"ruby",
-"cinna",
-"rhondite",
-"prize",
-
--- ===Wild===
-
-"water",
-"lava",
-"wow",
-"stain",
-"claws",
 "bou",
-"pig",
+"cinna",
+"claws",
 "clov",
-
--- ===Glass===
-
-"tempered",
+"cob",
 "color",
-"stain",
+"crack",
+--"dia",
+"extra",
+"feral",
+"lots",
 "mirror",
 "obs",
-"crack",
-"dia",
--- "cry",
-
--- ===Steel==
-
--- "sapph",
--- "ruby",
--- "claws",
--- "mirror",
--- "super",
--- "conc",
--- "elec"
--- "iron"
-
--- ===Stone===
-
--- "cob",
--- "cinna",
--- "bou",
--- "obs",
--- "conc",
--- "gran",
--- "fool",
--- "dice",
-
--- ===Gold===
-
--- "ori",
--- "rhondite",
--- "pig",
--- "dia",
--- "elec"
--- "fool"
--- "fort",
--- "doll",
-
--- ===Lucky===
-
--- "scratch",
--- "prize",
--- "clov",
--- "cry",
--- "iron",
--- "dice",
--- "doll"
-
+"ori",
+"pig",
+"power",
+"prize",
+"rhondite",
+"ruby",
+"sapph",
+"scratch",
+"stain",
+"tempered",
+"untamed",
 }
 
 -- ||           SPECTRAL          || 

@@ -316,7 +316,7 @@ descriptions = {
               j_mills_gummibar = {
                 name = "Gummibar",
                 text = {
-                  "This Joker gains +4 {C:mult}Mult{} When scoring hand is a {C:attention}Straight{},",
+                  "This Joker gains {C:mult}+4{} Mult When scoring hand is a {C:attention}Straight{},",
                   "{C:inactive}Total Mult: {C:mult}+#2#{}"
                 }
               },
@@ -474,6 +474,13 @@ descriptions = {
             text = {
                "This Joker gains {X:mult,C:white}X#1#{} Mult for a {C:attention}Straight Flush{}",
                "{C:inactive}It will only activate if hand is a Straight, Total: {X:mult,C:white}X#2#{} Mult"
+            }
+        },
+        j_mills_snake_eyes = {
+            name = "Snake Eyes",
+            text = {
+               "This Joker gains {X:mult,C:white}X#1#{} Mult each 2 scored",
+               "But also {C:gold}-$2{} when scored"
             }
         },
         j_mills_stowaway = {
@@ -787,7 +794,13 @@ descriptions = {
               
             }
           },
-        },
+          mills_instruction_glob = { 
+            name = "",
+            text = {
+              "Fusing Global!",
+        }
+      },
+    },
         Voucher={
           v_mills_snack_merchant = {
             name = "Snack Merchant",
@@ -816,7 +829,7 @@ descriptions = {
             mills_unknwown_fusion = "Unknown Combo",
 	    -- menus
            k_mills_instruction_cred = "Credits!",
-           k_mills_instruction_glob = "Fusing Global!",
+           mills_instruction_glob = "Fusing Global!",
            k_mills_instruction_mod = "Fusing Mods!",
            k_mills_instruction_cons = "Fusing Consume!",
            
@@ -825,7 +838,8 @@ descriptions = {
         high_scores={},
         labels={
             mills_cookie_seal = "Cookie Seal",
-            
+            mills_instruction_cred = "Credits!",
+            mills_instruction_glob = "Fusing Global!",
         },
         poker_hand_descriptions={},
         poker_hands={},

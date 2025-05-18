@@ -2,7 +2,7 @@ SMODS.Consumable  {
   object_type = "Consumable",
     key = 'homeys_doney',
     set = "Snack",
-    atlas = 'snacki',
+    atlas = 'snack',
     pos = { 
       x = 3, 
       y = 0 

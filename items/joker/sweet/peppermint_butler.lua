@@ -36,7 +36,7 @@ SMODS.Joker {
         G.C.WHITE, 
         1.2 )
         badges[#badges+1] = create_badge(
-        "Art: Mills", 
+        "Art: Soda Enjoyer", 
         MILLS.COLORS.ART, 
         G.C.WHITE, 
         1.2 )

@@ -8,11 +8,16 @@ SMODS.Joker {
       end,
     pos = { x = 1, y = 0 },
     cost = 5,
-
     loc_vars = function(self, info_queue, card)
         return { vars = {} }
     end,
-
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Rafaelly", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
     calculate = function(self, card, context)
     if context.setting_blind and not card.getting_sliced then
         G.E_MANAGER:add_event(Event({
@@ -37,3 +42,18 @@ SMODS.Joker {
             draw_card(G.play,G.deck, 90,'up', nil)  
         end
     end}
+
+    
+-- Joker Display Compatability
+if JokerDisplay then 
+  JokerDisplay.Definitions["j_mills_cave"] = { -- Pulls definition from the localization file
+    reminder_text = {
+        { text = "(" },
+        { text = "When Blind Selected"},
+        { text = ")" },
+    },
+     text = {
+        { text = "Fusion Cards", colour = G.C.FILTER },
+     }
+    }
+    end

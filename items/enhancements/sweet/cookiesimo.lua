@@ -20,6 +20,13 @@ SMODS.Enhancement {
         vars = {card.ability.extra.bonus, card.ability.extra.mult, card.ability.extra.p_dollars, (G.GAME.probabilities.normal or 1), card.ability.extra.odd}
       }
   end,
+  set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Rafaelly & Mills", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
   calculate = function(self, card, context)
           if context.cardarea == G.play and context.main_scoring then
             local bonus = 0

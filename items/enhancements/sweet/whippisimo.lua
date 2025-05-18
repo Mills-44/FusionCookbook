@@ -15,7 +15,13 @@ SMODS.Enhancement {
       vars = { tostring(next), tostring(prev) }
     }
   end,
-
+  set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Mills", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
   calculate = function(self, card, context)
     if context.cardarea == G.play and context.main_scoring then
       local mult = card.ability.extra.toggle and 2 or 1

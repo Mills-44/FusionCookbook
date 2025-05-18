@@ -20,7 +20,14 @@ SMODS.Booster {
     draw_hand = true,
     loc_vars = function(self, info_queue, card)
       return { vars = { card.config.center.config.choose, card.ability.extra } }
-  end,
+   end,
+   set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Mills", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
      --Vanilla usage of how to set up boosters just be aware of how to use create_card function
   ease_background_colour = function(self)
       ease_colour(G.C.DYN_UI.MAIN, MILLS.COLORS.COOKIE)

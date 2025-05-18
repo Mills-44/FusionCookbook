@@ -24,6 +24,13 @@ SMODS.Enhancement {
           }
         }
     end,
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Rafaelly & Mills", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
     calculate = function(self, card, context)
         if context.cardarea == G.play and context.main_scoring then
             if next(context.poker_hands['Full House'])  or next(context.poker_hands['Four of a Kind'])  or next(context.poker_hands['Straight Flush']) then

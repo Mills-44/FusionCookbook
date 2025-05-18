@@ -18,6 +18,13 @@ SMODS.Booster {
     cost = 8,
     discovered = true,
     draw_hand = true,
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Mills", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
   --Vanilla usage of how to set up boosters just be aware of how to use create_card function
   ease_background_colour = function(self)
       ease_colour(G.C.DYN_UI.MAIN, MILLS.COLORS.COOKIE)

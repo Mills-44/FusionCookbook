@@ -2,8 +2,11 @@ SMODS.Consumable {
   object_type = "Consumable",
     key = 'butterscotch',
     set = "Snack",
-    atlas = 'butterscotch',
-    pos = { x = 0, y = 0 },
+    atlas = 'snack',
+    pos = { 
+      x = 0, 
+      y = 1 
+    },
     config = {},
     cost = 5,
     weight = 2,
@@ -12,11 +15,16 @@ SMODS.Consumable {
    },
     unlocked = true,
     discovered = true,
-  
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Soda Enjoyer", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
     can_use = function(self)
       return true 
     end,
-  
     use = function(self, card, area)
       local sweet_count = 0
       for _, v in ipairs(G.jokers.cards) do

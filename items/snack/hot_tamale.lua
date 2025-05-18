@@ -2,8 +2,11 @@ SMODS.Consumable {
     object_type = "Consumable",
     key = 'hot_tamale',
     set = "Snack",
-    atlas = 'hot_tamale',
-    pos = { x = 0, y = 0 },
+    atlas = 'snack',
+    pos = { 
+        x = 4, 
+        y = 1 
+    },
     config = {},
     cost = 4,
     weight = 5,

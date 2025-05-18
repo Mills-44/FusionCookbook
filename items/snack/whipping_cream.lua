@@ -2,10 +2,10 @@ SMODS.Consumable  {
     object_type = "Consumable",
     key = 'whipping_cream',
     set = "Snack",
-    atlas = 'whipping_cream',
+    atlas = 'snack',
     pos = {
-        x = 0,
-        y = 0
+        x = 4,
+        y = 2
     },
     config = {
         max_highlighted = 2,
@@ -18,6 +18,13 @@ SMODS.Consumable  {
         Snack = true
      },
     discovered = true,
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Soda Enjoyer", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
     can_use = function(self, card)
         -- Only usable when hand is out (in play) or in shop
         if not G or not G.hand then return false end
@@ -27,7 +34,6 @@ SMODS.Consumable  {
         
         return #highlighted <= max_highlighted and #highlighted > 0
     end,
-
     use = function(self, card, area, copier)
         local highlighted = G.hand.highlighted or {}
         if #highlighted > 0 then

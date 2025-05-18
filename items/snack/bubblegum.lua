@@ -2,18 +2,26 @@ SMODS.Consumable {
     object_type = "Consumable",
     key = 'bubblegum',
     set = "Snack",
-    atlas = 'bubblegum',
-    pos = { x = 0, y = 0 },
+    atlas = 'snack',
+    pos = { 
+        x = 2, 
+        y = 0 
+    },
     pools = { Snack = true },
     cost = 3,
     weight = 10,
     discovered = true,
     unlocked = true,
-
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Soda Enjoyer", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
     can_use = function(self)
         return true 
     end,
-
     use = function(self, card)
         local gold_count = 0
         -- Count gold cards in deck and hand

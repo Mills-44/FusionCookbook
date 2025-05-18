@@ -4,8 +4,11 @@ SMODS.Consumable {
     object_type = "Consumable",
     key = 'shortbread',
     set = "Snack",
-    atlas = 'shortbread',
-    pos = { x = 0, y = 0 },
+    atlas = 'snack',
+    pos = { 
+        x = 2, 
+        y = 2 
+    },
     config = {
         max_highlighted = 2,
     },
@@ -16,8 +19,13 @@ SMODS.Consumable {
     weight = 15,
     unlocked = true,
     discovered = true,
-
-    
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Soda Enjoyer", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
     can_use = function(self)
         return #G.hand.highlighted == self.config.max_highlighted
     end,

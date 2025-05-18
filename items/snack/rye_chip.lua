@@ -2,17 +2,25 @@ SMODS.Consumable  {
   object_type = "Consumable",
   key = 'rye_chip',
   set = "Snack",
-  atlas = 'rye_chip',
-  pos = { x = 0, y = 0 },
+  atlas = 'snack',
+  pos = { 
+    x = 1, 
+    y = 2 
+  },
   config = {},
   cost = 5,
   weight = 2,
   unlocked = true,
   discovered = true,
   pools = { Snack = true },
-
+  set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Soda Enjoyer", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
   can_use = function(self) return true end,
-
   use = function(self, card, area)
       G.E_MANAGER:add_event(Event({
         trigger = 'after', 

@@ -2,8 +2,11 @@ SMODS.Consumable  {
     object_type = "Consumable",
     key = 'kinder_egg',
     set = "Snack",
-    atlas = 'kinder_egg',
-    pos = { x = 0, y = 0 },
+    atlas = 'snack',
+    pos = { 
+      x = 5, 
+      y = 1 
+    },
     config = {},
     cost = 4,
     weight = 5,
@@ -12,6 +15,13 @@ SMODS.Consumable  {
     pools = { 
       Snack = true
    },
+   set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Soda Enjoyer", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
    can_use = function(self, card)
     return #G.jokers.cards < G.jokers.config.card_limit or self.area == G.jokers
   end,

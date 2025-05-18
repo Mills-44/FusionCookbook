@@ -2,9 +2,9 @@ SMODS.Consumable {
     object_type = "Consumable",
     key = 'blondwie',
     set = "Snack",
-    atlas = 'blondwie',
+    atlas = 'snack',
     pos = {
-        x = 0,
+        x = 1,
         y = 0
     },
     config = {
@@ -20,7 +20,13 @@ SMODS.Consumable {
     cost = 5,
     unlocked = true,
     discovered = true,
-    
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Soda Enjoyer", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
     can_use = function(self, card)
         if #G.hand.highlighted > 2 then
             return false

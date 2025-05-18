@@ -19,6 +19,13 @@ SMODS.Enhancement {
                 card.ability.extra.bonus_dollars
             }}
     end,
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Rafaelly", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
     calculate = function (self, card, context)
         if context.final_scoring_step and context.cardarea == G.hand then
             card.ability.extra.p_dollars = card.ability.extra.p_dollars + card.ability.extra.bonus_dollars

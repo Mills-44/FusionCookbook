@@ -2,8 +2,11 @@ SMODS.Consumable  {
     object_type = "Consumable",
     key = 'cream_puff',
     set = "Snack",
-    atlas = 'cream_puff',
-    pos = { x = 0, y = 0 },
+    atlas = 'snack',
+    pos = { 
+      x = 1, 
+      y = 1 
+    },
     config = {},
     cost = 3,
     pools = { 

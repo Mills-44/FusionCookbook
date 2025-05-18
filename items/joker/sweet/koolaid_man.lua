@@ -5,7 +5,7 @@ SMODS.Joker {
         money = 3
       },
     },
-    atlas = 'sweet_jokers_1',
+    atlas = 'sweet_jokers',
     pos = {
       x = 2,
       y = 0
@@ -30,6 +30,11 @@ SMODS.Joker {
         badges[#badges+1] = create_badge(
         "Sweet", 
         MILLS.COLORS.SWEET, 
+        G.C.WHITE, 
+        1.2 )
+        badges[#badges+1] = create_badge(
+        "Art: Soda Enjoyer", 
+        MILLS.COLORS.ART, 
         G.C.WHITE, 
         1.2 )
     end,

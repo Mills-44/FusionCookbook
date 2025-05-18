@@ -21,6 +21,13 @@ SMODS.Enhancement {
             }
         }
     end,
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Rafaelly", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
     calculate = function(self, card, context)
         if context.destroy_card and context.cardarea == G.play and context.destroy_card == card and pseudorandom("stain") < G.GAME.probabilities.normal / card.ability.extra.odds then
             return { 

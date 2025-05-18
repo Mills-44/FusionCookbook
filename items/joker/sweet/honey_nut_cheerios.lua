@@ -1,10 +1,10 @@
 SMODS.Joker {
     key = 'honey_nut_cheerios',
     config = {},
-    atlas = 'honey_nut_cheerios',
+    atlas = 'sweet_jokers',
     pos = {
-        x = 0,
-        y = 0
+        x = 1,
+        y = 2
     },
     pools = { 
         Sweet = true
@@ -13,10 +13,22 @@ SMODS.Joker {
     rarity = 1,
     unlocked = true,
     discovered = true,
-    blueprint_compat = true,
+    blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
-   calculate = function(self, card, context)
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Sweet", 
+        MILLS.COLORS.SWEET, 
+        G.C.WHITE, 
+        1.2 )
+        badges[#badges+1] = create_badge(
+        "Art: Mills", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
+    calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play and context.other_card:is_suit("Spades") then
             local other_card = context.other_card
             G.E_MANAGER:add_event(Event({

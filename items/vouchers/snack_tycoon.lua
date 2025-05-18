@@ -13,6 +13,13 @@ SMODS.Voucher {
     loc_vars = function(self, info_queue, card)
 		return { vars = { self.config.rate_up } }
 	end,
+  set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Mills", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
     redeem = function(self)
 		G.E_MANAGER:add_event(Event({
 			func = function()

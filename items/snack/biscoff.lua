@@ -3,7 +3,7 @@ SMODS.Consumable {
     object_type = "Consumable",
     key = 'biscoff',
     set = "Snack",
-    atlas = 'biscoff',
+    atlas = 'snack',
     pos = {
         x = 0,
         y = 0
@@ -18,6 +18,13 @@ SMODS.Consumable {
     weight = 10,
     unlocked = true,
     discovered = true,
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Soda Enjoyer", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
     can_use = function(self, card)
         -- Only usable when hand is out (in play) or in shop
         if not G or not G.hand then return false end

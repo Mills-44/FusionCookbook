@@ -6,7 +6,7 @@ SMODS.Joker {
         chips_mod = 5
       },
     },
-    atlas = 'sweet_jokers_1',
+    atlas = 'sweet_jokers',
     pos = {
       x = 0,
       y = 1
@@ -33,6 +33,11 @@ SMODS.Joker {
         badges[#badges+1] = create_badge(
         "Sweet", 
         MILLS.COLORS.SWEET, 
+        G.C.WHITE, 
+        1.2 )
+        badges[#badges+1] = create_badge(
+        "Art: Mills", 
+        MILLS.COLORS.ART, 
         G.C.WHITE, 
         1.2 )
     end,

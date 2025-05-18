@@ -25,6 +25,13 @@ SMODS.Enhancement {
             }
         }
     end,
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Rafaelly", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
     calculate = function(self, card, context)
         if context.cardarea == G.play and context.main_scoring then
             local bonus = 0

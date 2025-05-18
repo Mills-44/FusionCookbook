@@ -11,6 +11,13 @@ SMODS.Joker {
 	loc_vars = function(self, info_queue, card)
 		return { vars = {}}
 	end,
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Rafaelly", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
 	calculate = function(self, card, context)
         if context.before then
             for _,othercard in ipairs(context.scoring_hand) do
@@ -34,3 +41,17 @@ SMODS.Joker {
             end
         end
     end}
+
+-- Joker Display Compatability
+if JokerDisplay then 
+  JokerDisplay.Definitions["j_mills_monster"] = { -- Pulls definition from the localization file
+    reminder_text = {
+        { text = "(" },
+        { text = "Steel Cards"},
+        { text = ")" },
+    },
+     text = {
+        { text = "Claws Cards", colour = G.C.FILTER },
+     }
+    }
+    end

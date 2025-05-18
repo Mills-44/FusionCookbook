@@ -2,8 +2,11 @@ SMODS.Consumable {
     object_type = "Consumable",
     key = 'm_and_m',
     set = "Snack",
-    atlas = 'm_and_m',
-    pos = { x = 0, y = 0 },
+    atlas = 'snack',
+    pos = { 
+        x = 3, 
+        y = 1 
+    },
     config = {
         extra = {
             odd = 3
@@ -17,7 +20,6 @@ SMODS.Consumable {
     unlocked = true,
     discovered = true,
     consumable = true,
-
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
@@ -26,11 +28,16 @@ SMODS.Consumable {
             }
         }
     end,
-
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Soda Enjoyer", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
     can_use = function(self)
         return true
     end,
-
     use = function(self, card, area)
         G.E_MANAGER:add_event(Event({
           trigger = 'after', 

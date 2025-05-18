@@ -6,10 +6,10 @@ SMODS.Joker {
         xmult_mod = 0.1
       },
     },
-    atlas = 'jimbo_gump',
+    atlas = 'sweet_jokers',
     pos = {
-      x = 0,
-      y = 0
+      x = 2,
+      y = 2
     },
     pools = { 
       Sweet = true
@@ -33,6 +33,11 @@ SMODS.Joker {
         badges[#badges+1] = create_badge(
         "Sweet", 
         MILLS.COLORS.SWEET, 
+        G.C.WHITE, 
+        1.2 )
+        badges[#badges+1] = create_badge(
+        "Art: Mills", 
+        MILLS.COLORS.ART, 
         G.C.WHITE, 
         1.2 )
     end,

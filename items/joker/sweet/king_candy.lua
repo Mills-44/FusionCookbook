@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = 'king_candy',
     config = {},
-    atlas = 'sweet_jokers_1',
+    atlas = 'sweet_jokers',
     pos = {
         x = 3,
         y = 1
@@ -13,7 +13,7 @@ SMODS.Joker {
     cost = 7,
     unlocked = true, 
     discovered = true, 
-    blueprint_compat = true,
+    blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
     loc_vars = function(self, info_queue, card)
@@ -23,6 +23,11 @@ SMODS.Joker {
         badges[#badges+1] = create_badge(
         "Sweet", 
         MILLS.COLORS.SWEET, 
+        G.C.WHITE, 
+        1.2 )
+        badges[#badges+1] = create_badge(
+        "Art: Mills", 
+        MILLS.COLORS.ART, 
         G.C.WHITE, 
         1.2 )
     end,

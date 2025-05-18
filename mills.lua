@@ -26,6 +26,7 @@ SMODS.load_file("lovely/others.toml") -- obsidian
 MILLS.register_items(MILLS.PEPPER_JOKERS, "items/joker/pepper")
 MILLS.register_items(MILLS.SWEET_JOKERS, "items/joker/sweet")
 MILLS.register_items(MILLS.FUSION_JOKERS, "items/joker/fusion")
+MILLS.register_items(MILLS.MISC_JOKERS, "items/joker/misc")
 MILLS.register_items(MILLS.SANDWICH_JOKERS, "items/joker/sandwich")
 
 -- Register custom ConsumableType: Snack
@@ -72,7 +73,7 @@ SMODS.insert_pool = function(pool, center, ...)
   return orig_insert_pool(pool, center, ...)
 end
 
--- Fusing cards go boioioing
+-- Cards go boioioing
 
 local set_spritesref = Card.set_sprites
 function Card:set_sprites(_center, _front)
@@ -90,7 +91,24 @@ function Card:set_sprites(_center, _front)
         self.children.floating_sprite.states.hover.can = false
         self.children.floating_sprite.states.click.can = false
     end
+     set_spritesref(self, _center, _front) 
+    if _center and _center.name == "j_mills_curly" then
+        self.children.floating_sprite = Sprite(
+            self.T.x,
+            self.T.y,
+            self.T.w,
+            self.T.h,
+            G.ASSET_ATLAS[_center.atlas or _center.set],
+            { x = 1, y = 0 }
+        )
+        self.children.floating_sprite.role.draw_major = self
+        self.children.floating_sprite.states.hover.can = false
+        self.children.floating_sprite.states.click.can = false
+      end
 end
+
+
+
 
 -- register items
 

@@ -225,7 +225,6 @@ descriptions = {
                     "When a {C:attention}Flush{} or {C:attention}Full House{} is played",
                     "Every {C:attention}3rd{} activation levels up Spiciness!",
                     "{C:inactive}Total Mult: {C:mult}+#2#{}",
-                    "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg",
                 }
             },  
             j_mills_anaheim_chile = {
@@ -235,7 +234,6 @@ descriptions = {
                     "{C:attention}When a Flush{} or {C:attention}Full House{} is played",
                     "Every {C:attention}3rd{} activation levels up Spiciness!",
                     "{C:inactive}Total Mult: {C:mult}+#2#{}",
-                    "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg ",
                 }
             },
             j_mills_jalapeno = {
@@ -245,7 +243,6 @@ descriptions = {
                     "{C:attention}When a Flush{} or {C:attention}Full House{} is played",
                     "Every {C:attention}3rd{} activation levels up Spiciness!",
                     "{C:inactive}Total Mult: {C:mult}+#2#{}",
-                    "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg ",
                 }
             },
             j_mills_cayenne = {
@@ -255,7 +252,6 @@ descriptions = {
                     "{C:attention}When a Flush{} or {C:attention}Full House{} is played",
                     "Every {C:attention}3rd{} activation levels up Spiciness!",
                     "{C:inactive}Total Mult: {C:mult}+#2#{}",
-                    "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg ",
                 }
             },
             j_mills_habanero = {
@@ -265,22 +261,20 @@ descriptions = {
                     "{C:attention}When a Flush{} or {C:attention}Full House{} is played",
                     "Every {C:attention}3rd{} activation levels up Spiciness!",
                     "{C:inactive}Total Mult: {C:mult}+#2#{}",
-                    "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg ",
                 }
-            }, j_mills_ghost_pepper = {
+            },
+            j_mills_ghost_pepper = {
                 name = "Ghost Pepper",
                 text = {
                     "This Joker gives {C:mult}+#1#{} Mult and {X:mult,C:white}X2{} ",
                     "On {C:attention}Flush{} or {C:attention}Full Houses{}, levels up Spiciness!",
-                    "The {C:attention}5th{} level activates Pain!",
-                    "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg "
+                    "The {C:attention}5th{} level activates Pain!",                    
                 }
             }, j_mills_carolina_reaper = {
                 name = "Carolina Reaper",
                 text = {
                     "This Joker gives {C:mult}+#1#{} and",
                     "{C:dark_edition}^#2# Mult{} on any scoring hands",
-                    "{X:gold,C:blue} Art:{X:blue,C:gold}gfsg "
                 }
             },
             --SWEET JOKERS
@@ -440,6 +434,61 @@ descriptions = {
                 "into {C:attention}Claws Cards{}"
             }
         },
+        -- Misc Jokers
+        j_mills_calculator = {
+            name = "Calculator",
+            text = {
+               "This Joker gives Mult equal",
+               "to the sum of all cards ranks"
+            }
+        },
+        j_mills_clown = {
+            name = "Clown",
+            text = {
+               "{C:chips}+#1#{} Chips"
+            }
+        },
+        j_mills_missing = {
+            name = "Missing",
+            text = {
+               "When a Joker is sold it will never be seen in shop again"
+            }
+        },
+        j_mills_russian_roulette = {
+            name = "Russian Roulette",
+            text = {
+               "Scoring face cards give have a {C:green}1 in 6{} chance for",
+               "{X:mult,C:white}X#1#{} Mult but destroys card if triggered"
+            }
+        },
+        j_mills_scorecard = {
+            name = "Scorecard",
+            text = {
+               "This Joker gains {C:mult}+#1#{} each time a blind is cleared on first try",
+               "But This Joker loses {C:mult}-#2#{} Mult each time a blind is not cleared on first try",
+               "{C:inactive}Total Mult: {C:mult}+#3#{}"
+            }
+        },
+        j_mills_serious = {
+            name = "Serious",
+            text = {
+               "This Joker gains {X:mult,C:white}X#1#{} Mult for a {C:attention}Straight Flush{}",
+               "{C:inactive}It will only activate if hand is a Straight, Total: {X:mult,C:white}X#2#{} Mult"
+            }
+        },
+        j_mills_stowaway = {
+            name = "Stowaway",
+            text = {
+               "{C:attention}+#1#{} Joker Slot & {C:chips}+#2#{} Chips"
+            }
+        },
+        j_mills_topsy_turvy = {
+            name = "Topsy Turvy",
+            text = {
+               "Hearts and Spades are swapped and Diamonds and Clubs are swapped",
+               "The suit is now considered the other one it swapped with only"
+            }
+        },
         },
         Other={
             p_mills_snack_pack = {
@@ -517,7 +566,7 @@ descriptions = {
                 }
               },
               c_mills_choffle = {
-                name = "Choffle",
+                name = "Chocolate Waffle",
                 text = {
                   "Select 2 {C:attention}Lucky, Gold, or Bonus Cards{},",
                   "To enfuse and create a new enhancement card"
@@ -537,7 +586,7 @@ descriptions = {
                 }
               },
               c_mills_homeys_doney = {
-                name = "Homey's Doney",
+                name = "Donut",
                 text = {
                   "{C:green}1 in 2{} chance to get +1 Discard or,",
                   "{C:green}1 in 2{} chance to get +1 Hand"
@@ -761,7 +810,7 @@ descriptions = {
         collabs={},
         dictionary={
             k_mills_snack_pack = "Snack Pack",
-           -- b_mills_snack_pack = "Snack",
+            b_mills_snack_pack = "Snack Pack",
             mills_flayfluff = "Makes Flayfluff!",
             mills_not_valid_fusion = "No Valid Combos",
             mills_unknwown_fusion = "Unknown Combo",

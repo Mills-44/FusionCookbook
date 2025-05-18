@@ -8,7 +8,7 @@
 	"main_file": "mills.lua",
 	"priority": 450,
 	"badge_colour": "2c63ea",
-	"badge_text_colour": "baa7a7",
+	"badge_text_colour": "ffffff",
 	"version": "1.0.1",
 	"dependencies": [
 		"Talisman (>=2.0.9)",

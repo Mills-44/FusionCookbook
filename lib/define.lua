@@ -72,7 +72,8 @@ JELLY = HEX("820f8a"),
 SWEET = HEX("d31a9a"),
 -- Fusion Colors
 FUSION = HEX("FF00FF"),
--- _ = HEX(""),
+--Misc Colors
+ART = HEX("5e819d"),
 -- _ = HEX(""),
 -- _ = HEX(""),
 -- _ = HEX(""),
@@ -134,8 +135,18 @@ MILLS.SWEET_JOKERS = {
 }
 
 MILLS.FUSION_JOKERS = {
-   "cave",
-   "monster",
+  --Common
+
+  -- Uncommon
+
+  --Rare
+  "cave",
+  "monster",
+
+  -- Legendary
+
+  -- Not Finished
+  
 }
 --Sandwich Jokers
 MILLS.SANDWICH_JOKERS = {
@@ -144,8 +155,30 @@ MILLS.SANDWICH_JOKERS = {
 --"mr_pb_and_jelly"
 --"gloopwich"
 --"everlasting_pollenstopper"
---"" -- More to come :)
---""
+}
+
+--Misc Jokers
+MILLS.MISC_JOKERS = {
+-- Common 
+"clown",
+"serious",
+--"scorecard",
+"stowaway",
+--"topsy_turvy",
+
+-- Uncommon
+--"calculator",
+--"russian_roulette",
+
+-- Rare
+--"missing",
+
+-- Legendary
+
+
+-- Not Finished
+--"curly"
+
 }
 
 -- ||           BOOSTER          ||
@@ -182,7 +215,7 @@ MILLS.SNACKS = {
 "rock_candy",
 "rye_chip",
 "shortbread",
---"slice_of_bread",
+"slice_of_bread",
 --"taffy",
 "take_5",
 "whipping_cream",

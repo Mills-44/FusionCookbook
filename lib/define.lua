@@ -247,20 +247,102 @@ MILLS.SWEET_ENHANCEMENTS = {
 --"dia",
 "extra",
 "feral",
+
+ -- ===Bonus===
+
 "lots",
 "mirror",
 "obs",
+"extra",
+"water",
+"tempered",
+"sapph",
+"cob",
 "ori",
 "pig",
+"scratch",
+
+-- ===Mult===
+
+"extra",
 "power",
 "prize",
 "rhondite",
+"laval",
+"color",
 "ruby",
 "sapph",
 "scratch",
+"cinna",
+"rhondite",
+"prize",
+
+-- ===Wild===
+
+"water",
+"lava",
+"wow",
 "stain",
+"claws",
+"bou",
+"pig",
+"clov",
+
+-- ===Glass===
+
 "tempered",
 "untamed",
+"color",
+"stain",
+"mirror",
+"obs",
+"crack",
+"dia",
+-- "cry",
+
+-- ===Steel==
+
+-- "sapph",
+-- "ruby",
+-- "claws",
+-- "mirror",
+-- "super",
+-- "conc",
+-- "elec"
+-- "iron"
+
+-- ===Stone===
+
+-- "cob",
+-- "cinna",
+-- "bou",
+-- "obs",
+-- "conc",
+-- "gran",
+-- "fool",
+-- "dice",
+
+-- ===Gold===
+
+-- "ori",
+-- "rhondite",
+-- "pig",
+-- "dia",
+-- "elec"
+-- "fool"
+-- "fort",
+-- "doll",
+
+-- ===Lucky===
+
+-- "scratch",
+-- "prize",
+-- "clov",
+-- "cry",
+-- "iron",
+-- "dice",
+-- "doll"
+
 }
 
 -- ||           SPECTRAL          || 

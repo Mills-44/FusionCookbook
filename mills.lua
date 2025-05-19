@@ -27,7 +27,7 @@ MILLS.register_items(MILLS.PEPPER_JOKERS, "items/joker/pepper")
 MILLS.register_items(MILLS.SWEET_JOKERS, "items/joker/sweet")
 MILLS.register_items(MILLS.FUSION_JOKERS, "items/joker/fusion")
 MILLS.register_items(MILLS.MISC_JOKERS, "items/joker/misc")
-MILLS.register_items(MILLS.SANDWICH_JOKERS, "items/joker/sandwich")
+--MILLS.register_items(MILLS.SANDWICH_JOKERS, "items/joker/sandwich")
 
 -- Register custom ConsumableType: Snack
 SMODS.ConsumableType {
@@ -114,9 +114,17 @@ end
 
 MILLS.register_items(MILLS.BOOSTER, "items/boosters")
 
+-- FUSIONS
+MILLS.register_items(MILLS.FUSION_BONUS_ENHANCEMENTS, "items/enhancements/fusion/bonus")
+MILLS.register_items(MILLS.FUSION_MULT_ENHANCEMENTS, "items/enhancements/fusion/mult")
+MILLS.register_items(MILLS.FUSION_WILD_ENHANCEMENTS, "items/enhancements/fusion/wild")
+MILLS.register_items(MILLS.FUSION_GLASS_ENHANCEMENTS, "items/enhancements/fusion/glass")
+MILLS.register_items(MILLS.FUSION_STEEL_ENHANCEMENTS, "items/enhancements/fusion/steel")
+MILLS.register_items(MILLS.FUSION_STONE_ENHANCEMENTS, "items/enhancements/fusion/stone")
+MILLS.register_items(MILLS.FUSION_GOLD_ENHANCEMENTS, "items/enhancements/fusion/gold")
+MILLS.register_items(MILLS.FUSION_LUCKY_ENHANCEMENTS, "items/enhancements/fusion/lucky")
 
 MILLS.register_items(MILLS.SWEET_ENHANCEMENTS, "items/enhancements/sweet")
-MILLS.register_items(MILLS.FUSION_ENHANCEMENTS, "items/enhancements/fusion")
 
 MILLS.register_items(MILLS.SNACKS, "items/snack")
 MILLS.register_items(MILLS.FUSION, "items/fusion")

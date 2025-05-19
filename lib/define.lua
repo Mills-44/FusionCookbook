@@ -160,16 +160,14 @@ MILLS.SANDWICH_JOKERS = {
 --Misc Jokers
 MILLS.MISC_JOKERS = {
 -- Common 
-"calculator",
 "clown",
 "serious",
-"snake_eyes",
 --"scorecard",
 "stowaway",
 --"topsy_turvy",
-"waste_worker"
 
 -- Uncommon
+--"calculator",
 --"russian_roulette",
 
 -- Rare
@@ -235,71 +233,64 @@ MILLS.SWEET_ENHANCEMENTS = {
  "whippisimo",
  "frostisimo"
 }
- MILLS.FUSION_ENHANCEMENTS = {
+ MILLS.FUSION_BONUS_ENHANCEMENTS = {
  -- Fusion Enhancements
-"bou",
-"cinna",
-"claws",
-"clov",
-"cob",
-"color",
-"crack",
---"dia",
-"extra",
-"feral",
 
  -- ===Bonus===
 
 "lots",
-"mirror",
-"obs",
 "extra",
 "water",
 "tempered",
 "sapph",
 "cob",
 "ori",
-"pig",
 "scratch",
+}
+
+MILLS.FUSION_MULT_ENHANCEMENTS = {
 
 -- ===Mult===
 
-"extra",
+"ex",
 "power",
-"prize",
-"rhondite",
-"laval",
+"lava",
 "color",
 "ruby",
-"sapph",
-"scratch",
 "cinna",
 "rhondite",
 "prize",
+}
+
+MILLS.FUSION_WILD_ENHANCEMENTS = {
 
 -- ===Wild===
 
-"water",
-"lava",
+"wat",
+"lav",
 "wow",
 "stain",
 "claws",
 "bou",
 "pig",
 "clov",
+}
+
+MILLS.FUSION_GLASS_ENHANCEMENTS = {
 
 -- ===Glass===
 
-"tempered",
-"untamed",
-"color",
-"stain",
+"temp",
+"col",
+"stan",
+"crack",
 "mirror",
 "obs",
-"crack",
 "dia",
--- "cry",
+"cry",
+}
 
+MILLS.FUSION_STEEL_ENHANCEMENTS = {
 -- ===Steel==
 
 -- "sapph",
@@ -310,6 +301,9 @@ MILLS.SWEET_ENHANCEMENTS = {
 -- "conc",
 -- "elec"
 -- "iron"
+}
+
+MILLS.FUSION_STONE_ENHANCEMENTS = {
 
 -- ===Stone===
 
@@ -321,6 +315,10 @@ MILLS.SWEET_ENHANCEMENTS = {
 -- "gran",
 -- "fool",
 -- "dice",
+}
+
+
+MILLS.FUSION_GOLD_ENHANCEMENTS = {
 
 -- ===Gold===
 
@@ -332,6 +330,9 @@ MILLS.SWEET_ENHANCEMENTS = {
 -- "fool"
 -- "fort",
 -- "doll",
+}
+
+MILLS.FUSION_LUCKY_ENHANCEMENTS = {
 
 -- ===Lucky===
 

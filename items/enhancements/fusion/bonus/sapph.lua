@@ -22,13 +22,18 @@ end,
     end,
     set_badges = function(self, card, badges)
         badges[#badges+1] = create_badge(
+        "Bonus + Steel", 
+        MILLS.COLORS.FUSION, 
+        G.C.WHITE, 
+        1.0 )
+        badges[#badges+1] = create_badge(
         "Art: Rafaelly", 
         MILLS.COLORS.ART, 
         G.C.WHITE, 
         1.2 )
     end,
     calculate = function(self, card, context)
-        if context.final_scoring_step and context.cardarea == G.hand then
+        if context.cardarea == G.hand and context.main_scoring then
            return {
             x_chips = card.ability.extra.x_chips
         }

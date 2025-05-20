@@ -8,7 +8,10 @@ SMODS.Enhancement {
     in_pool = function(self, args)
       return not args or not args.source or (args.source ~= 'sho' and args.source ~= 'sta')
 end,
-    config = {extra = {h_dollars = 5}},
+    config = {
+        extra = {
+            h_dollars = 5
+        }},
     loc_vars = function(self, info_queue, card)
         return {
             vars={
@@ -18,6 +21,11 @@ end,
     }
     end,
     set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Bonus + Gold", 
+        MILLS.COLORS.FUSION, 
+        G.C.WHITE, 
+        1.2 )
         badges[#badges+1] = create_badge(
         "Art: Rafaelly", 
         MILLS.COLORS.ART, 
@@ -31,7 +39,7 @@ end,
                 card = card
             }
         end
-            if context.individual and context.cardarea == G.hand and not context.end_of_round then
+            if context.cardarea == G.hand and context.end_of_round then
                return {
                 dollars = card.ability.extra.h_dollars
             }

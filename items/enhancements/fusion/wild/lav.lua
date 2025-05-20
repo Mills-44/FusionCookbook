@@ -1,5 +1,5 @@
 SMODS.Enhancement {
-    key = "lav",
+    key = 'lav',
     atlas = 'enhanc_fus',
     pos = {
         x = 2,
@@ -7,11 +7,11 @@ SMODS.Enhancement {
     },
     in_pool = function(self, args)
       return not args or not args.source or (args.source ~= 'sho' and args.source ~= 'sta')
-end,
+    end,
     any_suit = true,
     config = {
         extra = {
-            mult = 6
+            mult = 8
         }
     },
     order = 5,
@@ -23,6 +23,11 @@ end,
         }
     end,
     set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Wild + Mult", 
+        MILLS.COLORS.FUSION, 
+        G.C.WHITE, 
+        1.0 )
         badges[#badges+1] = create_badge(
         "Art: Rafaelly", 
         MILLS.COLORS.ART, 

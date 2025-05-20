@@ -1,10 +1,8 @@
-
-
 SMODS.Enhancement {
     key = "bou",
     atlas = 'enhanc_fus', 
-    any_rank = true,
-    no_suit = true,
+    no_rank = true,
+    any_suit = true,
     always_scores = true,
     replace_base_card = true,
     pos = {
@@ -16,7 +14,7 @@ SMODS.Enhancement {
 end,
     config = {
         extra = {
-            chips = 75
+            chips = 60
         }
     },
     loc_vars = function(self, info_queue, card)
@@ -26,6 +24,11 @@ end,
         }}
     end,
     set_badges = function(self, card, badges)
+         badges[#badges+1] = create_badge(
+        "Wild + Stone", 
+        MILLS.COLORS.FUSION, 
+        G.C.WHITE, 
+        1.2 )
         badges[#badges+1] = create_badge(
         "Art: Rafaelly", 
         MILLS.COLORS.ART, 

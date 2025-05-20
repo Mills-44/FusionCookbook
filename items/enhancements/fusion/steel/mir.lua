@@ -1,5 +1,5 @@
 SMODS.Enhancement {
-    key = "mirror",
+    key = "mir",
     atlas = "enhanc_fus",
     pos = {
     x = 4, 
@@ -23,7 +23,7 @@ end,
 end,
 set_badges = function(self, card, badges)
         badges[#badges+1] = create_badge(
-        "Glass + Steel", 
+        "Steel + Glass", 
         MILLS.COLORS.FUSION, 
         G.C.WHITE, 
         1.2 )
@@ -38,7 +38,7 @@ set_badges = function(self, card, badges)
         return { x_mult = card.ability.extra.x_mult}
     end
     if context.cardarea == G.play and context.repetition then
-        if (pseudorandom('mirror_odd') < G.GAME.probabilities.normal / card.ability.extra.odd) then
+        if (pseudorandom('mir_odd') < G.GAME.probabilities.normal / card.ability.extra.odd) then
             return {
                 repetitions = 1
             }

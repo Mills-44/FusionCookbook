@@ -1,31 +1,32 @@
 SMODS.Enhancement {
-    key = 'ex',
+    key = "iron",
     atlas = 'enhanc_fus',
     pos = {
-        x = 1,
-        y = 0
+        x = 7, 
+        y = 4
     },
     in_pool = function(self, args)
       return not args or not args.source or (args.source ~= 'sho' and args.source ~= 'sta')
 end,
     config = {
         extra = {
-            bonus = 50, 
-            mult = 8
+            odds_xmult = 5,
+            odds_money = 10,
+            x_mult = 2
         }
     },
-    order = 2,
     loc_vars = function(self, info_queue, card)
         return {
-            vars = {
-                card.ability.extra.bonus, 
-                card.ability.extra.mult
+            vars={
+                (G.GAME.probabilities.normal or 1),
+                card.ability.extra.odds_xmult,
+                card.ability.extra.odds_money
+            }
         }
-    }
     end,
     set_badges = function(self, card, badges)
         badges[#badges+1] = create_badge(
-        "Mult + Bonus", 
+        "Steel + Lucky", 
         MILLS.COLORS.FUSION, 
         G.C.WHITE, 
         1.0 )
@@ -37,10 +38,14 @@ end,
     end,
     calculate = function(self, card, context)
         if context.cardarea == G.play and context.main_scoring then
+            if (pseudorandom('iron_odds_xmult') < G.GAME.probabilities.normal/card.ability.extra.odds_xmult) then
            return {
-            chips = card.ability.extra.bonus, 
-            mult = card.ability.extra.mult
+            x_mult = card.ability.extra.x_mult
         }
         end
-   end
+        if (pseudorandom('iron_odds_money') < G.GAME.probabilities.normal/card.ability.extra.odds_xmult) then
+            ease_dollars(25)
+    end
+end
+end
 }

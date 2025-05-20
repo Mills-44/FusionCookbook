@@ -9,7 +9,7 @@ SMODS.Enhancement {
       return not args or not args.source or (args.source ~= 'sho' and args.source ~= 'sta')
 end,
     config = {extra = {
-        bonus = 75
+        bonus = 90
     }},
     order = 1,
     loc_vars = function(self, info_queue, card)
@@ -20,6 +20,11 @@ end,
         }
     end,
     set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Bonus + Bonus", 
+        MILLS.COLORS.FUSION, 
+        G.C.WHITE, 
+        1.0 )
         badges[#badges+1] = create_badge(
         "Art: Rafaelly", 
         MILLS.COLORS.ART, 

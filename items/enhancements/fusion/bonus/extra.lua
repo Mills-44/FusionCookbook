@@ -10,7 +10,7 @@ SMODS.Enhancement {
 end,
     config = {
         extra = {
-            bonus = 45, 
+            bonus = 60, 
             mult = 6
         }
     },
@@ -24,6 +24,11 @@ end,
     }
     end,
     set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Bonus + Mult", 
+        MILLS.COLORS.FUSION, 
+        G.C.WHITE, 
+        1.0 )
         badges[#badges+1] = create_badge(
         "Art: Rafaelly", 
         MILLS.COLORS.ART, 

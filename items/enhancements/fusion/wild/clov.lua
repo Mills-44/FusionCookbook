@@ -12,7 +12,7 @@ end,
         extra = 
         {
         odd = 4, 
-        odds = 10, 
+        odds = 8, 
         mult = 20, 
         p_dollars = 20
     }},
@@ -27,6 +27,11 @@ end,
     end,
     set_badges = function(self, card, badges)
         badges[#badges+1] = create_badge(
+        "Wild + Lucky", 
+        MILLS.COLORS.FUSION, 
+        G.C.WHITE, 
+        1.0 )
+        badges[#badges+1] = create_badge(
         "Art: Rafaelly", 
         MILLS.COLORS.ART, 
         G.C.WHITE, 
@@ -35,16 +40,15 @@ end,
     calculate = function(self, card, context)
         if context.cardarea == G.play and context.main_scoring then
             local mult = 0
-            local dol = 0
-            if (pseudorandom('multodd') < G.GAME.probabilities.normal / card.ability.extra.odd) then
+            if (pseudorandom('clov_odd') < G.GAME.probabilities.normal / card.ability.extra.odd) then
                 mult = card.ability.extra.mult
             end
-            if (pseudorandom('dollarodd') < G.GAME.probabilities.normal / card.ability.extra.odds) then
-                dol = card.ability.extra.p_dollars
+            if (pseudorandom('clov_odds') < G.GAME.probabilities.normal / card.ability.extra.odds) then
+               ease_dollars(20)
             end
             return {
                 mult = mult,
-                dollars = dol
+
             }
         end
 end

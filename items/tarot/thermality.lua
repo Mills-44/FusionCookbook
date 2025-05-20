@@ -1,10 +1,10 @@
 SMODS.Consumable {
     object_type = "Consumable",
-    key = 'chromlech',
+    key = 'thermality',
     set = "Tarot",
     atlas = 'tarot',
     pos = {
-        x = 1,
+        x = 0,
         y = 0
     },
     config = {
@@ -26,14 +26,14 @@ SMODS.Consumable {
         
         for _, v in ipairs(G.hand.highlighted) do
             if SMODS.has_enhancement(G.hand.highlighted[1], 'm_bonus') and
-               SMODS.has_enhancement(G.hand.highlighted[2], 'm_stone') or
-               SMODS.has_enhancement(G.hand.highlighted[1], 'm_stone') and
+               SMODS.has_enhancement(G.hand.highlighted[2], 'm_wild') or
+               SMODS.has_enhancement(G.hand.highlighted[1], 'm_wild') and
                SMODS.has_enhancement(G.hand.highlighted[2], 'm_bonus') or
-               SMODS.has_enhancement(G.hand.highlighted[1], 'm_stone') and
-               SMODS.has_enhancement(G.hand.highlighted[2], 'm_stone') or 
+               SMODS.has_enhancement(G.hand.highlighted[1], 'm_wild') and
+               SMODS.has_enhancement(G.hand.highlighted[2], 'm_wild') or 
                SMODS.has_enhancement(G.hand.highlighted[1], 'm_mult') and
-               SMODS.has_enhancement(G.hand.highlighted[2], 'm_stone') or
-               SMODS.has_enhancement(G.hand.highlighted[1], 'm_stone') and
+               SMODS.has_enhancement(G.hand.highlighted[2], 'm_wild') or
+               SMODS.has_enhancement(G.hand.highlighted[1], 'm_wild') and
                SMODS.has_enhancement(G.hand.highlighted[2], 'm_mult') then
                 return true
             else return false
@@ -56,58 +56,58 @@ SMODS.Consumable {
                 func = function()
 
                   if SMODS.has_enhancement(G.hand.highlighted[1], 'm_mult') and
-                   SMODS.has_enhancement(G.hand.highlighted[2], 'm_stone') or 
-                   SMODS.has_enhancement(G.hand.highlighted[1], 'm_stone') and
+                   SMODS.has_enhancement(G.hand.highlighted[2], 'm_wild') or 
+                   SMODS.has_enhancement(G.hand.highlighted[1], 'm_wild') and
                    SMODS.has_enhancement(G.hand.highlighted[2], 'm_mult') then
                     if MILLS.random_chance(.25) then
                         G.hand.highlighted[1]:set_ability ("m_mills_power",nil,true)
                     elseif MILLS.random_chance(.8) then
-                        G.hand.highlighted[1]:set_ability ("m_mills_cinna",nil,true)
+                        G.hand.highlighted[1]:set_ability ("m_mills_lava",nil,true)
                         else
                         G.hand.highlighted[1]:start_dissolve()
                         end
                     if MILLS.random_chance(.5) then
                         G.hand.highlighted[2]:set_ability ("m_mills_power",nil,true)
                     elseif MILLS.random_chance(.6) then
-                        G.hand.highlighted[2]:set_ability ("m_mills_cinna",nil,true)
+                        G.hand.highlighted[2]:set_ability ("m_mills_lava",nil,true)
                     else
                         G.hand.highlighted[2]:start_dissolve()
                     end
                 end
 
-                    if SMODS.has_enhancement(G.hand.highlighted[1], 'm_stone') and
-                   SMODS.has_enhancement(G.hand.highlighted[2], 'm_stone') then
+                    if SMODS.has_enhancement(G.hand.highlighted[1], 'm_wild') and
+                   SMODS.has_enhancement(G.hand.highlighted[2], 'm_wild') then
                     if MILLS.random_chance(.7) then
-                        G.hand.highlighted[1]:set_ability ("m_mills_cob",nil,true)
+                        G.hand.highlighted[1]:set_ability ("m_mills_lots",nil,true)
                     elseif MILLS.random_chance(.5) then
-                        G.hand.highlighted[1]:set_ability ("m_mills_cinna",nil,true)
+                        G.hand.highlighted[1]:set_ability ("m_mills_water",nil,true)
                         else
                         G.hand.highlighted[1]:start_dissolve()
                         end
                     if MILLS.random_chance(.6) then
-                        G.hand.highlighted[2]:set_ability ("m_mills_cinna",nil,true)
+                        G.hand.highlighted[2]:set_ability ("m_mills_lots",nil,true)
                     elseif MILLS.random_chance(.5) then
-                        G.hand.highlighted[2]:set_ability ("m_mills_cob",nil,true)
+                        G.hand.highlighted[2]:set_ability ("m_mills_lava",nil,true)
                     else
                         G.hand.highlighted[2]:start_dissolve()
                     end
                 end
 
                   if SMODS.has_enhancement(G.hand.highlighted[1], 'm_bonus') and
-                   SMODS.has_enhancement(G.hand.highlighted[2], 'm_stone') or 
-                   SMODS.has_enhancement(G.hand.highlighted[1], 'm_stone') and
+                   SMODS.has_enhancement(G.hand.highlighted[2], 'm_wild') or 
+                   SMODS.has_enhancement(G.hand.highlighted[1], 'm_wild') and
                    SMODS.has_enhancement(G.hand.highlighted[2], 'm_bonus') then
                     if MILLS.random_chance(.25) then
-                        G.hand.highlighted[1]:set_ability ("m_mills_cob",nil,true)
+                        G.hand.highlighted[1]:set_ability ("m_mills_lots",nil,true)
                     elseif MILLS.random_chance(.7) then
-                        G.hand.highlighted[1]:set_ability ("m_mills_bou",nil,true)
+                        G.hand.highlighted[1]:set_ability ("m_mills_water",nil,true)
                         else
                         G.hand.highlighted[1]:start_dissolve()
                         end
                     if MILLS.random_chance(.5) then
-                        G.hand.highlighted[2]:set_ability ("m_mills_cob",nil,true)
+                        G.hand.highlighted[2]:set_ability ("m_mills_lots",nil,true)
                     elseif MILLS.random_chance(.5) then
-                        G.hand.highlighted[2]:set_ability ("m_mills_bou",nil,true)
+                        G.hand.highlighted[2]:set_ability ("m_mills_water",nil,true)
                     else
                         G.hand.highlighted[2]:start_dissolve()
                     end

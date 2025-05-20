@@ -1,5 +1,5 @@
 SMODS.Enhancement {
-    key = "wat", 
+    key = 'wat', 
     atlas = 'enhanc_fus',
     any_suit = true,
     pos = {
@@ -10,7 +10,10 @@ SMODS.Enhancement {
       return not args or not args.source or (args.source ~= 'sho' and args.source ~= 'sta')
 end,
     order = 3,
-    config = {extra = {bonus = 45}},
+    config = {
+        extra = {
+            bonus = 75
+        }},
     loc_vars = function(self, info_queue, card)
         return {
             vars={
@@ -19,6 +22,11 @@ end,
         }
     end,
     set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Bonus + Wild", 
+        MILLS.COLORS.FUSION, 
+        G.C.WHITE, 
+        1.0 )
         badges[#badges+1] = create_badge(
         "Art: Rafaelly", 
         MILLS.COLORS.ART, 

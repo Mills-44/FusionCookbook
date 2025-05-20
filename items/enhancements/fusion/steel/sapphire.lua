@@ -1,8 +1,8 @@
 SMODS.Enhancement {
-    key = 'ex',
+    key = "sapphire",
     atlas = 'enhanc_fus',
     pos = {
-        x = 1,
+        x = 4, 
         y = 0
     },
     in_pool = function(self, args)
@@ -10,22 +10,19 @@ SMODS.Enhancement {
 end,
     config = {
         extra = {
-            bonus = 50, 
-            mult = 8
+            x_chips = 2.5
         }
     },
-    order = 2,
     loc_vars = function(self, info_queue, card)
         return {
-            vars = {
-                card.ability.extra.bonus, 
-                card.ability.extra.mult
+            vars={
+                card.ability.extra.x_chips
+            }
         }
-    }
     end,
     set_badges = function(self, card, badges)
         badges[#badges+1] = create_badge(
-        "Mult + Bonus", 
+        "Steel + Bonus", 
         MILLS.COLORS.FUSION, 
         G.C.WHITE, 
         1.0 )
@@ -36,11 +33,10 @@ end,
         1.2 )
     end,
     calculate = function(self, card, context)
-        if context.cardarea == G.play and context.main_scoring then
+        if context.cardarea == G.hand and context.main_scoring then
            return {
-            chips = card.ability.extra.bonus, 
-            mult = card.ability.extra.mult
+            x_chips = card.ability.extra.x_chips
         }
         end
-   end
+end
 }

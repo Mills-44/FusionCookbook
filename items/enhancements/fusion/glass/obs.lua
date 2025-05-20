@@ -33,6 +33,11 @@ end,
 end,
 set_badges = function(self, card, badges)
         badges[#badges+1] = create_badge(
+        "Glass + Stone", 
+        MILLS.COLORS.FUSION, 
+        G.C.WHITE, 
+        1.0 )
+        badges[#badges+1] = create_badge(
         "Art: Rafaelly", 
         MILLS.COLORS.ART, 
         G.C.WHITE, 

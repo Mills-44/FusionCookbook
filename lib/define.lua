@@ -111,6 +111,7 @@ MILLS.SWEET_JOKERS = {
 -- Uncommon
 "barry_b",
 "bob",
+"gingy",
 "jammin_jelly",
 "koolaid_man",
 "wonkas_chocolate_bar",
@@ -126,7 +127,7 @@ MILLS.SWEET_JOKERS = {
 -- Unfinished
 --"apple_of_jacks_eye",
 --"better_call_bon",
---"gingy",
+
 --"heisenbergs_baby_blue",
 --"king_dice",
 --"pos_baozis",
@@ -164,10 +165,12 @@ MILLS.MISC_JOKERS = {
 "serious",
 --"scorecard",
 "stowaway",
+"snake_eyes",
 --"topsy_turvy",
+"waste_worker",
 
 -- Uncommon
---"calculator",
+"calculator",
 --"russian_roulette",
 
 -- Rare

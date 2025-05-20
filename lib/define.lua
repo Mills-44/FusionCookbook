@@ -153,7 +153,7 @@ MILLS.FUSION_JOKERS = {
 MILLS.SANDWICH_JOKERS = {
 --"flayfluff_sub"
 --"golden_crunch"
---"mr_pb_and_jelly"
+"mr_pb_and_jelly"
 --"gloopwich"
 --"everlasting_pollenstopper"
 }
@@ -218,7 +218,7 @@ MILLS.SNACKS = {
 "rock_candy",
 "rye_chip",
 "shortbread",
---"slice_of_bread",
+"slice_of_bread",
 --"taffy",
 "take_5",
 "whipping_cream",
@@ -252,9 +252,7 @@ MILLS.SWEET_ENHANCEMENTS = {
 }
 
 MILLS.FUSION_MULT_ENHANCEMENTS = {
-
 -- ===Mult===
-
 "ex",
 "power",
 "lava",
@@ -266,9 +264,7 @@ MILLS.FUSION_MULT_ENHANCEMENTS = {
 }
 
 MILLS.FUSION_WILD_ENHANCEMENTS = {
-
 -- ===Wild===
-
 "wat",
 "lav",
 "wow",
@@ -280,9 +276,7 @@ MILLS.FUSION_WILD_ENHANCEMENTS = {
 }
 
 MILLS.FUSION_GLASS_ENHANCEMENTS = {
-
 -- ===Glass===
-
 "temp",
 "col",
 "stan",
@@ -295,27 +289,24 @@ MILLS.FUSION_GLASS_ENHANCEMENTS = {
 
 MILLS.FUSION_STEEL_ENHANCEMENTS = {
 -- ===Steel==
-
--- "sapph",
--- "ruby",
--- "claws",
--- "mirror",
--- "super",
--- "conc",
--- "elec"
--- "iron"
+ "sapphire",
+ "rub",
+ "claw",
+ "mir",
+ "titanium",
+ "concrete",
+ "fools",
+ "iron"
 }
 
 MILLS.FUSION_STONE_ENHANCEMENTS = {
-
 -- ===Stone===
-
 -- "cob",
 -- "cinna",
 -- "bou",
 -- "obs",
 -- "conc",
--- "gran",
+--"granite"
 -- "fool",
 -- "dice",
 }
@@ -357,9 +348,8 @@ MILLS.SPECTRAL = {
 
 -- ||           TAROT          ||
 MILLS.TAROT = {
-   "animal",
-   "chromlech",
-   "omnipotent",
+  "chromlech",
+  "thermality",
    --""
   }
 

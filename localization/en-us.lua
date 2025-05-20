@@ -4,13 +4,14 @@ descriptions = {
     Blind={},
     Edition={},
     Enhanced={
-        m_mills_candisimo = {
-            name = "Candisimo Card",
-            text ={ 
-                "If scored in {C:attention}Flush or Lower{}, this card gains {C:chips}+#3#{} Chips",
-                "If scored in {C:attention}Full House or Higher{} this card gains {C:mult}+#4#{} Mult card",
-                "{C:inactive}Total: {C:chips}+#1#{} Chips and {C:mult}+#2#{} Mult"
-            }
+      -- ||  SWEET   ||
+      m_mills_candisimo = {
+        name = "Candisimo Card",
+        text ={ 
+          "If scored in {C:attention}Flush or Lower{}, this card gains {C:chips}+#3#{} Chips",
+          "If scored in {C:attention}Full House or Higher{} this card gains {C:mult}+#4#{} Mult card",
+          "{C:inactive}Total: {C:chips}+#1#{} Chips and {C:mult}+#2#{} Mult"
+          }
         },
         m_mills_cookiesimo = {
         name = "Cookiesimo Card",
@@ -33,11 +34,101 @@ descriptions = {
                 "the amount of money increases by {C:gold}$1{}"
                 }
             },
-            m_mills_bou = {
-              name = "Boulder Card",
+
+      --  ||  FUSIONS   ||
+
+      -- BONUS
+        m_mills_lots = {
+          name = "Lots Card",
+          text = {
+            "{C:chips}+#1#{} Chips"
+          }
+        }, 
+        m_mills_extra = {
+          name = "Extra Card",
+          text = {
+            "{C:chips}+#1#{} Chips",
+            "{C:mult}+#2#{} Mult"
+            }
+          },
+        m_mills_water = {
+          name = "Water Card",
+          text = {
+            "{C:chips}+#1#{} Chips",
+            "and can be scored as any suit"
+              }
+            },
+          m_mills_tempered = {
+              name = "Tempered Glass Card",
               text = {
-                 "Considered as any suit with no rank",
-                 "{C:chips}+#1#{} chips",
+                "{X:chips,C:white}X#1#{} Chips",
+                "{C:green}#2# in #3#{} card is destroyed"
+                  }
+              },
+          m_mills_sapph = {
+              name = "Sapphire Card",
+              text = {
+                "{X:chips,C:white}X#1#{} Chips",
+                "while this card stays in hand"
+                  }
+              },
+          m_mills_cob = {
+            name = "Cobalt Card",
+            text = {
+              "{C:chips}+#1#{} Chips",
+              "has no rank or suit"
+            }
+          },
+          m_mills_ori = {
+            name = "Orichalcum Card",
+            text = {
+              "{C:money}$#1#{} if this card is held till end of round",
+              "or if scored adds {C:bonus}Chips{} equal to the amount of your total {C:attention}money{}"
+                }
+            },
+           m_mills_scratch = {
+              name = "Scratch Card",
+              text = {
+                "{C:green}#1# in #2#{} chance",
+                "for {C:chips}+#3#{} chips",
+                "{C:green}#4# in #5#{} chance",
+                "for {C:money}$#6# "
+                  }
+              },
+
+            -- MULT
+            m_mills_power = {
+              name = "Power Card",
+              text = {
+                 "{C:mult}+#1#{} Mult"
+                  }
+            },
+            m_mills_ex = {
+              name = "Extra Card",
+              text = {
+                "{C:chips}+#1#{} Chips",
+                "{C:mult}+#2#{} Mult"
+                  }
+            },
+            m_mills_lava = {
+              name = "Lava Card",
+              text = {
+                 "{C:mult}+#1#{} Mult",
+                 "and can be scored as any suit"
+                  }
+              }, 
+            m_mills_color = {
+              name = "Colored Glass Card",
+              text = {
+                "{X:mult,C:white}X#1#{} Mult",
+                "{C:green}#2# in #3#{} card is destroyed"
+                  }
+            },
+            m_mills_ruby = {
+              name = "Ruby Card",
+              text = {
+                 "{X:mult,C:white}X#1#{} Mult",
+                 "while this card stays in hand"
                   }
               },
             m_mills_cinna = {
@@ -47,77 +138,14 @@ descriptions = {
                  "has no rank or suit"
                   }
               },
-            m_mills_claws = {
-              name = "Claws Card",
+            m_mills_rhondite = {
+              name = "Rhondite Card",
               text = {
-                "{X:mult,C:white}X#1#{} Mult",
-                "Destroyed after {C:attention}#2#{} times scored"
-
+                "{C:money}-$1{} when held in hand each time but",
+                "{C:green}#2# in #3#{} chance for {C:money}$#1#{} also"
                   }
               },
-            m_mills_clov = {
-              name = "Clover Card",
-              text = {
-                "{C:green}#3# in #4#{} chance",
-                "for {C:mult}+#1#{} Mult",
-                "{C:green}#3# in #5#{} chance",
-                "{C:money}$#2#{} dollars"}
-                  },
-            m_mills_cob = {
-              name = "Cobalt Card",
-              text = {
-                 "{C:chips}+#1#{} Chips",
-                  "has no rank or suit"
-                  }
-              },
-            m_mills_color = {
-              name = "Colored Glass Card",
-              text = {
-                "{X:mult,C:white}X#1#{} Mult",
-                "{C:green}#2# in #3#{} card is destroyed"
-                  }
-              },
-            m_mills_extra = {
-              name = "Extra Card",
-              text = {
-                 "{C:chips}+#1#{} Chips",
-                 "{C:mult}+#2#{} Mult"
-                  }
-              },
-            m_mills_feral = {
-              name = "Lava Card",
-              text = {
-                 "{C:mult}+#1#{} Mult",
-                 "and can be scored as any suit"
-                  }
-              },
-            m_mills_lots = {
-              name = "Lots Card",
-              text = {
-                 "{C:chips}+#1#{} Chips"
-                  }
-              },  
-            m_mills_ori = {
-              name = "Orichalcum Card",
-              text = {
-                 "{C:money}$#1#{} when held in hand card",
-                 "then addds {C:bonus}Chips{} equal to the amount of total {C:attention}money{}"
-                  }
-              },
-            m_mills_pig = {
-              name = "Piggy Card",
-              text = {
-                 "{C:money}+$#1#{} dollars when scored and",
-                 "{C:money}+$#2#{} while held in hand"
-                  }
-              },
-            m_mills_power = {
-              name = "Power Card",
-              text = {
-                 "{C:mult}+#1#{} Mult"
-                  }
-              },
-            m_mills_prize = {
+             m_mills_prize = {
               name = "Prize Card",
               text = {
                 "{C:green}#3# in #4#{} chance",
@@ -125,63 +153,20 @@ descriptions = {
                 "{C:green}#3# in #5#{} chance for {C:money}$#2#{}"
                   }
                 },
-
-            m_mills_crack = { 
-              name = "Cracked Glass Card",
-              text = {
-                      "{X:mult,C:white}X#1#{} mult",
-                      "{E:2}breaks{} after use"
-                    }
-              },
-
-            m_mills_rhondite = {
-              name = "Rhondite Card",
-              text = {
-                "{C:money}-$1{} when scored",
-                "{C:green}#2# in #3#{} chance earn {C:money}$#1#{}"
-                  }
-              },
-            m_mills_ruby = {
-              name = "Ruby Card",
-              text = {
-                 "{X:mult,C:white}X#1#{} Mult"
-                  }
-              },
-            m_mills_sapph = {
-              name = "Sapphire Card",
-              text = {
-                "{X:chips,C:white}X#1#{} Chips",
-                "while held in hand"
-                  }
-              },
-            m_mills_scratch = {
-              name = "Scratch Card",
-              text = {
-                "{C:green}#1# in #2#{} chance",
-                "for {C:chips}+#3#{} chips",
-                "{C:green}#4# in #5#{} chance",
-                "for {C:money}$#6# "
-                  }
-              },
-            m_mills_stain = {
-              name = "Stained Glass Card",
-              text = {
-                "{X:mult,C:white}X#2#{} Mult",
-                "{C:green}#3# in #1#{} card is destroyed"
-                  }
-              },
-            m_mills_tempered = {
-              name = "Tempered Glass Card",
-              text = {
-                "{X:chips,C:white}X#1#{} Chips",
-                "{C:green}#2# in #3#{} card is destroyed"
-                  }
-              },
-            m_mills_untamed = {
+            
+            -- WILD
+            m_mills_wat = {
               name = "Water Card",
               text = {
-                 "{C:chips}+#1#{} Chips",
+                "{C:chips}+#1#{} Chips",
                 "and can be scored as any suit"
+              }
+            },
+            m_mills_lav = {
+              name = "Lava Card",
+              text = {
+                 "{C:mult}+#1#{} Mult",
+                 "and can be scored as any suit"
                   }
               },
             m_mills_wow = {
@@ -192,7 +177,71 @@ descriptions = {
                 "{C:legendary}hold it..."
                   }
               },
+            m_mills_stain = {
+              name = "Stained Glass Card",
+              m_mills_claws = {
+              name = "Claws Card",
+              text = {
+                "{X:mult,C:white}X#1#{} Mult",
+                "Destroyed after {C:attention}#2#{} times scored"
+                  }
+              },text = {
+                "{X:mult,C:white}X#2#{} Mult",
+                "{C:green}#3# in #1#{} card is destroyed"
+                  }
+            },
+            
+            m_mills_bou = {
+              name = "Boulder Card",
+              text = {
+                 "Considered as any suit with no rank",
+                 "{C:chips}+#1#{} chips",
+                  }
+            },
+            m_mills_pig = {
+              name = "Piggy Card",
+              text = {
+                 "{C:money}+$#1#{} dollars when scored and",
+                 "{C:money}+$#2#{} while held in hand"
+                  }
+              },
+            m_mills_clov = {
+              name = "Clover Card",
+              text = {
+                "{C:green}#3# in #4#{} chance",
+                "for {C:mult}+#1#{} Mult",
+                "{C:green}#3# in #5#{} chance {C:money}$#2#{}"}
+                  },
 
+            -- GLASS 
+            m_mills_temp = {
+              name = "Tempered Glass Card",
+              text = {
+                "{X:chips,C:white}X#1#{} Chips",
+                "{C:green}#2# in #3#{} card is destroyed"
+                  }
+              },
+            m_mills_col = {
+              name = "Colored Glass Card",
+              text = {
+                "{X:mult,C:white}X#1#{} Mult",
+                "{C:green}#2# in #3#{} card is destroyed"
+                  }
+            },
+            m_mills_stan = {
+              name = "Stained Glass Card",
+              text = {
+                "{X:mult,C:white}X#2#{} Mult",
+                "{C:green}#3# in #1#{} card is destroyed"
+                  }
+            },
+            m_mills_crack = { 
+              name = "Cracked Glass Card",
+              text = {
+                      "{X:mult,C:white}X#1#{} mult",
+                      "{E:2}breaks{} after use"
+                    }
+              },
               m_mills_mirror = {
                 name = "Mirror Card",
                 text = {
@@ -200,21 +249,87 @@ descriptions = {
                   "{C:green}#3# in #2#{} chance to retrigger",
                     }
                 },
+            m_mills_obs = {
+              name = "Obsidian Card",
+              text = {
+                "{X:mult,C:white}X#1#{} Mult",
+                "Never breaks",
+                  }
+                },
+		        m_mills_dia = {
+              name = "Diamond Card",
+              text = {
+                "{C:green}#3# in #4#{} chance for ${X:money,C:white}X2{}",
+                "{C:green}#3# in #5#{} chance card breaks",
+                  }
+              },
+              m_mills_cry = {
+              name = "Crytal Ball Card",
+              text = {
+                "{C:green}#1# in #2#{} chance for {X:mult,C:white}X2{} Mult or",
+                "{C:green}#1# in #3#{} chance for {X:mult,C:white}X.5{} Mult",
+                "{C:green}#1# in #5#{} chance card breaks and earn {C:gold}$50{}"
+                  }
+              },
 
-                m_mills_obs = {
-                  name = "Obsidian Card",
-                  text = {
-                    "{X:mult,C:white}X#1#{} Mult",
-                    "Never breaks",
-                      }
-                  },
-		            m_mills_dia = {
-                    name = "Diamond Card",
-                    text = {
-                      "{C:green}#4# in #2#{} chance for ${X:money,C:white}X2{}",
-                      "{C:green}#4# in #3#{} chance card breaks",
-                        }
-                    },
+              -- STEEL
+              m_mills_sapphire = {
+              name = "Sapphire Card",
+              text = {
+                "{X:chips,C:white}X#1#{} Chips",
+                "while this card stays in hand"
+                  }
+              },
+              m_mills_rub = {
+              name = "Ruby Card",
+              text = {
+                 "{X:mult,C:white}X#1#{} Mult",
+                 "while this card stays in hand"
+                  }
+              },
+              m_mills_claw = {
+              name = "Claws Card",
+              text = {
+                "{X:mult,C:white}X#1#{} Mult",
+                "Destroyed after {C:attention}#2#{} times scored"
+                  }
+              },
+              m_mills_mir = {
+                name = "Mirror Card",
+                text = {
+                  "{X:mult,C:white}X#1#{} Mult",
+                  "{C:green}#3# in #2#{} chance to retrigger",
+                    }
+                },
+              m_mills_titanium = {
+                name = "Titanium Card",
+                text = {
+                  "{X:mult,C:white}X#1#{} Mult",
+                  "while this card stays in hand"
+                    }
+                },
+              m_mills_concrete = {
+                name = "Concrete Card",
+                text = {
+                  "{C:chips}+#1#{} Chips",
+                  "while this card stays in hand"
+                    }
+              },
+              m_mills_fools = {
+                name = "Fool's Gold Card",
+                text = {
+                  "{C:gold}$2{} while this card stays in hand &",
+                  "{C:gold}$5{} when other Fool's Gold cards scored"
+                    }
+              },
+              m_mills_iron = {
+                name = "Iron Card",
+                text = {
+                  "{C:green}#1# in #2#{} chance for {X:mult,C:white}X2{} Mult &",
+                  "{C:green}#1# in #3#{} chance for {C:gold}$25{}",
+                    }
+              },
+              
         },
         Joker={
              --PEPPER JOKERS
@@ -448,6 +563,12 @@ descriptions = {
                "{C:chips}+#1#{} Chips"
             }
         },
+        j_mills_disciple = {
+            name = "Disciple",
+            text = {
+               "Gain {C:mult}+10{} Mult for every {C:attention}12{} discarded Face Cards"
+            }
+        },
         j_mills_missing = {
             name = "Missing",
             text = {
@@ -480,7 +601,8 @@ descriptions = {
             name = "Snake Eyes",
             text = {
                "This Joker gains {X:mult,C:white}X#1#{} Mult each 2 scored",
-               "But also {C:gold}-$2{} when scored"
+               "But also {C:gold}-$2{} when scored",
+               "Total: {X:mult,C:white}X#2#{} Mult"
             }
         },
         j_mills_stowaway = {
@@ -494,6 +616,12 @@ descriptions = {
             text = {
                "Hearts and Spades are swapped and Diamonds and Clubs are swapped",
                "The suit is now considered the other one it swapped with only"
+            }
+        },
+        j_mills_waste_worker = {
+            name = "Waste Worker",
+            text = {
+               "{C:red}+2{} Discards & {C:blue}-2{} Hands"
             }
         },
         },
@@ -540,8 +668,8 @@ descriptions = {
               c_mills_blondwie = {
                 name = "Blondwie",
                 text = {
-                  "Select 2 {C:attention}Mult, Lucky, or Glass Cards{},",
-                  "To enfuse and create a new enhancement card"
+                "Select 2 cards that are {C:attention}Mult/Lucky, Mult/Glass, Glass/Lucky, or Both Same{},",
+               "Both cards have a chance to become enfused but possibly destroy itself"
                 }
               },
               c_mills_bubblegum = {
@@ -640,7 +768,7 @@ descriptions = {
               c_mills_slice_of_bread = {
                 name = "Slice of Bread",
                 text = {
-                  "Combine two compatible Jokers,",
+                  "Select 2 compatible Sweet Jokers,",
                   "to create a {C:attention}Sandwich Joker{}"
                 }
               },
@@ -682,27 +810,20 @@ descriptions = {
         },
         },
         Tarot={
-          c_mills_animal = {
-            name = "Animal",
-             text = { 
-               "Select 2 {C:attention} Mult, Wild or Bonus Cards{},",
-               "To enfuse and create a new enhancement card"
-                }
-        },
           c_mills_chromlech = {
             name = "Cromlech",
              text = { 
-                "Select 2 {C:attention} Mult, Stone or Bonus Cards{},",
-                "To enfuse and create a new enhancement card"
+               "Select 2 cards that are {C:attention}Bonus/Stone, Mult/Stone or Stone/Stone{},",
+               "Both cards have a chance to become enfused but possibly destroy itself"
                 }
         },
-        c_mills_omnipotent = {
-          name = "Omnipotent",
-           text = { 
-              "Select 2 {C:attention} Mult or Bonus Cards{},",
-              "To enfuse and create a new enhancement card"
-              }
-      },
+        c_mills_thermality = {
+            name = "Thermality",
+             text = { 
+               "Select 2 cards that are {C:attention}Bonus/Wild, Mult/Wild or Wild/Wild{},",
+               "Both cards have a chance to become enfused but possibly destroy itself"
+                }
+        },
         },
         Fusion = {
           c_mills_enh_fus = {

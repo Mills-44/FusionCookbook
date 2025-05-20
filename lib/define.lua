@@ -295,7 +295,7 @@ MILLS.FUSION_STEEL_ENHANCEMENTS = {
  "mir",
  "titanium",
  "concrete",
- "fools",
+ "electrum",
  "iron"
 }
 

@@ -10,8 +10,8 @@ SMODS.Joker {
         x = 3,
         y = 1
     }, 
-    rarity = 1,
-    cost = 5,
+    rarity = 2,
+    cost = 6,
     unlocked = true, 
     discovered = true, 
     blueprint_compat = true,

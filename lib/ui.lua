@@ -61,7 +61,7 @@ SMODS.current_mod.config_tab = function()
   SMODS.current_mod.extra_tabs = function()
     return {
         {
-    label = localize('mills_instruction_glob'),
+    label = localize('k_mills_instruction_glob'),
     tab_definition_function = function()
     local modNodes = {}
 
@@ -121,7 +121,7 @@ SMODS.current_mod.config_tab = function()
     tab_definition_function = function()
     local modNodes = {}
 
-    for _, key in ipairs({ "mills_fusions_cred"}) do
+    for _, key in ipairs({ "k_mills_fusions_cred"}) do
         modNodes[#modNodes + 1] = {}
         local loc_vars = { scale = 1.2 }
         localize { type = 'descriptions', key = key, set = 'Tabs', nodes = modNodes[#modNodes], vars = loc_vars.vars, scale = loc_vars.scale, text_colour = loc_vars.text_colour, shadow = loc_vars.shadow }

@@ -13,6 +13,9 @@ SMODS.Consumable {
         odd = 10
         } 
     },
+     in_pool = function(self, args)
+      return not args or not args.source or (args.source ~= 'sho' and args.source ~= 'ar1')
+end,
     pools = { 
         Tarot = true
      },

@@ -62,7 +62,7 @@ descriptions = {
               name = "Tempered Glass Card",
               text = {
                 "{X:chips,C:white}X#1#{} Chips",
-                "{C:green}#2# in #3#{} card is destroyed"
+                "{C:green}#2# in #3#{} chance card is destroyed"
                   }
               },
           m_mills_sapph = {
@@ -82,8 +82,8 @@ descriptions = {
           m_mills_ori = {
             name = "Orichalcum Card",
             text = {
-              "{C:money}$#1#{} if this card is held till end of round",
-              "or if scored adds {C:bonus}Chips{} equal to the amount of your total {C:attention}money{}"
+              "{C:money}$#1#{} if this card is held till end of round for each hand saved",
+              "or if scored adds {C:bonus}Chips{} equal to the amount of your total {C:attention}${}"
                 }
             },
            m_mills_scratch = {
@@ -391,8 +391,8 @@ descriptions = {
             m_mills_orichal = {
               name = "Orichalcum Card",
               text = {
-                "{C:money}$#1#{} if this card is held till end of round",
-                "or if scored adds {C:bonus}Chips{} equal to the amount of your total {C:attention}money{}"
+                "{C:money}$#1#{} if this card is held till end of round for each hand saved",
+                "or if scored adds {C:bonus}Chips{} equal to the amount of your total {C:attention}${}"
                 }
             },
             m_mills_rhond = {
@@ -439,8 +439,8 @@ descriptions = {
               m_mills_money = {
                 name = "Money Card",
                 text = {
-                  "{C:green}#1# in #2#{} chance for {C:green}$10{} or,",
-                  "{C:green}#1# in #3#{} chance for {C:green}$20{}"
+                  "{C:green}#1# in #2#{} chance for {C:gold}$10{} or,",
+                  "{C:green}#1# in #3#{} chance for {C:gold}$20{}"
                     }
               },
 
@@ -495,8 +495,8 @@ descriptions = {
             m_mills_mon = {
                 name = "Money Card",
                 text = {
-                  "{C:green}#1# in #2#{} chance for {C:green}$15{} or,",
-                  "{C:green}#1# in #3#{} chance for {C:green}$20{}"
+                  "{C:green}#1# in #2#{} chance for {C:gold}$15{} or,",
+                  "{C:green}#1# in #3#{} chance for {C:gold}$20{}"
                     }
               },
             m_mills_seren = {
@@ -845,7 +845,8 @@ descriptions = {
               c_mills_blondwie = {
                 name = "Blondwie",
                 text = {
-                "Select 2 cards that are {C:attention}Mult/Lucky, Mult/Glass, Glass/Lucky, or Both Same{},",
+                "Select 2 cards that are ",
+                "{C:attention}Mult/Lucky, Mult/Glass, Glass/Lucky, or Both Same{},",
                "Both cards have a chance to become enfused but possibly destroy itself"
                 }
               },

@@ -27,7 +27,7 @@ MILLS.register_items(MILLS.PEPPER_JOKERS, "items/joker/pepper")
 MILLS.register_items(MILLS.SWEET_JOKERS, "items/joker/sweet")
 MILLS.register_items(MILLS.FUSION_JOKERS, "items/joker/fusion")
 MILLS.register_items(MILLS.MISC_JOKERS, "items/joker/misc")
---MILLS.register_items(MILLS.SANDWICH_JOKERS, "items/joker/sandwich")
+MILLS.register_items(MILLS.SANDWICH_JOKERS, "items/joker/sandwich")
 
 -- Register custom ConsumableType: Snack
 SMODS.ConsumableType {

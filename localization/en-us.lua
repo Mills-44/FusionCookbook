@@ -489,7 +489,7 @@ descriptions = {
               name = "Dice Card",
               text = {
                 "{C:green}#1# in #2#{} chance for {X:mult,C:white}X5{} Mult or,",
-                "{C:green}#1# in #3#{} chance for {X:mult,C:white}-X5{} Mult"
+                "{C:green}#1# in #2#{} chance for {X:mult,C:white}-X5{} Mult"
               }
             },
             m_mills_mon = {

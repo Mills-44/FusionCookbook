@@ -330,7 +330,7 @@ MILLS.FUSION_LUCKY_ENHANCEMENTS = {
 "prized",
 "clover",
 "crystal",
-"iron",
+"ir",
 "die",
 "mon",
 "seren"

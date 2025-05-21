@@ -1,5 +1,5 @@
 SMODS.Enhancement {
-    key = "dia",
+    key = "diamond",
     atlas = "enhanc_fus",
     pos = {
     x = 6, 
@@ -10,8 +10,8 @@ in_pool = function(self, args)
 end,
     config = {extra = {
         p_dollars = 0,
-        odd = 4,
-        odds = 8
+        odd = 3,
+        odds = 7
     }},
     loc_vars = function(self, info_queue, card)
         return {
@@ -26,7 +26,7 @@ end,
 end,
 set_badges = function(self, card, badges)
         badges[#badges+1] = create_badge(
-        "Glass + Gold", 
+        "Gold + Glass", 
         MILLS.COLORS.FUSION, 
         G.C.WHITE, 
         1.0 )

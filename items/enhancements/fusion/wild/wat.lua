@@ -23,7 +23,7 @@ end,
     end,
     set_badges = function(self, card, badges)
         badges[#badges+1] = create_badge(
-        "Bonus + Wild", 
+        "Wild + Bonus", 
         MILLS.COLORS.FUSION, 
         G.C.WHITE, 
         1.0 )

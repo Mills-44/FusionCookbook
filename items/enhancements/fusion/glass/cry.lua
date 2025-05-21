@@ -24,6 +24,18 @@ end,
             card.ability.extra.odd_break
         }}
 end,
+set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Glass + Lucky", 
+        MILLS.COLORS.FUSION, 
+        G.C.WHITE, 
+        1.0 )
+        badges[#badges+1] = create_badge(
+        "Art: Rafaelly", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
     calculate = function(self, card, context)
          if context.cardarea == G.play and context.main_scoring then
              if (pseudorandom('cry_odd_good') < G.GAME.probabilities.normal / card.ability.extra.odd) then

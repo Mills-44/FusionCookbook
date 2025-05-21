@@ -4,7 +4,7 @@ SMODS.Consumable {
     set = "Snack",
     atlas = 'snack',
     pos = {
-        x = 2,
+        x = 1,
         y = 1
     },
     config = {
@@ -14,7 +14,7 @@ SMODS.Consumable {
         } 
     },
     pools = { 
-        Tarot = true
+        Snack = true
      },
     cost = 4,
     unlocked = true,

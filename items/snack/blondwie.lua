@@ -14,7 +14,7 @@ SMODS.Consumable {
         } 
     },
     pools = { 
-        Tarot = true
+        Snack = true
      },
     cost = 4,
     unlocked = true,

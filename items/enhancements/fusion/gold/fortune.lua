@@ -29,7 +29,7 @@ end,
         1.2 )
     end,
     calculate = function(self, card, context)
-        if context.cardarea == G.hand and context. context.end_of_round then
+        if context.cardarea == G.hand and context.end_of_round then
             ease_dollars(8)
         end
     end

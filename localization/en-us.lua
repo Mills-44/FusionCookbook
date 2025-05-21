@@ -866,8 +866,9 @@ descriptions = {
               c_mills_cake_pop = {
                 name = "Cake Pop",
                 text = {
-                 "Select 2 cards that are {C:attention}Mult/Stone, Mult/Glass, Glass/Stone, or Both Same{},",
-               "Both cards have a chance to become enfused but possibly destroy itself"
+                  "Select 2 cards that are ",
+                  "{C:attention}Mult/Stone, Mult/Glass, Glass/Stone, or Both Same{},",
+                  "Both cards have a chance to become enfused but possibly destroy itself"
                 }
               },
               c_mills_cannoli = {
@@ -880,8 +881,9 @@ descriptions = {
               c_mills_choffle = {
                 name = "Chocolate Waffle",
                 text = {
-                 "Select 2 cards that are {C:attention}Gold/Lucky, Gold/Bonus, Bonus/Lucky, or Both Same{},",
-               "Both cards have a chance to become enfused but possibly destroy itself"
+                  "Select 2 cards that are ",
+                  "{C:attention}Gold/Lucky, Gold/Bonus, Bonus/Lucky, or Both Same{},",
+                  "Both cards have a chance to become enfused but possibly destroy itself"
                 }
               },
               c_mills_cream_puff = {
@@ -925,8 +927,9 @@ descriptions = {
               c_mills_rock_candy = {
                 name = "Rock Candy",
                 text = {
-                "Select 2 cards that are {C:attention}Glass/Stone, Bonus/Glass, Bonus/Stone, or Both Same{},",
-               "Both cards have a chance to become enfused but possibly destroy itself"
+                "Select 2 cards that are ",
+                "{C:attention}Glass/Stone, Bonus/Glass, Bonus/Stone, or Both Same{},",
+                "Both cards have a chance to become enfused but possibly destroy itself"
                 }
               },
               c_mills_rye_chip = {
@@ -952,7 +955,8 @@ descriptions = {
               c_mills_take_5 = {
                 name = "Take 5",
                 text = {
-                "Select 2 cards that are {C:attention}Mult/Wild, Mult/Glass, Glass/Wild, or Both Same{},",
+                "Select 2 cards that are ",
+                "{C:attention}Mult/Wild, Mult/Glass, Glass/Wild, or Both Same{},",
                "Both cards have a chance to become enfused but possibly destroy itself"
                 }
               },

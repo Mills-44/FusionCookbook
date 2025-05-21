@@ -18,7 +18,7 @@ end,
     end,
     set_badges = function(self, card, badges)
         badges[#badges+1] = create_badge(
-        "Steel + Gold", 
+        "Stone + Gold", 
         MILLS.COLORS.FUSION, 
         G.C.WHITE, 
         1.0 )

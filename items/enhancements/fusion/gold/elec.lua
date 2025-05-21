@@ -1,5 +1,5 @@
 SMODS.Enhancement {
-    key = "electrum",
+    key = "elec",
     atlas = 'enhanc_fus',
     pos = {
         x = 6, 

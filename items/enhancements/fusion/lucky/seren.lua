@@ -2,26 +2,32 @@ SMODS.Enhancement {
     key = "seren",
     atlas = 'enhanc_fus',
     pos = {
-        x = 3, 
-        y = 0
+        x = 7, 
+        y = 7
     },
     in_pool = function(self, args)
       return not args or not args.source or (args.source ~= 'sho' and args.source ~= 'sta')
 end,
     config = {
         extra = {
-            p_dollars = 2, 
-            odds = 6
+            odds_mult = 3,
+            odds_money = 4
         }
     },
     loc_vars = function(self, info_queue, card)
         return {
             vars={
-                card.ability.extra.p_dollars, 
                 (G.GAME.probabilities.normal or 1), 
-                card.ability.extra.odds}}
+                card.ability.extra.odds_mult,
+                card.ability.extra.odds_money
+            }}
 end,
 set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Lucky + Lucky", 
+        MILLS.COLORS.FUSION, 
+        G.C.WHITE, 
+        1.0 )
         badges[#badges+1] = create_badge(
         "Art: Rafaelly", 
         MILLS.COLORS.ART, 
@@ -29,15 +35,15 @@ set_badges = function(self, card, badges)
         1.2 )
     end,
 calculate = function(self, card, context)
-    if context.destroy_card and context.cardarea == G.play and context.destroy_card == card and (pseudorandom('glass') < G.GAME.probabilities.normal/card.ability.extra.odds) then
-        return { 
-            remove = true 
-        }
-    end
-        if context.cardarea == G.play and context.main_scoring then
-        return {
-            x_chips = card.ability.extra.x_chips
-        }
+         if context.cardarea == G.play and context.main_scoring then
+            if (pseudorandom('seren_odd') < G.GAME.probabilities.normal / card.ability.extra.odd_mult) then
+                return {
+                    mult = 25
+                }
+            end
+             if (pseudorandom('seren_odd') < G.GAME.probabilities.normal / card.ability.extra.odd_money) then
+                ease_dollars(8)
         end
     end
+end
 }

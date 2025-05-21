@@ -320,7 +320,7 @@ MILLS.FUSION_GOLD_ENHANCEMENTS = {
 "diamond",
 "elec",
 "fool",
-"fortune",
+"phil",
 "money"
 }
 

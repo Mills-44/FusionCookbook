@@ -429,8 +429,8 @@ descriptions = {
                   "{C:gold}$5{} when other Fool's Gold cards score"
                     }
               },
-              m_mills_fortune = {
-                name = "Fortune Card",
+              m_mills_phil = {
+                name = "Philosopher Stone Card",
                 text = {
                   "{C:gold}$8{} if this card stays in hand",
                   "during the final round of scoring"

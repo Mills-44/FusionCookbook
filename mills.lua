@@ -61,7 +61,7 @@ SMODS.ConsumableType {
       name = 'Fusion',
       label = 'Fusion',
       },
-  shop_rate = 0.0,
+  shop_rate = 0.5,
     }
 
 -- PATCH: Ensure pool is initialized before injection

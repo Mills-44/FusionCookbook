@@ -7,6 +7,9 @@ SMODS.Consumable {
         x = 1,
         y = 0
     },
+     in_pool = function(self, args)
+      return not args or not args.source or (args.source ~= 'sho' and args.source ~= 'ar1')
+end,
     config = {
         max_highlighted = 2,
         extra = {

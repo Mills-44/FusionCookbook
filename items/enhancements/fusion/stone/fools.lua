@@ -3,7 +3,7 @@ SMODS.Enhancement {
     atlas = 'enhanc_fus',
     pos = {
         x = 6, 
-        y = 4
+        y = 5
     },
     in_pool = function(self, args)
       return not args or not args.source or (args.source ~= 'sho' and args.source ~= 'sta')

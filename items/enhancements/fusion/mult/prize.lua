@@ -41,7 +41,6 @@ end,
     end,
     calculate = function(self, card, context)
         if context.cardarea == G.play and context.main_scoring then
-            local x_mult = 0
             if (pseudorandom('prize_odd') < G.GAME.probabilities.normal / card.ability.extra.odd) then
                 x_mult = card.ability.extra.x_mult_give
             end

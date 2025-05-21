@@ -40,9 +40,7 @@ end,
             }
         end
             if context.cardarea == G.hand and context.end_of_round then
-               return {
-                dollars = card.ability.extra.h_dollars
-            }
+                ease_dollars(5)
             end
         end
 }

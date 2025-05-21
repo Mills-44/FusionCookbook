@@ -288,7 +288,7 @@ MILLS.FUSION_GLASS_ENHANCEMENTS = {
 }
 
 MILLS.FUSION_STEEL_ENHANCEMENTS = {
--- ===Steel==
+-- ===Steel===
  "sapphire",
  "rub",
  "claw",
@@ -301,43 +301,39 @@ MILLS.FUSION_STEEL_ENHANCEMENTS = {
 
 MILLS.FUSION_STONE_ENHANCEMENTS = {
 -- ===Stone===
--- "cob",
--- "cinna",
--- "bou",
--- "obs",
--- "conc",
---"granite"
--- "fool",
--- "dice",
+"cobalt",
+"cinnabar",
+"boulder",
+"obsidian",
+"conc",
+"granite",
+"fools",
+"dice"
 }
 
 
 MILLS.FUSION_GOLD_ENHANCEMENTS = {
-
 -- ===Gold===
-
--- "ori",
--- "rhondite",
--- "pig",
--- "dia",
--- "elec"
--- "fool"
--- "fort",
--- "doll",
+"orichal",
+"rhond",
+"piggy",
+"diamond",
+"elec",
+"fool",
+"fortune",
+"money"
 }
 
 MILLS.FUSION_LUCKY_ENHANCEMENTS = {
-
 -- ===Lucky===
-
--- "scratch",
--- "prize",
--- "clov",
--- "cry",
--- "iron",
--- "dice",
--- "doll"
-
+"scra",
+"prized",
+"clover",
+"crystal",
+"iron",
+"die",
+"mon",
+"seren"
 }
 
 -- ||           SPECTRAL          || 

@@ -179,18 +179,11 @@ descriptions = {
               },
             m_mills_stain = {
               name = "Stained Glass Card",
-              m_mills_claws = {
-              name = "Claws Card",
               text = {
-                "{X:mult,C:white}X#1#{} Mult",
-                "Destroyed after {C:attention}#2#{} times scored"
-                  }
-              },text = {
                 "{X:mult,C:white}X#2#{} Mult",
                 "{C:green}#3# in #1#{} card is destroyed"
                   }
-            },
-            
+            },  
             m_mills_bou = {
               name = "Boulder Card",
               text = {
@@ -198,6 +191,13 @@ descriptions = {
                  "{C:chips}+#1#{} chips",
                   }
             },
+            m_mills_claws = {
+              name = "Claws Card",
+              text = {
+                "{X:mult,C:white}X#1#{} Mult",
+                "Destroyed after {C:attention}#2#{} times scored"
+                  }
+              },
             m_mills_pig = {
               name = "Piggy Card",
               text = {
@@ -315,11 +315,10 @@ descriptions = {
                   "while this card stays in hand"
                     }
               },
-              m_mills_fools = {
-                name = "Fool's Gold Card",
+              m_mills_electrum = {
+                name = "Electrum Card",
                 text = {
-                  "{C:gold}$2{} while this card stays in hand &",
-                  "{C:gold}$5{} when other Fool's Gold cards scored"
+                  "{C:gold}$3{} while this card stays in hand"
                     }
               },
               m_mills_iron = {
@@ -330,7 +329,185 @@ descriptions = {
                     }
               },
               
-        },
+              -- STONE
+            m_mills_cobalt = {
+              name = "Cobalt Card",
+              text = {
+                "{C:chips}+#1#{} Chips",
+                "has no rank or suit"
+            }
+          },
+          m_mills_cinnabar = {
+              name = "Cinnabar Card",
+              text = {
+                 "{C:mult}+#1#{} Mult & {C:chips}+#2#{} Chips",
+                 "has no rank or suit"
+                  }
+              },
+            m_mills_boulder = {
+              name = "Boulder Card",
+              text = {
+                 "Considered as any suit with no rank",
+                 "{C:chips}+#1#{} chips",
+                  }
+            },
+            m_mills_obsidian = {
+              name = "Obsidian Card",
+              text = {
+                "{X:mult,C:white}X#1#{} Mult",
+                "Never breaks",
+                  }
+                },
+            m_mills_conc = {
+                name = "Concrete Card",
+                text = {
+                  "{C:chips}+#1#{} Chips",
+                  "while this card stays in hand"
+                    }
+              },
+            m_mills_granite = {
+                name = "Granite Card",
+                text = {
+                  "{C:chips}+#1#{} Chips",
+                   "has no rank or suit"
+                    }
+              },
+            m_mills_fools = {
+                name = "Fool's Gold Card",
+                text = {
+                  "{C:gold}$2{} while this card stays in hand &",
+                  "{C:gold}$5{} when other Fool's Gold cards score"
+                    }
+              },
+            m_mills_dice = {
+              name = "Dice Card",
+              text = {
+                "{C:green}#1# in #2#{} chance for {X:mult,C:white}X5{} Mult or,",
+                "{C:green}#1# in #3#{} chance for {X:mult,C:white}-X5{} Mult"
+              }
+            },
+
+              -- GOLD
+            m_mills_orichal = {
+              name = "Orichalcum Card",
+              text = {
+                "{C:money}$#1#{} if this card is held till end of round",
+                "or if scored adds {C:bonus}Chips{} equal to the amount of your total {C:attention}money{}"
+                }
+            },
+            m_mills_rhond = {
+              name = "Rhondite Card",
+              text = {
+                "{C:money}-$1{} when held in hand each time but",
+                "{C:green}#2# in #3#{} chance for {C:money}$#1#{} also"
+                  }
+              },
+            m_mills_piggy = {
+              name = "Piggy Card",
+              text = {
+                 "{C:money}+$#1#{} dollars when scored and",
+                 "{C:money}+$#2#{} while held in hand"
+                  }
+              },
+              m_mills_diamond = {
+              name = "Diamond Card",
+              text = {
+                "{C:green}#3# in #4#{} chance for ${X:money,C:white}X2{}",
+                "{C:green}#3# in #5#{} chance card breaks",
+                  }
+              },
+              m_mills_elec = {
+                name = "Electrum Card",
+                text = {
+                  "{C:gold}$4{} while this card stays in hand"
+                    }
+              },
+              m_mills_fool = {
+                name = "Fool's Gold Card",
+                text = {
+                  "{C:gold}$3{} while this card stays in hand &",
+                  "{C:gold}$5{} when other Fool's Gold cards score"
+                    }
+              },
+              m_mills_fortune = {
+                name = "Fortune Card",
+                text = {
+                  "{C:gold}$8{} if this card stays in hand",
+                  "during the final round of scoring"
+                    }
+              },
+              m_mills_money = {
+                name = "Money Card",
+                text = {
+                  "{C:green}#1# in #2#{} chance for {C:green}$10{} or,",
+                  "{C:green}#1# in #3#{} chance for {C:green}$20{}"
+                    }
+              },
+
+              -- LUCKY
+              m_mills_scra = {
+                name = "Scratch Card",
+                text = {
+                  "{C:green}#1# in #2#{} chance",
+                  "for {C:chips}+#3#{} chips",
+                  "{C:green}#4# in #5#{} chance",
+                  "for {C:money}$#6# "
+                  }
+              },
+              m_mills_prized = {
+                name = "Prize Card",
+                text = {
+                  "{C:green}#3# in #4#{} chance",
+                  "for {X:mult,C:white}X#1#{} Mult",
+                  "{C:green}#3# in #5#{} chance for {C:money}$#2#{}"
+                  }
+                },
+              m_mills_clover = {
+                name = "Clover Card",
+                text = {
+                  "{C:green}#3# in #4#{} chance",
+                  "for {C:mult}+#1#{} Mult",
+                  "{C:green}#3# in #5#{} chance {C:money}$#2#{}"
+                }
+              },
+              m_mills_crystal = {
+                name = "Crytal Ball Card",
+                text = {
+                  "{C:green}#1# in #2#{} chance for {X:mult,C:white}X2{} Mult or",
+                  "{C:green}#1# in #3#{} chance for {X:mult,C:white}X.5{} Mult",
+                  "{C:green}#1# in #5#{} chance card breaks and earn {C:gold}$50{}"
+                }
+              },
+              m_mills_ir = {
+                name = "Iron Card",
+                text = {
+                  "{C:green}#1# in #2#{} chance for {X:mult,C:white}X2{} Mult &",
+                  "{C:green}#1# in #3#{} chance for {C:gold}$25{}",
+                    }
+              },
+              m_mills_die = {
+              name = "Dice Card",
+              text = {
+                "{C:green}#1# in #2#{} chance for {X:mult,C:white}X5{} Mult or,",
+                "{C:green}#1# in #3#{} chance for {X:mult,C:white}-X5{} Mult"
+              }
+            },
+            m_mills_mon = {
+                name = "Money Card",
+                text = {
+                  "{C:green}#1# in #2#{} chance for {C:green}$15{} or,",
+                  "{C:green}#1# in #3#{} chance for {C:green}$20{}"
+                    }
+              },
+            m_mills_seren = {
+                name = "Serendipity Card",
+                text = {
+                  "{C:green}#1# in #2#{} chance for {C:mult}+#1#{} Mult,",
+                  "{C:green}#1# in #3#{} chance for {C:green}$8{}"
+                    }
+              },
+
+        },    
         Joker={
              --PEPPER JOKERS
              j_mills_pimento_pepper = {

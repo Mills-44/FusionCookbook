@@ -1132,17 +1132,17 @@ descriptions = {
             mills_unknwown_fusion = "Unknown Combo",
 	    -- menus
            k_mills_instruction_cred = "Credits!",
-           mills_instruction_glob = "Fusing Global!",
+           k_mills_instruction_glob = "Fusing Global!",
            k_mills_instruction_mod = "Fusing Mods!",
            k_mills_instruction_cons = "Fusing Consume!",
+	   k_mills_instruction_cred = "Credits!",
+           k_mills_instruction_glob = "Fusing Global!",
            
 
         },
         high_scores={},
         labels={
             mills_cookie_seal = "Cookie Seal",
-            mills_instruction_cred = "Credits!",
-            mills_instruction_glob = "Fusing Global!",
         },
         poker_hand_descriptions={},
         poker_hands={},

@@ -72,7 +72,7 @@ end,
         func = function()
           for i, c in ipairs(G.jokers.cards) do
             if c == card then
-              table.remove(G.jokers.cards, i) -- Removes This Joker
+              SMODS.destroy_card(G.jokers.cards, i) -- Removes This Joker
               play_sound('mills_bye')
               break
             end

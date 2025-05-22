@@ -25,15 +25,15 @@ SMODS.Consumable {
         end
         
         for _, v in ipairs(G.hand.highlighted) do
-            if SMODS.has_enhancement(G.hand.highlighted[1], 'm_stone') and SMODS.has_enhancement(G.hand.highlighted[2], 'm_mult') or 
-               SMODS.has_enhancement(G.hand.highlighted[1], 'm_mult') and SMODS.has_enhancement(G.hand.highlighted[2], 'm_stone') or
-               SMODS.has_enhancement(G.hand.highlighted[1], 'm_stone') and  SMODS.has_enhancement(G.hand.highlighted[2], 'm_glass') or 
-               SMODS.has_enhancement(G.hand.highlighted[1], 'm_glass') and SMODS.has_enhancement(G.hand.highlighted[2], 'm_stone') or
+            if SMODS.has_enhancement(G.hand.highlighted[1], 'm_gold') and SMODS.has_enhancement(G.hand.highlighted[2], 'm_mult') or 
+               SMODS.has_enhancement(G.hand.highlighted[1], 'm_mult') and SMODS.has_enhancement(G.hand.highlighted[2], 'm_gold') or
+               SMODS.has_enhancement(G.hand.highlighted[1], 'm_gold') and  SMODS.has_enhancement(G.hand.highlighted[2], 'm_glass') or 
+               SMODS.has_enhancement(G.hand.highlighted[1], 'm_glass') and SMODS.has_enhancement(G.hand.highlighted[2], 'm_gold') or
                SMODS.has_enhancement(G.hand.highlighted[1], 'm_mult') and SMODS.has_enhancement(G.hand.highlighted[2], 'm_glass') or
                SMODS.has_enhancement(G.hand.highlighted[1], 'm_glass') and SMODS.has_enhancement(G.hand.highlighted[2], 'm_mult') or 
                SMODS.has_enhancement(G.hand.highlighted[1], 'm_mult') and SMODS.has_enhancement(G.hand.highlighted[2], 'm_mult') or 
                SMODS.has_enhancement(G.hand.highlighted[1], 'm_glass') and SMODS.has_enhancement(G.hand.highlighted[2], 'm_glass') or
-               SMODS.has_enhancement(G.hand.highlighted[1], 'm_stone') and SMODS.has_enhancement(G.hand.highlighted[2], 'm_stone') then
+               SMODS.has_enhancement(G.hand.highlighted[1], 'm_gold') and SMODS.has_enhancement(G.hand.highlighted[2], 'm_gold') then
                 return true
             else return false
             end
@@ -59,71 +59,71 @@ SMODS.Consumable {
                    SMODS.has_enhancement(G.hand.highlighted[1], 'm_mult') and
                    SMODS.has_enhancement(G.hand.highlighted[2], 'm_glass') then
                     if MILLS.random_chance(.35) then
-                        G.hand.highlighted[1]:set_ability ("m_mills_ori",nil,true)
+                        G.hand.highlighted[1]:set_ability ("m_mills_col",nil,true)
                     elseif MILLS.random_chance(.8) then
-                        G.hand.highlighted[1]:set_ability ("m_mills_lots",nil,true)
+                        G.hand.highlighted[1]:set_ability ("m_mills_crack",nil,true)
                         else
                         G.hand.highlighted[1]:start_dissolve()
                         end
                     if MILLS.random_chance(.5) then
-                        G.hand.highlighted[2]:set_ability ("m_mills_orichal",nil,true)
+                        G.hand.highlighted[2]:set_ability ("m_mills_color",nil,true)
                     elseif MILLS.random_chance(.65) then
-                        G.hand.highlighted[2]:set_ability ("m_mills_lots",nil,true)
+                        G.hand.highlighted[2]:set_ability ("m_mills_power",nil,true)
                     else
                         G.hand.highlighted[2]:start_dissolve()
                     end
                 end
 
                 if SMODS.has_enhancement(G.hand.highlighted[1], 'm_glass') and
-                   SMODS.has_enhancement(G.hand.highlighted[2], 'm_stone') or 
-                   SMODS.has_enhancement(G.hand.highlighted[1], 'm_stone') and
+                   SMODS.has_enhancement(G.hand.highlighted[2], 'm_gold') or 
+                   SMODS.has_enhancement(G.hand.highlighted[1], 'm_gold') and
                    SMODS.has_enhancement(G.hand.highlighted[2], 'm_glass') then
                     if MILLS.random_chance(.65) then
-                        G.hand.highlighted[1]:set_ability ("m_mills_scratch",nil,true)
+                        G.hand.highlighted[1]:set_ability ("m_mills_diamond",nil,true)
                     elseif MILLS.random_chance(.7) then
-                        G.hand.highlighted[1]:set_ability ("m_mills_lots",nil,true)
+                        G.hand.highlighted[1]:set_ability ("m_mills_phil",nil,true)
                         else
                         G.hand.highlighted[1]:start_dissolve()
                         end
                     if MILLS.random_chance(.5) then
-                        G.hand.highlighted[2]:set_ability ("m_mills_scra",nil,true)
+                        G.hand.highlighted[2]:set_ability ("m_mills_dia",nil,true)
                     elseif MILLS.random_chance(.5) then
-                        G.hand.highlighted[2]:set_ability ("m_mills_lots",nil,true)
+                        G.hand.highlighted[2]:set_ability ("m_mills_crack",nil,true)
                     else
                         G.hand.highlighted[2]:start_dissolve()
                     end
                 end
 
                   if SMODS.has_enhancement(G.hand.highlighted[1], 'm_mult') and
-                   SMODS.has_enhancement(G.hand.highlighted[2], 'm_stone') or 
-                   SMODS.has_enhancement(G.hand.highlighted[1], 'm_stone') and
+                   SMODS.has_enhancement(G.hand.highlighted[2], 'm_gold') or 
+                   SMODS.has_enhancement(G.hand.highlighted[1], 'm_gold') and
                    SMODS.has_enhancement(G.hand.highlighted[2], 'm_mult') then
                     if MILLS.random_chance(.4) then
-                        G.hand.highlighted[1]:set_ability ("m_mills_money",nil,true)
+                        G.hand.highlighted[1]:set_ability ("m_mills_rhondite",nil,true)
                     elseif MILLS.random_chance(.75) then
-                        G.hand.highlighted[1]:set_ability ("m_mills_ori",nil,true)
+                        G.hand.highlighted[1]:set_ability ("m_mills_power",nil,true)
                         else
                         G.hand.highlighted[1]:start_dissolve()
                         end
                     if MILLS.random_chance(.5) then
-                        G.hand.highlighted[2]:set_ability ("m_mills_ori",nil,true)
+                        G.hand.highlighted[2]:set_ability ("m_mills_rhond",nil,true)
                     elseif MILLS.random_chance(.5) then
-                        G.hand.highlighted[2]:set_ability ("m_mills_mon",nil,true)
+                        G.hand.highlighted[2]:set_ability ("m_mills_power",nil,true)
                     else
                         G.hand.highlighted[2]:start_dissolve()
                     end
                 end
 
                 
-                    if SMODS.has_enhancement(G.hand.highlighted[1], 'm_stone') and
-                   SMODS.has_enhancement(G.hand.highlighted[2], 'm_stone') then
+                    if SMODS.has_enhancement(G.hand.highlighted[1], 'm_gold') and
+                   SMODS.has_enhancement(G.hand.highlighted[2], 'm_gold') then
                     if MILLS.random_chance(.8) then
-                        G.hand.highlighted[1]:set_ability ("m_mills_bou",nil,true)
+                        G.hand.highlighted[1]:set_ability ("m_mills_phil",nil,true)
                     else
                         G.hand.highlighted[1]:start_dissolve()
                         end
                     if MILLS.random_chance(.6) then
-                        G.hand.highlighted[2]:set_ability ("m_mills_boulder",nil,true)
+                        G.hand.highlighted[2]:set_ability ("m_mills_phil",nil,true)
                     else
                         G.hand.highlighted[2]:start_dissolve()
                     end

@@ -13,9 +13,6 @@ SMODS.Consumable {
         odd = 10
         } 
     },
-     in_pool = function(self, args)
-      return not args or not args.source or (args.source ~= 'sho' and args.source ~= 'ar1')
-end,
     pools = { 
         Tarot = true
      },
@@ -72,7 +69,7 @@ end,
                     if MILLS.random_chance(.5) then
                         G.hand.highlighted[2]:set_ability ("m_mills_power",nil,true)
                     elseif MILLS.random_chance(.6) then
-                        G.hand.highlighted[2]:set_ability ("m_mills_lava",nil,true)
+                        G.hand.highlighted[2]:set_ability ("m_mills_lav",nil,true)
                     else
                         G.hand.highlighted[2]:start_dissolve()
                     end
@@ -81,16 +78,16 @@ end,
                     if SMODS.has_enhancement(G.hand.highlighted[1], 'm_wild') and
                    SMODS.has_enhancement(G.hand.highlighted[2], 'm_wild') then
                     if MILLS.random_chance(.7) then
-                        G.hand.highlighted[1]:set_ability ("m_mills_lots",nil,true)
-                    elseif MILLS.random_chance(.5) then
                         G.hand.highlighted[1]:set_ability ("m_mills_water",nil,true)
+                    elseif MILLS.random_chance(.5) then
+                        G.hand.highlighted[1]:set_ability ("m_mills_wat",nil,true)
                         else
                         G.hand.highlighted[1]:start_dissolve()
                         end
                     if MILLS.random_chance(.6) then
-                        G.hand.highlighted[2]:set_ability ("m_mills_lots",nil,true)
-                    elseif MILLS.random_chance(.5) then
                         G.hand.highlighted[2]:set_ability ("m_mills_lava",nil,true)
+                    elseif MILLS.random_chance(.5) then
+                        G.hand.highlighted[2]:set_ability ("m_mills_lav",nil,true)
                     else
                         G.hand.highlighted[2]:start_dissolve()
                     end
@@ -110,7 +107,7 @@ end,
                     if MILLS.random_chance(.5) then
                         G.hand.highlighted[2]:set_ability ("m_mills_lots",nil,true)
                     elseif MILLS.random_chance(.5) then
-                        G.hand.highlighted[2]:set_ability ("m_mills_water",nil,true)
+                        G.hand.highlighted[2]:set_ability ("m_mills_wat",nil,true)
                     else
                         G.hand.highlighted[2]:start_dissolve()
                     end

@@ -3,7 +3,7 @@ SMODS.Joker {
 	config = { 
         extra = { 
             discard_size = 2, 
-            hand_size = -2
+            hand_size = 2
          } 
         },
 	atlas = 'misc_jokers',
@@ -22,21 +22,12 @@ SMODS.Joker {
 		return { }
 	end,
 	add_to_deck = function(self, card, from_debuff)
-    G.GAME.round_resets.discards = card.ability.extra.discard_size
-    ease_discard(G.GAME.round_resets.discards)
-
-    G.GAME.round_resets.hands = card.ability.extra.hand_size
-    ease_hands_played(G.GAME.round_resets.hands)
+    G.GAME.round_resets.discards = G.GAME.round_resets.discards + card.ability.extra.discard_size
+	G.GAME.round_resets.hands = G.GAME.round_resets.hands - card.ability.extra.hand_size
 end,
 
 remove_from_deck = function(self, card, from_debuff)
-    G.E_MANAGER:add_event(Event({
-        trigger = 'before', delay = 0,
-        func = function()
-            G.GAME.round_resets.hands = G.GAME.round_resets.hands + 2
-            ease_hands_played(G.GAME.round_resets.hands)
-            return true
-        end
-    }))
+  G.GAME.round_resets.discards = G.GAME.round_resets.discards - card.ability.extra.discard_size
+  G.GAME.round_resets.hands = G.GAME.round_resets.hands + card.ability.extra.hand_size
 end
 }

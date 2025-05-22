@@ -2,7 +2,8 @@ SMODS.Joker {
     key = 'snake_eyes',
     config = {
         extra = {
-            xmult = 2.5
+            xmult_gain = .25,
+            xmult = 0
         }
     },
     atlas = 'misc_jokers',
@@ -20,7 +21,8 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
       return {
         vars = {
-          card.ability.extra.xmult,
+          card.ability.extra.xmult_gain,
+          card.ability.extra.xmult
         }
       }
     end,
@@ -35,9 +37,10 @@ SMODS.Joker {
       if context.cardarea == G.play then
 			if context.other_card then
                 if context.other_card:get_id() == 2 then
-                    return {
+                  card.ability.extra.xmult = card.ability.extra.xmult + .25
+                  return {
                         ease_dollars(-2),
-                        xmult = 2.5,
+                        xmult = card.ability.extra.xmult,
                         colour = G.C.MULT,
 					    card = card
                     }

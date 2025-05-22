@@ -7,9 +7,6 @@ SMODS.Consumable {
         x = 1,
         y = 0
     },
-     in_pool = function(self, args)
-      return not args or not args.source or (args.source ~= 'sho' and args.source ~= 'ar1')
-end,
     config = {
         max_highlighted = 2,
         extra = {
@@ -72,7 +69,7 @@ end,
                     if MILLS.random_chance(.5) then
                         G.hand.highlighted[2]:set_ability ("m_mills_power",nil,true)
                     elseif MILLS.random_chance(.6) then
-                        G.hand.highlighted[2]:set_ability ("m_mills_cinna",nil,true)
+                        G.hand.highlighted[2]:set_ability ("m_mills_cinnabar",nil,true)
                     else
                         G.hand.highlighted[2]:start_dissolve()
                     end
@@ -83,14 +80,14 @@ end,
                     if MILLS.random_chance(.7) then
                         G.hand.highlighted[1]:set_ability ("m_mills_cob",nil,true)
                     elseif MILLS.random_chance(.5) then
-                        G.hand.highlighted[1]:set_ability ("m_mills_cinna",nil,true)
+                        G.hand.highlighted[1]:set_ability ("m_mills_cobalt",nil,true)
                         else
                         G.hand.highlighted[1]:start_dissolve()
                         end
                     if MILLS.random_chance(.6) then
                         G.hand.highlighted[2]:set_ability ("m_mills_cinna",nil,true)
                     elseif MILLS.random_chance(.5) then
-                        G.hand.highlighted[2]:set_ability ("m_mills_cob",nil,true)
+                        G.hand.highlighted[2]:set_ability ("m_mills_cinnabar",nil,true)
                     else
                         G.hand.highlighted[2]:start_dissolve()
                     end
@@ -103,14 +100,14 @@ end,
                     if MILLS.random_chance(.25) then
                         G.hand.highlighted[1]:set_ability ("m_mills_cob",nil,true)
                     elseif MILLS.random_chance(.7) then
-                        G.hand.highlighted[1]:set_ability ("m_mills_bou",nil,true)
+                        G.hand.highlighted[1]:set_ability ("m_mills_extra",nil,true)
                         else
                         G.hand.highlighted[1]:start_dissolve()
                         end
                     if MILLS.random_chance(.5) then
                         G.hand.highlighted[2]:set_ability ("m_mills_cob",nil,true)
                     elseif MILLS.random_chance(.5) then
-                        G.hand.highlighted[2]:set_ability ("m_mills_bou",nil,true)
+                        G.hand.highlighted[2]:set_ability ("m_mills_ex",nil,true)
                     else
                         G.hand.highlighted[2]:start_dissolve()
                     end

@@ -10,8 +10,8 @@ SMODS.Enhancement {
 end,
     config = {
         extra = {
-            odd_low_money = 10,
-            odd_high_money = 25
+            odd_low_money = 5,
+            odd_high_money = 10
         }},
     loc_vars = function(self, info_queue, card)
         return { 

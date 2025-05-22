@@ -12,7 +12,7 @@ end,
     config = {extra = {
         odd = 4, 
         odds = 8, 
-        bonus = 80, 
+        bonus = 150, 
         p_dollars = 10
     }
 },

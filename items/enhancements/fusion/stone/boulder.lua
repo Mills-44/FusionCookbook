@@ -36,7 +36,7 @@ end,
         1.2 )
     end,
     calculate = function(self, card, context)
-        if context.cardarea and context.main_scoring == G.play then
+         if context.cardarea == G.play and context.main_scoring then
             return {
                 chips = card.ability.extra.chips
             }

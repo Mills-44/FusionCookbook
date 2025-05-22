@@ -5,6 +5,10 @@ SMODS.Enhancement {
         x = 6, 
         y = 5
     },
+    replace_base_card = true,
+    no_suit = true,
+    no_rank = true,
+    always_scores = true,
     in_pool = function(self, args)
       return not args or not args.source or (args.source ~= 'sho' and args.source ~= 'sta')
 end,
@@ -30,7 +34,10 @@ end,
     end,
     calculate = function(self, card, context)
         if context.cardarea == G.hand and context.main_scoring then
+               return {
             ease_dollars(3)
+        }
+    end
         if context.cardarea == G.play and context.individual and context.other_card:has_enhancement('m_mills_fools') then
          G.E_MANAGER:add_event(Event({
                    trigger = 'after',
@@ -40,7 +47,6 @@ end,
                         return true
                         end 
                     }))
-        end
         end
     end
 }

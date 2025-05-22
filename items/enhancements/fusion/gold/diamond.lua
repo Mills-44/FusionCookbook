@@ -11,7 +11,7 @@ end,
     config = {extra = {
         p_dollars = 0,
         odd = 3,
-        odds = 7
+        odds = 8
     }},
     loc_vars = function(self, info_queue, card)
         return {
@@ -37,10 +37,10 @@ set_badges = function(self, card, badges)
         1.2 )
 end,
     calculate = function(self, card, context)
-          if context.cardarea and context.main_scoring == G.play then
-        if (pseudorandom('dia_odd') < G.GAME.probabilities.normal / card.ability.extra.odd) then
+         if context.cardarea == G.play and context.main_scoring then
+       if (pseudorandom('dia_odd') < G.GAME.probabilities.normal / card.ability.extra.odd) then
             return {
-               ease_dollars(tonumber(format_ui_value(G.GAME.dollars))*2)
+                dollars = (tonumber(format_ui_value(G.GAME.dollars))),
             }
             end
          if context.destroy_card and context.cardarea == G.play and context.destroy_card == card and (pseudorandom('dia_odds') < G.GAME.probabilities.normal/card.ability.extra.odds) then

@@ -48,7 +48,6 @@ end,
             end
             return {
                 mult = mult,
-
             }
         end
 end

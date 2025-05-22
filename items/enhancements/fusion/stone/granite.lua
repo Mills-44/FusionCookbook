@@ -7,7 +7,7 @@ SMODS.Enhancement {
     replace_base_card = true, 
     pos = {
         x= 5,
-        y= 2
+        y= 5
     },
     in_pool = function(self, args)
       return not args or not args.source or (args.source ~= 'sho' and args.source ~= 'sta')
@@ -36,7 +36,7 @@ end,
         1.2 )
     end,
     calculate = function(self, card, context)
-        if context.cardarea and context.main_scoring == G.play then
+        if context.cardarea == G.play and context.main_scoring then
             return {
                 chips = card.ability.extra.chips
             }

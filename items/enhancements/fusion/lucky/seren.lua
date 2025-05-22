@@ -38,7 +38,7 @@ calculate = function(self, card, context)
          if context.cardarea == G.play and context.main_scoring then
             if (pseudorandom('seren_odd') < G.GAME.probabilities.normal / card.ability.extra.odd_mult) then
                 return {
-                    mult = 25
+                    mult = 30
                 }
             end
              if (pseudorandom('seren_odd') < G.GAME.probabilities.normal / card.ability.extra.odd_money) then

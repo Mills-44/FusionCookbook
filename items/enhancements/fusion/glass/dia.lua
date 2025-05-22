@@ -8,7 +8,8 @@ SMODS.Enhancement {
 in_pool = function(self, args)
       return not args or not args.source or (args.source ~= 'sho' and args.source ~= 'sta')
 end,
-    config = {extra = {
+    config = {
+        extra = {
         p_dollars = 0,
         odd = 4,
         odds = 8
@@ -37,10 +38,10 @@ set_badges = function(self, card, badges)
         1.2 )
 end,
     calculate = function(self, card, context)
-          if context.cardarea and context.main_scoring == G.play then
+          if context.cardarea == G.play and context.main_scoring then
         if (pseudorandom('dia_odd') < G.GAME.probabilities.normal / card.ability.extra.odd) then
             return {
-               ease_dollars(tonumber(format_ui_value(G.GAME.dollars))*2)
+                dollars = (tonumber(format_ui_value(G.GAME.dollars))),
             }
             end
          if context.destroy_card and context.cardarea == G.play and context.destroy_card == card and (pseudorandom('dia_odds') < G.GAME.probabilities.normal/card.ability.extra.odds) then

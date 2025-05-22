@@ -30,16 +30,20 @@ set_badges = function(self, card, badges)
         G.C.WHITE, 
         1.2 )
     end,
-calculate = function(self, card, context)
-if context.cardarea == G.hand and context.main_scoring and pseudorandom('rhondite_odds') < G.GAME.probabilities.normal/card.ability.extra.odds then
-    return {
-        ease_dollars(25)
-    }
-end
-if context.cardarea == G.hand and context.main_scoring then
-    return{
-        ease_dollars(-1)
-}
-end
-end
+    calculate = function(self, card, context)
+        if context.cardarea == G.hand and context.main_scoring then
+               return {
+                    ease_dollars(2),
+                    message = "$5",
+                    colour = G.C.GOLD
+        }
+            end
+        if context.cardarea == G.play and context.main_scoring then
+            return {
+            ease_dollars(5),
+            message = "$5",
+            colour = G.C.GOLD
+        }
+    end
+    end
 }

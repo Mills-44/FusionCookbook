@@ -11,7 +11,7 @@ end,
     any_suit = true,
     config = {
         extra = {
-            x_mult = 3, 
+            x_mult = 2.5, 
             odds = 5
         }
     },

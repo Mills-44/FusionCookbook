@@ -38,17 +38,18 @@ set_badges = function(self, card, badges)
     end,
     calculate = function(self, card, context)
          if context.cardarea == G.play and context.main_scoring then
-             if (pseudorandom('crystal_odd_good') < G.GAME.probabilities.normal / card.ability.extra.odd) then
+             if (pseudorandom('crystal_odd_good') < G.GAME.probabilities.normal / card.ability.extra.odd_good) then
                 return {
                     xmult = 2
                 }
              end
-             if (pseudorandom('crystal_odd_bad') < G.GAME.probabilities.normal / card.ability.extra.odd) then
+             if (pseudorandom('crystal_odd_bad') < G.GAME.probabilities.normal / card.ability.extra.odd_bad) then
                 return {
                     xmult = .5
                 }             
             end
-        if context.destroy_card and context.cardarea == G.play and context.destroy_card == card and (pseudorandom('cry_odd_break') < G.GAME.probabilities.normal/card.ability.extra.odds) then
+        end
+        if context.destroy_card and context.cardarea == G.play and context.destroy_card == card and (pseudorandom('crystal_odd_break') < G.GAME.probabilities.normal/card.ability.extra.odd_break) then
         G.E_MANAGER:add_event(Event({
             trigger = 'after',
             delay = .3,
@@ -58,7 +59,6 @@ set_badges = function(self, card, badges)
             end
         }))
         ease_dollars(50)
-    end
     end
 end
 }

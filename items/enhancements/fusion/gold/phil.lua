@@ -30,7 +30,9 @@ end,
     end,
     calculate = function(self, card, context)
         if context.cardarea == G.hand and context.end_of_round then
+            return {
             ease_dollars(8)
+            }
         end
     end
 }

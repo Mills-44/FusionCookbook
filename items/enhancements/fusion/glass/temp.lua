@@ -11,7 +11,7 @@ end,
     config = {
         extra = {
             x_chips = 2.5, 
-            odds = 8
+            odds = 6
         }
     },
     loc_vars = function(self, info_queue, card)

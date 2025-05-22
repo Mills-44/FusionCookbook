@@ -1,9 +1,10 @@
 SMODS.Enhancement {
     key = "conc",
     atlas = 'enhanc_fus',
-    no_suit = true,
     no_rank = true,
+    any_suit = true,
     always_scores = true,
+    replace_base_card = true,
     pos = {
         x = 5, 
         y = 4

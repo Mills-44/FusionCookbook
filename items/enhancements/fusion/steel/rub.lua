@@ -10,7 +10,7 @@ SMODS.Enhancement {
 end,
     config = {
         extra = {
-            x_mult = 3
+            x_mult = 3.5
         }},
     loc_vars = function(self, info_queue, card)
         return { 

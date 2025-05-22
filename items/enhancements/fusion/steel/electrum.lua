@@ -31,6 +31,10 @@ end,
     calculate = function(self, card, context)
         if context.cardarea == G.hand and context.main_scoring then
             ease_dollars(3)
+            return {
+                message = "$3",
+                colour = G.C.GOLD
+            }
         end
     end
 }

@@ -37,16 +37,15 @@ end,
     calculate = function (self, card, context)
         if context.final_scoring_step and context.cardarea == G.hand then
             card.ability.extra.p_dollars = card.ability.extra.p_dollars + card.ability.extra.bonus_dollars
+            return {
+                message = "$5? Oink Oink!",
+                color = MILLS.COLORS.FUSION
+            }
             end
             if context.cardarea == G.play and context.main_scoring then
                 return {
-                    dollars = card.ability.extra.p_dollars
-                }
-            end
-            if context.cardarea == G.play and context.main_scoring then
-                return { 
-                    remove = true 
-                }
+                    dollars = card.ability.extra.p_dollars,
+                }         
             end
         end
     }

@@ -18,7 +18,8 @@ end,
         return { 
             vars={
                 (G.GAME.probabilities.normal or 1),
-                card.ability.extra.dice,
+                card.ability.extra.roll_1,
+                card.ability.extra.roll_2,
             }
         }
     end,

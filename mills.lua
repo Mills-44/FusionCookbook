@@ -124,19 +124,23 @@ MILLS.register_items(MILLS.FUSION_STONE_ENHANCEMENTS, "items/enhancements/fusion
 MILLS.register_items(MILLS.FUSION_GOLD_ENHANCEMENTS, "items/enhancements/fusion/gold")
 MILLS.register_items(MILLS.FUSION_LUCKY_ENHANCEMENTS, "items/enhancements/fusion/lucky")
 
+-- Sweet Enhancements
 MILLS.register_items(MILLS.SWEET_ENHANCEMENTS, "items/enhancements/sweet")
 
-MILLS.register_items(MILLS.SNACKS, "items/snack")
-MILLS.register_items(MILLS.FUSION, "items/fusion")
+-- Consumables
+MILLS.register_items(MILLS.SNACKS, "items/consumables/snack")
+MILLS.register_items(MILLS.FUSION, "items/consumables/fusion")
+MILLS.register_items(MILLS.SPECTRAL, "items/consumables/spectral")
+MILLS.register_items(MILLS.TAROT, "items/consumables/tarot")
 
-MILLS.register_items(MILLS.SPECTRAL, "items/spectral")
-
-MILLS.register_items(MILLS.TAROT, "items/tarot")
-
+--Seals
 MILLS.register_items(MILLS.SEALS, "items/seals")
 
+-- Tags
 MILLS.register_items(MILLS.TAGS, "items/tags")
 
+-- Vouchers
 MILLS.register_items(MILLS.VOUCHERS, "items/vouchers")
 
+-- Editions
 --MILLS.register_items(MILLS.EDITIONS, "items/editions")

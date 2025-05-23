@@ -3,9 +3,7 @@
 
 --Cards that are 71x95
 local atlas_keys = { --This will set up a local loop of all atlas keys
-'animal',
 'apple_of_jacks_eye',
-'chromlech',
 'cookie',
 'curly',
 'enhanc_fus',
@@ -21,7 +19,6 @@ local atlas_keys = { --This will set up a local loop of all atlas keys
 'mr_pb_and_jelly',
 'munch',
 'nom',
-'omnipotent',
 'pepper_jokers',
 'snack',
 'sweet',
@@ -33,6 +30,7 @@ local atlas_keys = { --This will set up a local loop of all atlas keys
 'snack_pack_mega',
 'snack_tycoon',
 -- "spectral",
+'tarot'
 }
 
 for _, key in ipairs(atlas_keys) do --Pulls all keys in list

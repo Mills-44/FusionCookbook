@@ -17,7 +17,7 @@ descriptions = {
         name = "Cookiesimo Card",
         text = {
             "Triggers a random surprise!",
-            "{C:inactive}Surprise include chips, mult, $, xmult, consumeables"
+            "{C:inactive}Surprise include chips, mult, $, xmult"
             }
         },
         m_mills_whippisimo = {
@@ -376,7 +376,7 @@ descriptions = {
                 name = "Fool's Gold Card",
                 text = {
                   "{C:gold}$2{} while this card stays in hand &",
-                  "{C:gold}$5{} when other Fool's Gold cards score"
+                  "{C:gold}$5{} when scored"
                     }
               },
             m_mills_dice = {
@@ -432,7 +432,7 @@ descriptions = {
               m_mills_phil = {
                 name = "Philosopher Stone Card",
                 text = {
-                  "{C:gold}$8{} if this card stays in hand",
+                  "{C:gold}$8{} per hand left if this card stays in hand",
                   "during the final round of scoring"
                     }
               },
@@ -502,7 +502,7 @@ descriptions = {
             m_mills_seren = {
                 name = "Serendipity Card",
                 text = {
-                  "{C:green}#1# in #2#{} chance for {C:mult}+#1#{} Mult,",
+                  "{C:green}#1# in #2#{} chance for {C:mult}+30{} Mult,",
                   "{C:green}#1# in #3#{} chance for {C:green}$8{}"
                     }
               },
@@ -845,9 +845,9 @@ descriptions = {
               c_mills_blondwie = {
                 name = "Blondwie",
                 text = {
-                "Select 2 cards that are ",
-                "{C:attention}Mult/Lucky, Mult/Glass, Glass/Lucky, or Both Same{},",
-               "Both cards have a chance to become enfused but possibly destroy itself"
+                  "Select 2 cards that are ",
+                  "{C:attention}Mult, Glass, or Bonus{},",
+                  "cards {C:attention}Enfuse{} with a possiblity to destroy itself"
                 }
               },
               c_mills_bubblegum = {
@@ -868,8 +868,8 @@ descriptions = {
                 name = "Cake Pop",
                 text = {
                   "Select 2 cards that are ",
-                  "{C:attention}Mult/Stone, Mult/Glass, Glass/Stone, or Both Same{},",
-                  "Both cards have a chance to become enfused but possibly destroy itself"
+                  "{C:attention}Steel, Lucky, or Gold{},",
+                  "cards {C:attention}Enfuse{} with a possiblity to destroy itself"
                 }
               },
               c_mills_cannoli = {
@@ -882,9 +882,9 @@ descriptions = {
               c_mills_choffle = {
                 name = "Chocolate Waffle",
                 text = {
-                  "Select 2 cards that are ",
-                  "{C:attention}Gold/Lucky, Gold/Bonus, Bonus/Lucky, or Both Same{},",
-                  "Both cards have a chance to become enfused but possibly destroy itself"
+                 "Select 2 cards that are ",
+                  "{C:attention}Gold, Mult, or Glass{},",
+                  "cards {C:attention}Enfuse{} with a possiblity to destroy itself"
                 }
               },
               c_mills_cream_puff = {
@@ -928,9 +928,9 @@ descriptions = {
               c_mills_rock_candy = {
                 name = "Rock Candy",
                 text = {
-                "Select 2 cards that are ",
-                "{C:attention}Glass/Stone, Bonus/Glass, Bonus/Stone, or Both Same{},",
-                "Both cards have a chance to become enfused but possibly destroy itself"
+                  "Select 2 cards that are ",
+                  "{C:attention}Steel, Glass, or Lucky{},",
+                  "cards {C:attention}Enfuse{} with a possiblity to destroy itself"
                 }
               },
               c_mills_rye_chip = {
@@ -995,15 +995,15 @@ descriptions = {
           c_mills_chromlech = {
             name = "Cromlech",
              text = { 
-               "Select 2 cards that are {C:attention}Bonus/Stone, Mult/Stone or Stone/Stone{},",
-               "Both cards have a chance to become enfused but possibly destroy itself"
+               "Select a {C:attention}Stone Card{} with {C:attention}Mult, Bonus, or Wild{}",
+               "Both cards have a chance to {C:attention}Enfuse{} but possibly be destroyed"
                 }
         },
         c_mills_thermality = {
             name = "Thermality",
              text = { 
-               "Select 2 cards that are {C:attention}Bonus/Wild, Mult/Wild or Wild/Wild{},",
-               "Both cards have a chance to become enfused but possibly destroy itself"
+               "Select a {C:attention}Wild Card{} with {C:attention}Mult, Bonus, or Stone{}",
+               "Both cards have a chance to {C:attention}Enfuse{} but possibly be destroyed"
                 }
         },
         },
@@ -1132,17 +1132,17 @@ descriptions = {
             mills_unknwown_fusion = "Unknown Combo",
 	    -- menus
            k_mills_instruction_cred = "Credits!",
-           k_mills_instruction_glob = "Fusing Global!",
+           mills_instruction_glob = "Fusing Global!",
            k_mills_instruction_mod = "Fusing Mods!",
            k_mills_instruction_cons = "Fusing Consume!",
-	   k_mills_instruction_cred = "Credits!",
-           k_mills_instruction_glob = "Fusing Global!",
            
 
         },
         high_scores={},
         labels={
             mills_cookie_seal = "Cookie Seal",
+            mills_instruction_cred = "Credits!",
+            mills_instruction_glob = "Fusing Global!",
         },
         poker_hand_descriptions={},
         poker_hands={},

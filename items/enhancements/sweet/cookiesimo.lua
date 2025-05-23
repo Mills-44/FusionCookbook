@@ -29,59 +29,15 @@ SMODS.Enhancement {
     end,
   calculate = function(self, card, context)
           if context.cardarea == G.play and context.main_scoring then
-              if MILLS.random_chance(.4) then
+              if MILLS.random_chance(.5) then
               bonus = card.ability.extra.bonus
-            elseif MILLS.random_chance(.5) then
+            elseif MILLS.random_chance(.65) then
               mult = card.ability.extra.mult
-            elseif MILLS.random_chance(.6) then
+            elseif MILLS.random_chance(.8) then
              -- xmult = card.ability.extra.xmult
-            elseif MILLS.random_chance(.7) then
+            else
               ease_dollars(5)
-           elseif MILLS.random_chance(.8) then
-              G.E_MANAGER:add_event(Event({
-                trigger = 'after', 
-                delay = 0.4, 
-                func = function()
-                  play_sound('mills_nice')
-                  local card = create_card('Tarot', G.consumeables,  nil, nil, nil, nil, 'c_' )
-                  card:add_to_deck()
-                  G.consumeables:emplace(card)
-                  card:juice_up(0.3, 0.5)
-                      return true end }))
-           -- elseif MILLS.random_chance(.9) then
-          --    G.E_MANAGER:add_event(Event({
-           --     trigger = 'after', 
-            --    delay = 0.4, 
-             --   func = function()
-             --     play_sound('mills_nice')
-             --     local card = create_card('Snack', G.consumeables, nil, nil, nil, nil, nil, 'c_mills_' )
-             --     card:add_to_deck()
-              --    G.consumeables:emplace(card)
-             --         card:juice_up(0.3, 0.5)
-              --          return true end }))
-        --    elseif MILLS.random_chance(.95) then
-         --     G.E_MANAGER:add_event(Event({
-           --     trigger = 'after', 
-            --    delay = 0.4, 
-            --    func = function()
-             --     play_sound('mills_nice')
-             --     local card = create_card('Spectral', G.consumeables, nil, nil, nil, nil, nil, 'c_' )
-             --     card:add_to_deck()
-            --      G.consumeables:emplace(card)
-            --      card:juice_up(0.3, 0.5)
-           --             return true end }))
-          --  else
-          --    G.E_MANAGER:add_event(Event({
-          --      trigger = 'after', 
-           --     delay = 0.4, 
-           --     func = function()
-           --       play_sound('mills_nice')
-           --       local card = create_card('Planet', G.consumeables, nil, nil, nil, nil, nil, 'c_' )
-           --       card:add_to_deck()
-          --        G.consumeables:emplace(card)
-          --        card:juice_up(0.3, 0.5)
-          --              return true end }))
-              end
+            end
               return {
                   chips = bonus,
                   mult = mult,

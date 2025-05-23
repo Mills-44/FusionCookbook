@@ -70,6 +70,7 @@ GINGY = HEX("6f4305"),
 GUMMY = HEX("21de24"),
 JELLY = HEX("820f8a"),
 SWEET = HEX("d31a9a"),
+SANDWICH = HEX("9615aa"),
 -- Fusion Colors
 FUSION = HEX("FF00FF"),
 --Misc Colors
@@ -151,11 +152,11 @@ MILLS.FUSION_JOKERS = {
 }
 --Sandwich Jokers
 MILLS.SANDWICH_JOKERS = {
---"flayfluff_sub"
---"golden_crunch"
---"mr_pb_and_jelly"
---"gloopwich"
---"everlasting_pollenstopper"
+"flayfluff_sub",
+--"golden_crunch",
+"mr_pb_and_jelly",
+--"gloopwich",
+"everlasting_pollenstopper",
 }
 
 --Misc Jokers
@@ -218,7 +219,7 @@ MILLS.SNACKS = {
 "rock_candy",
 "rye_chip",
 "shortbread",
---"slice_of_bread",
+"slice_of_bread",
 --"taffy",
 "take_5",
 "whipping_cream",

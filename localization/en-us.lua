@@ -679,29 +679,29 @@ descriptions = {
             j_mills_everlasting_pollenstopper = {
                 name = "Everlasting Pollenstopper",
                 text = {
-                    "When scored hand contains a {C:attention}Lucky and Glass Card{},",
+                    "When scoring hand contains a {C:attention}Lucky and Glass Card{},",
                     "create a {C:negative}Negative Spectral{} card"
                 }
             },
             j_mills_flayfluff_sub = {
                 name = "Flayfluff Sub",
                 text = {
-                    "When scored hand contains a {C:attention} Wild and Glass Card{},",
-                    "create a {C:negative}Negative Joker{}"
+                    "When scoring hand contains a {C:attention}Wild and Glass Card{},",
+                    "create a {C:negative}Negative Sweet Joker{}"
                 }
             },
             j_mills_gloopwich = {
                 name = "Gloopwich",
                 text = {
-                    "When scored hand contains a {C:attention}Wild and Mult Card{},",
+                    "When scoring hand contains a {C:attention}Wild and Mult Card{},",
                     "all cards upgrade one editions",
-                    "{C:inactive}None → Foil → Holographic → Negative → Polychrome{}"
+                    "{C:inactive}None -> Foil -> Holographic -> Polychrome -> Negative{}"
                 }
             },
             j_mills_golden_crunch = {
                 name = "Golden Crunch",
                 text = {
-                    "When scored hand contains a {C:attention}Lucky and Glass Card{},",
+                    "When scoring hand contains a {C:attention}Lucky and Glass Card{},",
                     "all cards gain a random {C:attention}Seal{}"
                 }
             },
@@ -1020,90 +1020,86 @@ descriptions = {
           mills_fusions_glob = {
             name = "",
             text = {
-              "{C:purple, S:1.2}Global Fusion Card:{} Fuses 2 diferent selected cards of any type"
+              "{C:purple, S:1.2}Global Fusion Card:{} Enfuses 2 diferent selected cards of any type",
+              "{C:inactive}[WIP]"
             }
           },
 
-          mills_fusions_glob_enh = {
+          mills_fusions_cons = {
             name = "",
             text = {
-              "{C:purple, S:1.2}Global Modification Fusion Card:{} Fuses 2 diferent selected cards of any type"
-            }
-          },
-
-          mills_fusions_glob_cons = {
-            name = "",
-            text = {
-              "{C:purple, S:1.2}Global Consumable Fusion Card:{} Fuses 2 diferent selected cards of any type"
+              "{C:purple, S:1.2}Consumable Fusion Card:{} Fuses 2 diferent selected cards of any type",
+              "{C:inactive}[WIP]"
             }
           },
 
           mills_fusions_enh = {
             name = "",
             text = {
-              "{C:purple, S:1.2}Enhanc Fusion Card:{} Fuses 2 diferent selected {C:attention)enhancement{}"
+              "{C:purple, S:1.2}Enhanc Fusion Card:{} Fuses 2 diferent selected {C:attention}enhancement{}"
             }
           },
 
           mills_fusions_edi = {
             name = "",
             text = {
-              "{C:purple, S:1.2}Edition Fusion Card:{} Fuses 2 diferent selected {C:attention)editions{}"
+              "{C:purple, S:1.2}Edition Fusion Card:{} Fuses 2 diferent selected {C:attention}editions{}",
+              "{C:inactive}[WIP]"
             }
           },
 
           mills_fusions_seal = {
             name = "",
             text = {
-              "{C:purple, S:1.2}Seal Fusion Card:{} Fuses 2 diferent selected {C:attention)Seals{}"
+              "{C:purple, S:1.2}Seal Fusion Card:{} Fuses 2 diferent selected {C:attention}Seals{}",
+              "{C:inactive}[WIP]"
             }
           },
+          mills_credits_cred = {
+            name = "",
+            text = {
+              "{C:legendary,S:2,E:1}MOD MADE BY:{}",
+            }
+          },
+          mills_credits_art = {
+            name = "",
+            text = {
+              "{X:legendary,C:white}Artist:{}",
+              "{C:money}Rafaelly, Mills-44{}",
+              "{C:money}GSFG & Soda Enjoyer{}",
+            }
+          },
+          mills_credits_dev = {
+            name = "",
+            text = {
+              "{X:legendary,C:white}Developer:{}",
+              "{C:money}Rafaelly and Mills-44{}",
+            }
+          },
+        mills_credits_local = {
+          name = "",
+          text = {
+            "{X:legendary,C:white}Localization:{}",
+            "{C:money}Rafaelly(Portuguese[WIP] & English)",
+            "{C:money}Mills-44(English){}",
 
-          mills_fusions_tarot = {
-            name = "",
-            text = {
-              "{C:purple, S:1.2}Tarot Fusion Card:{} Fuses 2 diferent selected {C:attention)Tarot Cards{}"
-            }
-          },
-
-          mills_fusions_spec = {
-            name = "",
-            text = {
-              "{C:purple, S:1.2}Spectral Fusion Card:{} Fuses 2 diferent selected {C:attention)spectral cards{}"
-            }
-          },
-
-          mills_fusions_snack = {
-            name = "",
-            text = {
-              "{C:purple, S:1.2}Snack Fusion Card:{} Fuses 2 diferent selected {C:attention)snack cards{}"
-            }
-          },
-
-          mills_fusions_plan = {
-            name = "",
-            text = {
-              "{C:purple, S:1.2}Planet Fusion Card:{} Fuses 2 diferent selected {C:attention)planet card{}"
-            }
-          },
-          mills_fusions_cred = {
-            name = "",
-            text = {
-              "MOD MADE BY:",
-              "{X:legendary,C:white}Artist:{} {C:dark_blue}Rafaelly, Mills-44 and GSFG{}",
-              "{X:legendary,C:white}Developer:{} {C:dark_blue}Rafaelly and Mills-44{}",
-              "{X:legendary,C:white}Localization:{}",
-              "{C:dark_blue}Rafaelly(Portuguese[WIP] & english) and Mills-44(English){}"
-              
-            }
-          },
-          mills_instruction_glob = { 
-            name = "",
-            text = {
-              "Fusing Global!",
-        }
+          }
+        },
+        mills_combos_sandwich = {
+          name = "",
+          text = {
+            "{C:tarot,E:2}SANDWICH COMBOS:{}",
+          }
+        },
+        mills_combos_sandwichcombo = {
+          name = "",
+          text = {
+            "{C:default}Barry B. + Wonka's Chocolate Bar = Everlasting Pollenstopper{}",
+            "{C:default}Jammin' Jelly + Nutty Buddy = Mr.PB & Jelly{}",
+            "{C:default}Stay Puft + Barry B. = Flayfluff Sub{}",
+          }
+        },
       },
-    },
         Voucher={
           v_mills_snack_merchant = {
             name = "Snack Merchant",
@@ -1118,7 +1114,8 @@ descriptions = {
             },
           },
         },
-    misc = {
+      },
+   misc = {
         achievement_descriptions={},
         achievement_names={},
         blind_states={},
@@ -1131,18 +1128,13 @@ descriptions = {
             mills_not_valid_fusion = "No Valid Combos",
             mills_unknwown_fusion = "Unknown Combo",
 	    -- menus
-           k_mills_instruction_cred = "Credits!",
-           mills_instruction_glob = "Fusing Global!",
-           k_mills_instruction_mod = "Fusing Mods!",
-           k_mills_instruction_cons = "Fusing Consume!",
-           
-
+           k_mills_instruction_card = "Fusing Cards!",
+           k_mills_credits = "Credits!",
+           k_mills_combos = "Combos!",           
         },
         high_scores={},
         labels={
             mills_cookie_seal = "Cookie Seal",
-            mills_instruction_cred = "Credits!",
-            mills_instruction_glob = "Fusing Global!",
         },
         poker_hand_descriptions={},
         poker_hands={},
@@ -1172,4 +1164,3 @@ descriptions = {
         v_text={},
     },
   }
-}

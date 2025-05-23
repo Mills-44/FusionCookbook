@@ -219,7 +219,7 @@ MILLS.SNACKS = {
 "rock_candy",
 "rye_chip",
 "shortbread",
-"slice_of_bread",
+--"slice_of_bread",
 --"taffy",
 "take_5",
 "whipping_cream",

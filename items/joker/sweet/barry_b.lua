@@ -30,7 +30,7 @@ SMODS.Joker {
         "Art: Mills", 
         MILLS.COLORS.ART, 
         G.C.WHITE, 
-        1.2 )
+        1.0 )
     end,
     calculate = function(self, card, context)
         if context.before and not context.blueprint then

@@ -152,11 +152,11 @@ MILLS.FUSION_JOKERS = {
 }
 --Sandwich Jokers
 MILLS.SANDWICH_JOKERS = {
-"flayfluff_sub",
+--"flayfluff_sub",
 --"golden_crunch",
-"mr_pb_and_jelly",
+--"mr_pb_and_jelly",
 --"gloopwich",
-"everlasting_pollenstopper",
+--"everlasting_pollenstopper",
 }
 
 --Misc Jokers

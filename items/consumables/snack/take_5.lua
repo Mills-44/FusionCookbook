@@ -4,7 +4,7 @@ SMODS.Consumable {
     set = "Snack",
     atlas = 'snack',
     pos = {
-        x = 0,
+        x = 3,
         y = 2
     },
     config = {

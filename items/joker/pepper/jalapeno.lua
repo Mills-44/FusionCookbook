@@ -71,12 +71,12 @@ end,
         G.E_MANAGER:add_event(Event({
           func = function()
             for i, c in ipairs(G.jokers.cards) do
-              if c == card then
-                table.remove(G.jokers.cards, i)
-                play_sound('mills_adios')
-                break
-              end
+            if c == card then
+              SMODS.destroy_card(G.jokers.cards, i) -- Removes This Joker
+              play_sound('mills_bye')
+              break
             end
+          end
             local newcard = SMODS.add_card {
               set = 'Joker',
               area = G.jokers,

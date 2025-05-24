@@ -10,7 +10,23 @@ SMODS.Joker {
     in_pool = function(self, args)
         return false
       end,
-      
+     set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Sandwich", 
+        MILLS.COLORS.COOKIE, 
+        G.C.WHITE, 
+        1.2 )
+        badges[#badges+1] = create_badge(
+        "Jammin' Jelly + Nutty Buddy", 
+        MILLS.COLORS.SANDWICH, 
+        G.C.WHITE, 
+        1.0 )
+        badges[#badges+1] = create_badge(
+        "Art: Mills", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,     
     calculate = function(self, card, context)
       if context.cardarea == G.jokers then
       if context.before then 

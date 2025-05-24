@@ -3,6 +3,8 @@
 -- As a new coder I hope this will help people out build a mod if wanted 
 -- Shoutout to PaperMoon, OppositeWolf770, srockw, GitNether, Victin, BBBalatroMod for this idea used in Paperback
 
+MILLS.config = SMODS.current_mod.config
+
 --Poker Hands
 MILLS.base_poker_hands = {
   "Straight Flush",
@@ -73,6 +75,7 @@ SWEET = HEX("d31a9a"),
 SANDWICH = HEX("9615aa"),
 -- Fusion Colors
 FUSION = HEX("FF00FF"),
+FUTURE = HEX("8a11d4"),
 --Misc Colors
 ART = HEX("5e819d"),
 -- _ = HEX(""),
@@ -152,11 +155,11 @@ MILLS.FUSION_JOKERS = {
 }
 --Sandwich Jokers
 MILLS.SANDWICH_JOKERS = {
---"flayfluff_sub",
+"flayfluff_sub",
 --"golden_crunch",
---"mr_pb_and_jelly",
+"mr_pb_and_jelly",
 --"gloopwich",
---"everlasting_pollenstopper",
+"everlasting_pollenstopper",
 }
 
 --Misc Jokers
@@ -204,25 +207,28 @@ MILLS.BOOSTER = {
 --Snack Cards
 MILLS.SNACKS = {
 "biscoff",
-"blondwie",
 "bubblegum",
 "butterscotch",
 "cake_pop",
 --"cannoli",
-"choffle",
 --"cream_puff",
 "frosting",
 "homeys_doney",
 "kinder_egg",
 "m_and_m",
 "pretzel",
-"rock_candy",
 "rye_chip",
 "shortbread",
 --"slice_of_bread",
 --"taffy",
-"take_5",
 "whipping_cream",
+}
+MILLS.FUSE_SNACK = {
+  "blondwie",
+  "cake_pop",
+  "choffle",
+  "rock_candy",
+  "take_5",
 }
 
 -- ||           FUSIONS          ||
@@ -338,18 +344,43 @@ MILLS.FUSION_LUCKY_ENHANCEMENTS = {
 "seren"
 }
 
--- ||           SPECTRAL          || 
-MILLS.SPECTRAL = {
--- "baker",
- "munch",
-}
-
 -- ||           TAROT          ||
 MILLS.TAROT = {
   "chromlech",
   "thermality",
    --""
   }
+
+  MILLS.FUTURE = {
+   -- "stoopid",
+    "illusionist",
+   -- "intergalactic",
+   -- "jimbo",
+   -- "jester",
+   -- "cardinal",
+   -- "friends",
+   -- "jockey",
+   -- "integrity",
+   -- "greed",
+   -- "coins",
+   -- "buff",
+   -- "dead",
+   -- "skeleton",
+   -- "sobriety",
+   -- "imp",
+   -- "monolith",
+   -- "nebulous",
+   -- "eclipse",
+   -- "helios",
+   -- "planet",
+   -- "punishment",
+  }
+
+-- ||           SPECTRAL          || 
+MILLS.SPECTRAL = {
+-- "baker",
+ "munch",
+}
 
 -- ||           SEALS          ||
 MILLS.SEALS = {

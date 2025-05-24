@@ -507,7 +507,57 @@ descriptions = {
                     }
               },
 
-        },    
+        },   
+        Future = {
+           c_mills_illusionist = {
+                name = "Illusionist",
+                text = {
+                  "Create 2 random {C:attention}Lucky Base Enfused Cards{}"
+                }
+              },
+           c_mills_jimbo = {
+                name = "Jimbo",
+                text = {
+                  "Create 2 random {C:attention}Mult Base Enfused Cards{}"
+                }
+              },
+           c_mills_cardinal = {
+                name = "Cardinal",
+                text = {
+                  "Create 2 random {C:attention}Bonus Base Enfused Cards{}"
+                }
+              },
+           c_mills_friends = {
+                name = "Friends",
+                text = {
+                  "Create 2 random {C:attention}Wild Base Enfused Cards{}"
+                }
+              },
+           c_mills_jockey = {
+                name = "Jockey",
+                text = {
+                  "Create 2 random {C:attention}Steel Base Enfused Cards{}"
+                }
+              },
+           c_mills_integrity = {
+                name = "Integrity",
+                text = {
+                  "Create 2 random {C:attention}Glass Base Enfused Cards{}"
+                }
+              },
+           c_mills_imp = {
+                name = "Imp",
+                text = {
+                  "Create 2 random {C:attention}Gold Base Enfused Cards{}"
+                }
+              },
+           c_mills_monolith = {
+                name = "Monolith",
+                text = {
+                  "Create 2 random {C:attention}Stone Base Enfused Cards{}"
+                }
+              },
+        },
         Joker={
              --PEPPER JOKERS
              j_mills_pimento_pepper = {
@@ -1122,12 +1172,19 @@ descriptions = {
         challenge_names={},
         collabs={},
         dictionary={
+          --Surge Meter
+            k_surge = "Surges: ",
+          --Snack Pack
             k_mills_snack_pack = "Snack Pack",
             b_mills_snack_pack = "Snack Pack",
             mills_flayfluff = "Makes Flayfluff!",
             mills_not_valid_fusion = "No Valid Combos",
             mills_unknwown_fusion = "Unknown Combo",
-	    -- menus
+	    -- ||   MENUS   ||
+      -- Config
+          enable_enhancement_fusions = "Enable Enfusion Enhancements",
+          mills_restart = "Restart Required",
+      -- Other
            k_mills_instruction_card = "Fusing Cards!",
            k_mills_credits = "Credits!",
            k_mills_combos = "Combos!",           

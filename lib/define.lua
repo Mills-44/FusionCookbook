@@ -52,6 +52,13 @@ MILLS.base_suits = {
   --Highly Doubt but maybe more suits in the long run
 }
 
+MILLS.base_editions = {
+  "foil",
+  "holo",
+  "negative",
+  "poly"
+}
+
 -- Define light and dark suits
 MILLS.light_suits = { 'Diamonds', 'Hearts' }
 MILLS.dark_suits = { 'Spades', 'Clubs' }
@@ -219,7 +226,7 @@ MILLS.SNACKS = {
 "pretzel",
 "rye_chip",
 "shortbread",
---"slice_of_bread",
+"slice_of_bread",
 --"taffy",
 "whipping_cream",
 }
@@ -352,23 +359,26 @@ MILLS.TAROT = {
   }
 
   MILLS.FUTURE = {
+  -- ||   Complete    ||
+  -- "illusionist", 
+  -- "jimbo",
+  -- "jester",
+  -- "cardinal",
+  -- "friends",
+  -- "jockey",
+  -- "integrity",
+  -- "greed",
+  -- "imp",
+  -- "monolith",
+  -- "coin",
+
+  -- ||   Uncomplete    ||
    -- "stoopid",
-    "illusionist",
    -- "intergalactic",
-   -- "jimbo",
-   -- "jester",
-   -- "cardinal",
-   -- "friends",
-   -- "jockey",
-   -- "integrity",
-   -- "greed",
-   -- "coins",
    -- "buff",
    -- "dead",
    -- "skeleton",
    -- "sobriety",
-   -- "imp",
-   -- "monolith",
    -- "nebulous",
    -- "eclipse",
    -- "helios",

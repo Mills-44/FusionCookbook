@@ -19,10 +19,15 @@ SMODS.load_file("items/sounds.lua")() -- Sounds
 SMODS.load_file("lovely/others.toml") 
 
 MILLS.register_items(MILLS.PEPPER_JOKERS, "items/joker/pepper")
+
 MILLS.register_items(MILLS.SWEET_JOKERS, "items/joker/sweet")
+
+if mills.config.enable_enhancement_fusions then
 MILLS.register_items(MILLS.FUSION_JOKERS, "items/joker/fusion")
+end
+
 MILLS.register_items(MILLS.MISC_JOKERS, "items/joker/misc")
---MILLS.register_items(MILLS.SANDWICH_JOKERS, "items/joker/sandwich")
+MILLS.register_items(MILLS.SANDWICH_JOKERS, "items/joker/sandwich")
 
 -- Register custom ConsumableType: Snack
 SMODS.ConsumableType {
@@ -43,6 +48,7 @@ SMODS.ConsumableType {
 }
 
 -- Register custom ConsumableType: Fusions
+if mills.config.enable_enhancement_fusions then
 SMODS.ConsumableType {
   object_type = "ConsumableType",
   key = 'Fusion',
@@ -57,9 +63,9 @@ SMODS.ConsumableType {
       },
   shop_rate = 0.0,
     }
+end
 
--- Register custom ConsumableType: Fusion
-
+-- Register custom ConsumableType: Future
 SMODS.ConsumableType {
   object_type = "ConsumableType",
   key = 'Future',
@@ -74,7 +80,7 @@ SMODS.ConsumableType {
       },
   shop_rate = 0.0,
     }
-  
+
 
 -- PATCH: Ensure pool is initialized before injection
 local orig_insert_pool = SMODS.insert_pool

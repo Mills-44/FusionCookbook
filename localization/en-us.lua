@@ -557,6 +557,13 @@ descriptions = {
                   "Create 2 random {C:attention}Stone Base Enfused Cards{}"
                 }
               },
+            c_mills_greed = {
+                name = "Greed",
+                text = {
+                  "Triples money",
+                  "{C:inactive}(Max of {C:money}$#1#{C:inactive})",
+                }
+              },
         },
         Joker={
              --PEPPER JOKERS

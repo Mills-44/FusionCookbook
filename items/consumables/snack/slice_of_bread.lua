@@ -22,6 +22,13 @@ SMODS.Consumable  {
         1.2 )
     end,
   can_use = function(self)
+    if #G.hand.highlighted ~= 2 then
+            return false
+        end
+
+         for _, v in ipairs(G.hand.highlighted) do
+
+         end
     return true
   end,
 use = function(self, card, area, copier)

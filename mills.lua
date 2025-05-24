@@ -1,33 +1,28 @@
---For my Util and Define
-if not MILLS then
-    MILLS = {}
-end
-
-if not ANIM then
-  ANIM = {}
-end
---Loads Mod
-mills = SMODS.current_mod
-mills_path = SMODS.current_mod.path
-
---Config Lib
---MILLS.config = SMODS.load_file("config.lua")() -- When I set up UI I this will actually do sum for now its a dummy config 
+MILLS = {}
 
 --Load lib
 SMODS.load_file("lib/define.lua")() -- Definitions 
 SMODS.load_file("lib/util.lua")() -- Utility functions built
 SMODS.load_file("lib/ui.lua")() -- Tabs and stuff
-ANIM = SMODS.load_file("lib/animation.lua")()
+--SMODS.load_file("lib/hooks.lua")()
+
+--Loads Mod
+mills = SMODS.current_mod
+mills_config = mills.config
+mills.enabled = copy_table(mills_config)
+mills_path = SMODS.current_mod.path
 
 SMODS.load_file("items/atlas.lua")() -- Pictures
 SMODS.load_file("items/sounds.lua")() -- Sounds
-SMODS.load_file("lovely/others.toml") -- obsidian
+
+-- Lovely Fixes
+SMODS.load_file("lovely/others.toml") 
 
 MILLS.register_items(MILLS.PEPPER_JOKERS, "items/joker/pepper")
 MILLS.register_items(MILLS.SWEET_JOKERS, "items/joker/sweet")
 MILLS.register_items(MILLS.FUSION_JOKERS, "items/joker/fusion")
 MILLS.register_items(MILLS.MISC_JOKERS, "items/joker/misc")
-MILLS.register_items(MILLS.SANDWICH_JOKERS, "items/joker/sandwich")
+--MILLS.register_items(MILLS.SANDWICH_JOKERS, "items/joker/sandwich")
 
 -- Register custom ConsumableType: Snack
 SMODS.ConsumableType {
@@ -47,8 +42,7 @@ SMODS.ConsumableType {
 	can_divide = true,
 }
 
--- Register custom ConsumableType: Fusion
-
+-- Register custom ConsumableType: Fusions
 SMODS.ConsumableType {
   object_type = "ConsumableType",
   key = 'Fusion',
@@ -63,6 +57,24 @@ SMODS.ConsumableType {
       },
   shop_rate = 0.0,
     }
+
+-- Register custom ConsumableType: Fusion
+
+SMODS.ConsumableType {
+  object_type = "ConsumableType",
+  key = 'Future',
+  default = 'c_mills_illusionist',
+  collection_rows = { 4,4 },
+  primary_colour = HEX("dfd1e6"),
+  secondary_colour = HEX("8a11d4"),
+  loc_txt = {
+      collection = 'Future Cards',
+      name = 'Future',
+      label = 'Future',
+      },
+  shop_rate = 0.0,
+    }
+  
 
 -- PATCH: Ensure pool is initialized before injection
 local orig_insert_pool = SMODS.insert_pool
@@ -107,14 +119,12 @@ function Card:set_sprites(_center, _front)
       end
 end
 
-
-
-
--- register items
+-- Register items
 
 MILLS.register_items(MILLS.BOOSTER, "items/boosters")
 
 -- FUSIONS
+if mills.config.enable_enhancement_fusions then
 MILLS.register_items(MILLS.FUSION_BONUS_ENHANCEMENTS, "items/enhancements/fusion/bonus")
 MILLS.register_items(MILLS.FUSION_MULT_ENHANCEMENTS, "items/enhancements/fusion/mult")
 MILLS.register_items(MILLS.FUSION_WILD_ENHANCEMENTS, "items/enhancements/fusion/wild")
@@ -123,15 +133,26 @@ MILLS.register_items(MILLS.FUSION_STEEL_ENHANCEMENTS, "items/enhancements/fusion
 MILLS.register_items(MILLS.FUSION_STONE_ENHANCEMENTS, "items/enhancements/fusion/stone")
 MILLS.register_items(MILLS.FUSION_GOLD_ENHANCEMENTS, "items/enhancements/fusion/gold")
 MILLS.register_items(MILLS.FUSION_LUCKY_ENHANCEMENTS, "items/enhancements/fusion/lucky")
-
+end
 -- Sweet Enhancements
 MILLS.register_items(MILLS.SWEET_ENHANCEMENTS, "items/enhancements/sweet")
 
 -- Consumables
+if mills.config.enable_enhancement_fusions then
+MILLS.register_items(MILLS.FUSE_SNACK, "items/consumables/snack")
+end
+
 MILLS.register_items(MILLS.SNACKS, "items/consumables/snack")
-MILLS.register_items(MILLS.FUSION, "items/consumables/fusion")
 MILLS.register_items(MILLS.SPECTRAL, "items/consumables/spectral")
+
+MILLS.register_items(MILLS.FUSION, "items/consumables/fusion")
+
+if mills.config.enable_enhancement_fusions then
 MILLS.register_items(MILLS.TAROT, "items/consumables/tarot")
+end
+
+--Future Cards 
+--MILLS.register_items(MILLS.FUTURE, "items/consumables/future")
 
 --Seals
 MILLS.register_items(MILLS.SEALS, "items/seals")

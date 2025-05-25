@@ -27,7 +27,7 @@ MILLS.register_items(MILLS.FUSION_JOKERS, "items/joker/fusion")
 end
 
 MILLS.register_items(MILLS.MISC_JOKERS, "items/joker/misc")
-MILLS.register_items(MILLS.SANDWICH_JOKERS, "items/joker/sandwich")
+--MILLS.register_items(MILLS.SANDWICH_JOKERS, "items/joker/sandwich")
 
 -- Register custom ConsumableType: Snack
 SMODS.ConsumableType {
@@ -66,20 +66,20 @@ SMODS.ConsumableType {
 end
 
 -- Register custom ConsumableType: Future
-SMODS.ConsumableType {
-  object_type = "ConsumableType",
-  key = 'Future',
-  default = 'c_mills_illusionist',
-  collection_rows = { 4,4 },
-  primary_colour = HEX("dfd1e6"),
-  secondary_colour = HEX("8a11d4"),
-  loc_txt = {
-      collection = 'Future Cards',
-      name = 'Future',
-      label = 'Future',
-      },
-  shop_rate = 0.0,
-    }
+--SMODS.ConsumableType {
+ -- object_type = "ConsumableType",
+ -- key = 'Future',
+ -- default = 'c_mills_illusionist',
+ -- collection_rows = { 4,4 },
+ -- primary_colour = HEX("dfd1e6"),
+ -- secondary_colour = HEX("8a11d4"),
+ -- loc_txt = {
+  --    collection = 'Future Cards',
+  --    name = 'Future',
+  --    label = 'Future',
+  --    },
+ -- shop_rate = 0.0,
+   -- }
 
 
 -- PATCH: Ensure pool is initialized before injection

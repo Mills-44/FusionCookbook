@@ -19,6 +19,13 @@ SMODS.Consumable {
     cost = 4,
     unlocked = true,
     discovered = true,
+     set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Soda Enjoyer", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
     can_use = function(self, card)
          if #G.hand.highlighted ~= 2 then
             return false

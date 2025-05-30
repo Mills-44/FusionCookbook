@@ -27,22 +27,17 @@ SMODS.Joker {
           if SMODS.has_enhancement(c_card, "m_mills_lav") then mult = true end
         end
         if wild and mult then
-          local upgrade = G.play.cards
-          local edition = 1
+          local upgrade = context.other_card
           if upgrade.edition then
-          for i, v in ipairs(G.P_CENTER_POOLS.Edition) do
-            if v.key == upgrade.edition.key then
-              edition = i
+          for i, v in ipairs(upgrage) do
+            if v.key == MILLS.base_editions then
+              upgrade = i
               break
             end
           end
         end
-      edition = edition + 1 
-      if edition > #G.P_CENTER_POOLS.Edition then
-			edition = edition - #G.P_CENTER_POOLS.Edition
-		end
-  end
-end
-end 
+      end
+    end
+  end 
 end
 }

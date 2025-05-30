@@ -45,6 +45,7 @@ SMODS.Joker {
                            end}))
                     if not SMODS.has_enhancement(c, 'm_lucky') then
                         c:set_ability('m_lucky',nil,true) 
+                    end
                     G.E_MANAGER:add_event(Event({
                         trigger = 'after',
                         delay = .3,
@@ -52,7 +53,6 @@ SMODS.Joker {
                         c:flip()
                         return true
                         end}))
-                    end
                 end
                 play_sound('mills_wonka')
                 return {

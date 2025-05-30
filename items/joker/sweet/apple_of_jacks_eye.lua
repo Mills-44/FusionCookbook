@@ -17,16 +17,20 @@ SMODS.Joker {
     eternal_compat = true,
     perishable_compat = true,
     calculate = function(self, card, context)
-    if context.cardarea == G.play then
-		if context.other_card then
-        if context.other_card:get_id() == 3 then
-                    return {
-                        mult = 4,
-                        colour = G.C.MULT,
-					    card = card
-                    }
+        if context.cardarea == G.play and conxtex.individual then
+           for k, v in ipairs(MILLS.base_suits) do
+            local suit_count = 0
+                if context.other_card.base.suit == v then
+                    suit_count = suit_count + 1
                 end
-            end
+           return suit_count
+        end
+        if suit_count == 3 then
+            local newcard = create_card('Snack', G.consumeables, nil, nil, nil, nil, nil, 'c_mills_' )
+            newcard:add_to_deck()
+            G.consumeables:emplace(newcard)
+            newcard:juice_up(0.3, 0.5)  
         end
     end
+end
 }

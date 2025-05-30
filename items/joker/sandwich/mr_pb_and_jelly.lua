@@ -50,12 +50,12 @@ SMODS.Joker {
         func = function()
           play_sound('mills_mrpb')
           local newcard = create_card('Snack', G.consumeables, nil, nil, nil, nil, nil, 'c_mills_' )
-                    newcard:add_to_deck()
-                    newcard:set_edition({negative = true})
-                    G.consumeables:emplace(newcard)
-                    newcard:juice_up(0.3, 0.5)  
-                return true 
-                end }))
+          newcard:add_to_deck()
+          newcard:set_edition({negative = true})
+          G.consumeables:emplace(newcard)
+          newcard:juice_up(0.3, 0.5)  
+        return true 
+        end }))
         end
       end
     end

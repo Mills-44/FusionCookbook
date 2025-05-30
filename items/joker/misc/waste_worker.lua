@@ -18,6 +18,13 @@ SMODS.Joker {
     blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
+    set_badges = function(self, card, badges)
+        badges[#badges+1] = create_badge(
+        "Art: Soda Enjoyer", 
+        MILLS.COLORS.ART, 
+        G.C.WHITE, 
+        1.2 )
+    end,
 	loc_vars = function(self, info_queue, card)
 		return { }
 	end,

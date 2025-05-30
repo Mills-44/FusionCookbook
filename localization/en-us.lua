@@ -564,6 +564,12 @@ descriptions = {
                   "{C:inactive}(Max of {C:money}$#1#{C:inactive})",
                 }
               },
+            c_mills_psychic = {
+              name = "Psychic",
+              text = {
+                "Create 2 random {C:mills_future}Future{} cards"
+              }
+            },
         },
         Joker={
              --PEPPER JOKERS
@@ -1068,8 +1074,8 @@ descriptions = {
           c_mills_enh_fus = {
             name = "Enhancement Fusion",
             text = {
-              "{C:purple}Fuses{} 2 different {C:attention}enhancements{}",
-              "into one {C:purple,E:1}fused{} enhancement card"
+              "{C:mills_enfuse,E:1}Enfuse{} 2 different {C:attention}enhancements{}",
+              "into a {C:mills_enfuse,E:1}Enfuse{} enhancement card"
             }
           },
         },
@@ -1077,30 +1083,34 @@ descriptions = {
           mills_fusions_glob = {
             name = "",
             text = {
-              "{C:purple, S:1.2}Global Fusion Card:{} Enfuses 2 diferent selected cards of any type",
-              "{C:inactive}[WIP]"
+              "{C:purple,S:1.2}Global Fusion Card:{}",
+              "{C:mills_enfuse,E:1}Enfuse{} 2 cards of any type",
+              "{C:inactive}[WIP]{}"
             }
           },
 
           mills_fusions_cons = {
             name = "",
             text = {
-              "{C:purple, S:1.2}Consumable Fusion Card:{} Fuses 2 diferent selected cards of any type",
-              "{C:inactive}[WIP]"
+              "{C:purple,S:1.2}Consumable Fusion Card:{}",
+              "{C:mills_enfuse,E:1}Enfuse{} 2 diferent selected cards of any type",
+              "{C:inactive}[WIP]{}"
             }
           },
 
           mills_fusions_enh = {
             name = "",
             text = {
-              "{C:purple, S:1.2}Enhanc Fusion Card:{} Fuses 2 diferent selected {C:attention}enhancement{}"
+              "{C:purple, S:1.2}Enhance Fusion Card:{}",
+              "{C:mills_enfuse,E:1}Enfuse{} 2 cards selected {C:attention}Enhancement{}"
             }
           },
 
           mills_fusions_edi = {
             name = "",
             text = {
-              "{C:purple, S:1.2}Edition Fusion Card:{} Fuses 2 diferent selected {C:attention}editions{}",
+              "{C:purple, S:1.2}Edition Fusion Card:{}",
+              "{C:mills_enfuse,E:1}Enfuse{} 2 cards selected {C:attention}Editions{}",
               "{C:inactive}[WIP]"
             }
           },
@@ -1108,7 +1118,8 @@ descriptions = {
           mills_fusions_seal = {
             name = "",
             text = {
-              "{C:purple, S:1.2}Seal Fusion Card:{} Fuses 2 diferent selected {C:attention}Seals{}",
+              "{C:purple, S:1.2}Seal Fusion Card:{}",
+              "{C:mills_enfuse,E:1}Enfuse{} 2 cards selected with {C:attention}Seals{}",
               "{C:inactive}[WIP]"
             }
           },
@@ -1118,27 +1129,27 @@ descriptions = {
               "{C:legendary,S:2,E:1}MOD MADE BY:{}",
             }
           },
-          mills_credits_art = {
-            name = "",
-            text = {
-              "{X:legendary,C:white}Artist:{}",
-              "{C:money}Rafaelly, Mills-44{}",
-              "{C:money}GSFG & Soda Enjoyer{}",
-            }
-          },
           mills_credits_dev = {
             name = "",
             text = {
               "{X:legendary,C:white}Developer:{}",
-              "{C:money}Rafaelly and Mills-44{}",
+              "{C:mills_rafa}Rafaelly{} and {C:mills_mil}Mills-44{}",
+            }
+          },
+          mills_credits_art = {
+            name = "",
+            text = {
+              "{X:legendary,C:white}Artists:{}",
+              "{C:mills_rafa}Rafaelly{}, {C:mills_mil}Mills-44{}",
+              "{C:money}GSFG & Soda Enjoyer{}",
             }
           },
         mills_credits_local = {
           name = "",
           text = {
             "{X:legendary,C:white}Localization:{}",
-            "{C:money}Rafaelly(Portuguese[WIP] & English)",
-            "{C:money}Mills-44(English){}",
+            "{C:mills_rafa}Rafaelly{}{C:money}(Portuguese)[WIP]",
+            "{C:mills_mil}Mills-44{}{C:money}(English){}",
 
           }
         },

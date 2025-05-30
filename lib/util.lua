@@ -126,13 +126,58 @@ if not MILLS._rng_seeded then
 end
 
 -- Weight Utility for spawn rates for consumables
-function MILLS.snack_spawn_rate(key)
-    if key then assert(G.P_CENTERS[key], "Invalid consumable key: "..key) else key = snack_spawn('shop_consumable').key end
-    local card = Card(G.shop_consumeable.T.x + G.shop_consumeable.T.w/2,
-    G.shop_consumeable.T.y,  G.CARD_W*1.27, G.CARD_H*1.27, G.P_CARDS.empty, G.P_CENTERS[key], {bypass_discovery_center = true, bypass_discovery_ui = true})
-    create_shop_card_ui(card, 'Snack', G.shop_consumeable)
-    card.ability.consumable_pos = #G.shop_consumeable.cards + 1
-    card:start_materialize()
-    G.shop_consumeable:emplace(card)
-    return card
+function MILLS.consumable_rate(args)
+   args = args or {}
+    local key = args.key or 'std_consumable'
+    local mod = args.mod or 1
+    local guaranteed = args.guaranteed or false
+    local options = args.options or get_current_pool("Consumable")
+    if args.no_replace then
+        for i, k in pairs(options) do
+            if G.P_CENTERS[k] and G.P_CENTERS[k].replace_base_card then
+                options[i] = 'UNAVAILABLE'
+            end
+        end
+    local type_key = args.type_key or key.."type"..G.GAME.round_resets.ante
+    key = key..G.GAME.round_resets.ante
+
+    local available_consumable = {}
+    local total_weight = 0
+    for _, v in ipairs(options) do
+        if v ~= "UNAVAILABLE" then
+            local consumable_option = {}
+            if type(v) == 'string' then
+                assert(G.P_CENTERS[v])
+                consumable_option = { key = v, weight = G.P_CENTERS[v].weight or 5 }
+            elseif type(v) == 'table' then
+                assert(G.P_CENTERS[v.key])
+                consumable_option = { key = v.key, weight = v.weight }
+            end
+            if consumable_option.weight > 0 then
+                table.insert(available_consumable, consumable_option)
+                total_weight = total_weight + consumable_option.weight
+            end
+          end
+      end
+      total_weight = total_weight + (total_weight / 40 * 60) -- set base rate to 40%
+
+      local type_weight = 0 -- modified weight total
+      for _,v in ipairs(available_consumable) do
+        v.weight = G.P_CENTERS[v.key].get_weight and G.P_CENTERS[v.key]:get_weight() or v.weight
+        type_weight = type_weight + v.weight
+    end
+
+    local consumable_poll = pseudorandom(pseudoseed(key))
+    if consumable_poll > 1 - (type_weight*mod / total_weight) or guaranteed then 
+        local consumable_type_poll = pseudorandom(pseudoseed(type_key))
+        local weight_i = 0
+        for k, v in ipairs(available_consumable) do
+            weight_i = weight_i + v.weight
+            if consumable_type_poll > 1 - (weight_i / type_weight) then
+                return v.key
+            end
+        end
+    end
+
   end
+end

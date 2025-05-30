@@ -1,10 +1,35 @@
 
 SMODS.current_mod.config_tab = function()
     local scale = 5/6
-    return {n=G.UIT.ROOT, config = {align = "cl", minh = G.ROOM.T.h*0.25, padding = 0.0, r = 0.1, colour = G.C.GREY}, nodes = {
-        {n = G.UIT.R, config = { padding = 0.05 }, nodes = {
-            {n = G.UIT.C, config = { minw = G.ROOM.T.w*0.25, padding = 0.05 }, nodes = {
-                create_toggle{ label = localize("enable_enhancement_fusions"), info = {localize("mills_restart")}, active_colour = mills.badge_colour, ref_table = mills.config, ref_value = "enable_enhancement_fusions" }
+    return {
+    n = G.UIT.ROOT, 
+    config = {
+        align = "cl", 
+        minh = G.ROOM.T.h*0.25, 
+        padding = 0.0, 
+        r = 0.1, 
+        colour = G.C.GREY
+    }, 
+    nodes = {
+        {
+        n = G.UIT.R, 
+        config = { 
+            padding = 0.05 
+        }, 
+        nodes = {
+            {
+            n = G.UIT.C, 
+            config = { 
+                minw = G.ROOM.T.w*0.25, 
+                padding = 0.05 
+            }, 
+            nodes = {
+                create_toggle{ 
+                label = localize("enable_enhancement_fusions"), 
+                active_colour = MILLS.COLORS.FUSION, 
+                ref_table = mills.config, 
+                ref_value = "enable_enhancement_fusions" 
+                },
             }}
         }}
     }}
@@ -27,7 +52,16 @@ SMODS.current_mod.extra_tabs = function()
                             }) do
                     modNodes[#modNodes + 1] = {}
                     local loc_vars = { scale = 1.2 }
-                    localize { type = 'descriptions', key = key, set = 'Tabs', nodes = modNodes[#modNodes], vars = loc_vars.vars, scale = loc_vars.scale, text_colour = loc_vars.text_colour, shadow = loc_vars.shadow }
+                    localize { 
+                    type = 'descriptions', 
+                    key = key, 
+                    set = 'Tabs', 
+                    nodes = modNodes[#modNodes], 
+                    vars = loc_vars.vars, 
+                    scale = loc_vars.scale, 
+                    text_colour = loc_vars.text_colour, 
+                    shadow = loc_vars.shadow 
+                }
                     modNodes[#modNodes] = desc_from_rows(modNodes[#modNodes])
                     modNodes[#modNodes].config.colour = loc_vars.background_colour or modNodes[#modNodes].config.colour
                 end
@@ -93,7 +127,15 @@ SMODS.current_mod.extra_tabs = function()
                             }) do
                     modNodes[#modNodes + 1] = {}
                     local loc_vars = { scale = 1.2 }
-                    localize { type = 'descriptions', key = key, set = 'Tabs', nodes = modNodes[#modNodes], vars = loc_vars.vars, scale = loc_vars.scale, text_colour = loc_vars.text_colour, shadow = loc_vars.shadow }
+                    localize { 
+                        type = 'descriptions', 
+                        key = key, 
+                        set = 'Tabs', 
+                        nodes = modNodes[#modNodes], 
+                        vars = loc_vars.vars, 
+                        scale = loc_vars.scale, 
+                        text_colour = loc_vars.text_colour, 
+                        shadow = loc_vars.shadow }
                     modNodes[#modNodes] = desc_from_rows(modNodes[#modNodes])
                     modNodes[#modNodes].config.colour = loc_vars.background_colour or modNodes[#modNodes].config.colour
                 end

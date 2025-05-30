@@ -59,6 +59,14 @@ MILLS.base_editions = {
   "poly"
 }
 
+MILLS.SEALS = {
+  "red",
+  "blue",
+  "purple",
+  "gold",
+  "mills_cookie"
+}
+
 -- Define light and dark suits
 MILLS.light_suits = { 'Diamonds', 'Hearts' }
 MILLS.dark_suits = { 'Spades', 'Clubs' }
@@ -85,8 +93,6 @@ FUSION = HEX("FF00FF"),
 FUTURE = HEX("8a11d4"),
 --Misc Colors
 ART = HEX("5e819d"),
--- _ = HEX(""),
--- _ = HEX(""),
 -- _ = HEX(""),
 -- _ = HEX(""),
 -- _ = HEX(""),
@@ -163,9 +169,9 @@ MILLS.FUSION_JOKERS = {
 --Sandwich Jokers
 MILLS.SANDWICH_JOKERS = {
 "flayfluff_sub",
---"golden_crunch",
+"golden_crunch",
 "mr_pb_and_jelly",
---"gloopwich",
+"gloopwich",
 "everlasting_pollenstopper",
 }
 
@@ -226,7 +232,7 @@ MILLS.SNACKS = {
 "pretzel",
 "rye_chip",
 "shortbread",
-"slice_of_bread",
+--"slice_of_bread",
 --"taffy",
 "whipping_cream",
 }
@@ -363,17 +369,20 @@ MILLS.TAROT = {
   -- "illusionist", 
   -- "jimbo",
   -- "jester",
-  -- "cardinal",
+   "cardinal",
   -- "friends",
-  -- "jockey",
-  -- "integrity",
-  -- "greed",
-  -- "imp",
+   "jockey",
+   "integrity",
+   "greed",
+   "imp",
+  -- "stupid",
+   "psychic",
+   --"astronomer",
+   --"lacerate",
   -- "monolith",
   -- "coin",
 
   -- ||   Uncomplete    ||
-   -- "stoopid",
    -- "intergalactic",
    -- "buff",
    -- "dead",

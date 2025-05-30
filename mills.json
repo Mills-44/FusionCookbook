@@ -12,6 +12,6 @@
 	"version": "1.0.3",
 	"dependencies": [
 		"Talisman (>=2.0.9)",
-		"Steamodded (>=1.0.0~BETA-0323b)"
+		"Steamodded (>=1.0.0~BETA-0509c)"
 	]
 }

@@ -4,7 +4,8 @@ MILLS = {}
 SMODS.load_file("lib/define.lua")() -- Definitions 
 SMODS.load_file("lib/util.lua")() -- Utility functions built
 SMODS.load_file("lib/ui.lua")() -- Tabs and stuff
---SMODS.load_file("lib/hooks.lua")()
+SMODS.load_file("lib/hooks.lua")()
+--SMODS.load_file("lib/surgemeter.lua")()
 
 --Loads Mod
 mills = SMODS.current_mod
@@ -67,19 +68,19 @@ end
 
 -- Register custom ConsumableType: Future
 --SMODS.ConsumableType {
- -- object_type = "ConsumableType",
+  --object_type = "ConsumableType",
  -- key = 'Future',
  -- default = 'c_mills_illusionist',
  -- collection_rows = { 4,4 },
- -- primary_colour = HEX("dfd1e6"),
+--  primary_colour = HEX("dfd1e6"),
  -- secondary_colour = HEX("8a11d4"),
- -- loc_txt = {
-  --    collection = 'Future Cards',
-  --    name = 'Future',
-  --    label = 'Future',
-  --    },
+--loc_txt = {
+ --   collection = 'Future Cards',
+ --   name = 'Future',
+ --   label = 'Future',
+ --     },
  -- shop_rate = 0.0,
-   -- }
+ -- }
 
 
 -- PATCH: Ensure pool is initialized before injection

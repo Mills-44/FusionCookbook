@@ -33,7 +33,7 @@ SMODS.Consumable {
         end
       end
   
-      local multiplier = 1 + (0.5 * sweet_count)
+      local multiplier = 0.5 * sweet_count
       local money_before = G.GAME.dollars or 0
       local total = math.floor(money_before * multiplier)
       ease_dollars(total) 

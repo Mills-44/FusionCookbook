@@ -38,14 +38,6 @@ SMODS.Consumable {
         local highlighted = G.hand.highlighted or {}
         if #highlighted == 0 then return end
 
-            G.E_MANAGER:add_event(Event({
-                trigger = 'after', delay = 0.4,
-                func = function()
-                    card:juice_up(0.3, 0.5)
-                    return true
-                end
-            }))
-
             for _, c in ipairs(highlighted) do
                 G.E_MANAGER:add_event(Event({
                     trigger = 'after', delay = 0.15,

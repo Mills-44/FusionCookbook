@@ -28,7 +28,29 @@ SMODS.Consumable  {
     if G.jokers.highlighted[1].config.center.key  == 'j_mills_jammin_jelly' and
        G.jokers.highlighted[2].config.center.key == 'j_mills_nutty_buddy'  or
        G.jokers.highlighted[2].config.center.key  == 'j_mills_jammin_jelly' and
-       G.jokers.highlighted[1].config.center.key == 'j_mills_nutty_buddy' then 
+       G.jokers.highlighted[1].config.center.key == 'j_mills_nutty_buddy'  or
+
+      G.jokers.highlighted[1].config.center.key  == 'j_mills_jammin_jelly' and
+      G.jokers.highlighted[2].config.center.key == 'j_mills_stay_puft'  or
+      G.jokers.highlighted[2].config.center.key  == 'j_mills_jammin_jelly' and
+      G.jokers.highlighted[1].config.center.key == 'j_mills_stay_puft'  or
+
+      G.jokers.highlighted[1].config.center.key  == 'j_mills_barry_b' and
+      G.jokers.highlighted[2].config.center.key == 'j_mills_stay_puft'  or
+      G.jokers.highlighted[2].config.center.key  == 'j_mills_barry_b' and
+      G.jokers.highlighted[1].config.center.key == 'j_mills_stay_puft'  or
+
+      G.jokers.highlighted[1].config.center.key  == 'j_mills_barry_b' and
+      G.jokers.highlighted[2].config.center.key == 'j_mills_wonkas_chocolate_bar'  or
+      G.jokers.highlighted[2].config.center.key  == 'j_mills_barry_b' and
+      G.jokers.highlighted[1].config.center.key == 'j_mills_wonkas_chocolate_bar'  or
+
+      G.jokers.highlighted[1].config.center.key  == 'j_mills_nutty_buddy' and
+      G.jokers.highlighted[2].config.center.key == 'j_mills_wonkas_chocolate_bar'  or
+      G.jokers.highlighted[2].config.center.key  == 'j_mills_nutty_buddy' and
+      G.jokers.highlighted[1].config.center.key == 'j_mills_wonkas_chocolate_bar'  
+       
+       then 
             return true
         end
   end,

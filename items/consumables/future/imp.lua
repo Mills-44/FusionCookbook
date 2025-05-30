@@ -2,7 +2,7 @@ SMODS.Consumable {
     object_type = "Consumable",
     key = 'imp',
     set = "Future",
-    atlas = 'tarot',
+    atlas = 'future',
     pos = {
         x = 0,
         y = 0
